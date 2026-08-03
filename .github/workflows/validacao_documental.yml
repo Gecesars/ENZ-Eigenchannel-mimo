@@ -1,0 +1,42 @@
+name: Validação documental e matemática
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obter repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar pacote e ferramentas
+        run: python -m pip install --upgrade pip && python -m pip install -e ".[dev]"
+
+      - name: Executar testes matemáticos
+        run: pytest -q
+
+      - name: Verificar sintaxe Python
+        run: python -m compileall -q src testes
+
+      - name: Verificar referências internas essenciais
+        shell: bash
+        run: |
+          test -f README.md
+          test -f CREDITOS.md
+          test -f docs/INDEX.md
+          test -f docs/01_artigo_base_inatel.md
+          test -f referencias/references.bib
+          test -f modelos/especificacoes/g0_artigo_base.preliminar.yaml
