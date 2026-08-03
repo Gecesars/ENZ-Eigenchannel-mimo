@@ -1,0 +1,45 @@
+name: Normalizar fórmulas Markdown
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/normalizar_formulas_markdown.py"
+      - ".github/workflows/normalizar_formulas_markdown.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  normalizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obter repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Converter delimitadores matemáticos
+        run: python scripts/normalizar_formulas_markdown.py --apply
+
+      - name: Validar resultado
+        run: python scripts/normalizar_formulas_markdown.py --check
+
+      - name: Publicar somente alterações Markdown
+        shell: bash
+        run: |
+          if git diff --quiet -- '*.md'; then
+            echo "Nenhuma normalização pendente."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.md'
+          git commit -m "docs: normaliza blocos matemáticos para MathJax do GitHub"
+          git push
