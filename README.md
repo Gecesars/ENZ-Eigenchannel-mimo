@@ -6,6 +6,8 @@
 > **Próximo marco formal:** reprodução independente do modelo de referência do Inatel no Ansys AEDT/HFSS 2024 R2, seguida de uma experiência crítica de duas portas.  
 > **Idioma oficial da documentação:** português do Brasil.
 
+> **Renderização matemática:** o GitHub suporta LaTeX em Markdown via MathJax. Este repositório padroniza equações de bloco com cercas `math`; consulte [`docs/GUIA_RENDERIZACAO_MATEMATICA.md`](docs/GUIA_RENDERIZACAO_MATEMATICA.md).
+
 ---
 
 ## 1. Tese do projeto
@@ -16,23 +18,23 @@ Este repositório investiga uma pergunta situada na fronteira entre eletromagnet
 
 A observação física de partida é que um guia retangular operando próximo ao corte do modo dominante apresenta constante de propagação longitudinal pequena,
 
-$$
+```math
 \beta_z =
 \sqrt{k_0^2\varepsilon_r\mu_r-k_c^2}
 \longrightarrow 0,
-$$
+```
 
 e, portanto, comprimento de onda guiado elevado,
 
-$$
+```math
 \lambda_g=\frac{2\pi}{\beta_z}\longrightarrow\infty.
-$$
+```
 
 Em uma faixa finita e sob condições modais específicas, o campo acumula pouca fase ao longo da direção de propagação. Essa característica permite que uma região geometricamente extensa se comporte como uma abertura aproximadamente coerente. O trabalho de referência desenvolvido por pesquisadores do Inatel demonstrou que uma cavidade ranhurada pode ser remodelada mantendo a área transversal, convertendo um feixe estreito em um feixe em leque com topo plano, sem deslocamento relevante da frequência ressonante. O resultado foi obtido com cinco ranhuras, carregamento dielétrico em FR4, pinos metálicos para supressão modal e um perfil externo em degrau para redistribuição de amplitude.
 
 A pesquisa deste repositório parte desse resultado, preserva seus créditos e formula uma extensão mais exigente:
 
-$$
+```math
 \boxed{
 \text{fase coerente interna}
 +
@@ -46,11 +48,11 @@ $$
 \longrightarrow
 \text{base de estados radiantes úteis}
 }
-$$
+```
 
 A transformação conceitual é
 
-$$
+```math
 \mathbf v(f)
 \;\xrightarrow{\mathcal T}\;
 \mathbf J(\mathbf r,f)
@@ -58,7 +60,7 @@ $$
 \mathbf F(\Omega,f)
 \;\xrightarrow{\mathcal P}\;
 \mathbf H(f),
-$$
+```
 
 onde:
 
@@ -100,6 +102,19 @@ Resultados publicados que orientam a reprodução:
 
 Esses valores são metas de reprodução, não parâmetros a serem forçados por ajuste oculto. Dimensões não publicadas serão classificadas como **desconhecidas**, **inferidas** ou **otimizadas**, nunca apresentadas como se tivessem sido fornecidas pelos autores.
 
+### 2.1 FR4 no modelo de referência
+
+O FR4 será mantido na reprodução porque foi usado pelos autores como inclusão dielétrica de casamento e escolhido por disponibilidade de prototipagem. Contudo, FR4 genérico não será tratado como material precisamente caracterizado em 25,87 GHz. O fabricante, a permissividade complexa, a tangente de perdas e as dimensões completas da inclusão permanecem desconhecidos.
+
+A estratégia é separar:
+
+- **R0:** FR4 como referência obrigatória do artigo;
+- **R1:** análise de sensibilidade de $\varepsilon_r$, $\tan\delta$ e dimensões;
+- **R2:** reotimização com materiais de micro-ondas controlados;
+- **R3:** comparação experimental entre FR4 e alternativa de baixa perda.
+
+A análise completa está em [`docs/01a_validacao_fr4_e_materiais_26ghz.md`](docs/01a_validacao_fr4_e_materiais_26ghz.md).
+
 ---
 
 ## 3. Questão científica central
@@ -110,7 +125,7 @@ A pergunta operacional é:
 
 A primeira experiência decisiva não será uma montagem 4×4 completa. Será:
 
-$$
+```math
 \boxed{
 \text{uma estrutura compartilhada}
 +
@@ -118,7 +133,7 @@ $$
 +
 \text{dois estados radiantes úteis}
 }
-$$
+```
 
 O sucesso mínimo exige simultaneamente:
 
@@ -171,13 +186,13 @@ Todo resultado será classificado como:
 
 O alvo inicial de quatro portas, somente após G2, é:
 
-$$
+```math
 4\ \text{portas}
 =
 2\ \text{famílias de padrão}
 \times
 2\ \text{polarizações}.
-$$
+```
 
 ---
 
@@ -185,17 +200,17 @@ $$
 
 Para padrões embarcados vetoriais,
 
-$$
+```math
 \mathbf F_m(\Omega,f)=
 \begin{bmatrix}
 E_{\theta,m}(\Omega,f)\\
 E_{\phi,m}(\Omega,f)
 \end{bmatrix},
-$$
+```
 
 a correlação relevante deve considerar o espectro angular e polarimétrico do ambiente:
 
-$$
+```math
 \rho_{ij}^{(P)}
 =
 \frac{
@@ -213,7 +228,7 @@ P(\Omega)
 \int_{4\pi}P(\Omega)\|\mathbf F_j\|^2\,d\Omega
 \right]
 }.
-$$
+```
 
 A ECC isotrópica continuará sendo calculada, porém não será tratada como prova universal de diversidade.
 
@@ -223,7 +238,7 @@ A ECC isotrópica continuará sendo calculada, porém não será tratada como pr
 
 A capacidade instantânea para um canal estreito é
 
-$$
+```math
 C=
 \log_2\det
 \left[
@@ -231,7 +246,7 @@ C=
 \frac{\rho}{N_t}
 \mathbf H\mathbf H^H
 \right].
-$$
+```
 
 Para banda larga e OFDM, a análise será feita por frequência, subportadora ou bloco de coerência. O projeto priorizará:
 
@@ -261,6 +276,7 @@ Para banda larga e OFDM, a análise será feita por frequência, subportadora ou
 ├── docs/
 │   ├── 00_carta_cientifica.md
 │   ├── 01_artigo_base_inatel.md
+│   ├── 01a_validacao_fr4_e_materiais_26ghz.md
 │   ├── 02_fundamentos_maxwellianos.md
 │   ├── 03_guia_retangular_e_enz_estrutural.md
 │   ├── 04_invariancia_geometrica.md
@@ -288,9 +304,11 @@ Para banda larga e OFDM, a análise será feita por frequência, subportadora ou
 │   ├── 26_benchmarks.md
 │   ├── 27_notacao_e_glossario.md
 │   ├── 28_perguntas_abertas.md
-│   └── 29_plano_de_publicacoes.md
+│   ├── 29_plano_de_publicacoes.md
+│   └── GUIA_RENDERIZACAO_MATEMATICA.md
 ├── referencias/
 ├── modelos/
+├── scripts/
 ├── src/
 ├── testes/
 └── artefatos/
@@ -310,8 +328,9 @@ A primeira etapa executável consiste em:
 6. exportar $E_\theta$ e $E_\phi$ complexos;
 7. realizar convergência de malha, fronteiras e domínio aberto;
 8. comparar quantitativamente com o artigo;
-9. registrar discrepâncias sem ajuste oculto;
-10. publicar o pacote de artefatos e o manifesto da execução.
+9. executar a campanha FR4 versus materiais controlados;
+10. registrar discrepâncias sem ajuste oculto;
+11. publicar o pacote de artefatos e o manifesto da execução.
 
 O runtime científico primário será **Ansys AEDT/HFSS 2024 R2**, controlado por **PyAEDT sobre a interface gRPC nativa do AEDT**.
 
@@ -337,6 +356,7 @@ Este é um projeto de pesquisa aberto. São especialmente valiosas contribuiçõ
 - antenas ranhuradas;
 - ENZ e índice próximo de zero;
 - dopagem fotônica;
+- caracterização dielétrica em ondas milimétricas;
 - sistemas multiporta;
 - MIMO e modelos de canal mmWave;
 - otimização adjunta;
