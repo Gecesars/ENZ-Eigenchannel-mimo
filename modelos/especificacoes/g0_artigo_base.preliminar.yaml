@@ -1,0 +1,54 @@
+schema: enz-eigenchannel-mimo/geometry-spec/v1
+modelo: G0_artigo_base_preliminar
+estado: documental_nao_validado
+frequencia_central:
+  valor: 25.87
+  unidade: GHz
+  origem: publicado
+  fonte: artigo-base, Seção III
+cavidade:
+  area_transversal:
+    valor: 108.0
+    unidade: mm2
+    origem: publicado
+  dimensoes_iniciais:
+    largura: {valor: 14.0, unidade: mm, origem: publicado}
+    altura: {valor: 7.7143, unidade: mm, origem: publicado}
+  comprimento:
+    valor: null
+    unidade: mm
+    origem: desconhecido
+alimentacao:
+  tipo: WR-28
+  a: {valor: 7.11, unidade: mm, origem: publicado}
+  b: {valor: 3.56, unidade: mm, origem: publicado}
+  modo_dominante: TE10
+  frequencia_corte: {valor: 21.08, unidade: GHz, origem: publicado}
+ranhuras:
+  quantidade_inicial: 3
+  quantidade_final: 5
+  comprimento: {valor: null, unidade: mm, origem: desconhecido}
+  largura: {valor: null, unidade: mm, origem: desconhecido}
+  posicoes: {valor: null, unidade: mm, origem: desconhecido}
+degrau:
+  largura: {valor: 9.0, unidade: mm, origem: publicado}
+  altura: {valor: 1.0, unidade: mm, origem: publicado}
+chanfros:
+  quantidade: 2
+  dimensao: {valor: 3.0, unidade: mm, origem: publicado}
+dieletrico:
+  material_nominal: FR4
+  epsilon_r: {valor: null, origem: desconhecido}
+  tangente_perdas: {valor: null, origem: desconhecido}
+  dimensoes: {valor: null, unidade: mm, origem: desconhecido}
+pinos_metalicos:
+  quantidade: null
+  diametro: {valor: null, unidade: mm, origem: desconhecido}
+  posicoes: {valor: null, unidade: mm, origem: desconhecido}
+metas_de_reproducao:
+  banda_s11_menos_10db: {valor: 1.11, unidade: GHz, origem: medido_publicado}
+  ganho_realizado_maximo: {valor: 7.84, unidade: dBi, origem: medido_publicado}
+  beamwidth_1db: {min: 60, max: 70, unidade: grau, origem: medido_publicado}
+  ripple_maximo: {valor: 0.71, unidade: dB, origem: medido_publicado}
+  beamwidth_3db_minimo: {valor: 80, unidade: grau, origem: medido_publicado}
+  sll_maximo: {valor: -10.02, unidade: dB, origem: medido_publicado}

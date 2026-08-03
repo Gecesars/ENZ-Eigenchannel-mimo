@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Ao utilizar este repositório, cite o projeto e o artigo-base do Inatel."
+title: "ENZ Eigenchannel MIMO"
+type: software
+authors:
+  - family-names: "Simão"
+    given-names: "Geraldo César"
+repository-code: "https://github.com/Gecesars/ENZ-Eigenchannel-mimo"
+license: "Apache-2.0"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Vilas Boas"
+      given-names: "Evandro C."
+    - family-names: "de Vasconcellos"
+      given-names: "Sofia B."
+    - family-names: "Sodré Jr."
+      given-names: "Arismar Cerqueira"
+    - family-names: "de Figueiredo"
+      given-names: "Felipe Augusto Pereira"
+  title: "A Millimeter-Wave Flat-Top Fan-Beam Antenna Array Based on a Geometry-Independent Resonant Cavity"
+  journal: "IEEE Open Journal of Antennas and Propagation"
+  year: 2026
+  doi: "10.1109/OJAP.2026.3703713"

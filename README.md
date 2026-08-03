@@ -238,37 +238,109 @@ Para banda larga e OFDM, a análise será feita por frequência, subportadora ou
 - mediana e percentil 5% de capacidade;
 - outage;
 - rank efetivo;
-- estabilidade sob bloqueio e movimento;
-- treinamento necessário;
-- eficiência energética;
-- densidade de graus de liberdade por volume.
-
-A capacidade depende da matriz de canal. A antena não “gera throughput” isoladamente; ela modifica acoplamento, eficiência, padrões, polarização, SNR, correlação e overhead.
+- condição numérica;
+- distribuição dos valores singulares;
+- custo de treinamento;
+- potência aceita;
+- eficiência;
+- volume e complexidade.
 
 ---
 
 ## 8. Estrutura documental
 
-O índice integral está em [`docs/INDEX.md`](docs/INDEX.md). O corpus inclui fundamentos maxwellianos, guia de onda e ENZ estrutural, invariância geométrica, dopagem fotônica, síntese de abertura, teoria modal, multiportas, padrões embarcados, teoria da informação eletromagnética, operadores e autocanais, limites físicos, modelos de canal, otimização inversa, hipóteses originais, arquitetura HFSS/gRPC, validação numérica e experimental, revisão patentária e plano de publicações.
+```text
+.
+├── README.md
+├── ROADMAP.md
+├── CREDITOS.md
+├── CITATION.cff
+├── AGENTS.md
+├── CONTRIBUTING.md
+├── LICENSE.md
+├── docs/
+│   ├── 00_carta_cientifica.md
+│   ├── 01_artigo_base_inatel.md
+│   ├── 02_fundamentos_maxwellianos.md
+│   ├── 03_guia_retangular_e_enz_estrutural.md
+│   ├── 04_invariancia_geometrica.md
+│   ├── 05_dopagem_fotonica.md
+│   ├── 06_ranhuras_e_sintese_de_abertura.md
+│   ├── 07_teoria_modal_de_cavidades_abertas.md
+│   ├── 08_modelagem_multiporta.md
+│   ├── 09_padroes_embarcados_complexos.md
+│   ├── 10_teoria_da_informacao_eletromagnetica.md
+│   ├── 11_operadores_e_autocanais.md
+│   ├── 12_acoplamento_mutuo_e_rede_ativa.md
+│   ├── 13_diversidade_e_rank.md
+│   ├── 14_limites_fundamentais.md
+│   ├── 15_modelos_de_canal_mmwave.md
+│   ├── 16_objetivos_orientados_a_capacidade.md
+│   ├── 17_projeto_inverso_e_otimizacao.md
+│   ├── 18_hipoteses_originais.md
+│   ├── 19_arquiteturas_candidatas.md
+│   ├── 20_arquitetura_hfss_grpc.md
+│   ├── 21_validacao_eletromagnetica.md
+│   ├── 22_validacao_experimental.md
+│   ├── 23_dados_e_reprodutibilidade.md
+│   ├── 24_revisao_bibliografica_e_patentes.md
+│   ├── 25_matriz_de_evidencias.md
+│   ├── 26_benchmarks.md
+│   ├── 27_notacao_e_glossario.md
+│   ├── 28_perguntas_abertas.md
+│   └── 29_plano_de_publicacoes.md
+├── referencias/
+├── modelos/
+├── src/
+├── testes/
+└── artefatos/
+```
 
 ---
 
-## 9. Próximos passos formais
+## 9. Próximo marco: EM-VALIDATION-01
 
-O roadmap completo está em [`ROADMAP.md`](ROADMAP.md). Os três primeiros gates são:
+A primeira etapa executável consiste em:
 
-1. **EM-VALIDATION-01** — reproduzir independentemente o modelo de uma porta do artigo-base;
-2. **INVARIANCE-MANIFOLD-01** — mapear deformações que preservam ressonância e coerência de fase;
-3. **DUALPORT-CRITICAL-01** — provar ou refutar dois estados radiantes úteis em uma estrutura compartilhada.
+1. congelar uma especificação auditável do modelo do artigo;
+2. reproduzir a cavidade fechada em Eigenmode;
+3. reproduzir a antena em Driven Modal;
+4. verificar modos $TE_{10}$, $TM_{11}$ e parasitas;
+5. extrair $S_{11}$ complexo, impedância, campos internos e campos de abertura;
+6. exportar $E_\theta$ e $E_\phi$ complexos;
+7. realizar convergência de malha, fronteiras e domínio aberto;
+8. comparar quantitativamente com o artigo;
+9. registrar discrepâncias sem ajuste oculto;
+10. publicar o pacote de artefatos e o manifesto da execução.
 
-Nenhuma alegação de novidade multiporta será promovida antes da conclusão do primeiro gate.
+O runtime científico primário será **Ansys AEDT/HFSS 2024 R2**, controlado por **PyAEDT sobre a interface gRPC nativa do AEDT**.
 
 ---
 
 ## 10. Licenciamento
 
-- documentação original: **CC BY 4.0**;
-- código original: **Apache License 2.0**;
-- conteúdo de terceiros: permanece sob a licença da fonte.
+- documentação original deste repositório: **CC BY 4.0**;
+- código-fonte original: **Apache License 2.0**;
+- artigos e materiais de terceiros mantêm suas próprias licenças;
+- o artigo-base do Inatel é CC BY 4.0 e deve ser citado pelos autores e DOI originais.
 
-Consulte [`LICENSE.md`](LICENSE.md), [`CREDITOS.md`](CREDITOS.md) e [`CONTRIBUTING.md`](CONTRIBUTING.md).
+Consulte [`LICENSE.md`](LICENSE.md).
+
+---
+
+## 11. Contribuição
+
+Este é um projeto de pesquisa aberto. São especialmente valiosas contribuições em:
+
+- eletromagnetismo computacional;
+- teoria de modos e quasi-normal modes;
+- antenas ranhuradas;
+- ENZ e índice próximo de zero;
+- dopagem fotônica;
+- sistemas multiporta;
+- MIMO e modelos de canal mmWave;
+- otimização adjunta;
+- metrologia de antenas;
+- reprodução independente do artigo-base.
+
+Toda contribuição científica deve incluir hipótese, método, dados, limitações e rastreabilidade.

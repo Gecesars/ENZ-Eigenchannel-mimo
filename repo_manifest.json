@@ -1,0 +1,11 @@
+{
+  "schema": "enz-eigenchannel-mimo/repository-manifest/v1",
+  "language": "pt-BR",
+  "scientific_runtime": {
+    "primary_aedt": "2024.2",
+    "transport": "PyAEDT over native AEDT gRPC"
+  },
+  "status": "theory-and-validation-planning",
+  "base_paper_doi": "10.1109/OJAP.2026.3703713",
+  "next_gate": "EM-VALIDATION-01"
+}
