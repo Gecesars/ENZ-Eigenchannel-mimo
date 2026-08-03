@@ -27,7 +27,7 @@ Cada avaliação exige HFSS. Métodos:
 
 Para objetivo $J(\mathbf E,\mathbf g)$, o gradiente pode ser obtido com problema adjunto, reduzindo custo para muitas variáveis:
 
-$$
+```math
 \frac{dJ}{dg_i}
 =
 \frac{\partial J}{\partial g_i}
@@ -38,7 +38,7 @@ $$
 \frac{\partial\mathbf A}{\partial g_i}
 \mathbf e
 \right\}.
-$$
+```
 
 Implementação completa no HFSS pode exigir APIs de sensitividade ou exportação para solver próprio.
 
@@ -72,19 +72,19 @@ Validar incerteza do surrogate.
 
 Se $\boldsymbol\xi$ representa tolerâncias,
 
-$$
+```math
 \min_{\mathbf g}
 \mathbb E_\xi[J(\mathbf g,\xi)]
 +
 \lambda
 \mathrm{Std}_\xi[J].
-$$
+```
 
 Ou chance constraints:
 
-$$
+```math
 P(g_k(\mathbf g,\xi)\le0)\ge1-\epsilon.
-$$
+```
 
 ## 8. Monte Carlo
 

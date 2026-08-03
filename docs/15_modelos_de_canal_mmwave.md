@@ -8,14 +8,14 @@ Uma antena orientada a capacidade deve ser avaliada em conjunto de canais, não 
 
 Para $L$ caminhos,
 
-$$
+```math
 \mathbf H(f)=
 \sum_{\ell=1}^{L}
 \alpha_\ell
 \mathbf a_R(\Omega_{\ell,R},f)
 \mathbf a_T^H(\Omega_{\ell,T},f)
 e^{-j2\pi f\tau_\ell}.
-$$
+```
 
 Com padrões reais, os vetores de steering são substituídos por campos embarcados polarimétricos.
 
@@ -49,12 +49,12 @@ Modelos:
 
 ## 6. Mobilidade
 
-$$
+```math
 f_{D,\ell}
 =
 \frac{v}{\lambda}
 \cos\psi_\ell.
-$$
+```
 
 Padrões largos podem reduzir necessidade de tracking, mas aumentar interferência e diminuir SNR.
 

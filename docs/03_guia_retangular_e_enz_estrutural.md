@@ -4,7 +4,7 @@
 
 Para guia retangular preenchido por meio homogêneo, as frequências de corte são
 
-$$
+```math
 f_{c,mn}
 =
 \frac{c}{2\sqrt{\varepsilon_r\mu_r}}
@@ -12,43 +12,43 @@ f_{c,mn}
 \left(\frac{m}{a}\right)^2+
 \left(\frac{n}{b}\right)^2
 }.
-$$
+```
 
 O modo dominante usual é $TE_{10}$:
 
-$$
+```math
 f_c=\frac{c}{2a\sqrt{\varepsilon_r\mu_r}}.
-$$
+```
 
 Acima do corte,
 
-$$
+```math
 \beta=
 k_0\sqrt{
 \varepsilon_r\mu_r-
 \left(\frac{f_c}{f}\right)^2
 }.
-$$
+```
 
 ## 2. Permissividade efetiva
 
 Para o modo $TE_{10}$ em guia com $\mu_r\approx1$, é possível escrever uma analogia:
 
-$$
+```math
 \varepsilon_{\mathrm{eff}}(f)
 =
 \varepsilon_r
 -
 \left(\frac{f_c}{f}\right)^2.
-$$
+```
 
 Quando $f\rightarrow f_c^+$,
 
-$$
+```math
 \varepsilon_{\mathrm{eff}}\rightarrow0^+,
 \qquad
 \beta\rightarrow0.
-$$
+```
 
 Isso é uma emulação modal de ENZ, não significa que o ar adquiriu permissividade material nula. O efeito depende da dispersão estrutural e do modo.
 
@@ -56,23 +56,23 @@ Isso é uma emulação modal de ENZ, não significa que o ar adquiriu permissivi
 
 A velocidade de fase é
 
-$$
+```math
 v_p=\frac{\omega}{\beta},
-$$
+```
 
 e cresce próximo ao corte. A velocidade de grupo, para guia ideal,
 
-$$
+```math
 v_g=c\sqrt{1-\left(\frac{f_c}{f}\right)^2},
-$$
+```
 
 tende a zero. Não há violação de causalidade: energia e informação seguem a velocidade de grupo e a resposta dispersiva.
 
 A impedância modal TE é
 
-$$
+```math
 Z_{TE}=\frac{\omega\mu}{\beta},
-$$
+```
 
 que cresce próximo ao corte. Essa incompatibilidade de impedância explica por que estruturas ENZ podem apresentar forte reflexão sem mecanismo de matching.
 
@@ -80,15 +80,15 @@ que cresce próximo ao corte. Essa incompatibilidade de impedância explica por 
 
 Ao longo de comprimento $L$,
 
-$$
+```math
 \Delta\phi=\beta L.
-$$
+```
 
 Uma condição prática de quase uniformidade pode ser
 
-$$
+```math
 |\beta L|<\phi_{\max},
-$$
+```
 
 por exemplo 10° ou 20°, mas o limiar deve ser associado à métrica de desempenho, não escolhido arbitrariamente.
 
@@ -96,9 +96,9 @@ por exemplo 10° ou 20°, mas o limiar deve ser associado à métrica de desempe
 
 Em guia real,
 
-$$
+```math
 \beta_c=\beta-j\alpha,
-$$
+```
 
 onde $\alpha$ inclui perdas condutivas, dielétricas e de radiação. Próximo ao corte, a relação entre energia armazenada e fluxo de potência aumenta, podendo amplificar perdas. Rugosidade e condutividade do alumínio tornam-se importantes em 26 GHz.
 

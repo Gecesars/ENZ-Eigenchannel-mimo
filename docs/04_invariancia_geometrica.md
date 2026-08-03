@@ -10,10 +10,10 @@ A afirmação correta é que existe um conjunto de transformações sob as quais
 
 Defina
 
-$$
+```math
 \mathbf g=
 [g_1,g_2,\ldots,g_N]^T,
-$$
+```
 
 incluindo:
 
@@ -28,7 +28,7 @@ incluindo:
 
 A resposta é um vetor
 
-$$
+```math
 \mathbf y(\mathbf g)=
 [
 f_r,
@@ -39,21 +39,21 @@ S_{11},
 \mathbf a_{\mathrm{slot}},
 \mathbf F
 ].
-$$
+```
 
 ## 3. Restrição de área
 
 No artigo-base, a principal transformação preserva
 
-$$
+```math
 A_c=W_cH_c=108\text{ mm}^2.
-$$
+```
 
 Assim,
 
-$$
+```math
 H_c=\frac{A_c}{W_c}.
-$$
+```
 
 Essa restrição define uma curva em espaço bidimensional, mas a estrutura completa possui mais dimensões. Preservar área não garante automaticamente preservação de volume, impedância, modo ou abertura.
 
@@ -61,19 +61,19 @@ Essa restrição define uma curva em espaço bidimensional, mas a estrutura comp
 
 Para pequena perturbação $\delta\mathbf g$,
 
-$$
+```math
 \delta f_r
 \approx
 \nabla_{\mathbf g}f_r
 \cdot
 \delta\mathbf g.
-$$
+```
 
 Uma direção quase invariante $\mathbf v$ satisfaz
 
-$$
+```math
 \nabla_{\mathbf g}f_r\cdot\mathbf v\approx0.
-$$
+```
 
 O conjunto dessas direções forma um subespaço tangente local.
 
@@ -81,21 +81,21 @@ O conjunto dessas direções forma um subespaço tangente local.
 
 Se a derivada de primeira ordem for pequena, a curvatura importa:
 
-$$
+```math
 \delta f_r
 \approx
 \frac12
 \delta\mathbf g^T
 \mathbf H_f
 \delta\mathbf g,
-$$
+```
 
 onde
 
-$$
+```math
 \mathbf H_f=
 \nabla_{\mathbf g}^2f_r.
-$$
+```
 
 Uma direção pode parecer invariante em pequenas variações e falhar em deformações maiores.
 
@@ -103,7 +103,7 @@ Uma direção pode parecer invariante em pequenas variações e falhar em deform
 
 Para perturbações materiais pequenas, a variação de frequência pode ser aproximada por
 
-$$
+```math
 \frac{\Delta\omega}{\omega}
 \approx
 -\frac12
@@ -121,7 +121,7 @@ $$
 \mu|\mathbf H|^2
 \right)dV
 }.
-$$
+```
 
 Para deformações de fronteira, surgem integrais de superfície envolvendo componentes tangenciais e normais. Em cavidades abertas, deve-se usar formulações não hermitianas ou diferenças finitas validadas.
 
@@ -129,7 +129,7 @@ Para deformações de fronteira, surgem integrais de superfície envolvendo comp
 
 Defina um conjunto
 
-$$
+```math
 \mathcal M_\delta=
 \left\{
 \mathbf g:
@@ -139,11 +139,11 @@ $$
 \;
 \eta>\eta_{\min}
 \right\}.
-$$
+```
 
 A pesquisa procura regiões de $\mathcal M_\delta$ onde o padrão varie fortemente:
 
-$$
+```math
 \left\|
 \frac{\partial\mathbf F}{\partial\mathbf g}
 \right\|
@@ -153,7 +153,7 @@ $$
 \frac{\partial f_r}{\partial\mathbf g}
 \right|
 \text{ pequeno}.
-$$
+```
 
 Essa é a liberdade útil para codificação geométrica.
 

@@ -71,7 +71,7 @@ Refinamento em:
 
 Convergência simultânea:
 
-$$
+```math
 \Delta f_r,
 \quad
 \Delta S_{11},
@@ -81,7 +81,7 @@ $$
 \Delta BW_{1dB},
 \quad
 \Delta\sigma_\phi.
-$$
+```
 
 ## 7. Domínio aberto
 
@@ -107,7 +107,7 @@ Casos:
 
 Verificar:
 
-$$
+```math
 P_{\mathrm{inc}}
 =
 P_{\mathrm{ref}}
@@ -117,7 +117,7 @@ P_{\mathrm{rad}}
 P_{\mathrm{loss}}
 +
 P_{\mathrm{guided,out}}.
-$$
+```
 
 Erro numérico deve ser documentado.
 

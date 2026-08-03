@@ -10,9 +10,9 @@ Em um hospedeiro ENZ ideal, o campo magnético pode aproximar-se de uma distribu
 
 Próximo ao corte, a impedância TE pode ser elevada:
 
-$$
+```math
 Z_{TE}=\frac{\omega\mu}{\beta}.
-$$
+```
 
 Sem matching, a potência é refletida. O dopante oferece um mecanismo de compensação reativa e transformação de impedância sem uma rede externa convencional.
 
@@ -29,11 +29,11 @@ Em formulações bidimensionais, a cavidade dopada pode ser representada por uma
 
 O matching requer simultaneamente:
 
-$$
+```math
 \Re\{Z_{\mathrm{in}}\}=Z_0,
 \qquad
 \Im\{Z_{\mathrm{in}}\}=0.
-$$
+```
 
 O dopante pode ajustar a parte reativa e alterar o acoplamento com as aberturas.
 
@@ -64,14 +64,14 @@ Neste projeto, dopantes podem ter funções adicionais:
 
 Defina o conjunto de dopantes
 
-$$
+```math
 \mathcal D=
 \{D_1,\ldots,D_K\},
-$$
+```
 
 com
 
-$$
+```math
 D_k=
 [
 \varepsilon_{r,k},
@@ -79,18 +79,18 @@ D_k=
 x_k,y_k,z_k,
 l_k,w_k,h_k
 ].
-$$
+```
 
 ## 6. Matriz de transformação
 
 A cavidade pode ser vista como operador:
 
-$$
+```math
 \mathbf a_{\mathrm{apertura}}
 =
 \mathbf T_{\mathrm{cav}}(f)
 \mathbf v_{\mathrm{portas}}.
-$$
+```
 
 Os dopantes alteram $\mathbf T_{\mathrm{cav}}$. O objetivo é obter colunas da matriz que produzam estados de abertura distintos e eficientes.
 

@@ -14,9 +14,9 @@ Para radiador eletricamente pequeno, limites de Chu–Harrington relacionam $Q$ 
 
 Uma aproximação comum:
 
-$$
+```math
 B_f\propto\frac1Q.
-$$
+```
 
 Matching de múltiplas ressonâncias pode ampliar banda, mas adiciona modos e sensibilidade.
 
@@ -30,9 +30,9 @@ O número de modos radiantes significativos de uma região finita é limitado po
 
 Uma estimativa assintótica para uma abertura plana envolve área em comprimentos de onda:
 
-$$
+```math
 N_{\mathrm{DoF}}\sim\frac{2A}{\lambda^2}
-$$
+```
 
 para certas polarizações e regiões angulares, mas o coeficiente depende da geometria e do domínio.
 
@@ -42,10 +42,10 @@ Os autovalores da matriz de resistência radiativa indicam modos eficientes. Mod
 
 ## 6. Eficiência
 
-$$
+```math
 \eta=
 \frac{P_r}{P_r+P_c+P_d}.
-$$
+```
 
 Em mmWave:
 
@@ -66,7 +66,7 @@ Em uma direção plana, existem duas polarizações transversais independentes. 
 
 Uma métrica exploratória:
 
-$$
+```math
 \mathcal D_{EM}
 =
 \frac{
@@ -74,13 +74,13 @@ r_{\mathrm{eff}}\eta B_f
 }{
 V/\lambda^3
 }.
-$$
+```
 
 Não é métrica padronizada e deve ser rotulada como proposta.
 
 ## 9. Capacidade por hardware
 
-$$
+```math
 \mathcal D_C
 =
 \frac{
@@ -88,7 +88,7 @@ C_{5\%}
 }{
 N_{\mathrm{RF}}P_{DC}V
 }.
-$$
+```
 
 Útil para comparar solução passiva e phased array.
 

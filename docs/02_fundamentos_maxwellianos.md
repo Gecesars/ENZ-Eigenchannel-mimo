@@ -4,29 +4,29 @@
 
 Assumindo convenção temporal $e^{j\omega t}$,
 
-$$
+```math
 \nabla\times\mathbf E=-j\omega\mathbf B,
-$$
+```
 
-$$
+```math
 \nabla\times\mathbf H=\mathbf J+j\omega\mathbf D,
-$$
+```
 
-$$
+```math
 \nabla\cdot\mathbf D=\rho,
 \qquad
 \nabla\cdot\mathbf B=0.
-$$
+```
 
 Em meios lineares locais,
 
-$$
+```math
 \mathbf D=\bar{\bar\varepsilon}\mathbf E,
 \qquad
 \mathbf B=\bar{\bar\mu}\mathbf H,
 \qquad
 \mathbf J=\bar{\bar\sigma}\mathbf E+\mathbf J_s.
-$$
+```
 
 A estrutura real inclui condutores, dielétricos dispersivos, perdas e fronteiras abertas. Portanto, o operador eletromagnético é, em geral, não hermitiano quando há radiação ou dissipação.
 
@@ -34,7 +34,7 @@ A estrutura real inclui condutores, dielétricos dispersivos, perdas e fronteira
 
 Eliminando $\mathbf H$,
 
-$$
+```math
 \nabla\times
 \left(
 \bar{\bar\mu}^{-1}
@@ -44,11 +44,11 @@ $$
 \omega^2\bar{\bar\varepsilon}\mathbf E
 =
 -j\omega\mathbf J_s.
-$$
+```
 
 No problema de autovalor sem fonte,
 
-$$
+```math
 \nabla\times
 \left(
 \bar{\bar\mu}^{-1}
@@ -57,53 +57,53 @@ $$
 =
 \tilde\omega_n^2
 \bar{\bar\varepsilon}\mathbf E_n.
-$$
+```
 
 Em cavidade fechada ideal, $\tilde\omega_n$ pode ser real. Em cavidade aberta ou com perdas,
 
-$$
+```math
 \tilde\omega_n=\omega_n-j\gamma_n,
-$$
+```
 
 e o fator de qualidade é aproximadamente
 
-$$
+```math
 Q_n=\frac{\omega_n}{2\gamma_n}.
-$$
+```
 
 ## 3. Energia e potência
 
 A densidade média de potência é dada pelo vetor de Poynting complexo,
 
-$$
+```math
 \mathbf S_c=\frac12\mathbf E\times\mathbf H^*.
-$$
+```
 
 A potência média atravessando uma superfície é
 
-$$
+```math
 P=\Re\left\{
 \int_S \mathbf S_c\cdot d\mathbf S
 \right\}.
-$$
+```
 
 Para meios dispersivos, as expressões de energia devem incluir derivadas das constitutivas. Uma forma aproximada, em meio isotrópico com perdas pequenas, é
 
-$$
+```math
 W_e=
 \frac14
 \int_V
 \frac{\partial(\omega\varepsilon')}{\partial\omega}
 |\mathbf E|^2\,dV,
-$$
+```
 
-$$
+```math
 W_m=
 \frac14
 \int_V
 \frac{\partial(\omega\mu')}{\partial\omega}
 |\mathbf H|^2\,dV.
-$$
+```
 
 Próximo ao corte, a velocidade de grupo reduzida e o armazenamento de energia podem tornar a estrutura sensível a perdas e tolerâncias.
 
@@ -111,11 +111,11 @@ Próximo ao corte, a velocidade de grupo reduzida e o armazenamento de energia p
 
 O campo pode ser expandido em modos:
 
-$$
+```math
 \mathbf E(\mathbf r,\omega)
 \approx
 \sum_n c_n(\omega)\mathbf e_n(\mathbf r).
-$$
+```
 
 Os coeficientes dependem de:
 
@@ -129,10 +129,10 @@ Os coeficientes dependem de:
 
 Para uma estrutura multiporta, cada porta produz um vetor distinto de coeficientes modais:
 
-$$
+```math
 \mathbf c^{(m)}=
 [c_1^{(m)},c_2^{(m)},\ldots]^T.
-$$
+```
 
 A diversidade de padrões pode surgir se diferentes portas excitarem combinações modais suficientemente diferentes.
 
@@ -140,24 +140,24 @@ A diversidade de padrões pode surgir se diferentes portas excitarem combinaçõ
 
 Em operadores hermitianos, modos distintos são ortogonais sob um produto interno energético. Em estruturas abertas e dissipativas, pode ser necessário usar modos direitos e esquerdos:
 
-$$
+```math
 \mathcal L\mathbf e_n^R
 =
 \lambda_n\mathbf e_n^R,
-$$
+```
 
-$$
+```math
 \mathcal L^\dagger\mathbf e_n^L
 =
 \lambda_n^*\mathbf e_n^L,
-$$
+```
 
 com relação biortogonal
 
-$$
+```math
 \langle\mathbf e_m^L,\mathbf e_n^R\rangle
 \propto\delta_{mn}.
-$$
+```
 
 Esse formalismo é importante para perturbação de forma e sensibilidade de modos quase degenerados.
 
@@ -165,9 +165,9 @@ Esse formalismo é importante para perturbação de forma e sensibilidade de mod
 
 Para estruturas lineares, passivas e recíprocas sem polarização magnética não recíproca, a matriz de espalhamento satisfaz idealmente
 
-$$
+```math
 \mathbf S=\mathbf S^T.
-$$
+```
 
 No domínio de campos, a reciprocidade relaciona fontes e observações. Ela permite interpretar o padrão de transmissão de uma porta como sensibilidade de recepção da mesma porta.
 
@@ -175,9 +175,9 @@ No domínio de campos, a reciprocidade relaciona fontes e observações. Ela per
 
 Uma abertura em parede PEC pode ser substituída por corrente magnética equivalente
 
-$$
+```math
 \mathbf M_s=-2\hat{\mathbf n}\times\mathbf E_a
-$$
+```
 
 em formulação de equivalência apropriada. O campo distante é uma transformação integral da distribuição complexa de abertura. Portanto, controlar amplitude e fase nas ranhuras equivale a controlar os coeficientes de radiação.
 

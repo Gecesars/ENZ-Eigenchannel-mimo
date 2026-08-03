@@ -97,9 +97,9 @@ Incluir:
 
 Incerteza expandida:
 
-$$
+```math
 U=k u_c,
-$$
+```
 
 tipicamente com $k=2$ quando apropriado.
 

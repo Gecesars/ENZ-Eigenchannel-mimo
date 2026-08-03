@@ -6,7 +6,7 @@ Minimizar $S_{11}$ ou maximizar ganho em um ângulo não garante bom desempenho 
 
 ## 2. Objetivo log-det
 
-$$
+```math
 J_C(\mathbf g)
 =
 -\mathbb E_{\mathcal C}
@@ -19,30 +19,30 @@ J_C(\mathbf g)
 \mathbf H(\mathbf g)\mathbf H^H(\mathbf g)
 \right)
 \right].
-$$
+```
 
 ## 3. Percentis
 
 Para robustez:
 
-$$
+```math
 J=
 -w_{50}C_{50}
 -w_5C_5
 +w_oP_{\mathrm{out}}.
-$$
+```
 
 ## 4. Valores singulares
 
 Pode-se maximizar o menor valor singular:
 
-$$
+```math
 J_{\min}=-\mathbb E[\sigma_{\min}^2].
-$$
+```
 
 Ou equilibrar:
 
-$$
+```math
 J_{\mathrm{bal}}
 =
 \mathbb E
@@ -52,11 +52,11 @@ J_{\mathrm{bal}}
 \log\sigma_i-\overline{\log\sigma}
 \right)^2
 \right].
-$$
+```
 
 ## 5. Multiobjetivo EM
 
-$$
+```math
 J_{\mathrm{EM}}
 =
 w_1L_{\mathrm{match}}
@@ -65,17 +65,17 @@ w_1L_{\mathrm{match}}
 +w_4L_{\mathrm{gain}}
 +w_5L_{\mathrm{eff}}
 +w_6L_{\mathrm{tol}}.
-$$
+```
 
 ## 6. Função conjunta
 
-$$
+```math
 J=
 J_C+
 \lambda_{\mathrm{EM}}J_{\mathrm{EM}}
 +\lambda_VV
 +\lambda_MM.
-$$
+```
 
 $M$ pode representar massa, complexidade ou custo.
 

@@ -4,17 +4,17 @@
 
 Para $M$ portas,
 
-$$
+```math
 \mathbf b=\mathbf S\mathbf a,
-$$
+```
 
 onde $\mathbf a$ são ondas incidentes e $\mathbf b$ ondas refletidas.
 
 A matriz
 
-$$
+```math
 \mathbf S(f)\in\mathbb C^{M\times M}
-$$
+```
 
 deve ser extraída com referência de impedância e plano de referência declarados.
 
@@ -22,15 +22,15 @@ deve ser extraída com referência de impedância e plano de referência declara
 
 Para estrutura recíproca ideal,
 
-$$
+```math
 S_{ij}=S_{ji}.
-$$
+```
 
 Para passividade,
 
-$$
+```math
 \mathbf S^H\mathbf S\preceq\mathbf I
-$$
+```
 
 quando as portas representam todos os canais guiados e as perdas/radiação removem potência.
 
@@ -38,13 +38,13 @@ quando as portas representam todos os canais guiados e as perdas/radiação remo
 
 Com excitação simultânea $\mathbf a$,
 
-$$
+```math
 \Gamma_{m,\mathrm{ativa}}
 =
 \frac{b_m}{a_m}
 =
 \frac{\sum_nS_{mn}a_n}{a_m}.
-$$
+```
 
 Uma porta bem casada isoladamente pode ficar mal casada sob combinação de fases.
 
@@ -52,46 +52,46 @@ Uma porta bem casada isoladamente pode ficar mal casada sob combinação de fase
 
 O Total Active Reflection Coefficient é
 
-$$
+```math
 \mathrm{TARC}
 =
 \sqrt{
 \frac{\mathbf b^H\mathbf b}
 {\mathbf a^H\mathbf a}
 }.
-$$
+```
 
 Deve ser avaliado para combinações relevantes de amplitude e fase, não apenas uma combinação.
 
 ## 5. Matriz de impedância
 
-$$
+```math
 \mathbf Z=
 Z_0
 (\mathbf I+\mathbf S)
 (\mathbf I-\mathbf S)^{-1}.
-$$
+```
 
 Autovetores de $\mathbf Z$ ou $\mathbf S$ podem revelar combinações naturais de portas.
 
 ## 6. Modos de espalhamento
 
-$$
+```math
 \mathbf S\mathbf q_m
 =
 \lambda_m\mathbf q_m.
-$$
+```
 
 Excitar $\mathbf q_m$ pode produzir um estado coletivo. Entretanto, ortogonalidade terminal não garante ortogonalidade de radiação.
 
 ## 7. Potência aceita
 
-$$
+```math
 P_{\mathrm{acc}}
 =
 \mathbf a^H\mathbf a-
 \mathbf b^H\mathbf b.
-$$
+```
 
 A comparação de ganho e capacidade deve normalizar por potência aceita, e não apenas potência incidente.
 

@@ -4,9 +4,9 @@
 
 Uma ranhura em uma parede metálica interrompe a corrente superficial e acopla o campo interno ao espaço livre. Pelo princípio de equivalência, o campo na abertura pode ser representado por corrente magnética equivalente
 
-$$
+```math
 \mathbf M_s=-2\hat{\mathbf n}\times\mathbf E_a.
-$$
+```
 
 A amplitude e a fase de $\mathbf E_a$ determinam a contribuição radiada.
 
@@ -14,14 +14,14 @@ A amplitude e a fase de $\mathbf E_a$ determinam a contribuição radiada.
 
 Para $N$ ranhuras,
 
-$$
+```math
 \mathbf F(\Omega)
 =
 \sum_{n=1}^{N}
 a_n
 \mathbf f_n(\Omega)
 e^{jk_0\hat{\mathbf r}\cdot\mathbf r_n},
-$$
+```
 
 onde $a_n$ contém amplitude e fase de acoplamento. Em uma cavidade ENZ inspirada, a fase interna tende a variar pouco, mas:
 
@@ -40,7 +40,7 @@ Um padrão flat-top exige distribuição de abertura que compense a tendência n
 
 Uma função objetivo pode ser
 
-$$
+```math
 J_{\mathrm{flat}}
 =
 \int_{\Omega_s}
@@ -51,19 +51,19 @@ G(\Omega)-G_0
 \lambda_{\mathrm{out}}
 \int_{\Omega\notin\Omega_s}
 G(\Omega)d\Omega.
-$$
+```
 
 ## 5. Ripple
 
 No setor $\Omega_s$,
 
-$$
+```math
 R_{\mathrm{dB}}
 =
 \max_{\Omega_s}G_{\mathrm{dB}}
 -
 \min_{\Omega_s}G_{\mathrm{dB}}.
-$$
+```
 
 A métrica deve ser calculada por frequência. Um bom ripple na frequência central não garante estabilidade na banda.
 
@@ -75,12 +75,12 @@ A métrica deve ser calculada por frequência. Um bom ripple na frequência cent
 
 ## 7. Sidelobe level
 
-$$
+```math
 SLL=
 G_{\mathrm{lóbulo\ lateral,max}}
 -
 G_{\mathrm{principal,max}}.
-$$
+```
 
 Em flat-top, identificar o fim do lóbulo principal exige critério consistente, pois o topo é largo.
 
@@ -88,22 +88,22 @@ Em flat-top, identificar o fim do lóbulo principal exige critério consistente,
 
 No HFSS, criar superfícies de amostragem em cada abertura e calcular:
 
-$$
+```math
 A_n=
 \left|
 \int_{S_n}
 \mathbf E_t\cdot\hat{\mathbf u}\,dS
 \right|,
-$$
+```
 
-$$
+```math
 \phi_n=
 \arg
 \left[
 \int_{S_n}
 \mathbf E_t\cdot\hat{\mathbf u}\,dS
 \right].
-$$
+```
 
 Registrar também potência radiada local e corrente superficial.
 
@@ -111,13 +111,13 @@ Registrar também potência radiada local e corrente superficial.
 
 Dado um padrão desejado, pode-se calcular uma distribuição de abertura alvo e otimizar a geometria para aproximá-la. A cadeia é:
 
-$$
+```math
 F_{\mathrm{alvo}}
 \rightarrow
 a_{n,\mathrm{alvo}}
 \rightarrow
 \text{geometria da cavidade}.
-$$
+```
 
 Essa é uma forma de projeto inverso com restrições físicas e modais.
 
@@ -125,9 +125,9 @@ Essa é uma forma de projeto inverso com restrições físicas e modais.
 
 Para cada porta $m$,
 
-$$
+```math
 \mathbf a^{(m)}=
 [a_1^{(m)},\ldots,a_N^{(m)}]^T.
-$$
+```
 
 A diversidade depende da independência entre esses vetores sob o operador de radiação. Não basta trocar a porta se as distribuições $\mathbf a^{(m)}$ forem proporcionais.

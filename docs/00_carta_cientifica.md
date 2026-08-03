@@ -4,34 +4,34 @@
 
 O objeto de estudo não é simplesmente “uma antena ENZ MIMO”. Essa expressão é ampla demais e pode ocultar a questão científica real. O objeto é o conjunto de operadores que transforma excitações terminais em correntes, campos radiados e, por fim, canais de comunicação:
 
-$$
+```math
 \mathcal T_{\mathrm{porta}\rightarrow\mathrm{corrente}},
 \qquad
 \mathcal R_{\mathrm{corrente}\rightarrow\mathrm{campo}},
 \qquad
 \mathcal P_{\mathrm{campo}\rightarrow\mathrm{canal}}.
-$$
+```
 
 Para $M$ portas,
 
-$$
+```math
 \mathbf a_t=
 [a_1,\ldots,a_M]^T
-$$
+```
 
 define as ondas incidentes nos terminais. A estrutura passiva produz correntes
 
-$$
+```math
 \mathbf J(\mathbf r)=
 \sum_{m=1}^{M}a_m\mathbf J_m(\mathbf r),
-$$
+```
 
 e campos embarcados
 
-$$
+```math
 \mathbf F(\Omega)=
 \sum_{m=1}^{M}a_m\mathbf F_m(\Omega).
-$$
+```
 
 O ambiente de propagação e o receptor mapeiam esses campos na matriz de canal $\mathbf H$. A pesquisa procura geometrias, portas e perturbações para as quais os dois primeiros operadores formem uma base eficiente e robusta, capaz de melhorar os valores singulares do terceiro operador em um conjunto de ambientes explicitamente definido.
 
@@ -54,9 +54,9 @@ O ambiente de propagação e o receptor mapeiam esses campos na matriz de canal 
 
 Existe um conjunto local não trivial de deformações $\mathbf g$ para o qual
 
-$$
+```math
 \left|\frac{\partial f_r}{\partial \mathbf g}\right|
-$$
+```
 
 é pequeno, enquanto a distribuição de amplitude nas ranhuras varia de forma significativa.
 
@@ -74,12 +74,12 @@ Uma estrutura compartilhada ou fortemente acoplada pode sustentar duas excitaç�
 
 A geometria ótima para maximizar
 
-$$
+```math
 \mathbb E[
 \log_2\det(
 \mathbf I+\rho\mathbf H\mathbf H^H/N_t
 )]
-$$
+```
 
 não coincide, em geral, com a geometria ótima para minimizar $S_{11}$, maximizar ganho de boresight ou minimizar ECC isotrópica.
 

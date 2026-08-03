@@ -12,18 +12,18 @@ Em arrays convencionais, reduzir $S_{ij}$ é uma meta comum. Entretanto, acoplam
 
 ## 2. Matriz de impedância
 
-$$
+```math
 \mathbf V=\mathbf Z\mathbf I.
-$$
+```
 
 Escreva
 
-$$
+```math
 \mathbf Z=
 \mathbf R_r+
 \mathbf R_\ell+
 j\mathbf X.
-$$
+```
 
 - $\mathbf R_r$: radiação;
 - $\mathbf R_\ell$: perdas;
@@ -31,24 +31,24 @@ $$
 
 ## 3. Potência
 
-$$
+```math
 P_{\mathrm{acc}}
 =
 \frac12
 \mathbf I^H
 (\mathbf R_r+\mathbf R_\ell)
 \mathbf I.
-$$
+```
 
-$$
+```math
 P_r=
 \frac12
 \mathbf I^H\mathbf R_r\mathbf I.
-$$
+```
 
 Eficiência para estado $\mathbf I$:
 
-$$
+```math
 \eta(\mathbf I)
 =
 \frac{
@@ -56,17 +56,17 @@ $$
 }{
 \mathbf I^H(\mathbf R_r+\mathbf R_\ell)\mathbf I
 }.
-$$
+```
 
 ## 4. Estados próprios
 
 Resolver
 
-$$
+```math
 \mathbf Z\mathbf q_n
 =
 z_n\mathbf q_n
-$$
+```
 
 ou uma formulação generalizada pode revelar estados naturais. A excitação terminal necessária deve ser realizável.
 
@@ -99,11 +99,11 @@ Mas pode também tornar portas redundantes.
 
 Para duas portas iguais,
 
-$$
+```math
 \mathbf a=
 \frac1{\sqrt2}
 [1,e^{j\phi}]^T.
-$$
+```
 
 Avaliar $\mathrm{TARC}(\phi)$ para $0\le\phi<2\pi$. Para quatro portas, usar amostragem de hiperesfera de fases ou estados de precoding.
 
@@ -123,7 +123,7 @@ Uma rede externa pode melhorar matching, mas adiciona perda e complexidade. O m�
 
 Uma função de custo pode incluir
 
-$$
+```math
 J=
 w_1\mathrm{TARC}
 +w_2(1-\eta)
@@ -131,7 +131,7 @@ w_1\mathrm{TARC}
 +w_4\kappa(\mathbf H)
 +w_5Q
 +w_6\sigma_{\mathrm{tol}}.
-$$
+```
 
 ## 10. Regra
 

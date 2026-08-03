@@ -26,15 +26,15 @@ Em banda larga, diferentes frequências observam canais distintos, mas isso não
 
 Em canal LoS distante, elementos co-localizados com padrões idênticos tendem a rank baixo. Para arrays uniformes Tx/Rx, uma condição aproximada de espaçamento para LoS MIMO é
 
-$$
+```math
 d_Td_R\approx\frac{\lambda R}{N}.
-$$
+```
 
 Para $d_T=d_R=d$,
 
-$$
+```math
 d\approx\sqrt{\frac{\lambda R}{N}}.
-$$
+```
 
 Em 25,87 GHz, $\lambda_0\approx11,59$ mm. Para $N=4$:
 
@@ -63,14 +63,14 @@ A escolha depende do canal e da montagem. A polarização deve ser avaliada com 
 
 O sistema não deve forçar quatro streams. Defina limiar por valores singulares:
 
-$$
+```math
 r^\star=
 \max\left\{
 r:
 \mathrm{SINR}_i>\gamma_{\min},
 i\le r
 \right\}.
-$$
+```
 
 ## 6. Diversidade versus multiplexação
 

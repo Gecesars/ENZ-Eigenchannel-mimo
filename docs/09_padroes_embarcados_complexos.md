@@ -4,13 +4,13 @@
 
 O padrão embarcado da porta $m$ é obtido excitando essa porta e terminando as demais. É uma grandeza vetorial complexa:
 
-$$
+```math
 \mathbf F_m(\theta,\phi,f)
 =
 E_{\theta,m}\hat{\boldsymbol\theta}
 +
 E_{\phi,m}\hat{\boldsymbol\phi}.
-$$
+```
 
 Magnitude normalizada não é suficiente para MIMO. Fase absoluta relativa, polarização e potência precisam ser preservadas.
 
@@ -29,7 +29,7 @@ A comparação entre portas deve usar a mesma convenção.
 
 Para ambiente isotrópico,
 
-$$
+```math
 \rho_{ij}
 =
 \frac{
@@ -45,13 +45,13 @@ $$
 \int_{4\pi}\|\mathbf F_j\|^2d\Omega
 \right]
 }.
-$$
+```
 
 ## 4. Correlação ponderada
 
 Em ambiente real,
 
-$$
+```math
 \rho_{ij}^{(P)}
 =
 \frac{
@@ -65,7 +65,7 @@ $$
 \int\mathbf F_i^H\mathbf P\mathbf F_i\,d\Omega
 \int\mathbf F_j^H\mathbf P\mathbf F_j\,d\Omega
 }.
-$$
+```
 
 $\mathbf P$ pode representar espectro angular e acoplamento polarimétrico.
 
@@ -73,11 +73,11 @@ $\mathbf P$ pode representar espectro angular e acoplamento polarimétrico.
 
 Defina
 
-$$
+```math
 G_{ij}
 =
 \langle\mathbf F_i,\mathbf F_j\rangle_P.
-$$
+```
 
 Os autovalores de $\mathbf G$ indicam quantas direções radiantes independentes existem sob o ambiente considerado.
 
@@ -93,21 +93,21 @@ Phase centers diferentes alteram a fase do padrão. Para comparar estados intern
 
 A decomposição deve incluir co- e cross-polarização conforme base definida. Para canais polarimétricos, usar matriz de espalhamento de cada caminho:
 
-$$
+```math
 \mathbf P_\ell=
 \begin{bmatrix}
 p_{\theta\theta}&p_{\theta\phi}\\
 p_{\phi\theta}&p_{\phi\phi}
 \end{bmatrix}.
-$$
+```
 
 ## 8. Discretização
 
 A integração esférica requer pesos:
 
-$$
+```math
 d\Omega=\sin\theta\,d\theta\,d\phi.
-$$
+```
 
 Uma grade uniforme em $\theta$ e $\phi$ não deve ser somada sem $\sin\theta$.
 

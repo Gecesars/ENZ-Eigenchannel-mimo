@@ -92,11 +92,11 @@ Gate mínimo:
 
 Alvo inicial:
 
-$$
+```math
 2\ \text{padrões}
 \times
 2\ \text{polarizações}.
-$$
+```
 
 Entregas:
 

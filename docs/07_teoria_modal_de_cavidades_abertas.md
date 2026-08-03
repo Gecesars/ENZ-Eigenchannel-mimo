@@ -4,22 +4,22 @@
 
 Uma cavidade PEC fechada suporta modos discretos sem perda de radiação. Ao abrir ranhuras, conectar guia e incluir perdas, os modos tornam-se ressonâncias abertas com frequências complexas.
 
-$$
+```math
 \tilde\omega_n=\omega_n-j\gamma_n.
-$$
+```
 
 O campo total pode ser decomposto em modos quase normais mais uma contribuição de fundo.
 
 ## 2. Fator de qualidade
 
-$$
+```math
 Q_n=
 \frac{\omega_n}{2\gamma_n}.
-$$
+```
 
 O $Q$ carregado combina:
 
-$$
+```math
 \frac1{Q_L}
 =
 \frac1{Q_c}
@@ -29,7 +29,7 @@ $$
 \frac1{Q_r}
 +
 \frac1{Q_e},
-$$
+```
 
 onde os termos representam perdas condutivas, dielétricas, radiativas e acoplamento externo.
 
@@ -37,13 +37,13 @@ onde os termos representam perdas condutivas, dielétricas, radiativas e acoplam
 
 Se dois modos estão próximos,
 
-$$
+```math
 \mathbf H_{\mathrm{eff}}=
 \begin{bmatrix}
 \omega_1-j\gamma_1 & \kappa\\
 \kappa & \omega_2-j\gamma_2
 \end{bmatrix}.
-$$
+```
 
 Os autovalores híbridos dependem de $\kappa$. Pinos metálicos podem reduzir ou redirecionar esse acoplamento.
 
@@ -55,13 +55,13 @@ Estados degenerados têm mesma frequência, mas campos distintos. Em uma cavidad
 
 Portas simétricas podem excitar combinações:
 
-$$
+```math
 \mathbf v_+=
 \frac1{\sqrt2}[1,1]^T,
 \qquad
 \mathbf v_-=
 \frac1{\sqrt2}[1,-1]^T.
-$$
+```
 
 Os estados par e ímpar podem apresentar distribuições de abertura e padrões distintos. Essa é uma rota promissora para a experiência dual-port.
 
@@ -69,7 +69,7 @@ Os estados par e ímpar podem apresentar distribuições de abertura e padrões 
 
 A participação de um modo $n$ sob porta $m$ pode ser estimada por sobreposição:
 
-$$
+```math
 c_n^{(m)}
 \propto
 \frac{
@@ -77,7 +77,7 @@ c_n^{(m)}
 }{
 \omega-\tilde\omega_n
 }.
-$$
+```
 
 No HFSS, a comparação entre Eigenmode e Driven Modal deve identificar quais modos participam da resposta.
 
@@ -89,28 +89,28 @@ Estruturas abertas podem apresentar coalescência de autovalores e autovetores e
 
 Para amplitudes modais $\mathbf a$,
 
-$$
+```math
 \frac{d\mathbf a}{dt}
 =
 (j\mathbf\Omega-\mathbf\Gamma)\mathbf a
 +
 \mathbf K^T\mathbf s_+,
-$$
+```
 
-$$
+```math
 \mathbf s_-=
 \mathbf C\mathbf s_+
 +
 \mathbf D\mathbf a.
-$$
+```
 
 No regime estacionário,
 
-$$
+```math
 \mathbf a=
 [j(\omega\mathbf I-\mathbf\Omega)+\mathbf\Gamma]^{-1}
 \mathbf K^T\mathbf s_+.
-$$
+```
 
 Esse modelo liga portas, modos, perdas e espalhamento.
 

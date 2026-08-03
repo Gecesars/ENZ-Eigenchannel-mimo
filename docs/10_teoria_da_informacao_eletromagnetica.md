@@ -4,10 +4,10 @@
 
 O modelo MIMO base é
 
-$$
+```math
 \mathbf y=
 \mathbf H\mathbf x+\mathbf n,
-$$
+```
 
 com:
 
@@ -22,7 +22,7 @@ A antena não é separável do canal: ela determina como os modos eletromagnéti
 
 Para ruído branco e potência igualmente distribuída,
 
-$$
+```math
 C=
 B\log_2\det
 \left[
@@ -30,27 +30,27 @@ B\log_2\det
 \frac{\rho}{N_t}
 \mathbf H\mathbf H^H
 \right].
-$$
+```
 
 Se houver CSI no transmissor e water filling,
 
-$$
+```math
 C=
 B\sum_i
 \log_2
 \left(
 1+\frac{p_i\sigma_i^2}{N_0B}
 \right),
-$$
+```
 
 onde $\sigma_i$ são valores singulares de $\mathbf H$.
 
 ## 3. SVD
 
-$$
+```math
 \mathbf H=
 \mathbf U\mathbf\Sigma\mathbf V^H.
-$$
+```
 
 As colunas de $\mathbf V$ são precoders espaciais; as colunas de $\mathbf U$ são combinadores; os valores de $\mathbf\Sigma$ definem os subcanais.
 
@@ -58,34 +58,34 @@ As colunas de $\mathbf V$ são precoders espaciais; as colunas de $\mathbf U$ s�
 
 Uma métrica contínua é
 
-$$
+```math
 \mathbf R=
 \mathbf H\mathbf H^H,
-$$
+```
 
-$$
+```math
 p_i=
 \frac{\lambda_i}{\sum_j\lambda_j},
-$$
+```
 
-$$
+```math
 r_{\mathrm{eff}}
 =
 \exp
 \left(
 -\sum_ip_i\ln p_i
 \right).
-$$
+```
 
 Rank algébrico pode ser quatro e rank efetivo próximo de um.
 
 ## 5. Condição
 
-$$
+```math
 \kappa(\mathbf H)
 =
 \frac{\sigma_{\max}}{\sigma_{\min}}.
-$$
+```
 
 Valores elevados indicam streams fracos e sensibilidade a ruído e erros de estimação.
 
@@ -93,7 +93,7 @@ Valores elevados indicam streams fracos e sensibilidade a ruído e erros de esti
 
 A matriz de canal pode ser escrita como integral de modos angulares:
 
-$$
+```math
 H_{ij}(f)
 =
 \int
@@ -101,11 +101,11 @@ H_{ij}(f)
 \mathbf K(\Omega_R,\Omega_T,f)
 \mathbf F_{T,j}(\Omega_T,f)
 \,d\Omega_Rd\Omega_T.
-$$
+```
 
 Em canal discreto de $L$ caminhos,
 
-$$
+```math
 H_{ij}(f)
 =
 \sum_{\ell=1}^{L}
@@ -114,7 +114,7 @@ H_{ij}(f)
 \mathbf P_\ell
 \mathbf F_{T,j}(\Omega_{\ell,T},f)
 e^{-j2\pi f\tau_\ell}.
-$$
+```
 
 ## 7. EIT — Electromagnetic Information Theory
 
@@ -122,11 +122,11 @@ A teoria da informação eletromagnética busca formular capacidade diretamente 
 
 Um operador de canal $\mathcal H$ pode ser decomposto:
 
-$$
+```math
 \mathcal H\psi_n
 =
 \sigma_n\phi_n.
-$$
+```
 
 Os $\psi_n$ são modos de transmissão ótimos no domínio das correntes; $\phi_n$ são modos de recepção. Uma antena física implementa uma subbase desses modos.
 
