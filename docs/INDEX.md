@@ -46,3 +46,4 @@
 ## Publicação e qualidade documental
 
 - [Guia de renderização matemática](GUIA_RENDERIZACAO_MATEMATICA.md)
+- [Implementação Python para AEDT/HFSS 2024 R2](30_implementacao_aedt_2024r2.md)

@@ -1,0 +1,19 @@
+schema: enz-eigenchannel-mimo/g0-smoke-seed/v1
+status: HIPOTESE_PARA_TESTE_DE_AUTOMACAO
+proibido_para_claims: true
+frequencia_central_ghz: 25.87
+coordenadas:
+  X: longitudinal_propagacao
+  Y: transversal_larga
+  Z: vertical
+modelos:
+  M0: cavidade_fechada_eigenmode
+  M1: tres_ranhuras_driven_modal
+  M2: cinco_ranhuras_driven_modal
+  M3: cinco_ranhuras_com_degrau
+  M4: fabricavel_com_dieletrico_pinos_chanfros
+regras:
+  - nenhuma_dimensao_hipotetica_pode_entrar_em_scientific_run
+  - o_esqueleto_publicado_deve_falhar_com_dimensoes_desconhecidas
+  - o_seed_serve_apenas_para_validar_codigo_e_topologia_CAD
+  - materiais_de_10GHz_nao_sao_extrapolados_silenciosamente_para_25_87GHz

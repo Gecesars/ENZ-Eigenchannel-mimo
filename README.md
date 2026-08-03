@@ -364,3 +364,14 @@ Este é um projeto de pesquisa aberto. São especialmente valiosas contribuiçõ
 - reprodução independente do artigo-base.
 
 Toda contribuição científica deve incluir hipótese, método, dados, limitações e rastreabilidade.
+
+---
+
+## 12. Automação AEDT/HFSS 2024 R2
+
+O repositório contém uma camada Python executável para geração e validação dos modelos **M0–M4** no Ansys Electronics Desktop 2024 R2. A implementação mantém importação tardia do PyAEDT, versão estrita `2024.2`, sessão gRPC única por processo, geometria declarativa, build separado do solve, preflight offline e pacote de artefatos com SHA-256.
+
+Os modelos preparados são: cavidade fechada Eigenmode, três ranhuras, cinco ranhuras, perfil em degrau e modelo fabricável com inclusão dielétrica, pinos e chanfros. Dimensões desconhecidas permanecem bloqueadas. Existe um seed explicitamente hipotético apenas para testar a automação CAD; ele é rejeitado automaticamente em execução científica.
+
+Documentação e comandos: [`docs/30_implementacao_aedt_2024r2.md`](docs/30_implementacao_aedt_2024r2.md).
+

@@ -59,3 +59,15 @@ Uma tarefa só está concluída quando:
 ## Documentação
 
 Escrever em português técnico claro. Equações em LaTeX. Citar DOI e fonte primária. Distinguir teoria, implementação, simulação e medição.
+
+## Automação AEDT 2024 R2
+
+- Importar PyAEDT somente dentro da camada `aedt`; testes offline não podem exigir AEDT.
+- Manter `version="2024.2"` e rejeitar fallback silencioso.
+- Uma sessão ou worker possui `Desktop`, `Hfss`, `modeler`, `post` e setups.
+- Toda geometria nasce de `G0GeometrySpec` e `GeometryPlan`; não criar objetos ad hoc no runner.
+- `engineering_smoke_seed()` é proibido para resultados científicos.
+- Build sem solve deve ser um gate independente.
+- Não declarar validação AEDT sem artefatos de execução licenciada.
+- Preservar nomes determinísticos, unidades explícitas e manifestos SHA-256.
+

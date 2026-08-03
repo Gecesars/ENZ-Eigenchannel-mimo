@@ -1,0 +1,5 @@
+# Ambiente reproduzível para Windows + Ansys Electronics Desktop 2024 R2.
+# PyAEDT permanece dependência opcional do pacote para que CI Linux não importe AEDT.
+pyaedt==1.3.0
+pyyaml>=6.0,<7
+numpy>=1.26,<3
