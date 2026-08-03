@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "enz-eigenchannel-mimo"
-version = "0.0.1"
-description = "Ferramentas científicas para cavidades ENZ multiporta e autocanais MIMO"
+version = "0.1.0"
+description = "Ferramentas científicas para cavidades ENZ multiporta, autocanais MIMO e automação AEDT/HFSS 2024 R2"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "Apache-2.0"}
@@ -14,6 +14,10 @@ dependencies = ["numpy>=1.26"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.10"]
+aedt = ["pyaedt==1.3.0", "pyyaml>=6.0,<7"]
+
+[project.scripts]
+enz-aedt = "enz_eigenchannel_mimo.aedt.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
