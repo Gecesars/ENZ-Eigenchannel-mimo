@@ -29,7 +29,10 @@ jobs:
         run: pytest -q
 
       - name: Verificar sintaxe Python
-        run: python -m compileall -q src testes
+        run: python -m compileall -q src testes scripts
+
+      - name: Verificar blocos matemáticos Markdown
+        run: python scripts/normalizar_formulas_markdown.py --check
 
       - name: Verificar referências internas essenciais
         shell: bash
@@ -38,5 +41,9 @@ jobs:
           test -f CREDITOS.md
           test -f docs/INDEX.md
           test -f docs/01_artigo_base_inatel.md
+          test -f docs/01a_validacao_fr4_e_materiais_26ghz.md
+          test -f docs/GUIA_RENDERIZACAO_MATEMATICA.md
           test -f referencias/references.bib
           test -f modelos/especificacoes/g0_artigo_base.preliminar.yaml
+          grep -q 'material_nominal: FR4' modelos/especificacoes/g0_artigo_base.preliminar.yaml
+          grep -q 'extrapolar_10ghz_para_25_87ghz: false' modelos/especificacoes/g0_artigo_base.preliminar.yaml
