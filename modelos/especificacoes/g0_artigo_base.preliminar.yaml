@@ -1,4 +1,4 @@
-schema: enz-eigenchannel-mimo/geometry-spec/v1
+schema: enz-eigenchannel-mimo/geometry-spec/v2
 modelo: G0_artigo_base_preliminar
 estado: documental_nao_validado
 frequencia_central:
@@ -38,9 +38,69 @@ chanfros:
   dimensao: {valor: 3.0, unidade: mm, origem: publicado}
 dieletrico:
   material_nominal: FR4
-  epsilon_r: {valor: null, origem: desconhecido}
-  tangente_perdas: {valor: null, origem: desconhecido}
-  dimensoes: {valor: null, unidade: mm, origem: desconhecido}
+  funcao_fisica: photonic_doping_e_casamento_de_impedancia
+  motivacao_publicada: disponibilidade_para_prototipagem
+  fabricante: null
+  produto: null
+  lote: null
+  epsilon_r:
+    valor: null
+    origem: desconhecido
+    frequencia_referencia: null
+  tangente_perdas:
+    valor: null
+    origem: desconhecido
+    frequencia_referencia: null
+  anisotropia:
+    valor: desconhecida
+    origem: desconhecido
+  dimensoes:
+    valor: null
+    unidade: mm
+    origem: desconhecido
+  politica_reproducao:
+    modelo_R0: manter_FR4_do_artigo
+    proibido: substituir_antes_da_reproducao
+    justificativa: preservar_comparabilidade_com_o_trabalho_publicado
+  politica_sensibilidade:
+    classificacao: HIPOTESE_NUMERICA
+    observacao: pontos_de_D_O_E_nao_representam_especificacoes_comerciais
+    epsilon_r_pontos: [3.6, 3.9, 4.2, 4.5, 4.8]
+    tan_delta_pontos: [0.002, 0.005, 0.010, 0.020, 0.030]
+    escala_linear_inclusao: [0.85, 0.925, 1.0, 1.075, 1.15]
+  candidatos_baixa_perda:
+    - id: TMM4
+      fabricante: Rogers
+      dk_publicada_10ghz: 4.50
+      dk_projeto_publicada_10ghz: 4.70
+      df_publicada_10ghz: 0.0020
+      papel: primeira_alternativa_por_proximidade_de_permissividade
+      exige_reotimizacao: true
+    - id: RO4350B
+      fabricante: Rogers
+      dk_publicada_10ghz: 3.48
+      dk_projeto_publicada_10ghz: 3.66
+      df_publicada_10ghz: 0.0037
+      papel: compromisso_fabricacao_custo_perda
+      exige_reotimizacao: true
+    - id: RO3003
+      fabricante: Rogers
+      dk_publicada_10ghz: 3.00
+      tolerancia_dk_publicada_10ghz: 0.04
+      df_publicada_10ghz: 0.0010
+      papel: baixa_perda_mmwave
+      exige_reotimizacao: true
+    - id: RT_DUROID_5880
+      fabricante: Rogers
+      dk_publicada_10ghz: 2.20
+      tolerancia_dk_publicada_10ghz: 0.02
+      df_publicada_10ghz: 0.0009
+      papel: referencia_de_perda_muito_baixa
+      exige_reotimizacao: true
+  regra_de_dados:
+    extrapolar_10ghz_para_25_87ghz: false
+    aceitar_material_generico_sem_fonte: false
+    exigir_manifesto_de_material: true
 pinos_metalicos:
   quantidade: null
   diametro: {valor: null, unidade: mm, origem: desconhecido}
