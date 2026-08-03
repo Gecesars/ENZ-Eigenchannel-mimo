@@ -1,0 +1,29 @@
+* text=auto
+
+# Fontes e documentação: representação canônica LF.
+*.bib text eol=lf
+*.gitattributes text eol=lf
+*.csv text eol=lf
+*.gitignore text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.s1p text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+*.url text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+
+# Formatos binários usuais.
+*.aedt binary
+*.jpeg binary
+*.jpg binary
+*.pdf binary
+*.png binary
+*.x_b binary
+
+# Pacotes científicos curados são byte-a-byte: seus manifests registram SHA-256.
+poros_aedt/** binary
+doc/pdfs/** binary
+doc/relatorio_tecnico/assets/** binary

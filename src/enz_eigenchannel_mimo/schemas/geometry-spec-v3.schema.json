@@ -1,0 +1,457 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "enz-eigenchannel-mimo/geometry-spec/v3",
+  "title": "Especificação declarativa de geometria ENZ",
+  "type": "object",
+  "required": [
+    "schema",
+    "modelo",
+    "versao",
+    "estado",
+    "classificacao",
+    "fonte_primaria",
+    "sistema_coordenadas",
+    "parametros",
+    "etapas"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "enz-eigenchannel-mimo/geometry-spec/v3"},
+    "modelo": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+    "versao": {"type": "integer", "minimum": 1},
+    "estado": {"type": "string", "minLength": 1},
+    "classificacao": {"$ref": "#/$defs/classe"},
+    "fonte_primaria": {"$ref": "#/$defs/fontePrimaria"},
+    "sistema_coordenadas": {"$ref": "#/$defs/coordenadas"},
+    "parametros": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {"pattern": "^[a-z][a-z0-9_]*$"},
+      "additionalProperties": {"$ref": "#/$defs/parametro"}
+    },
+    "etapas": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {"pattern": "^M[0-4]$"},
+      "additionalProperties": {"$ref": "#/$defs/etapa"}
+    },
+    "observacoes": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "posprocessamento": {
+      "$ref": "#/$defs/posprocessamento"
+    }
+  },
+  "$defs": {
+    "classe": {
+      "enum": [
+        "PUBLICADO",
+        "DERIVADO",
+        "SIMULADO",
+        "MEDIDO",
+        "INFERIDO",
+        "HIPÓTESE",
+        "DESCONHECIDO"
+      ]
+    },
+    "fontePrimaria": {
+      "type": "object",
+      "required": ["doi", "url", "data_acesso"],
+      "additionalProperties": false,
+      "properties": {
+        "doi": {"type": "string", "pattern": "^10\\."},
+        "url": {"type": "string", "format": "uri"},
+        "data_acesso": {"type": "string", "format": "date"},
+        "arquivo": {"type": ["string", "null"]},
+        "sha256": {"type": ["string", "null"], "pattern": "^[0-9a-fA-F]{64}$"},
+        "licenca": {"type": "string", "minLength": 1}
+      }
+    },
+    "coordenadas": {
+      "type": "object",
+      "required": ["unidade_comprimento", "origem", "eixo_x", "eixo_y", "eixo_z"],
+      "additionalProperties": false,
+      "properties": {
+        "unidade_comprimento": {"type": "string", "minLength": 1},
+        "origem": {"type": "string", "minLength": 1},
+        "eixo_x": {"type": "string", "minLength": 1},
+        "eixo_y": {"type": "string", "minLength": 1},
+        "eixo_z": {"type": "string", "minLength": 1}
+      }
+    },
+    "fonteParametro": {
+      "type": "object",
+      "required": ["referencia", "localizacao", "tipo"],
+      "additionalProperties": false,
+      "properties": {
+        "referencia": {"type": "string", "minLength": 1},
+        "localizacao": {"type": "string", "minLength": 1},
+        "tipo": {
+          "enum": [
+            "TEXTO",
+            "FIGURA",
+            "TABELA",
+            "EQUAÇÃO",
+            "DERIVAÇÃO",
+            "SIMULAÇÃO",
+            "MEDIÇÃO",
+            "AUDITORIA",
+            "HIPÓTESE"
+          ]
+        }
+      }
+    },
+    "valor": {
+      "oneOf": [
+        {"type": "number"},
+        {"type": "string", "minLength": 1},
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "oneOf": [
+              {"type": "number"},
+              {"type": "string", "minLength": 1},
+              {
+                "type": "array",
+                "minItems": 1,
+                "items": {"type": "number"}
+              }
+            ]
+          }
+        },
+        {"type": "null"}
+      ]
+    },
+    "parametro": {
+      "type": "object",
+      "required": ["valor", "unidade", "classificacao", "fonte"],
+      "additionalProperties": false,
+      "properties": {
+        "valor": {"$ref": "#/$defs/valor"},
+        "unidade": {"type": "string", "minLength": 1},
+        "classificacao": {"$ref": "#/$defs/classe"},
+        "fonte": {"$ref": "#/$defs/fonteParametro"},
+        "incerteza": {"$ref": "#/$defs/valor"},
+        "intervalo": {"$ref": "#/$defs/valor"},
+        "observacao": {"type": "string", "minLength": 1}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"classificacao": {"const": "DESCONHECIDO"}}},
+          "then": {"properties": {"valor": {"type": "null"}}},
+          "else": {"properties": {"valor": {"not": {"type": "null"}}}}
+        }
+      ]
+    },
+    "expressao": {
+      "oneOf": [
+        {"type": "number"},
+        {"type": "string", "minLength": 1}
+      ]
+    },
+    "objeto": {
+      "type": "object",
+      "required": ["nome", "tipo"],
+      "additionalProperties": false,
+      "properties": {
+        "nome": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+        "tipo": {"enum": ["box", "cylinder", "rectangle", "polyline_prism", "air_region"]},
+        "origem": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {"$ref": "#/$defs/expressao"}
+        },
+        "tamanho": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 3,
+          "items": {"$ref": "#/$defs/expressao"}
+        },
+        "orientacao": {"enum": ["X", "Y", "Z", "XY", "YZ", "ZX"]},
+        "raio": {"$ref": "#/$defs/expressao"},
+        "altura": {"$ref": "#/$defs/expressao"},
+        "lados": {"type": "integer", "minimum": 0},
+        "material": {"type": "string", "minLength": 1},
+        "margens_percentuais": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {"type": "number", "minimum": 0}
+        },
+        "pontos": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": {"$ref": "#/$defs/expressao"}
+          }
+        },
+        "vetor_extrusao": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {"$ref": "#/$defs/expressao"}
+        }
+      }
+    },
+    "operacao": {
+      "type": "object",
+      "required": ["tipo", "alvo", "ferramentas"],
+      "additionalProperties": false,
+      "properties": {
+        "tipo": {"enum": ["subtract", "unite"]},
+        "alvo": {"type": "string", "minLength": 1},
+        "ferramentas": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "manter_ferramentas": {"type": "boolean"}
+      }
+    },
+    "fronteira": {
+      "type": "object",
+      "required": ["nome", "tipo", "alvo", "selecao"],
+      "additionalProperties": false,
+      "properties": {
+        "nome": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+        "tipo": {"enum": ["perfect_e", "radiation"]},
+        "alvo": {"type": "string", "minLength": 1},
+        "selecao": {"enum": ["objeto", "todas_faces", "todas_faces_exceto_y_min"]}
+      }
+    },
+    "porta": {
+      "type": "object",
+      "required": ["nome", "tipo", "alvo", "referencia"],
+      "additionalProperties": false,
+      "properties": {
+        "nome": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+        "tipo": {"const": "wave"},
+        "alvo": {"type": "string", "minLength": 1},
+        "referencia": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "modos": {"type": "integer", "minimum": 1},
+        "impedancia": {"type": "number", "exclusiveMinimum": 0},
+        "renormalizar": {"type": "boolean"},
+        "deembed": {"type": "number", "minimum": 0},
+        "linha_integracao": {
+          "oneOf": [
+            {"type": "integer"},
+            {"type": "string", "minLength": 1},
+            {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": "array",
+                "minItems": 3,
+                "maxItems": 3,
+                "items": {"$ref": "#/$defs/expressao"}
+              }
+            }
+          ]
+        }
+      }
+    },
+    "setup": {
+      "type": "object",
+      "required": ["nome", "propriedades"],
+      "additionalProperties": false,
+      "properties": {
+        "nome": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+        "tipo": {"type": ["string", "null"]},
+        "propriedades": {
+          "type": "object",
+          "additionalProperties": {
+            "type": ["number", "boolean", "string"]
+          }
+        }
+      }
+    },
+    "varredura": {
+      "type": "object",
+      "required": ["nome", "unidade", "inicio", "fim", "pontos"],
+      "additionalProperties": false,
+      "properties": {
+        "nome": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+        "unidade": {"type": "string", "minLength": 1},
+        "inicio": {"type": "number", "exclusiveMinimum": 0},
+        "fim": {"type": "number", "exclusiveMinimum": 0},
+        "pontos": {"type": "integer", "minimum": 2},
+        "tipo": {"enum": ["Discrete", "Interpolating", "Fast"]},
+        "salvar_campos": {"type": "boolean"},
+        "salvar_campos_radiados": {"type": "boolean"},
+        "tolerancia_interpolacao": {"type": "number", "exclusiveMinimum": 0},
+        "maximo_solucoes": {"type": "integer", "minimum": 1}
+      }
+    },
+    "varreduraCamposArtigo": {
+      "type": "object",
+      "required": ["nome", "unidade", "frequencias", "salvar_campos", "salvar_campos_radiados"],
+      "additionalProperties": false,
+      "properties": {
+        "nome": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+        "unidade": {"type": "string", "minLength": 1},
+        "frequencias": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "number", "exclusiveMinimum": 0},
+          "uniqueItems": true
+        },
+        "salvar_campos": {"type": "boolean"},
+        "salvar_campos_radiados": {"type": "boolean"}
+      }
+    },
+    "farfield": {
+      "type": "object",
+      "required": ["nome", "phi", "theta"],
+      "additionalProperties": false,
+      "properties": {
+        "nome": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+        "phi": {"$ref": "#/$defs/faixaAngular"},
+        "theta": {"$ref": "#/$defs/faixaAngular"}
+      }
+    },
+    "faixaAngular": {
+      "type": "object",
+      "required": ["inicio", "fim", "passo"],
+      "additionalProperties": false,
+      "properties": {
+        "inicio": {"type": "number"},
+        "fim": {"type": "number"},
+        "passo": {"type": "number", "exclusiveMinimum": 0}
+      }
+    },
+    "corteCampo": {
+      "type": "object",
+      "required": ["nome", "origem", "plano"],
+      "additionalProperties": false,
+      "properties": {
+        "nome": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+        "origem": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {"$ref": "#/$defs/expressao"}
+        },
+        "plano": {"enum": ["XY", "YZ", "ZX"]},
+        "objetos_filtro": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        }
+      }
+    },
+    "plotCampo": {
+      "type": "object",
+      "required": ["nome", "corte", "quantidade", "frequencia", "fase"],
+      "additionalProperties": false,
+      "properties": {
+        "nome": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+        "corte": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+        "quantidade": {"type": "string", "minLength": 1},
+        "frequencia": {"type": "string", "pattern": "^[0-9.]+(GHz|MHz|Hz)$"},
+        "fase": {"type": "string", "pattern": "^-?[0-9.]+deg$"}
+      }
+    },
+    "relatorioAedt": {
+      "type": "object",
+      "required": ["nome", "categoria", "tipo", "solucao", "expressoes", "sweep_primario"],
+      "additionalProperties": false,
+      "properties": {
+        "nome": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+        "categoria": {"enum": ["Modal Solution Data", "Far Fields", "Antenna Parameters"]},
+        "tipo": {"enum": ["Rectangular Plot", "Radiation Pattern", "Data Table", "3D Polar Plot", "3D Spherical Plot"]},
+        "solucao": {"type": "string", "minLength": 1},
+        "contexto": {"type": ["string", "null"]},
+        "dominio": {"enum": ["Sweep", "Spectral"]},
+        "expressoes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "sweep_primario": {"type": "string", "minLength": 1},
+        "sweep_secundario": {"type": ["string", "null"]},
+        "variacoes": {
+          "type": "object",
+          "additionalProperties": {
+            "oneOf": [
+              {"type": "string", "minLength": 1},
+              {
+                "type": "array",
+                "minItems": 1,
+                "items": {"type": "string", "minLength": 1}
+              }
+            ]
+          }
+        }
+      }
+    },
+    "estudoParametrico": {
+      "type": "object",
+      "required": ["nome", "variavel", "inicio", "fim", "passo", "tipo", "solucao"],
+      "additionalProperties": false,
+      "properties": {
+        "nome": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+        "variavel": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+        "inicio": {"type": "number"},
+        "fim": {"type": "number"},
+        "passo": {"type": "number", "exclusiveMinimum": 0},
+        "tipo": {"enum": ["LinearStep", "LinearCount", "DecadeCount"]},
+        "solucao": {"type": "string", "minLength": 1}
+      }
+    },
+    "posprocessamento": {
+      "type": "object",
+      "required": ["cortes", "plots_campo", "relatorios", "estudos_parametricos"],
+      "additionalProperties": false,
+      "properties": {
+        "cortes": {"type": "array", "items": {"$ref": "#/$defs/corteCampo"}},
+        "plots_campo": {"type": "array", "items": {"$ref": "#/$defs/plotCampo"}},
+        "relatorios": {"type": "array", "items": {"$ref": "#/$defs/relatorioAedt"}},
+        "estudos_parametricos": {"type": "array", "items": {"$ref": "#/$defs/estudoParametrico"}}
+      }
+    },
+    "etapa": {
+      "type": "object",
+      "required": ["estado", "solucao", "requer", "objetos", "operacoes", "fronteiras", "portas", "setup"],
+      "additionalProperties": false,
+      "properties": {
+        "estado": {"enum": ["executavel", "documental_bloqueado"]},
+        "bloqueios": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        },
+        "solucao": {"enum": ["Eigenmode", "DrivenModal"]},
+        "requer": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+          "uniqueItems": true
+        },
+        "objetos": {"type": "array", "items": {"$ref": "#/$defs/objeto"}},
+        "operacoes": {"type": "array", "items": {"$ref": "#/$defs/operacao"}},
+        "fronteiras": {"type": "array", "items": {"$ref": "#/$defs/fronteira"}},
+        "portas": {"type": "array", "items": {"$ref": "#/$defs/porta"}},
+        "setup": {"$ref": "#/$defs/setup"},
+        "varredura": {"$ref": "#/$defs/varredura"},
+        "varredura_campos_artigo": {"$ref": "#/$defs/varreduraCamposArtigo"},
+        "farfield": {"$ref": "#/$defs/farfield"},
+        "frequencias_exportacao_hz": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "number", "exclusiveMinimum": 0}
+        }
+      }
+    }
+  }
+}

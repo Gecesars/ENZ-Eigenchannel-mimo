@@ -1,0 +1,250 @@
+schema: enz-eigenchannel-mimo/geometry-spec/v3
+modelo: G0_artigo_base_auditado
+versao: 3
+estado: documental_bloqueado_por_cotas_da_figura_2
+classificacao: DESCONHECIDO
+fonte_primaria:
+  doi: 10.1109/OJAP.2026.3703713
+  url: https://ieeexplore.ieee.org/document/11563493/
+  data_acesso: "2026-08-03"
+  arquivo: null
+  sha256: null
+  licenca: CC BY 4.0 informada pelo artigo e pela página do autor
+sistema_coordenadas:
+  unidade_comprimento: mm
+  origem: DESCONHECIDA até transcrição visual auditável da Figura 2(a)
+  eixo_x: longitudinal da cavidade; convenção provisória de software
+  eixo_y: transversal no plano das ranhuras; convenção provisória de software
+  eixo_z: normal ao plano das ranhuras; convenção provisória de software
+parametros:
+  frequencia_central:
+    valor: 25.87
+    unidade: GHz
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III, texto", tipo: TEXTO}
+  cavidade_area_transversal:
+    valor: 108.0
+    unidade: mm2
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III, texto", tipo: TEXTO}
+  cavidade_largura_inicial:
+    valor: 14.0
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III, texto: 14 mm x 7,7143 mm", tipo: TEXTO}
+  cavidade_altura_inicial:
+    valor: 7.7143
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III, texto: 14 mm x 7,7143 mm", tipo: TEXTO}
+  cavidade_comprimento:
+    valor: null
+    unidade: mm
+    classificacao: DESCONHECIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a); cota ainda não transcrita visualmente", tipo: AUDITORIA}
+  cavidade_largura_final:
+    valor: null
+    unidade: mm
+    classificacao: DESCONHECIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a); cota ainda não transcrita visualmente", tipo: AUDITORIA}
+  cavidade_altura_final:
+    valor: null
+    unidade: mm
+    classificacao: DESCONHECIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a); deve satisfazer área publicada", tipo: AUDITORIA}
+  espessura_parede:
+    valor: null
+    unidade: mm
+    classificacao: DESCONHECIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a); cota ainda não transcrita visualmente", tipo: AUDITORIA}
+  wr28_a:
+    valor: 7.11
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III, texto", tipo: TEXTO}
+  wr28_b:
+    valor: 3.56
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III, texto", tipo: TEXTO}
+  wr28_comprimento:
+    valor: null
+    unidade: mm
+    classificacao: DESCONHECIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a); cota ainda não transcrita visualmente", tipo: AUDITORIA}
+  wr28_frequencia_corte:
+    valor: 21.08
+    unidade: GHz
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III, texto", tipo: TEXTO}
+  ranhuras_quantidade_inicial:
+    valor: 3
+    unidade: "1"
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seções II-III, texto", tipo: TEXTO}
+  ranhuras_quantidade_final:
+    valor: 5
+    unidade: "1"
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seções II-III, texto", tipo: TEXTO}
+  ranhura_comprimento_nominal:
+    valor: null
+    unidade: mm
+    classificacao: DESCONHECIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a); cota nominal ainda não transcrita", tipo: AUDITORIA}
+  ranhura_largura_nominal:
+    valor: null
+    unidade: mm
+    classificacao: DESCONHECIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a); cota nominal ainda não transcrita", tipo: AUDITORIA}
+  ranhura_comprimento_medido_min:
+    valor: 5.66
+    unidade: mm
+    classificacao: MEDIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção IV, inspeção dimensional do protótipo", tipo: MEDIÇÃO}
+  ranhura_comprimento_medido_max:
+    valor: 5.68
+    unidade: mm
+    classificacao: MEDIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção IV, inspeção dimensional do protótipo", tipo: MEDIÇÃO}
+  ranhura_largura_medida_min:
+    valor: 0.93
+    unidade: mm
+    classificacao: MEDIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção IV, inspeção dimensional do protótipo", tipo: MEDIÇÃO}
+  ranhura_largura_medida_max:
+    valor: 0.94
+    unidade: mm
+    classificacao: MEDIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção IV, inspeção dimensional do protótipo", tipo: MEDIÇÃO}
+  ranhuras_posicoes:
+    valor: null
+    unidade: mm
+    classificacao: DESCONHECIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a); posições ainda não transcritas", tipo: AUDITORIA}
+  degrau_largura:
+    valor: 9.0
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III e Tabela 2", tipo: TEXTO}
+  degrau_altura:
+    valor: 1.0
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III e Tabela 2", tipo: TEXTO}
+  chanfro_dimensao:
+    valor: 3.0
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III, texto", tipo: TEXTO}
+  gap_modelo_final:
+    valor: 0.05
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção IV, valor incorporado ao modelo numérico final", tipo: TEXTO}
+  fr4_epsilon_r:
+    valor: null
+    unidade: "1"
+    classificacao: DESCONHECIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Não informado no texto ou tabelas acessíveis", tipo: AUDITORIA}
+  fr4_tan_delta:
+    valor: null
+    unidade: "1"
+    classificacao: DESCONHECIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Não informado no texto ou tabelas acessíveis", tipo: AUDITORIA}
+  fr4_dimensoes:
+    valor: null
+    unidade: mm
+    classificacao: DESCONHECIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a); cotas ainda não transcritas", tipo: AUDITORIA}
+  pinos_quantidade:
+    valor: null
+    unidade: "1"
+    classificacao: DESCONHECIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a); quantidade ainda não auditada visualmente", tipo: AUDITORIA}
+  pinos_diametro:
+    valor: null
+    unidade: mm
+    classificacao: DESCONHECIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a); cota ainda não transcrita", tipo: AUDITORIA}
+  pinos_posicoes:
+    valor: null
+    unidade: mm
+    classificacao: DESCONHECIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a); posições ainda não transcritas", tipo: AUDITORIA}
+etapas:
+  M0:
+    estado: documental_bloqueado
+    bloqueios: [cavidade_comprimento desconhecido, orientação da Figura 2 não auditada]
+    solucao: Eigenmode
+    requer: [cavidade_comprimento, cavidade_largura_inicial, cavidade_altura_inicial]
+    objetos:
+      - nome: Cavity_Air
+        tipo: box
+        origem: [0, 0, 0]
+        tamanho: [cavidade_comprimento, cavidade_largura_inicial, cavidade_altura_inicial]
+        material: vacuum
+    operacoes: []
+    fronteiras:
+      - {nome: PEC_Cavity, tipo: perfect_e, alvo: Cavity_Air, selecao: todas_faces}
+    portas: []
+    setup:
+      nome: Setup_Eigen_18_32
+      tipo: null
+      propriedades: {MinimumFrequency: 18GHz, NumModes: 12, MaxDeltaFreq: 0.1, MaximumPasses: 12, MinimumConvergedPasses: 2}
+  M1:
+    estado: documental_bloqueado
+    bloqueios: [topologia e cotas completas da Figura 2 não transcritas]
+    solucao: DrivenModal
+    requer: [cavidade_comprimento, espessura_parede, wr28_comprimento, ranhura_comprimento_nominal, ranhura_largura_nominal, ranhuras_posicoes]
+    objetos: []
+    operacoes: []
+    fronteiras: []
+    portas: []
+    setup:
+      nome: Setup_Driven_25p87
+      tipo: null
+      propriedades: {Frequency: 25.87GHz, MaxDeltaS: 0.02, MaximumPasses: 15, MinimumConvergedPasses: 2}
+  M2:
+    estado: documental_bloqueado
+    bloqueios: [largura e altura finais e posições das cinco ranhuras desconhecidas]
+    solucao: DrivenModal
+    requer: [cavidade_comprimento, cavidade_largura_final, cavidade_altura_final, espessura_parede, wr28_comprimento, ranhura_comprimento_nominal, ranhura_largura_nominal, ranhuras_posicoes]
+    objetos: []
+    operacoes: []
+    fronteiras: []
+    portas: []
+    setup:
+      nome: Setup_Driven_25p87
+      tipo: null
+      propriedades: {Frequency: 25.87GHz, MaxDeltaS: 0.02, MaximumPasses: 15, MinimumConvergedPasses: 2}
+  M3:
+    estado: documental_bloqueado
+    bloqueios: [perfil completo do degrau desconhecido apesar de largura e altura publicadas]
+    solucao: DrivenModal
+    requer: [cavidade_comprimento, cavidade_largura_final, cavidade_altura_final, espessura_parede, wr28_comprimento, ranhura_comprimento_nominal, ranhura_largura_nominal, ranhuras_posicoes, degrau_largura, degrau_altura]
+    objetos: []
+    operacoes: []
+    fronteiras: []
+    portas: []
+    setup:
+      nome: Setup_Driven_25p87
+      tipo: null
+      propriedades: {Frequency: 25.87GHz, MaxDeltaS: 0.02, MaximumPasses: 15, MinimumConvergedPasses: 2}
+  M4:
+    estado: documental_bloqueado
+    bloqueios: [FR4, pinos, paredes, parafusos e coordenadas completas desconhecidos]
+    solucao: DrivenModal
+    requer: [cavidade_comprimento, cavidade_largura_final, cavidade_altura_final, espessura_parede, wr28_comprimento, ranhura_comprimento_nominal, ranhura_largura_nominal, ranhuras_posicoes, degrau_largura, degrau_altura, chanfro_dimensao, fr4_epsilon_r, fr4_tan_delta, fr4_dimensoes, pinos_quantidade, pinos_diametro, pinos_posicoes]
+    objetos: []
+    operacoes: []
+    fronteiras: []
+    portas: []
+    setup:
+      nome: Setup_Driven_25p87
+      tipo: null
+      propriedades: {Frequency: 25.87GHz, MaxDeltaS: 0.02, MaximumPasses: 15, MinimumConvergedPasses: 2}
+observacoes:
+  - Esta versão não substitui g0_artigo_base.preliminar.yaml.
+  - Valores medidos de ranhura descrevem o protótipo e o modelo com tolerâncias, não a cota nominal da Figura 2.
+  - Nenhuma etapa G0 é executável enquanto os bloqueios declarados permanecerem.

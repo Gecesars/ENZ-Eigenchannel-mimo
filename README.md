@@ -2,11 +2,24 @@
 
 **Síntese de autocanais eletromagnéticos por cavidades ressonantes inspiradas em epsilon-near-zero, codificação geométrica de abertura e arquiteturas multiporta em ondas milimétricas.**
 
-> **Estado atual:** fundação teórica, arquitetura científica e preparação da validação eletromagnética.  
-> **Próximo marco formal:** reprodução independente do modelo de referência do Inatel no Ansys AEDT/HFSS 2024 R2, seguida de uma experiência crítica de duas portas.  
+> **Estado atual:** fórmulas e evidências auditadas; worker AEDT 2024 R2 validado; reconstrução exploratória G0 v7 aberta, solucionada e instrumentada com cortes e relatórios. A reprodução fiel permanece bloqueada por cotas/CAD ausentes, divergência de S11 e reprovação do gate estrito de passividade.
+>
+> **Próximo marco formal:** obter o CAD/coordenadas dos Modelos I–IX e fechar passividade antes de promover qualquer reconstrução a reprodução.
 > **Idioma oficial da documentação:** português do Brasil.
 
 > **Renderização matemática:** o GitHub suporta LaTeX em Markdown via MathJax. Este repositório padroniza equações de bloco com cercas `math`; consulte [`docs/GUIA_RENDERIZACAO_MATEMATICA.md`](docs/GUIA_RENDERIZACAO_MATEMATICA.md).
+
+**SIMULADO:** o smoke test sintético M0 concluiu build, validação, convergência,
+exportação e encerramento sem processo órfão. Ele valida a infraestrutura, não
+reproduz o artigo. O relatório está em
+[`docs/32_execucao_prioridades_1_a_5.md`](docs/32_execucao_prioridades_1_a_5.md).
+
+**DERIVADO:** o dossiê consolidado de 99 páginas, com teoria, dimensões,
+waveport em Z, cortes, campos, relatórios, diagramas de radiação e gates de
+validação está em
+[`doc/pdfs/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v1.pdf`](doc/pdfs/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v1.pdf).
+Seu manifesto registra 25.530 palavras extraíveis, 18 figuras, 19 tabelas e os
+hashes de todas as fontes.
 
 ---
 
@@ -317,6 +330,13 @@ Para banda larga e OFDM, a análise será feita por frequência, subportadora ou
 ---
 
 ## 9. Próximo marco: EM-VALIDATION-01
+
+**SIMULADO:** o smoke test da infraestrutura foi concluído no AEDT 2024 R2 com
+14 cores e publicado em `poros_aedt/`.
+
+**DESCONHECIDO:** a reprodução fiel continua bloqueada pelos parâmetros
+materiais e coordenadas CAD não publicados, conforme
+`docs/33_validacao_artigo_e_execucao_14_cores.md`.
 
 A primeira etapa executável consiste em:
 

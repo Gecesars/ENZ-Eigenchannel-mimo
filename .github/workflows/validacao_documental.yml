@@ -25,8 +25,19 @@ jobs:
       - name: Instalar pacote e ferramentas
         run: python -m pip install --upgrade pip && python -m pip install -e ".[dev]"
 
-      - name: Executar testes matemáticos
+      - name: Executar testes unitários
         run: pytest -q
+
+      - name: Verificar estilo e formatação Python
+        run: python -m ruff check src testes scripts && python -m ruff format --check src testes scripts
+
+      - name: Verificar tipos estáticos
+        run: python -m mypy src
+
+      - name: Validar especificações declarativas
+        run: |
+          enz-validar-spec modelos/especificacoes/g0_artigo_base.auditado.v3.yaml
+          enz-validar-spec modelos/especificacoes/m0_cavidade_retangular_smoke.hipotese.v1.yaml
 
       - name: Verificar sintaxe Python
         run: python -m compileall -q src testes scripts
@@ -45,5 +56,7 @@ jobs:
           test -f docs/GUIA_RENDERIZACAO_MATEMATICA.md
           test -f referencias/references.bib
           test -f modelos/especificacoes/g0_artigo_base.preliminar.yaml
+          test -f modelos/especificacoes/g0_artigo_base.auditado.v3.yaml
+          test -f modelos/especificacoes/m0_cavidade_retangular_smoke.hipotese.v1.yaml
           grep -q 'material_nominal: FR4' modelos/especificacoes/g0_artigo_base.preliminar.yaml
           grep -q 'extrapolar_10ghz_para_25_87ghz: false' modelos/especificacoes/g0_artigo_base.preliminar.yaml

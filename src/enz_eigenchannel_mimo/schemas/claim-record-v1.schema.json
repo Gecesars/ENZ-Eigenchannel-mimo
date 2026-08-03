@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "enz-eigenchannel-mimo/claim-record/v1",
+  "title": "Registro de afirmação e evidência",
+  "type": "object",
+  "required": [
+    "claim_id",
+    "statement",
+    "classification",
+    "sources",
+    "runs",
+    "measurements",
+    "limitations",
+    "reviewer",
+    "date"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "claim_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9_-]*$"},
+    "statement": {"type": "string", "minLength": 1},
+    "classification": {
+      "enum": [
+        "PUBLICADO",
+        "DERIVADO",
+        "SIMULADO",
+        "MEDIDO",
+        "INFERIDO",
+        "HIPÓTESE",
+        "DESCONHECIDO"
+      ]
+    },
+    "sources": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "runs": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "measurements": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "limitations": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "reviewer": {"type": ["string", "null"]},
+    "date": {"type": "string", "format": "date"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"classification": {"const": "PUBLICADO"}}},
+      "then": {"properties": {"sources": {"minItems": 1}}}
+    },
+    {
+      "if": {"properties": {"classification": {"const": "SIMULADO"}}},
+      "then": {"properties": {"runs": {"minItems": 1}}}
+    },
+    {
+      "if": {"properties": {"classification": {"const": "MEDIDO"}}},
+      "then": {"properties": {"measurements": {"minItems": 1}}}
+    }
+  ]
+}

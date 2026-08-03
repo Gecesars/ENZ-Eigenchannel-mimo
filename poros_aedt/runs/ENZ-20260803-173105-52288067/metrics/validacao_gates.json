@@ -1,0 +1,76 @@
+{
+  "gates_booleanos": {
+    "aedt_2024r2_estrito": true,
+    "pyaedt_1p3p0": true,
+    "grpc_nativo": true,
+    "licenca_disponivel": true,
+    "sem_processo_orfao": true,
+    "recursos_14_1_0": true,
+    "solve_executado": true,
+    "hashes_artefatos": true
+  },
+  "convergencia": {
+    "classificacao": "SIMULADO",
+    "passes": 3,
+    "delta_f_percentual": 0.00091896,
+    "alvo_percentual": 0.5,
+    "convergiu": true
+  },
+  "malha": {
+    "classificacao": "SIMULADO",
+    "tetraedros": 3268
+  },
+  "validacao_analitica_modos": {
+    "classificacao": "DERIVADO",
+    "indices_mnp": [
+      [
+        2,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        0
+      ]
+    ],
+    "frequencias_esperadas_hz": [
+      18420801688.015823,
+      20826288089.433537,
+      22185563257.623917,
+      22687458192.82231
+    ],
+    "frequencias_simuladas_hz": [
+      18421495557.9161,
+      20827053858.1344,
+      22186814834.203,
+      22688994266.1086
+    ],
+    "erros_percentuais": [
+      0.003766773629225925,
+      0.003676933198918949,
+      0.005641400962188297,
+      0.006770583435279614
+    ],
+    "limite_percentual": 0.01
+  },
+  "balanco_potencia": {
+    "classificacao": "DERIVADO",
+    "resultado": "NAO_APLICAVEL",
+    "motivo": "M0 e uma cavidade PEC fechada em Eigenmode, sem portas, perdas ou potencia incidente."
+  },
+  "avisos_aedt": {
+    "quantidade": 8,
+    "explicacao": "Avisos de variavel Phase sem sweep durante exportacao; nenhum erro AEDT."
+  }
+}

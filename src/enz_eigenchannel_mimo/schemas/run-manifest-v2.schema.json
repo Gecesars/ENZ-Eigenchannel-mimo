@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "enz-eigenchannel-mimo/run-manifest/v2",
+  "title": "Manifesto de execucao AEDT com recursos do solver",
+  "type": "object",
+  "required": [
+    "schema", "run_id", "status", "created_at", "updated_at",
+    "specification", "git", "host", "runtime", "solver", "artifacts", "errors"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "enz-eigenchannel-mimo/run-manifest/v2"},
+    "run_id": {"type": "string", "pattern": "^ENZ-[0-9]{8}-[0-9]{6}-[0-9a-f]{8}$"},
+    "status": {
+      "enum": [
+        "CREATED", "PREFLIGHT", "CONNECTING", "BUILDING",
+        "VALIDATING_GEOMETRY", "BUILT", "MESHING", "SOLVING",
+        "POSTPROCESSING", "EXPORTING", "COMPLETED", "FAILED", "CANCELLED"
+      ]
+    },
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "completed_at": {"type": ["string", "null"], "format": "date-time"},
+    "specification": {"$ref": "#/$defs/arquivoIdentificado"},
+    "git": {
+      "type": "object",
+      "required": ["commit", "dirty"],
+      "additionalProperties": false,
+      "properties": {
+        "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "dirty": {"type": "boolean"}
+      }
+    },
+    "host": {
+      "type": "object",
+      "required": ["python", "os", "hostname", "cpu_count", "ram_bytes"],
+      "additionalProperties": false,
+      "properties": {
+        "python": {"type": "string", "minLength": 1},
+        "os": {"type": "string", "minLength": 1},
+        "hostname": {"type": "string", "minLength": 1},
+        "cpu_count": {"type": ["integer", "null"], "minimum": 1},
+        "ram_bytes": {"type": ["integer", "null"], "minimum": 1}
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "required": [
+        "requested_aedt", "strict_version", "pyaedt", "transport",
+        "license", "pid", "grpc_port", "build"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "requested_aedt": {"const": "2024.2"},
+        "strict_version": {"const": true},
+        "pyaedt": {"type": ["string", "null"]},
+        "transport": {"const": "native AEDT gRPC via PyAEDT"},
+        "license": {"type": "string", "minLength": 1},
+        "pid": {"type": ["integer", "null"], "minimum": 1},
+        "grpc_port": {"type": ["integer", "null"], "minimum": 1, "maximum": 65535},
+        "build": {"type": ["string", "null"]},
+        "orphan_after_close": {"type": ["boolean", "null"]}
+      }
+    },
+    "solver": {
+      "type": "object",
+      "required": [
+        "stage", "solution_type", "setup", "solve_requested",
+        "cores", "tasks", "gpus", "validation_messages"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "stage": {"type": "string", "pattern": "^M[0-4]$"},
+        "solution_type": {"enum": ["Eigenmode", "DrivenModal"]},
+        "setup": {"type": "string", "minLength": 1},
+        "solve_requested": {"type": "boolean"},
+        "cores": {"type": "integer", "minimum": 1},
+        "tasks": {"type": "integer", "minimum": 1},
+        "gpus": {"type": "integer", "minimum": 0},
+        "validation_messages": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "artifacts": {"type": "array", "items": {"$ref": "#/$defs/arquivoIdentificado"}},
+    "errors": {"type": "array", "items": {"type": "string", "minLength": 1}}
+  },
+  "$defs": {
+    "arquivoIdentificado": {
+      "type": "object",
+      "required": ["path", "sha256", "bytes"],
+      "additionalProperties": false,
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "bytes": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

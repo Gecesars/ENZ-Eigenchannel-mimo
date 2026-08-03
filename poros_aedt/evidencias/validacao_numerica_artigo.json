@@ -1,0 +1,182 @@
+{
+  "schema_version": "validacao-artigo-base-v1",
+  "artigo": {
+    "doi": "10.1109/OJAP.2026.3703713",
+    "arquivo": "doc/pdfs/VilasBoas_2026_OJAP_FlatTop.pdf",
+    "sha256": "57f4627b41767a8edc07eca437fb62c192fe277d3d891df39ce4bf53d101a40a",
+    "classificacao": "PUBLICADO"
+  },
+  "constantes": {
+    "c0_m_s": 299792458.0,
+    "classificacao": "DERIVADO"
+  },
+  "checagens_aritmeticas": [
+    {
+      "id": "area_transversal_inicial",
+      "classificacao_publicado": "PUBLICADO",
+      "classificacao_calculo": "DERIVADO",
+      "publicado": 108.0,
+      "derivado": 108.00019999999999,
+      "unidade": "mm2",
+      "resultado": "CONSISTENTE",
+      "fonte": "Secao III, pagina 4",
+      "observacao": "14 mm x 7.7143 mm; diferenca apenas da precisao decimal publicada."
+    },
+    {
+      "id": "corte_te10_wr28",
+      "classificacao_publicado": "PUBLICADO",
+      "classificacao_calculo": "DERIVADO",
+      "publicado": 21.08,
+      "derivado": 21.08245133614627,
+      "unidade": "GHz",
+      "resultado": "CONSISTENTE",
+      "fonte": "Secao III, pagina 4",
+      "observacao": "Calculado com c0 exato e a=7.11 mm."
+    },
+    {
+      "id": "bandwidth_modelo_i",
+      "classificacao_publicado": "PUBLICADO",
+      "classificacao_calculo": "DERIVADO",
+      "publicado": 0.6,
+      "derivado": 0.6000000000000014,
+      "unidade": "GHz",
+      "resultado": "CONSISTENTE",
+      "fonte": "Secao III, pagina 4",
+      "observacao": ""
+    },
+    {
+      "id": "bandwidth_final_25p64_26p24",
+      "classificacao_publicado": "PUBLICADO",
+      "classificacao_calculo": "DERIVADO",
+      "publicado": 0.6,
+      "derivado": 0.5999999999999979,
+      "unidade": "GHz",
+      "resultado": "CONSISTENTE",
+      "fonte": "Secao III, pagina 5",
+      "observacao": ""
+    },
+    {
+      "id": "bandwidth_medido",
+      "classificacao_publicado": "PUBLICADO",
+      "classificacao_calculo": "DERIVADO",
+      "publicado": 1.11,
+      "derivado": 1.1099999999999994,
+      "unidade": "GHz",
+      "resultado": "CONSISTENTE",
+      "fonte": "Resumo e Secao IV, pagina 5",
+      "observacao": ""
+    },
+    {
+      "id": "fbw_medido",
+      "classificacao_publicado": "PUBLICADO",
+      "classificacao_calculo": "DERIVADO",
+      "publicado": 4.24,
+      "derivado": 4.2439304148346375,
+      "unidade": "%",
+      "resultado": "CONSISTENTE",
+      "fonte": "Tabela 4, pagina 8",
+      "observacao": "FBW derivada usando a media aritmetica dos limites medidos."
+    },
+    {
+      "id": "dimensoes_normalizadas",
+      "classificacao_publicado": "PUBLICADO",
+      "classificacao_calculo": "DERIVADO",
+      "publicado": [
+        0.95,
+        2.33,
+        3.1
+      ],
+      "derivado": [
+        0.9492233457053814,
+        2.3299118485495725,
+        3.10654913139943
+      ],
+      "unidade": "lambda0",
+      "resultado": "CONSISTENTE",
+      "fonte": "Figura 2(a), pagina 4, e Tabela 4, pagina 8",
+      "observacao": "Usa dimensoes externas 11 x 27 x 36 mm e lambda0 em 25.87 GHz."
+    }
+  ],
+  "divergencias_documentais": [
+    {
+      "id": "limite_superior_banda_simulada",
+      "classificacao": "PUBLICADO",
+      "resultado": "DIVERGENTE",
+      "valores": [
+        "25.63-26.23 GHz (Modelo I, pagina 4)",
+        "25.64-26.25 GHz (texto associado a Tabela 1, pagina 4)",
+        "25.64-26.24 GHz (refinamento final, pagina 5)",
+        "25.64-26.25 GHz (comparacao medida/simulada, pagina 5)"
+      ],
+      "impacto": "A largura simulada final pode ser 600 ou 610 MHz conforme o trecho."
+    },
+    {
+      "id": "frequencia_superior_padrao",
+      "classificacao": "PUBLICADO",
+      "resultado": "DIVERGENTE",
+      "valores": [
+        "26.25 GHz na Tabela 3",
+        "26.22 GHz na Figura 4"
+      ],
+      "impacto": "Nao tratar as duas curvas como a mesma frequencia sem dados brutos."
+    },
+    {
+      "id": "doi_placeholder_cabecalho",
+      "classificacao": "PUBLICADO",
+      "resultado": "DIVERGENTE",
+      "valores": [
+        "10.1109/OJAP.2020.1234567 no cabecalho da pagina 1",
+        "10.1109/OJAP.2026.3703713 no rodape e metadados IEEE"
+      ],
+      "impacto": "O primeiro valor e um placeholder editorial; o segundo identifica o artigo."
+    },
+    {
+      "id": "convencao_sll",
+      "classificacao": "PUBLICADO",
+      "resultado": "AMBIGUIDADE_DE_CONVENCAO",
+      "valores": [
+        "abaixo de -10.02 dB no resumo",
+        ">10.02 dB nas tabelas"
+      ],
+      "impacto": "As tabelas usam magnitude positiva de supressao; as curvas usam nivel negativo."
+    }
+  ],
+  "caracteristicas_sem_dados_brutos": [
+    {
+      "grupo": "S11 complexo e ressonancia",
+      "classificacao": "PUBLICADO",
+      "resultado": "NAO_REPRODUZIVEL",
+      "motivo": "O artigo fornece curvas rasterizadas, nao Touchstone complexo."
+    },
+    {
+      "grupo": "campos E/H complexos e coerencia de fase",
+      "classificacao": "PUBLICADO",
+      "resultado": "NAO_REPRODUZIVEL",
+      "motivo": "Nao ha exportacao de campo complexo ou fase por ranhura."
+    },
+    {
+      "grupo": "ganho, eficiencia, beamwidth, ripple, SLL e x-pol",
+      "classificacao": "PUBLICADO",
+      "resultado": "NAO_REPRODUZIVEL",
+      "motivo": "Padroes complexos, malha, setup e dados tabulados completos nao foram publicados."
+    },
+    {
+      "grupo": "matching por FR4 e supressao TE10-TM11",
+      "classificacao": "PUBLICADO",
+      "resultado": "NAO_REPRODUZIVEL",
+      "motivo": "epsilon_r, tan_delta, coordenadas dos pinos e propriedades do condutor estao DESCONHECIDOS."
+    }
+  ],
+  "derivacoes_adicionais": {
+    "lambda0_mm_em_25p87_ghz": 11.588421260146887,
+    "desvio_largura_ranhura_medida_percentual": [
+      16.250000000000007,
+      17.499999999999982
+    ],
+    "desvio_comprimento_ranhura_medido_percentual": [
+      0.0,
+      0.35335689045936647
+    ],
+    "classificacao": "DERIVADO"
+  }
+}

@@ -1,0 +1,173 @@
+$begin '$base_index$'
+  $begin 'properties'
+    all_levels=000000000000
+    time(year=000000002026, month=000000000008, day=000000000003, hour=000000000014, min=000000000037, sec=000000000017)
+    version=000000000000
+  $end 'properties'
+  $begin '$base_index$'
+    $index$(pos=000000004107, lin=000000000153, lvl=000000000000)
+  $end '$base_index$'
+$end '$base_index$'
+$begin 'SolutionBlock1'
+	ProductName=''
+	CircuitName='HFSS_ENZ_M0_cavidade_retangular_smoke_M0'
+	VersionID=7
+	PostProcess=false
+	LossLess=true
+	NextUniqueID=137
+	MoveBackwards=false
+	$begin 'VariationIDs'
+		Map(V='', ID=3)
+		Map(V='cavidade_altura=\'7.7142999999999997mm\' cavidade_comprimento=\'20mm\' cavidade_largura=\'14mm\'', ID=115)
+	$end 'VariationIDs'
+	$begin 'LinkedDataList'
+	$end 'LinkedDataList'
+	$begin 'InitialMeshes'
+		M(VID=115, Ver=7, Dir='DV115_V7.imesh/')
+	$end 'InitialMeshes'
+	MeshAssemVersionID=2
+	$begin 'NextAssemVersionID'
+		NextUniqueID=3
+		MoveBackwards=false
+	$end 'NextAssemVersionID'
+	$begin 'DefinitionMeshes'
+		$begin 'DefMeshes_Comp-1'
+			DefinitionID=-1
+			VersionID=1
+			VIDMap('cavidade_altura=\'7.7142999999999997mm\' cavidade_comprimento=\'20mm\' cavidade_largura=\'14mm\'', 117)
+			DM(VID=117, Ver=1, Dir='NDV117_V1.dmesh/')
+		$end 'DefMeshes_Comp-1'
+	$end 'DefinitionMeshes'
+	$begin 'MI'
+		$begin 'SubData'
+			ID=0
+			MI(VID=115, Ver=7, Dir='DV115_MI0_V7.sd/')
+		$end 'SubData'
+	$end 'MI'
+	VersionID2=8
+$end 'SolutionBlock1'
+$begin 'BlockMapName'
+	FileHeader='SolutionBlock1'
+	'SolutionKey(SimSetup=10, Instance=\'SetupDefinition\', Solution=-1, VersionID=15)'='SolutionBlock4'
+	'SolutionKey(SimSetup=10, Instance=\'SolutionDefinition\', Solution=11, VersionID=15)'='SolutionBlock2'
+	'SolutionKey(SimSetup=10, Instance=\'SolutionDefinition\', Solution=12, VersionID=15)'='SolutionBlock3'
+$end 'BlockMapName'
+$begin 'SolutionBlock4'
+	SimSetupID=10
+	SimSetupName='Setup_Eigen_18_32'
+	VersionID=15
+	$begin 'EmConvergenceData'
+		EmConv(VID=115, Ver=15, EmConv='DV115_S10_V15.EMConvData')
+	$end 'EmConvergenceData'
+	IsImported=false
+	IsTable=false
+	SolveSetupID=1
+	$begin 'CurrMeshes'
+		M(VID=115, Ver=15, Dir='DV115_S10_V15.cmesh/')
+	$end 'CurrMeshes'
+	MeshAssemVersionID=1
+	$begin 'NextAssemVersionID'
+		NextUniqueID=2
+		MoveBackwards=false
+	$end 'NextAssemVersionID'
+	$begin 'ADP'
+		$begin 'SubData'
+			ID=3
+			ADP(VID=115, Ver=15, Dir='DV115_S10_ADP3_V15.sd/')
+		$end 'SubData'
+	$end 'ADP'
+	$begin 'SU'
+	$end 'SU'
+	$begin 'WaveAdapt'
+		WA(VID=115, Ver=15, A=0)
+	$end 'WaveAdapt'
+	$begin 'LastPassNumbers'
+		LP(VID=115, Ver=15, P=3)
+	$end 'LastPassNumbers'
+	$begin 'Profiles'
+		P(VID=115, Ver=15, File='DV115_S10_V15.profile')
+	$end 'Profiles'
+	$begin 'MI'
+		$begin 'SubData'
+			ID=0
+			MI(VID=115, Ver=15, Dir='DV115_S10_MI0_V15.sd/')
+		$end 'SubData'
+	$end 'MI'
+$end 'SolutionBlock4'
+$begin 'SolutionBlock3'
+	SolutionName='LastAdaptive'
+	SolutionID=12
+	V=15
+	$begin 'States'
+		F(VID=115, Ver=15)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies()
+		SolutionType=1
+		CenterFreq=0
+	$end 'Definition'
+	IsImported=false
+	IsTable=false
+	IsMatrixDataTable=false
+	SweepID=-1
+	KeepAllFastSweepFields=false
+	$begin 'M'
+		$begin 'SubData'
+			ID=0
+			M(VID=115, Ver=15, File='DV115_SOL12_M0_V15.sd')
+		$end 'SubData'
+	$end 'M'
+	$begin 'Fields'
+		IDDblMap(121, 0)
+		$begin 'DataMap'
+			VID=115
+			Ver=15
+			F(DblID=121, Dir='DV115_S12_V15_F121/')
+		$end 'DataMap'
+	$end 'Fields'
+$end 'SolutionBlock3'
+$begin 'SolutionBlock2'
+	SolutionName='AdaptivePass'
+	SolutionID=11
+	V=15
+	$begin 'States'
+		F(VID=115, Ver=15)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies()
+		SolutionType=1
+		CenterFreq=0
+	$end 'Definition'
+	IsImported=false
+	IsTable=false
+	IsMatrixDataTable=false
+	SweepID=-1
+	KeepAllFastSweepFields=false
+	$begin 'M'
+		$begin 'SubData'
+			ID=1
+			M(VID=115, Ver=15, File='DV115_SOL11_M1_V15.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=2
+			M(VID=115, Ver=15, File='DV115_SOL11_M2_V15.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=3
+			M(VID=115, Ver=15, File='DV115_SOL11_M3_V15.sd')
+		$end 'SubData'
+	$end 'M'
+$end 'SolutionBlock2'
+$begin '$index$'
+	$begin '$index$'
+		BlockMapName(pos=1435, lin=39, lvl=0)
+		SolutionBlock2(pos=3430, lin=120, lvl=0)
+		SolutionBlock3(pos=2794, lin=87, lvl=0)
+		SolutionBlock4(pos=1818, lin=45, lvl=0)
+		SolutionBlock1(pos=370, lin=1, lvl=0)
+		$base_index$(pos=0, lin=1, lvl=0)
+		$index$(pos=4107, lin=153, lvl=0)
+	$end '$index$'
+$end '$index$'

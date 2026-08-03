@@ -1,0 +1,57 @@
+schema: enz-eigenchannel-mimo/geometry-spec/v3
+modelo: M0_cavidade_retangular_smoke
+versao: 1
+estado: executavel_sem_claim_de_reproducao
+classificacao: HIPÓTESE
+fonte_primaria:
+  doi: 10.1109/OJAP.2026.3703713
+  url: https://ieeexplore.ieee.org/document/11563493/
+  data_acesso: "2026-08-03"
+  arquivo: null
+  sha256: null
+  licenca: CC BY 4.0 informada pelo artigo e pela página do autor
+sistema_coordenadas:
+  unidade_comprimento: mm
+  origem: canto inferior da cavidade sintética
+  eixo_x: comprimento sintético
+  eixo_y: largura sintética
+  eixo_z: altura sintética
+parametros:
+  cavidade_comprimento:
+    valor: 20.0
+    unidade: mm
+    classificacao: HIPÓTESE
+    fonte: {referencia: "smoke test de infraestrutura", localizacao: "valor declarado sem ajuste a resultado publicado", tipo: HIPÓTESE}
+  cavidade_largura:
+    valor: 14.0
+    unidade: mm
+    classificacao: HIPÓTESE
+    fonte: {referencia: "smoke test de infraestrutura", localizacao: "valor declarado; coincidência com dimensão publicada não implica reprodução", tipo: HIPÓTESE}
+  cavidade_altura:
+    valor: 7.7143
+    unidade: mm
+    classificacao: HIPÓTESE
+    fonte: {referencia: "smoke test de infraestrutura", localizacao: "valor declarado; coincidência com dimensão publicada não implica reprodução", tipo: HIPÓTESE}
+etapas:
+  M0:
+    estado: executavel
+    bloqueios: []
+    solucao: Eigenmode
+    requer: [cavidade_comprimento, cavidade_largura, cavidade_altura]
+    objetos:
+      - nome: Cavity_Air
+        tipo: box
+        origem: [0, 0, 0]
+        tamanho: [cavidade_comprimento, cavidade_largura, cavidade_altura]
+        material: vacuum
+    operacoes: []
+    fronteiras:
+      - {nome: PEC_Cavity, tipo: perfect_e, alvo: Cavity_Air, selecao: todas_faces}
+    portas: []
+    setup:
+      nome: Setup_Eigen_18_32
+      tipo: null
+      propriedades: {MinimumFrequency: 18GHz, NumModes: 4, MaxDeltaFreq: 0.5, MaximumPasses: 6, MinimumPasses: 1, MinimumConvergedPasses: 2, PercentRefinement: 20}
+observacoes:
+  - Modelo exclusivamente destinado a validar launch, build, solve, export e encerramento do worker.
+  - Não é reprodução, reconstrução otimizada ou resultado do artigo-base.

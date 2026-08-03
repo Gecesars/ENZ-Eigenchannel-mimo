@@ -1,0 +1,7 @@
+$begin 'ValidationCache'
+	$begin 'OneValidationResult'
+		Variation='cavidade_altura=\'7.7142999999999997mm\' cavidade_comprimento=\'20mm\' cavidade_largura=\'14mm\''
+		Status=true
+		FileName='VI2DD416537217857786275.tmp'
+	$end 'OneValidationResult'
+$end 'ValidationCache'

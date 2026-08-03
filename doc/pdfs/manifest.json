@@ -1,0 +1,322 @@
+{
+  "schema_version": "pdf-corpus-manifest-v1",
+  "gerado_em_utc": "2026-08-03T17:24:43.716096+00:00",
+  "escopo": {
+    "descricao": "Todas as entradas @article de referencias/references.bib",
+    "total_referencias": 14,
+    "validados": 9,
+    "indisponiveis": 5
+  },
+  "criterios_validacao": [
+    "assinatura %PDF",
+    "marcador %%EOF nos ultimos 8192 bytes",
+    "parse estrito pelo pypdf",
+    "ao menos uma pagina",
+    "cobertura lexical do titulo >= 60% nas tres primeiras paginas",
+    "SHA-256 e tamanho registrados"
+  ],
+  "documentos": [
+    {
+      "key": "VilasBoas2026FlatTop",
+      "title": "A Millimeter-Wave Flat-Top Fan-Beam Antenna Array Based on a Geometry-Independent Resonant Cavity",
+      "doi": "10.1109/OJAP.2026.3703713",
+      "arquivo": "doc/pdfs/VilasBoas_2026_OJAP_FlatTop.pdf",
+      "status": "validado",
+      "tentativas": [],
+      "validacao": {
+        "sha256": "57f4627b41767a8edc07eca437fb62c192fe277d3d891df39ce4bf53d101a40a",
+        "md5": "61f5568a1a7978f84513307a7dafea53",
+        "bytes": 7869402,
+        "paginas": 10,
+        "titulo_cobertura": 1.0,
+        "titulo_metodo": "extracao_lexical",
+        "md5_publicado_confirmado": false,
+        "doi_encontrado_primeiras_3_paginas": true,
+        "pdf_header": "%PDF-1.5",
+        "pdf_eof": true
+      },
+      "origem": "arquivo_preexistente"
+    },
+    {
+      "key": "VilasBoas2025PhotonicDoping",
+      "title": "Photonic doping of epsilon-near-zero waveguide cavities for high-gain millimeter-wave antenna arrays",
+      "doi": "10.1063/5.0296722",
+      "arquivo": "doc/pdfs/VilasBoas2025PhotonicDoping.pdf",
+      "status": "indisponivel",
+      "tentativas": [
+        {
+          "url": "https://pubs.aip.org/aip/jap/article-pdf/doi/10.1063/5.0296722/20811628/193106_1_5.0296722.pdf",
+          "origem": "editora",
+          "versao_documental": "version_of_record",
+          "erro": "HTTPError: HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www.researchgate.net/publication/journal/Journal-of-Applied-Physics-1089-7550/publication/397849186_Photonic_doping_of_epsilon-near-zero_waveguide_cavities_for_high-gain_millimeter-wave_antenna_arrays/links/6920e8edabe27c41e5144ecb/Photonic-doping-of-epsilon-near-zero-waveguide-cavities-for-high-gain-millimeter-wave-antenna-arrays.pdf",
+          "origem": "pagina_dos_autores",
+          "versao_documental": "version_of_record",
+          "erro": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "atalho_doi": "doc/pdfs/indisponiveis/VilasBoas2025PhotonicDoping.url"
+    },
+    {
+      "key": "Li2022GeometryIndependent",
+      "title": "Geometry-independent antenna based on epsilon-near-zero media",
+      "doi": "10.1038/s41467-022-31013-z",
+      "arquivo": "doc/pdfs/Li2022GeometryIndependent.pdf",
+      "status": "validado",
+      "tentativas": [],
+      "validacao": {
+        "sha256": "563ab41624eac47340bd498b59858aa04828f19c695def56d8a5699b51ff107f",
+        "md5": "b6851ec851f23ae561598aff6e4e7b69",
+        "bytes": 1246887,
+        "paginas": 8,
+        "titulo_cobertura": 1.0,
+        "titulo_metodo": "extracao_lexical",
+        "md5_publicado_confirmado": false,
+        "doi_encontrado_primeiras_3_paginas": true,
+        "pdf_header": "%PDF-1.4",
+        "pdf_eof": true
+      },
+      "origem": "arquivo_preexistente"
+    },
+    {
+      "key": "Silveirinha2006Supercoupling",
+      "title": "Tunneling of Electromagnetic Energy through Subwavelength Channels and Bends Using Epsilon-Near-Zero Materials",
+      "doi": "10.1103/PhysRevLett.97.157403",
+      "arquivo": "doc/pdfs/Silveirinha2006Supercoupling.pdf",
+      "status": "validado",
+      "tentativas": [],
+      "validacao": {
+        "sha256": "8c28dfc198117175ceeba34699128558d6cb7e1fcf29ec041a42e4f96841749e",
+        "md5": "31a7b8b4e2da6542ed80677cb9259f6e",
+        "bytes": 436892,
+        "paginas": 4,
+        "titulo_cobertura": 0.928571,
+        "titulo_metodo": "extracao_lexical",
+        "md5_publicado_confirmado": false,
+        "doi_encontrado_primeiras_3_paginas": true,
+        "pdf_header": "%PDF-1.4",
+        "pdf_eof": true
+      },
+      "origem": "arquivo_preexistente"
+    },
+    {
+      "key": "Liberal2017PhotonicDoping",
+      "title": "Photonic doping of epsilon-near-zero media",
+      "doi": "10.1126/science.aal2672",
+      "arquivo": "doc/pdfs/Liberal2017PhotonicDoping.pdf",
+      "status": "indisponivel",
+      "tentativas": [
+        {
+          "url": "https://murimetasurfaces.hsites.harvard.edu/sites/g/files/omnuum8691/files/muri_metasurfaces/files/photonic_doping_science_march_10_2017.pdf",
+          "origem": "repositorio_institucional_dos_autores",
+          "versao_documental": "version_of_record",
+          "erro": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "atalho_doi": "doc/pdfs/indisponiveis/Liberal2017PhotonicDoping.url"
+    },
+    {
+      "key": "Liberal2017NZIPhotonics",
+      "title": "Near-zero refractive index photonics",
+      "doi": "10.1038/nphoton.2017.13",
+      "arquivo": "doc/pdfs/Liberal2017NZIPhotonics.pdf",
+      "status": "indisponivel",
+      "tentativas": [
+        {
+          "url": "https://murimetasurfaces.hsites.harvard.edu/sites/g/files/omnuum8691/files/muri_metasurfaces/files/zim_review_article_nature_photonics_march_2017.pdf",
+          "origem": "repositorio_institucional_dos_autores",
+          "versao_documental": "version_of_record",
+          "erro": "HTTPError: HTTP Error 403: Forbidden"
+        }
+      ],
+      "atalho_doi": "doc/pdfs/indisponiveis/Liberal2017NZIPhotonics.url"
+    },
+    {
+      "key": "Yan2024FanoENZ",
+      "title": "Fano Resonance in Epsilon-Near-Zero Media",
+      "doi": "10.1103/PhysRevLett.133.256402",
+      "arquivo": "doc/pdfs/Yan2024FanoENZ.pdf",
+      "status": "validado",
+      "tentativas": [],
+      "validacao": {
+        "sha256": "61945e14db896f6d0681043d2df192bc3caf20eccd1db5cb46dc1b89b9088a7b",
+        "md5": "1b60c6c982310249188024b1df8e1ff5",
+        "bytes": 959411,
+        "paginas": 7,
+        "titulo_cobertura": 1.0,
+        "titulo_metodo": "extracao_lexical",
+        "md5_publicado_confirmado": false,
+        "doi_encontrado_primeiras_3_paginas": true,
+        "pdf_header": "%PDF-1.4",
+        "pdf_eof": true
+      },
+      "origem": "arquivo_preexistente"
+    },
+    {
+      "key": "Harrington1971CharacteristicModes",
+      "title": "Theory of Characteristic Modes for Conducting Bodies",
+      "doi": "10.1109/TAP.1971.1139999",
+      "arquivo": "doc/pdfs/Harrington1971CharacteristicModes.pdf",
+      "status": "indisponivel",
+      "tentativas": [
+        {
+          "url": "https://ece-research.unm.edu/summa/notes/In/0195.pdf",
+          "origem": "arquivo_academico",
+          "versao_documental": "author_manuscript",
+          "erro": "ValueError: titulo incompativel (cobertura=0.000)"
+        }
+      ],
+      "atalho_doi": "doc/pdfs/indisponiveis/Harrington1971CharacteristicModes.url"
+    },
+    {
+      "key": "Telatar1999Capacity",
+      "title": "Capacity of Multi-antenna Gaussian Channels",
+      "doi": "10.1002/ett.4460100604",
+      "arquivo": "doc/pdfs/Telatar1999Capacity.pdf",
+      "status": "validado",
+      "tentativas": [
+        {
+          "origem": "arquivo_preexistente",
+          "erro": "ValueError: titulo incompativel (cobertura=0.000)"
+        }
+      ],
+      "origem": "repositorio_institucional",
+      "versao_documental": "version_of_record",
+      "licenca": "openaccess",
+      "url_obtencao": "https://infoscience.epfl.ch/server/api/core/bitstreams/ab2b6a45-d663-46f6-aa8f-f7f9b06c2bc4/content",
+      "resposta": {
+        "http_status": 200,
+        "content_type": "application/pdf",
+        "url_final": "https://infoscience.epfl.ch/server/api/core/bitstreams/ab2b6a45-d663-46f6-aa8f-f7f9b06c2bc4/content"
+      },
+      "validacao": {
+        "sha256": "e4fe71cfc8ad1e2177f1e38090b2647a9b664e78f37bc0e32dea21f0779f1dec",
+        "md5": "304bb4ec06a007516c460a323730fff6",
+        "bytes": 338971,
+        "paginas": 28,
+        "titulo_cobertura": 0.0,
+        "titulo_metodo": "checksum_do_repositorio",
+        "md5_publicado_confirmado": true,
+        "doi_encontrado_primeiras_3_paginas": false,
+        "pdf_header": "%PDF-1.2",
+        "pdf_eof": true
+      }
+    },
+    {
+      "key": "Ayach2014SparsePrecoding",
+      "title": "Spatially Sparse Precoding in Millimeter Wave MIMO Systems",
+      "doi": "10.1109/TWC.2014.011714.130846",
+      "arquivo": "doc/pdfs/Ayach2014SparsePrecoding.pdf",
+      "status": "validado",
+      "tentativas": [],
+      "validacao": {
+        "sha256": "33d16071018faa7cbcd93605b6640bbe780c6190eada9fca7a53bf51b53492fd",
+        "md5": "ea23d33efa769158f7b70b0570a3f9fa",
+        "bytes": 1220556,
+        "paginas": 30,
+        "titulo_cobertura": 1.0,
+        "titulo_metodo": "extracao_lexical",
+        "md5_publicado_confirmado": false,
+        "doi_encontrado_primeiras_3_paginas": false,
+        "pdf_header": "%PDF-1.5",
+        "pdf_eof": true
+      },
+      "origem": "arquivo_preexistente"
+    },
+    {
+      "key": "Molisch2017HybridBeamforming",
+      "title": "Hybrid Beamforming for Massive MIMO: A Survey",
+      "doi": "10.1109/MCOM.2017.1600400",
+      "arquivo": "doc/pdfs/Molisch2017HybridBeamforming.pdf",
+      "status": "validado",
+      "tentativas": [],
+      "validacao": {
+        "sha256": "7591de873e0aa144cc88bc9c5c4c2c13bebb4774a1b55c1f3cea2dfb82f9163b",
+        "md5": "ad0a4ed463a45b7a72a3e725f4a3d8e2",
+        "bytes": 658635,
+        "paginas": 13,
+        "titulo_cobertura": 1.0,
+        "titulo_metodo": "extracao_lexical",
+        "md5_publicado_confirmado": false,
+        "doi_encontrado_primeiras_3_paginas": false,
+        "pdf_header": "%PDF-1.5",
+        "pdf_eof": true
+      },
+      "origem": "arquivo_preexistente"
+    },
+    {
+      "key": "VilasBoas2026DielectricLoaded",
+      "title": "A Dielectric-Loaded Slotted Cavity-Backed Antenna Array for Millimeter Waves",
+      "doi": "10.1109/TAP.2026.3651362",
+      "arquivo": "doc/pdfs/VilasBoas2026DielectricLoaded.pdf",
+      "status": "indisponivel",
+      "tentativas": [
+        {
+          "url": "https://ieeexplore.ieee.org/ielx8/8/11477934/11346880.pdf?arnumber=11346880",
+          "origem": "editora",
+          "versao_documental": "version_of_record",
+          "erro": "ValueError: assinatura PDF ausente"
+        }
+      ],
+      "atalho_doi": "doc/pdfs/indisponiveis/VilasBoas2026DielectricLoaded.url"
+    },
+    {
+      "key": "Slater1946MicrowaveElectronics",
+      "title": "Microwave Electronics",
+      "doi": "10.1103/RevModPhys.18.441",
+      "arquivo": "doc/pdfs/Slater1946MicrowaveElectronics.pdf",
+      "status": "validado",
+      "tentativas": [],
+      "validacao": {
+        "sha256": "8c49acab012a2ba7d91596404de8810d04eec52e952a9e5f734971653d3aea03",
+        "md5": "0aec711c80e21a3aa2fa9d54e2fb157d",
+        "bytes": 6041788,
+        "paginas": 72,
+        "titulo_cobertura": 1.0,
+        "titulo_metodo": "extracao_lexical",
+        "md5_publicado_confirmado": false,
+        "doi_encontrado_primeiras_3_paginas": false,
+        "pdf_header": "%PDF-1.4",
+        "pdf_eof": true
+      },
+      "origem": "arquivo_preexistente"
+    },
+    {
+      "key": "Lai1990LeakingModes",
+      "title": "Time-independent perturbation for leaking electromagnetic modes in open systems with application to resonances in microdroplets",
+      "doi": "10.1103/PhysRevA.41.5187",
+      "arquivo": "doc/pdfs/Lai1990LeakingModes.pdf",
+      "status": "validado",
+      "tentativas": [],
+      "validacao": {
+        "sha256": "68a6195650e1e159447a0977464d07aca402b1bfe9696a15e254af965ebc0ee5",
+        "md5": "5592b0325c8c37a68d739121fa936ccf",
+        "bytes": 658446,
+        "paginas": 12,
+        "titulo_cobertura": 1.0,
+        "titulo_metodo": "extracao_lexical",
+        "md5_publicado_confirmado": false,
+        "doi_encontrado_primeiras_3_paginas": false,
+        "pdf_header": "%PDF-1.4",
+        "pdf_eof": true
+      },
+      "origem": "arquivo_preexistente"
+    }
+  ],
+  "anexos": [
+    {
+      "nome": "Li2022GeometryIndependent_supplementary.pdf",
+      "relacao": "supplementary_information",
+      "doi_artigo": "10.1038/s41467-022-31013-z",
+      "resposta": {
+        "http_status": 200,
+        "content_type": "text/html",
+        "url_final": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9217913/bin/41467_2022_31013_MOESM1_ESM.pdf"
+      },
+      "status": "indisponivel",
+      "erro": "PdfReadError: PDF starts with '\n\n\n\n<', but '%PDF-' expected"
+    }
+  ]
+}

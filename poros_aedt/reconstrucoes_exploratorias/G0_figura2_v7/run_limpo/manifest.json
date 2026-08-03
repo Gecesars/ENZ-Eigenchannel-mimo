@@ -1,0 +1,88 @@
+{
+  "schema": "enz-eigenchannel-mimo/run-manifest/v2",
+  "run_id": "ENZ-20260803-192218-ed5384a5",
+  "status": "COMPLETED",
+  "created_at": "2026-08-03T19:22:18.833841+00:00",
+  "updated_at": "2026-08-03T19:24:18.555374+00:00",
+  "completed_at": "2026-08-03T19:24:18.555374+00:00",
+  "specification": {
+    "path": "D:\\dev\\ENZ_ANT\\ENZ-Eigenchannel-mimo\\modelos\\especificacoes\\g0_figura2_reconstrucao_exploratoria.hipotese.v7.yaml",
+    "sha256": "ed5384a5dcbf709a0019269af4332b5ef65c2f6353bf725fd3a2a06fe0b2025e",
+    "bytes": 22808
+  },
+  "git": {
+    "commit": "428d1557220e15f06057de59eb538d98af0d0732",
+    "dirty": true
+  },
+  "host": {
+    "python": "3.12.10",
+    "os": "Windows-11-10.0.26200-SP0",
+    "hostname": "RF01",
+    "cpu_count": 20,
+    "ram_bytes": 42677538816
+  },
+  "runtime": {
+    "requested_aedt": "2024.2",
+    "strict_version": true,
+    "pyaedt": "1.3.0",
+    "transport": "native AEDT gRPC via PyAEDT",
+    "license": "DISPONIVEL: available_license_feature=98",
+    "pid": 117840,
+    "grpc_port": 58134,
+    "build": "2024.2.0",
+    "orphan_after_close": false
+  },
+  "solver": {
+    "stage": "M4",
+    "solution_type": "DrivenModal",
+    "setup": "Setup_Driven_25p87_HIPOTESE",
+    "solve_requested": true,
+    "cores": 14,
+    "tasks": 1,
+    "gpus": 0,
+    "validation_messages": []
+  },
+  "artifacts": [
+    {
+      "path": "input\\g0_figura2_reconstrucao_exploratoria.hipotese.v7.yaml",
+      "sha256": "ed5384a5dcbf709a0019269af4332b5ef65c2f6353bf725fd3a2a06fe0b2025e",
+      "bytes": 22808
+    },
+    {
+      "path": "aedt\\G0_figura2_reconstrucao_v7_M4.aedt",
+      "sha256": "24315eb2b3a2a5bec23b224c42872fd619d4eb5263b9a616ce7ba82c89631aab",
+      "bytes": 249970
+    },
+    {
+      "path": "logs\\validation.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "metrics\\convergence.csv",
+      "sha256": "9700a1dd530c380852a00fff7591bf18f94c1b0ca24847154592c99f21b7c508",
+      "bytes": 1648
+    },
+    {
+      "path": "metrics\\mesh_stats.csv",
+      "sha256": "6ff6dc00caee0e9288e65ab2dc1ddb1c30ed1842552387ff368ed9156042d976",
+      "bytes": 3164
+    },
+    {
+      "path": "metrics\\solver_profile.csv",
+      "sha256": "d5185d6e47beb32fbc25c0999bdd77f5094779bd8d09ade9976e10122bc69c0c",
+      "bytes": 22775
+    },
+    {
+      "path": "network\\sparameters.s1p",
+      "sha256": "03f0f1f39d9160c443f09a835ef91b1eb391e544dd5d4ed98d2263ae618fde88",
+      "bytes": 1907
+    },
+    {
+      "path": "logs\\aedt_messages.log",
+      "sha256": "0bef95d98ec459cd99f472e97916fce5983581de3e1204f21e9a4109f0ca853a",
+      "bytes": 1397
+    }
+  ],
+  "errors": []
+}

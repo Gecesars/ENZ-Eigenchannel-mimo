@@ -1,0 +1,90 @@
+{
+  "schema": "enz-eigenchannel-mimo/aedt-postprocessing/v1",
+  "classificacao": "SIMULADO",
+  "modelo": "G0_figura2_reconstrucao_v7",
+  "especificacao": {
+    "path": "D:\\dev\\ENZ_ANT\\ENZ-Eigenchannel-mimo\\modelos\\especificacoes\\g0_figura2_reconstrucao_exploratoria.hipotese.v7.yaml",
+    "sha256": "ed5384a5dcbf709a0019269af4332b5ef65c2f6353bf725fd3a2a06fe0b2025e"
+  },
+  "solucoes_disponiveis": [
+    "Setup_Driven_25p87_HIPOTESE - altura_interna_wr28='7.1100000000000003mm' cavidade_area_plana='108mm2' cavidade_comprimento_interno_exploratorio='18mm' cavidade_largura_interna_exploratoria='6mm' chanfro='3mm' comprimento_total_eixo_y='27mm' corpo_altura_externa='11.109999999999999mm' corpo_comprimento_externo='36mm' corpo_largura_externa_exploratoria='9mm' degrau_altura='1mm' degrau_largura='9mm' espessura_fundo_exploratoria='3mm' espessura_parede_lateral='1mm' espessura_tampa='1mm' flange_comprimento_exploratorio='4mm' flange_largura='22.5mm' fr4_dimensao_x='3mm' fr4_dimensao_y='1.6499999999999999mm' fr4_epsilon_r_exploratorio='4.4000000000000004' fr4_tan_delta_exploratorio='0.02' frequencia_adaptativa='25.870000000000001GHz' frequencia_sweep_fim='27GHz' frequencia_sweep_inicio='25GHz' largura_interna_wr28='3.5600000000000001mm' parafuso_diametro_exploratorio='2mm' pino_diametro='1mm' pino_offset_x_exploratorio='2mm' pino_offset_y_exploratorio='1.325mm' plano_porta_y='-18mm' ranhura_comprimento='5.6600000000000001mm' ranhura_largura='0.80000000000000004mm' ranhura_passo_exploratorio='4mm' : Table",
+    "Setup_Driven_25p87_HIPOTESE : LastAdaptive",
+    "Setup_Driven_25p87_HIPOTESE : Sweep_25_27GHz",
+    "Setup_Driven_25p87_HIPOTESE : Sweep_Fields_Article"
+  ],
+  "criados": {
+    "cortes": [],
+    "plots_campo": [],
+    "relatorios": [
+      "Fig2b_RadiationEfficiency",
+      "Fig3c_PeakRealizedGain"
+    ],
+    "estudos_parametricos": []
+  },
+  "existentes": {
+    "cortes": [
+      "Cut_ZX_ArrayCenter",
+      "Cut_XY_MidHeight",
+      "Cut_YZ_Slot1",
+      "Cut_YZ_Slot2",
+      "Cut_YZ_Slot3",
+      "Cut_YZ_Slot4",
+      "Cut_YZ_Slot5",
+      "Cut_ZX_Port"
+    ],
+    "plots_campo": [
+      "EMag_ZX_ArrayCenter_25p87",
+      "EMag_XY_MidHeight_25p87",
+      "EMag_YZ_Slot1_25p87",
+      "EMag_YZ_Slot2_25p87",
+      "EMag_YZ_Slot3_25p87",
+      "EMag_YZ_Slot4_25p87",
+      "EMag_YZ_Slot5_25p87",
+      "EMag_ZX_Port_25p87"
+    ],
+    "relatorios": [
+      "Fig2b_S11_25_27GHz",
+      "Fig1b_d_EPlane_25p87",
+      "Fig3d_EPlane_25p87",
+      "Fig4_EPlane_CoCross_MultiFreq",
+      "Fig4_HPlane_CoCross_MultiFreq",
+      "Gain3D_25p87"
+    ],
+    "estudos_parametricos": [
+      "Param_Chamfer_c_0_4mm",
+      "Param_StepWidth_8_10mm",
+      "Param_StepHeight_0p5_1p5mm"
+    ]
+  },
+  "pendentes_sem_solucao": {
+    "plots_campo": [],
+    "relatorios": []
+  },
+  "exportados": [
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Fig1b_d_EPlane_25p87.csv",
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Fig1b_d_EPlane_25p87.jpg",
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Fig2b_RadiationEfficiency.csv",
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Fig2b_RadiationEfficiency.jpg",
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Fig2b_S11_25_27GHz.csv",
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Fig2b_S11_25_27GHz.jpg",
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Fig3c_PeakRealizedGain.csv",
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Fig3c_PeakRealizedGain.jpg",
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Fig3d_EPlane_25p87.csv",
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Fig3d_EPlane_25p87.jpg",
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Fig4_EPlane_CoCross_MultiFreq.csv",
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Fig4_EPlane_CoCross_MultiFreq.jpg",
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Fig4_HPlane_CoCross_MultiFreq.csv",
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Fig4_HPlane_CoCross_MultiFreq.jpg",
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Gain3D_25p87.csv",
+    "artefatos\\runs\\ENZ-20260803-191731-ed5384a5\\plots\\article_reports\\Gain3D_25p87.jpg"
+  ],
+  "erros": [],
+  "runtime": {
+    "build": "2024.2.0",
+    "pid": 142312,
+    "grpc_port": 62123,
+    "pyaedt": "1.3.0",
+    "license": "DISPONIVEL: available_license_feature=98",
+    "cores_configurados_solve": 14
+  }
+}

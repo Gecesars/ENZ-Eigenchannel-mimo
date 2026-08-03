@@ -3,9 +3,21 @@
   "language": "pt-BR",
   "scientific_runtime": {
     "primary_aedt": "2024.2",
-    "transport": "PyAEDT over native AEDT gRPC"
+    "transport": "PyAEDT over native AEDT gRPC",
+    "validated_solver_resources": {"cores": 14, "tasks": 1, "gpus": 0}
   },
-  "status": "theory-and-validation-planning",
+  "status": "corpus-audited-m0-validated-g0-v7-exploratory-solved-and-documented",
   "base_paper_doi": "10.1109/OJAP.2026.3703713",
-  "next_gate": "EM-VALIDATION-01"
+  "technical_report": {
+    "path": "doc/pdfs/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v1.pdf",
+    "manifest": "doc/pdfs/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v1.manifest.json",
+    "classification": "HIPÓTESE"
+  },
+  "g0_v7_gates": {
+    "waveport_axis_z": "PASS",
+    "adaptive_convergence": "PASS",
+    "strict_passivity": "FAIL",
+    "published_s11_correspondence": "FAIL"
+  },
+  "next_gate": "EM-VALIDATION-01-source-complete-cad-materials-passivity-and-complex-data"
 }

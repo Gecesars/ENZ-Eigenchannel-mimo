@@ -24,9 +24,21 @@ Acima do corte,
 
 ```math
 \beta=
-k_0\sqrt{
-\varepsilon_r\mu_r-
+k_0\sqrt{\varepsilon_r\mu_r}
+\sqrt{
+1-
 \left(\frac{f_c}{f}\right)^2
+}.
+```
+
+Essa expressão usa a frequência de corte **do guia preenchido** definida acima.
+Equivalentemente, usando a frequência de corte no vácuo
+$f_{c0}=c/(2a)$,
+
+```math
+\beta=k_0\sqrt{
+\varepsilon_r\mu_r-
+\left(\frac{f_{c0}}{f}\right)^2
 }.
 ```
 
@@ -38,9 +50,17 @@ Para o modo $TE_{10}$ em guia com $\mu_r\approx1$, é possível escrever uma ana
 \varepsilon_{\mathrm{eff}}(f)
 =
 \varepsilon_r
--
-\left(\frac{f_c}{f}\right)^2.
+\left[
+1-
+\left(\frac{f_c}{f}\right)^2
+\right]
+.
 ```
+
+Se $f_{c0}$ for usado em vez de $f_c$, a mesma relação é
+$\varepsilon_{\mathrm{eff}}=\varepsilon_r-(f_{c0}/f)^2$. Misturar as duas
+definições omite um fator $\varepsilon_r$; no caso do artigo-base, preenchido
+por ar, ambas coincidem numericamente.
 
 Quando $f\rightarrow f_c^+$,
 
@@ -63,10 +83,14 @@ v_p=\frac{\omega}{\beta},
 e cresce próximo ao corte. A velocidade de grupo, para guia ideal,
 
 ```math
-v_g=c\sqrt{1-\left(\frac{f_c}{f}\right)^2},
+v_g=
+\frac{c}{\sqrt{\varepsilon_r\mu_r}}
+\sqrt{1-\left(\frac{f_c}{f}\right)^2},
 ```
 
-tende a zero. Não há violação de causalidade: energia e informação seguem a velocidade de grupo e a resposta dispersiva.
+para preenchimento homogêneo, isotrópico e não dispersivo. Ela tende a zero.
+Não há violação de causalidade: energia e informação seguem a velocidade de
+grupo e a resposta dispersiva.
 
 A impedância modal TE é
 
@@ -148,3 +172,13 @@ Neste repositório, “regime ENZ estrutural” significa:
 5. métricas de matching e perda explicitadas.
 
 Sem esses itens, o termo ENZ não deve ser usado apenas por semelhança visual.
+
+## 10. Rastreabilidade
+
+**PUBLICADO:** a equivalência modal entre guia retangular próximo ao corte e
+meio ENZ é discutida por Silveirinha e Engheta, DOI
+`10.1103/PhysRevLett.97.157403`, e empregada experimentalmente por Li et al.,
+DOI `10.1038/s41467-022-31013-z`.
+
+**DERIVADO:** as expressões desta seção seguem de
+$\beta^2=k_0^2\varepsilon_r\mu_r-k_c^2$ e da definição declarada de $f_c$.

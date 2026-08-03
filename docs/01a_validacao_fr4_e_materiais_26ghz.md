@@ -36,7 +36,7 @@ No modelo perturbativo, a alteração de frequência provocada por uma mudança 
 ```math
 \frac{\Delta\omega}{\omega_0}
 \approx
--\frac{1}{2}
+-
 \frac{
 \displaystyle\int_{V_d}
 \Delta\varepsilon\,|\mathbf E_0|^2\,dV

@@ -106,12 +106,12 @@ Para perturbações materiais pequenas, a variação de frequência pode ser apr
 ```math
 \frac{\Delta\omega}{\omega}
 \approx
--\frac12
+-
 \frac{
 \int_V
 \left(
 \Delta\varepsilon|\mathbf E|^2
--
++
 \Delta\mu|\mathbf H|^2
 \right)dV
 }{
@@ -122,6 +122,19 @@ Para perturbações materiais pequenas, a variação de frequência pode ser apr
 \right)dV
 }.
 ```
+
+**DERIVADO:** os termos de perturbação volumétrica em permissividade e
+permeabilidade entram com o mesmo sinal dentro do numerador nessa aproximação.
+O denominador contém as parcelas elétrica e magnética; por isso não existe um
+fator $1/2$ adicional diante dessa razão. Para uma variação uniforme em meio
+não dispersivo e energias elétrica e magnética iguais, a expressão recupera
+$\Delta\omega/\omega\approx-½(\Delta\varepsilon/\varepsilon+
+\Delta\mu/\mu)$. A normalização e a forma integral precisam ser adaptadas para
+materiais dispersivos, anisotrópicos ou com perdas.
+
+**PUBLICADO:** a formulação clássica de perturbação de cavidades é atribuída a
+J. C. Slater, *Microwave Electronics*, DOI
+`10.1103/RevModPhys.18.441`.
 
 Para deformações de fronteira, surgem integrais de superfície envolvendo componentes tangenciais e normais. Em cavidades abertas, deve-se usar formulações não hermitianas ou diferenças finitas validadas.
 

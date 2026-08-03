@@ -1,0 +1,11 @@
+HFSS Mesh Statistics
+  Project:           M0_cavidade_retangular_smoke_M0
+  Design:            HFSS_ENZ_M0_cavidade_retangular_smoke_M0
+  Solution setup:    Setup_Eigen_18_32
+  Design variation:  cavidade_altura='7.7142999999999997mm' cavidade_comprimento='20mm' cavidade_largura='14mm'
+
+Total number of mesh elements: 3268
+           |     Num Tets  | Min edge length  | Max edge length  | RMS edge length  |     Min tet vol  |     Max tet vol  |    Mean tet vol  |  Std Devn (vol)  |
+Cavity_Air |         3268  |         1.29559  |         3.18787  |         2.37074  |         0.12151  |         2.25955  |        0.660956  |        0.323134  |
+
+ |

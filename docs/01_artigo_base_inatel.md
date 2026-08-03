@@ -116,12 +116,15 @@ Portanto, qualquer extensão MIMO deste repositório é uma nova hipótese e dev
 
 Mesmo com a Figura 2, algumas dimensões podem exigir leitura gráfica, CAD original ou contato com os autores. Toda dimensão deve receber uma origem:
 
-- `PUBLISHED_TEXT`;
-- `PUBLISHED_FIGURE`;
-- `DERIVED`;
-- `INFERRED`;
-- `OPTIMIZED`;
-- `UNKNOWN`.
+- classificação científica dentre `PUBLICADO`, `DERIVADO`, `SIMULADO`,
+  `MEDIDO`, `INFERIDO`, `HIPÓTESE` e `DESCONHECIDO`;
+- tipo de fonte dentre `TEXTO`, `FIGURA`, `TABELA`, `EQUAÇÃO`, `DERIVAÇÃO`,
+  `SIMULAÇÃO`, `MEDIÇÃO`, `AUDITORIA` e `HIPÓTESE`;
+- referência e localização exata na fonte.
+
+Por exemplo, a antiga categoria `PUBLISHED_FIGURE` corresponde agora a
+`classificacao: PUBLICADO` e `fonte.tipo: FIGURA`. Essa separação evita criar
+classes compostas fora da ontologia obrigatória.
 
 Um modelo que reproduza o gráfico após ajustar dimensões desconhecidas será chamado de **reconstrução otimizada**, não de réplica exata.
 

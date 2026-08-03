@@ -11,7 +11,23 @@ venv/
 *.aedb/
 *.log
 artefatos/runs/
+artefatos/failed_publications/
+artefatos/report_preview/
+artefatos/sensitive_ephemeral/
+
+# Estado efêmero do AEDT: nunca publicar tokens, locks ou semáforos de sessão.
+*.aedt.lock
+*.semaphore
 resultados/
 build/
 dist/
 *.egg-info/
+
+# Pacote científico curado: deve permanecer visível mesmo contendo logs e
+# diretórios .aedtresults que são ignorados em runs brutos.
+!poros_aedt/
+!poros_aedt/**
+
+# A exceção do pacote curado não reabilita estado efêmero de sessão.
+poros_aedt/**/*.aedt.lock
+poros_aedt/**/*.semaphore

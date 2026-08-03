@@ -161,3 +161,24 @@ Port: P1_WR28
 ## 12. Integração futura
 
 A infraestrutura madura do repositório `dipole_gen` é referência de implementação para seleção de runtime, workers independentes, gRPC, extração MIMO, persistência e comparação. O código deve ser reutilizado por adaptação explícita ou módulo compartilhado, evitando cópia cega.
+
+## 13. Implementação auditada em 2026-08-03
+
+**SIMULADO:** o worker `enz-aedt-worker` executou um M0 sintético Eigenmode no
+AEDT 2024.2.0 por gRPC nativo com PyAEDT 1.3.0. O run concluído registrou PID,
+porta, build, licença, commit Git, hashes, convergência, malha, perfil do solver,
+mensagens AEDT e teste de processo órfão.
+
+**DERIVADO:** a extração modal não usa nomes inventados nem o eixo gráfico
+`Freq`/`X`. Ela consulta as categorias que o próprio AEDT expõe como
+`Eigen Modes` e `Eigen Q`, seguindo o exemplo oficial do PyAEDT, e grava valores
+SI em CSV.
+
+**HIPÓTESE:** o arquivo
+`m0_cavidade_retangular_smoke.hipotese.v1.yaml` contém dimensões sintéticas
+declaradas apenas para testar a infraestrutura.
+
+**DESCONHECIDO:** `local_attach`, execução remota, cancelamento cooperativo e
+timeout externo ainda não foram validados. O CLI atual implementa somente
+`local_launch` isolado. Operações de solução devem ser iniciadas em processo
+worker, nunca na thread da interface.

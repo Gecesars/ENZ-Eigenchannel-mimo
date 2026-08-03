@@ -1,0 +1,21 @@
+DesignVariation : cavidade_altura='7.7142999999999997mm' cavidade_comprimento='20mm' cavidade_largura='14mm'
+Setup : Setup_Eigen_18_32
+
+==================
+Number of Passes
+Completed : 3
+Maximum   : 6
+Minimum   : 1
+==================
+Criterion : Max Delta Freq. %
+Target    : 0.5
+Current   : 0.00091896
+Target Consecutive Passes  : 2
+Current Consecutive Passes : 2
+Converged : Yes
+==================
+Pass Number|Solved Elements|Max Delta Freq. %|
+          1|           2266|              N/A|
+          2|           2720|        0.0012863|
+          3|           3268|       0.00091896|
+

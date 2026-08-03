@@ -1,0 +1,71 @@
+{
+  "schema": "enz-eigenchannel-mimo/exploratory-validation/v1",
+  "modelo": "G0_figura2_reconstrucao_v7",
+  "classificacao_global": "HIPÓTESE",
+  "fonte_primaria": {
+    "doi": "10.1109/OJAP.2026.3703713",
+    "arquivo": "doc/pdfs/VilasBoas_2026_OJAP_FlatTop.pdf"
+  },
+  "especificacao": {
+    "arquivo": "modelos/especificacoes/g0_figura2_reconstrucao_exploratoria.hipotese.v7.yaml",
+    "sha256": "ed5384a5dcbf709a0019269af4332b5ef65c2f6353bf725fd3a2a06fe0b2025e"
+  },
+  "run_solucao_imutavel": "ENZ-20260803-192218-ed5384a5",
+  "run_projeto_configurado": "ENZ-20260803-191731-ed5384a5",
+  "waveport": {
+    "classificacao": "SIMULADO",
+    "gate": "PASS",
+    "sheet_bbox_mm": [-1.78, -18.0, 3.0, 1.78, -18.0, 10.11],
+    "sheet_extents_mm": {"x": 3.56, "y": 0.0, "z": 7.11},
+    "sheet_normal": [0.0, 1.0, 0.0],
+    "use_integration_line": true,
+    "integration_line_start_mm": [0.0, -18.0, 3.0],
+    "integration_line_end_mm": [0.0, -18.0, 10.11],
+    "integration_axis": "Z",
+    "automatic_setup_present": false
+  },
+  "solver": {
+    "classificacao": "SIMULADO",
+    "aedt": "2024.2.0",
+    "pyaedt": "1.3.0",
+    "transport": "native AEDT gRPC via PyAEDT",
+    "cores_solicitados": 14,
+    "passes": 4,
+    "max_delta_s": 0.0041377,
+    "target_delta_s": 0.02,
+    "converged": true,
+    "mesh_tetrahedra": 33723,
+    "discrete_article_frequencies_ghz": [25.65, 25.87, 26.22]
+  },
+  "posprocessamento": {
+    "classificacao": "SIMULADO",
+    "cuts": 8,
+    "field_plots": 8,
+    "reports_with_traces": 8,
+    "report_csv_exports": 8,
+    "report_jpg_exports": 8,
+    "configured_parametric_studies": 3,
+    "executed_parametric_studies": 0
+  },
+  "power_at_25_87_ghz": {
+    "classificacao": "SIMULADO",
+    "incident_power": 1.0,
+    "accepted_power": 0.385354748539771,
+    "radiated_power": 0.393687468781196,
+    "radiation_efficiency": 1.02162350476542,
+    "total_efficiency": 0.393687468781196,
+    "peak_realized_gain_dbi": 3.28777062801175,
+    "algebraic_identity_gate": "PASS",
+    "strict_passivity_gate": "FAIL",
+    "radiated_over_accepted_excess_percent": 2.162350476541497
+  },
+  "comparison_with_publication": {
+    "classificacao": "SIMULADO",
+    "s11_min_db": -2.36897893667884,
+    "s11_min_frequency_ghz": 26.22,
+    "s11_at_25_87_ghz_db": -0.997468951526421,
+    "published_minus_10_db_band_ghz": [25.64, 26.24],
+    "matching_gate": "FAIL"
+  },
+  "conclusao": "A infraestrutura, a waveport, a malha e o ambiente de plots foram verificados. A reprodução científica permanece reprovada por hipóteses geométricas, divergência de S11 e excesso de potência radiada sobre a aceita."
+}

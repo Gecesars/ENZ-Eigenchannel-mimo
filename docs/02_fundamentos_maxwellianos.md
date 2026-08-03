@@ -62,14 +62,23 @@ No problema de autovalor sem fonte,
 Em cavidade fechada ideal, $\tilde\omega_n$ pode ser real. Em cavidade aberta ou com perdas,
 
 ```math
-\tilde\omega_n=\omega_n-j\gamma_n,
+\tilde\omega_n=\omega_n+j\gamma_n,
 ```
 
-e o fator de qualidade é aproximadamente
+com $\gamma_n>0$ para um modo temporalmente decrescente sob a convenção
+$e^{j\omega t}$ adotada neste documento, pois
+$e^{j\tilde\omega_n t}=e^{j\omega_nt}e^{-\gamma_nt}$. Se a convenção
+$e^{-j\omega t}$ for usada, o sinal da parte imaginária deve ser invertido. O
+fator de qualidade é aproximadamente
 
 ```math
 Q_n=\frac{\omega_n}{2\gamma_n}.
 ```
+
+**DERIVADO:** o sinal acima decorre diretamente da convenção temporal declarada.
+Modos quase normais de sistemas abertos e a perturbação de suas frequências
+complexas são tratados, por exemplo, por Lai et al., DOI
+`10.1103/PhysRevA.41.5187`.
 
 ## 3. Energia e potência
 

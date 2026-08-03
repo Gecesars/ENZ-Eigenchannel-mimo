@@ -1,0 +1,221 @@
+HFSS Profile
+ Project: G0_figura2_reconstrucao_v7_M4
+ Design: HFSS_ENZ_G0_figura2_reconstrucao_v7_M4
+ Solution setup: Setup_Driven_25p87_HIPOTESE
+ Design variation: altura_interna_wr28='7.1100000000000003mm' cavidade_area_plana='108mm2' cavidade_comprimento_interno_exploratorio='18mm' cavidade_largura_interna_exploratoria='6mm' chanfro='3mm' comprimento_total_eixo_y='27mm' corpo_altura_externa='11.109999999999999mm' corpo_comprimento_externo='36mm' corpo_largura_externa_exploratoria='9mm' degrau_altura='1mm' degrau_largura='9mm' espessura_fundo_exploratoria='3mm' espessura_parede_lateral='1mm' espessura_tampa='1mm' flange_comprimento_exploratorio='4mm' flange_largura='22.5mm' fr4_dimensao_x='3mm' fr4_dimensao_y='1.6499999999999999mm' fr4_epsilon_r_exploratorio='4.4000000000000004' fr4_tan_delta_exploratorio='0.02' frequencia_adaptativa='25.870000000000001GHz' frequencia_sweep_fim='27GHz' frequencia_sweep_inicio='25GHz' largura_interna_wr28='3.5600000000000001mm' parafuso_diametro_exploratorio='2mm' pino_diametro='1mm' pino_offset_x_exploratorio='2mm' pino_offset_y_exploratorio='1.325mm' plano_porta_y='-18mm' ranhura_comprimento='5.6600000000000001mm' ranhura_largura='0.80000000000000004mm' ranhura_passo_exploratorio='4mm'
+
+  Task                             Real Time  CPU Time  Memory  Information
+  ----                             ---------  --------  ------  -----------
+
+  Solution Process                                              Start Time: 08/03/2026 16:22:41, Host: RF01, Processor: 20, OS: NT 10.0, Product: HFSS Version 2024.2.0
+                                                                Executing From: C:\Program Files\AnsysEM\v242\Win64\HFSSCOMENGINE.exe
+                                                                
+  HPC                                                           Type: Auto, MPI Vendor: Intel, MPI Version: 2021
+  Machine                                                       Name: RF01, Memory: 39.7 GB, RAM Limit: 90.000000%, Cores: 14, Free Disk Space: 138 GB
+                                                                
+                                                                Allow off core: True
+                                                                Solution Basis Order: 1
+  Design Validation                                             Elapsed time : 00:00:00 , HFSS ComEngine Memory : 110 M
+                                                                Perform full validations with standard port validations
+                                                                
+  Initial Meshing                                               Time: 08/03/2026 16:22:41
+  Mesh                             00:00:02   00:00:03  71.3 M  Tetrahedra: 17982, Type: TAU, Cores: 14
+  Coarsen                          00:00:01   00:00:01  71.3 M  Tetrahedra: 6426
+  Lambda Refine                    00:00:03   00:00:03  69.3 M  Tetrahedra: 20860, Cores: 1
+  Simulation Setup                 00:00:00   00:00:00  237 M   Disk: 0 Bytes
+  Port Adapt                       00:00:00   00:00:00  245 M   Tetrahedra: 17761, Disk: 40.5 KB
+  Port Refine                      00:00:00   00:00:00  50.1 M  Tetrahedra: 21032, Cores: 1
+  Initial Meshing                                               Elapsed Time: 00:00:08
+                                                                
+  Adaptive Meshing                                              Time: 08/03/2026 16:22:49
+                                                                
+  Adaptive Pass 1                                               Frequency: 25.87GHz
+  Simulation Setup                 00:00:00   00:00:00  242 M   Tetrahedra: 17889, Disk: 9.1 KB
+  Matrix Assembly                  00:00:00   00:00:01  398 M   Tetrahedra: 17889, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:01   00:00:13  963 M   Type: DCS, Cores: 14, Matrix size: 111321, Matrix bandwidth:  20.6, Disk: 438 KB
+  Field Recovery                   00:00:00   00:00:00  963 M   Excitations: 1, Disk: 2.67 MB
+  Data Transfer                    00:00:00   00:00:00  113 M   Adaptive Pass 1
+                                                                
+  Adaptive Pass 2                                               Frequency: 25.87GHz
+  Adaptive Refine                  00:00:00   00:00:00  56 M    Tetrahedra: 24611, Cores: 1
+  Simulation Setup                 00:00:00   00:00:00  251 M   Tetrahedra: 20975, Disk: 12.2 KB
+  Matrix Assembly                  00:00:00   00:00:01  430 M   Tetrahedra: 20975, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:02   00:00:14  1.05 G  Type: DCS, Cores: 14, Matrix size: 129877, Matrix bandwidth:  20.6, Disk: 73.9 KB
+  Field Recovery                   00:00:00   00:00:00  1.05 G  Excitations: 1, Disk: 1.17 MB
+  Data Transfer                    00:00:00   00:00:00  113 M   Adaptive Pass 2
+                                                                Max Mag. Delta S: 0.04772
+                                                                
+  Adaptive Pass 3                                               Frequency: 25.87GHz
+  Adaptive Refine                  00:00:01   00:00:01  58.7 M  Tetrahedra: 28807, Cores: 1
+  Simulation Setup                 00:00:00   00:00:00  258 M   Tetrahedra: 24571, Disk: 12.2 KB
+  Matrix Assembly                  00:00:00   00:00:01  468 M   Tetrahedra: 24571, P1_WR28_TE10 Triangles: 91, Disk: 437 Bytes
+  Matrix Solve                     00:00:02   00:00:16  1.11 G  Type: DCS, Cores: 14, Matrix size: 151471, Matrix bandwidth:  20.6, Disk: 85.8 KB
+  Field Recovery                   00:00:00   00:00:00  1.11 G  Excitations: 1, Disk: 1.29 MB
+  Data Transfer                    00:00:00   00:00:00  113 M   Adaptive Pass 3
+                                                                Max Mag. Delta S: 0.01162
+                                                                
+  Adaptive Pass 4                                               Frequency: 25.87GHz
+  Adaptive Refine                  00:00:01   00:00:01  64.7 M  Tetrahedra: 33723, Cores: 1
+  Simulation Setup                 00:00:00   00:00:00  270 M   Tetrahedra: 28772, Disk: 15 KB
+  Matrix Assembly                  00:00:00   00:00:01  514 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:02   00:00:17  1.33 G  Type: DCS, Cores: 14, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 99.9 KB
+  Field Recovery                   00:00:00   00:00:00  1.33 G  Excitations: 1, Disk: 1.42 MB
+  Data Transfer                    00:00:00   00:00:00  114 M   Adaptive Pass 4
+                                                                Max Mag. Delta S: 0.00414
+                                                                
+  Adaptive Meshing                                              Elapsed Time: 00:00:23
+                                                                Adaptive Passes converged
+                                                                
+  Frequency Sweep                                               Time: 08/03/2026 16:23:12
+                                                                HPC: Enabled
+                                                                
+  Solution - Sweep_Fields_Article                               Discrete HFSS Frequency Sweep, Solving Distributed - up to 3 frequencies in parallel, Time: 08/03/2026 16:23:12
+                                                                From 25.65GHz to 26.22GHz, 3 Frequencies
+                                                                Frequency: 25.87GHz has already been solved
+                                                                
+  Frequency - 26.22GHz                                          RF01
+  Simulation Setup                 00:00:00   00:00:00  265 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:00   00:00:01  511 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:03   00:00:12  1.21 G  Type: DCS, Cores: 5, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.42 KB
+  Field Recovery                   00:00:00   00:00:00  1.21 G  Excitations: 1, Disk: 505 KB
+                                                                
+  Frequency - 25.65GHz                                          RF01
+  Simulation Setup                 00:00:00   00:00:00  266 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:00   00:00:02  512 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:03   00:00:12  1.24 G  Type: DCS, Cores: 5, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.42 KB
+  Field Recovery                   00:00:00   00:00:00  1.24 G  Excitations: 1, Disk: 505 KB
+                                                                
+  Data Transfer                    00:00:00   00:00:00  114 M   Discrete frequency sweep
+                                                                
+  Solution - Sweep_Fields_Article                               Elapsed Time: 00:00:09
+                                                                HFSS: Distributed Discrete sweep
+                                                                
+  Solution - Sweep_25_27GHz                                     Interpolating HFSS Frequency Sweep, Solving Distributed - up to 7 frequencies in parallel, Time: 08/03/2026 16:23:24
+                                                                From 25GHz to 27GHz, 201 Frequencies
+                                                                
+  Frequency - 27GHz                                             RF01
+                                                                Distributed Solve Group #1
+  Simulation Setup                 00:00:00   00:00:00  296 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:01   00:00:01  430 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:08   00:00:14  1.24 G  Type: DCS, Cores: 2, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.42 KB
+  Field Recovery                   00:00:00   00:00:00  1.24 G  Excitations: 1, Disk: 505 KB
+                                                                
+  Frequency - 25GHz                                             RF01
+                                                                Distributed Solve Group #1
+  Simulation Setup                 00:00:00   00:00:00  297 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:01   00:00:02  429 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:08   00:00:14  1.23 G  Type: DCS, Cores: 2, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.42 KB
+  Field Recovery                   00:00:00   00:00:00  1.23 G  Excitations: 1, Disk: 505 KB
+                                                                
+  Frequency - 26GHz                                             RF01
+                                                                Distributed Solve Group #1
+  Simulation Setup                 00:00:00   00:00:00  297 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:01   00:00:02  429 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:08   00:00:15  1.23 G  Type: DCS, Cores: 2, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.42 KB
+  Field Recovery                   00:00:00   00:00:00  1.23 G  Excitations: 1, Disk: 505 KB
+                                                                
+  Frequency - 25.5GHz                                           RF01
+                                                                Distributed Solve Group #1
+  Simulation Setup                 00:00:00   00:00:00  299 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:02   00:00:03  431 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:08   00:00:15  1.23 G  Type: DCS, Cores: 2, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.42 KB
+  Field Recovery                   00:00:00   00:00:00  1.23 G  Excitations: 1, Disk: 505 KB
+                                                                
+  Frequency - 26.5GHz                                           RF01
+                                                                Distributed Solve Group #1
+  Simulation Setup                 00:00:00   00:00:00  296 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:02   00:00:03  429 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:08   00:00:14  1.23 G  Type: DCS, Cores: 2, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.41 KB
+  Field Recovery                   00:00:00   00:00:00  1.23 G  Excitations: 1, Disk: 505 KB
+                                                                
+  Frequency - 25.25GHz                                          RF01
+                                                                Distributed Solve Group #1
+  Simulation Setup                 00:00:00   00:00:00  297 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:02   00:00:03  430 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:08   00:00:14  1.23 G  Type: DCS, Cores: 2, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.42 KB
+  Field Recovery                   00:00:00   00:00:00  1.23 G  Excitations: 1, Disk: 505 KB
+                                                                
+  Frequency - 25.75GHz                                          RF01
+                                                                Distributed Solve Group #1
+  Simulation Setup                 00:00:00   00:00:00  296 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:02   00:00:04  428 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:07   00:00:13  1.23 G  Type: DCS, Cores: 2, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.42 KB
+  Field Recovery                   00:00:00   00:00:00  1.23 G  Excitations: 1, Disk: 505 KB
+                                                                
+                                                                Basis Element # 1, Frequency: 27GHz; Additional basis points are needed before the interpolation error can be computed.
+                                                                Basis Element # 2, Frequency: 25GHz; Additional basis points are needed before the interpolation error can be computed.
+                                                                Basis Element # 3, Frequency: 26GHz; S Matrix Error = 148.956%
+                                                                Basis Element # 4, Frequency: 25.5GHz; S Matrix Error =  61.438%
+                                                                Basis Element # 5, Frequency: 26.5GHz; S Matrix Error =  25.702%
+                                                                Basis Element # 6, Frequency: 25.25GHz; S Matrix Error =   8.576%
+                                                                Basis Element # 7, Frequency: 25.75GHz; S Matrix Error =   2.452%
+                                                                
+  Frequency - 26.75GHz                                          RF01
+                                                                Distributed Solve Group #2
+  Simulation Setup                 00:00:00   00:00:00  296 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:01   00:00:01  429 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:07   00:00:13  1.23 G  Type: DCS, Cores: 2, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.42 KB
+  Field Recovery                   00:00:00   00:00:00  1.23 G  Excitations: 1, Disk: 505 KB
+                                                                
+  Frequency - 26.25GHz                                          RF01
+                                                                Distributed Solve Group #2
+  Simulation Setup                 00:00:00   00:00:00  297 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:01   00:00:02  429 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:08   00:00:14  1.24 G  Type: DCS, Cores: 2, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.42 KB
+  Field Recovery                   00:00:00   00:00:00  1.24 G  Excitations: 1, Disk: 505 KB
+                                                                
+  Frequency - 25.875GHz                                         RF01
+                                                                Distributed Solve Group #2
+  Simulation Setup                 00:00:00   00:00:00  296 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:01   00:00:02  431 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:08   00:00:15  1.23 G  Type: DCS, Cores: 2, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.42 KB
+  Field Recovery                   00:00:00   00:00:00  1.23 G  Excitations: 1, Disk: 505 KB
+                                                                
+  Frequency - 25.625GHz                                         RF01
+                                                                Distributed Solve Group #2
+  Simulation Setup                 00:00:00   00:00:00  298 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:02   00:00:03  430 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:08   00:00:15  1.23 G  Type: DCS, Cores: 2, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.41 KB
+  Field Recovery                   00:00:00   00:00:00  1.23 G  Excitations: 1, Disk: 505 KB
+                                                                
+  Frequency - 25.375GHz                                         RF01
+                                                                Distributed Solve Group #2
+  Simulation Setup                 00:00:00   00:00:00  296 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:02   00:00:03  429 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:08   00:00:14  1.23 G  Type: DCS, Cores: 2, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.41 KB
+  Field Recovery                   00:00:00   00:00:00  1.23 G  Excitations: 1, Disk: 505 KB
+                                                                
+  Frequency - 25.125GHz                                         RF01
+                                                                Distributed Solve Group #2
+  Simulation Setup                 00:00:00   00:00:00  296 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:02   00:00:03  429 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:08   00:00:14  1.23 G  Type: DCS, Cores: 2, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.41 KB
+  Field Recovery                   00:00:00   00:00:00  1.23 G  Excitations: 1, Disk: 505 KB
+                                                                
+  Frequency - 26.625GHz                                         RF01
+                                                                Distributed Solve Group #2
+  Simulation Setup                 00:00:01   00:00:00  296 M   Tetrahedra: 28772, Disk: 0 Bytes
+  Matrix Assembly                  00:00:02   00:00:03  428 M   Tetrahedra: 28772, P1_WR28_TE10 Triangles: 91, Disk: 0 Bytes
+  Matrix Solve                     00:00:07   00:00:13  1.23 G  Type: DCS, Cores: 2, Matrix size: 176691, Matrix bandwidth:  20.6, Disk: 1.42 KB
+  Field Recovery                   00:00:00   00:00:00  1.23 G  Excitations: 1, Disk: 505 KB
+                                                                
+                                                                Basis Element # 8, Frequency: 26.75GHz; S Matrix Error =   0.505%
+                                                                Basis Element # 9, Frequency: 26.25GHz; Scattering matrix quantities converged; Passive within tolerance
+  Data Transfer                    00:00:00   00:00:00  116 M   Frequency Group #2; Interpolating frequency sweep
+                                                                
+  Solution - Sweep_25_27GHz                                     Elapsed Time: 00:00:42
+                                                                Interpolating sweep converged and is passive
+                                                                HFSS: Distributed Interpolating sweep
+                                                                
+  Frequency Sweep                                               Elapsed Time: 00:00:54
+                                                                
+  Simulation Summary                                            
+  Design Validation                                             Elapsed Time: 00:00:00, Total Memory: 110 MB
+  Initial Meshing                                               Elapsed Time: 00:00:08, Total Memory: 316 MB
+  Adaptive Meshing                                              Elapsed Time: 00:00:23, Average memory/process: 1.33 GB, Max memory/process: 1.33 GB, Max number of processes/frequency: 1, Total number of cores: 14
+  Frequency Sweep                                               Elapsed Time: 00:00:54, Average memory/process: 1.23 GB, Max memory/process: 1.24 GB, Max number of processes/frequency: 1, Total number of cores: 14
+                                                                Max solved tets: 28772, Max matrix size: 176691, Matrix bandwidth: 20.6
+                                                                
+  Solution Process                                              Elapsed Time: 00:01:25, ComEngine Memory: 117 M
+                                                                Stop Time: 08/03/2026 16:24:07, Status: Normal Completion
+                                                                

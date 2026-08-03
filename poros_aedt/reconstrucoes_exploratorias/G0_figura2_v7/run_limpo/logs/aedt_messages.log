@@ -1,0 +1,8 @@
+Project: *Global - Messages, [info]  GRPC server running on port: 58134.
+
+Project: G0_figura2_reconstrucao_v7_M4, Design: HFSS_ENZ_G0_figura2_reconstrucao_v7_M4 (Modal Network), [info]  A discrete frequency sweep with 3 point(s) has been started using HFSS - Solving Distributed. (04:24:07 PM  Aug 03, 2026)
+Project: G0_figura2_reconstrucao_v7_M4, Design: HFSS_ENZ_G0_figura2_reconstrucao_v7_M4 (Modal Network), [info]  Discrete frequency sweep complete. (04:24:07 PM  Aug 03, 2026)
+Project: G0_figura2_reconstrucao_v7_M4, Design: HFSS_ENZ_G0_figura2_reconstrucao_v7_M4 (Modal Network), [info]  An interpolating frequency sweep with 201 points has been started using HFSS - Solving Distributed. (04:24:07 PM  Aug 03, 2026)
+Project: G0_figura2_reconstrucao_v7_M4, Design: HFSS_ENZ_G0_figura2_reconstrucao_v7_M4 (Modal Network), [info]  Interpolating frequency sweep complete. Converged. (04:24:07 PM  Aug 03, 2026)
+Project: G0_figura2_reconstrucao_v7_M4, Design: HFSS_ENZ_G0_figura2_reconstrucao_v7_M4 (Modal Network), [info]  Normal completion of simulation on server: Local Machine. (04:24:07 PM  Aug 03, 2026)
+Project: G0_figura2_reconstrucao_v7_M4, Design: HFSS_ENZ_G0_figura2_reconstrucao_v7_M4 (Modal Network), [info]  Touchstone export: Writing to "D:/dev/ENZ_ANT/ENZ-Eigenchannel-mimo/artefatos/runs/ENZ-20260803-192218-ed5384a5/network/sparameters.s1p" (04:24:09 PM  Aug 03, 2026)

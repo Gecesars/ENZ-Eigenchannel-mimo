@@ -5,8 +5,13 @@
 Uma cavidade PEC fechada suporta modos discretos sem perda de radiação. Ao abrir ranhuras, conectar guia e incluir perdas, os modos tornam-se ressonâncias abertas com frequências complexas.
 
 ```math
-\tilde\omega_n=\omega_n-j\gamma_n.
+\tilde\omega_n=\omega_n+j\gamma_n.
 ```
+
+O sinal corresponde à convenção temporal $e^{j\omega t}$ adotada em
+[`02_fundamentos_maxwellianos.md`](02_fundamentos_maxwellianos.md), com
+$\gamma_n>0$ representando decaimento. Sob $e^{-j\omega t}$, usa-se
+$\tilde\omega_n=\omega_n-j\gamma_n$.
 
 O campo total pode ser decomposto em modos quase normais mais uma contribuição de fundo.
 

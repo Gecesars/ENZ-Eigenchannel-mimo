@@ -1,0 +1,337 @@
+schema: enz-eigenchannel-mimo/geometry-spec/v3
+modelo: G0_figura2_reconstrucao_exploratoria
+versao: 5
+estado: executavel_sem_claim_de_reproducao
+classificacao: HIPÓTESE
+fonte_primaria:
+  doi: 10.1109/OJAP.2026.3703713
+  url: https://ieeexplore.ieee.org/document/11563493/
+  data_acesso: "2026-08-03"
+  arquivo: doc/pdfs/VilasBoas_2026_OJAP_FlatTop.pdf
+  sha256: 57f4627b41767a8edc07eca437fb62c192fe277d3d891df39ce4bf53d101a40a
+  licenca: CC BY 4.0; versão aceita dos autores
+sistema_coordenadas:
+  unidade_comprimento: mm
+  origem: plano da porta WR-28, centro em x=0, face inferior mecânica em z=0
+  eixo_x: eixo da abertura de cinco ranhuras, paralelo ao comprimento externo de 36 mm
+  eixo_y: propagação da porta WR-28 para a cavidade
+  eixo_z: altura interna correspondente à parede larga a=7,11 mm do WR-28
+parametros:
+  frequencia_adaptativa:
+    valor: 25.87
+    unidade: GHz
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figuras 1-2 e Seção III", tipo: TEXTO}
+  frequencia_sweep_inicio:
+    valor: 25.0
+    unidade: GHz
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(b)", tipo: FIGURA}
+  frequencia_sweep_fim:
+    valor: 27.0
+    unidade: GHz
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(b)", tipo: FIGURA}
+  cavidade_area_plana:
+    valor: 108.0
+    unidade: mm2
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III", tipo: TEXTO}
+  cavidade_comprimento_interno_exploratorio:
+    valor: 18.0
+    unidade: mm
+    classificacao: DERIVADO
+    fonte: {referencia: "Figura 2(a) e área publicada", localizacao: "108 mm2 / 6 mm = 18 mm; mapeamento exploratório", tipo: DERIVAÇÃO}
+  cavidade_largura_interna_exploratoria:
+    valor: 6.0
+    unidade: mm
+    classificacao: INFERIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "cota bruta de 6 mm na vista ortográfica da Figura 2(a)", tipo: FIGURA}
+    observacao: A figura não vincula esta cota a um referencial CAD; o uso como largura interna é inferido e reversível.
+  corpo_comprimento_externo:
+    valor: 36.0
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a), vista isométrica", tipo: FIGURA}
+  corpo_largura_externa_exploratoria:
+    valor: 9.0
+    unidade: mm
+    classificacao: INFERIDO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "cota bruta de 9 mm na Figura 2(a)", tipo: FIGURA}
+  corpo_altura_externa:
+    valor: 11.11
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a), cota local na vista isométrica", tipo: FIGURA}
+  altura_interna_wr28:
+    valor: 7.11
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III e Figura 2(a), WR-28 a", tipo: TEXTO}
+  largura_interna_wr28:
+    valor: 3.56
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III e Figura 2(a), WR-28 b", tipo: TEXTO}
+  espessura_parede_lateral:
+    valor: 1.0
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a)", tipo: FIGURA}
+  espessura_tampa:
+    valor: 1.0
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a)", tipo: FIGURA}
+  espessura_fundo_exploratoria:
+    valor: 3.0
+    unidade: mm
+    classificacao: DERIVADO
+    fonte: {referencia: "Figura 2(a)", localizacao: "11,11 - 7,11 - 1,00 = 3,00 mm", tipo: DERIVAÇÃO}
+    observacao: A derivação depende da associação inferida entre a cota 11,11 mm e a altura externa local.
+  flange_largura:
+    valor: 22.5
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a), vista isométrica", tipo: FIGURA}
+  flange_comprimento_exploratorio:
+    valor: 4.0
+    unidade: mm
+    classificacao: HIPÓTESE
+    fonte: {referencia: "reconstrução exploratória v5", localizacao: "não cotado no artigo", tipo: HIPÓTESE}
+  comprimento_total_eixo_y:
+    valor: 27.0
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a), vista isométrica", tipo: FIGURA}
+  plano_porta_y:
+    valor: -18.0
+    unidade: mm
+    classificacao: DERIVADO
+    fonte: {referencia: "reconstrução exploratória v5", localizacao: "9 mm de corpo + 18 mm até o plano de porta = 27 mm", tipo: DERIVAÇÃO}
+    observacao: O artigo não individualiza o plano de referência eletromagnético; a origem foi escolhida no extremo mecânico publicado.
+  chanfro:
+    valor: 3.0
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III e Figura 2(a)", tipo: TEXTO}
+  degrau_largura:
+    valor: 9.0
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III, Tabela 2", tipo: TEXTO}
+  degrau_altura:
+    valor: 1.0
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Seção III, Tabela 2", tipo: TEXTO}
+  ranhura_comprimento:
+    valor: 5.66
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a)", tipo: FIGURA}
+  ranhura_largura:
+    valor: 0.8
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a)", tipo: FIGURA}
+  ranhura_passo_exploratorio:
+    valor: 4.0
+    unidade: mm
+    classificacao: HIPÓTESE
+    fonte: {referencia: "reconstrução exploratória v5", localizacao: "centros não cotados; distribuição simétrica somente para materialização", tipo: HIPÓTESE}
+  fr4_dimensao_x:
+    valor: 3.0
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a), detalhe do slab", tipo: FIGURA}
+  fr4_dimensao_y:
+    valor: 1.65
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a), detalhe do slab", tipo: FIGURA}
+  fr4_epsilon_r_exploratorio:
+    valor: 4.4
+    unidade: "1"
+    classificacao: HIPÓTESE
+    fonte: {referencia: "material genérico FR4_epoxy do AEDT", localizacao: "não informado no artigo", tipo: HIPÓTESE}
+  fr4_tan_delta_exploratorio:
+    valor: 0.02
+    unidade: "1"
+    classificacao: HIPÓTESE
+    fonte: {referencia: "material genérico FR4_epoxy do AEDT", localizacao: "não informado no artigo", tipo: HIPÓTESE}
+  pino_diametro:
+    valor: 1.0
+    unidade: mm
+    classificacao: PUBLICADO
+    fonte: {referencia: "DOI 10.1109/OJAP.2026.3703713", localizacao: "Figura 2(a), detalhe dos rods", tipo: FIGURA}
+  pino_offset_x_exploratorio:
+    valor: 2.0
+    unidade: mm
+    classificacao: HIPÓTESE
+    fonte: {referencia: "reconstrução exploratória v5", localizacao: "eixos dos pinos não cotados", tipo: HIPÓTESE}
+  pino_offset_y_exploratorio:
+    valor: 1.325
+    unidade: mm
+    classificacao: HIPÓTESE
+    fonte: {referencia: "reconstrução exploratória v5", localizacao: "eixos dos pinos não cotados", tipo: HIPÓTESE}
+  parafuso_diametro_exploratorio:
+    valor: 2.0
+    unidade: mm
+    classificacao: HIPÓTESE
+    fonte: {referencia: "reconstrução exploratória v5", localizacao: "parafusos visíveis, sem diâmetro publicado", tipo: HIPÓTESE}
+etapas:
+  M4:
+    estado: executavel
+    bloqueios: []
+    solucao: DrivenModal
+    requer:
+      - frequencia_adaptativa
+      - frequencia_sweep_inicio
+      - frequencia_sweep_fim
+      - cavidade_area_plana
+      - cavidade_comprimento_interno_exploratorio
+      - cavidade_largura_interna_exploratoria
+      - corpo_comprimento_externo
+      - corpo_largura_externa_exploratoria
+      - corpo_altura_externa
+      - altura_interna_wr28
+      - largura_interna_wr28
+      - espessura_parede_lateral
+      - espessura_tampa
+      - espessura_fundo_exploratoria
+      - flange_largura
+      - flange_comprimento_exploratorio
+      - comprimento_total_eixo_y
+      - plano_porta_y
+      - chanfro
+      - degrau_largura
+      - degrau_altura
+      - ranhura_comprimento
+      - ranhura_largura
+      - ranhura_passo_exploratorio
+      - fr4_dimensao_x
+      - fr4_dimensao_y
+      - fr4_epsilon_r_exploratorio
+      - fr4_tan_delta_exploratorio
+      - pino_diametro
+      - pino_offset_x_exploratorio
+      - pino_offset_y_exploratorio
+      - parafuso_diametro_exploratorio
+    objetos:
+      - nome: Housing_Cavity
+        tipo: polyline_prism
+        pontos:
+          - [-18mm, 3mm, 0mm]
+          - [-15mm, 0mm, 0mm]
+          - [15mm, 0mm, 0mm]
+          - [18mm, 3mm, 0mm]
+          - [18mm, 6mm, 0mm]
+          - [15mm, 9mm, 0mm]
+          - [4.5mm, 9mm, 0mm]
+          - [4.5mm, 10mm, 0mm]
+          - [-4.5mm, 10mm, 0mm]
+          - [-4.5mm, 9mm, 0mm]
+          - [-15mm, 9mm, 0mm]
+          - [-18mm, 6mm, 0mm]
+        vetor_extrusao: [0mm, 0mm, corpo_altura_externa]
+        material: pec
+      - nome: Housing_Feed
+        tipo: box
+        origem: [-2.78mm, plano_porta_y, 0mm]
+        tamanho: [5.56mm, 19.5mm, corpo_altura_externa]
+        material: pec
+      - nome: Housing_Flange
+        tipo: box
+        origem: [-11.25mm, plano_porta_y, 0mm]
+        tamanho: [flange_largura, flange_comprimento_exploratorio, corpo_altura_externa]
+        material: pec
+      - nome: Cavity_Air
+        tipo: box
+        origem: [-9mm, 1.5mm, espessura_fundo_exploratoria]
+        tamanho: [cavidade_comprimento_interno_exploratorio, cavidade_largura_interna_exploratoria, altura_interna_wr28]
+        material: vacuum
+      - nome: Feed_Air
+        tipo: box
+        origem: [-1.78mm, plano_porta_y, espessura_fundo_exploratoria]
+        tamanho: [largura_interna_wr28, 19.5mm, altura_interna_wr28]
+        material: vacuum
+      - nome: Port_WR28_Sheet
+        tipo: rectangle
+        orientacao: ZX
+        origem: [-1.78mm, plano_porta_y, espessura_fundo_exploratoria]
+        tamanho: [largura_interna_wr28, altura_interna_wr28]
+        material: vacuum
+      - {nome: Slot_Air_1, tipo: box, origem: [-8.4mm, 1.67mm, 10.11mm], tamanho: [ranhura_largura, ranhura_comprimento, 1.2mm], material: vacuum}
+      - {nome: Slot_Air_2, tipo: box, origem: [-4.4mm, 1.67mm, 10.11mm], tamanho: [ranhura_largura, ranhura_comprimento, 1.2mm], material: vacuum}
+      - {nome: Slot_Air_3, tipo: box, origem: [-0.4mm, 1.67mm, 10.11mm], tamanho: [ranhura_largura, ranhura_comprimento, 1.2mm], material: vacuum}
+      - {nome: Slot_Air_4, tipo: box, origem: [3.6mm, 1.67mm, 10.11mm], tamanho: [ranhura_largura, ranhura_comprimento, 1.2mm], material: vacuum}
+      - {nome: Slot_Air_5, tipo: box, origem: [7.6mm, 1.67mm, 10.11mm], tamanho: [ranhura_largura, ranhura_comprimento, 1.2mm], material: vacuum}
+      - nome: FR4_Slab
+        tipo: box
+        origem: [-1.5mm, 3.675mm, espessura_fundo_exploratoria]
+        tamanho: [fr4_dimensao_x, fr4_dimensao_y, altura_interna_wr28]
+        material: FR4_epoxy
+      - {nome: Rod_PEC_NW, tipo: cylinder, orientacao: Z, origem: [-2mm, 3.175mm, 3mm], raio: 0.5mm, altura: altura_interna_wr28, lados: 0, material: pec}
+      - {nome: Rod_PEC_NE, tipo: cylinder, orientacao: Z, origem: [2mm, 3.175mm, 3mm], raio: 0.5mm, altura: altura_interna_wr28, lados: 0, material: pec}
+      - {nome: Rod_PEC_SW, tipo: cylinder, orientacao: Z, origem: [-2mm, 5.825mm, 3mm], raio: 0.5mm, altura: altura_interna_wr28, lados: 0, material: pec}
+      - {nome: Rod_PEC_SE, tipo: cylinder, orientacao: Z, origem: [2mm, 5.825mm, 3mm], raio: 0.5mm, altura: altura_interna_wr28, lados: 0, material: pec}
+      - {nome: MountHole_L, tipo: cylinder, orientacao: Z, origem: [-8mm, -16mm, -0.1mm], raio: 1mm, altura: 11.31mm, lados: 0, material: vacuum}
+      - {nome: MountHole_R, tipo: cylinder, orientacao: Z, origem: [8mm, -16mm, -0.1mm], raio: 1mm, altura: 11.31mm, lados: 0, material: vacuum}
+      - nome: Open_Region
+        tipo: air_region
+        margens_percentuais: [50, 80, 120, 50, 0, 120]
+    operacoes:
+      - {tipo: unite, alvo: Housing_Cavity, ferramentas: [Housing_Feed, Housing_Flange], manter_ferramentas: false}
+      - {tipo: subtract, alvo: Housing_Cavity, ferramentas: [Cavity_Air, Feed_Air], manter_ferramentas: true}
+      - {tipo: subtract, alvo: Housing_Cavity, ferramentas: [Slot_Air_1, Slot_Air_2, Slot_Air_3, Slot_Air_4, Slot_Air_5], manter_ferramentas: true}
+      - {tipo: subtract, alvo: Housing_Cavity, ferramentas: [MountHole_L, MountHole_R], manter_ferramentas: true}
+      - {tipo: unite, alvo: Cavity_Air, ferramentas: [Feed_Air, Slot_Air_1, Slot_Air_2, Slot_Air_3, Slot_Air_4, Slot_Air_5], manter_ferramentas: false}
+      - {tipo: subtract, alvo: Cavity_Air, ferramentas: [FR4_Slab, Rod_PEC_NW, Rod_PEC_NE, Rod_PEC_SW, Rod_PEC_SE], manter_ferramentas: true}
+    fronteiras:
+      - {nome: Radiation_Open_5Faces, tipo: radiation, alvo: Open_Region, selecao: todas_faces_exceto_y_min}
+    portas:
+      - nome: P1_WR28_TE10
+        tipo: wave
+        alvo: Port_WR28_Sheet
+        referencia: [Housing_Cavity]
+        modos: 1
+        impedancia: 50
+        renormalizar: true
+        deembed: 0
+        linha_integracao: 0
+    setup:
+      nome: Setup_Driven_25p87_HIPOTESE
+      tipo: null
+      propriedades:
+        Frequency: 25.87GHz
+        MaxDeltaS: 0.02
+        MaximumPasses: 15
+        MinimumPasses: 2
+        MinimumConvergedPasses: 2
+        PercentRefinement: 20
+    varredura:
+      nome: Sweep_25_27GHz
+      unidade: GHz
+      inicio: 25.0
+      fim: 27.0
+      pontos: 201
+      tipo: Interpolating
+      salvar_campos: true
+      salvar_campos_radiados: false
+      tolerancia_interpolacao: 0.5
+      maximo_solucoes: 80
+    farfield:
+      nome: FF_Sphere_2deg
+      phi: {inicio: -180, fim: 180, passo: 2}
+      theta: {inicio: -180, fim: 180, passo: 2}
+    frequencias_exportacao_hz: [25870000000.0]
+observacoes:
+  - Esta versão não substitui g0_artigo_base.auditado.v4.yaml nem o smoke M0.
+  - A topologia e as dimensões PUBLICADO vêm das Figuras 1-2 e Seções II-III do artigo.
+  - A posição da porta, o comprimento da flange, o passo das ranhuras, os eixos dos pinos e os furos são HIPÓTESE porque não há coordenadas CAD no PDF.
+  - O contorno interno 18 mm x 6 mm preserva exatamente 108 mm2, mas seu mapeamento para a Figura 2 é exploratório.
+  - FR4_epoxy com epsilon_r=4,4 e tan_delta=0,02 é HIPÓTESE; o artigo não publica propriedades complexas do laminado.
+  - PEC substitui o alumínio real porque a liga, a condutividade e a rugosidade do modelo não são publicadas.
+  - O setup adaptativo e seus critérios são HIPÓTESE de implementação; o artigo publica HFSS/FEM e as faixas, mas não malha, DeltaS ou número de passes.
+  - Nenhum resultado desta versão pode ser apresentado como reprodução fiel ou validado contra S11, campo, ganho ou padrão publicados.

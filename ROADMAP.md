@@ -6,7 +6,7 @@ O projeto progride por **gates verificáveis**, não por aparência visual de re
 
 ## Fase 0 — Fundação documental
 
-**Estado:** iniciada.
+**Estado:** fundação implementada, sob revisão contínua.
 
 Entregas:
 
@@ -36,6 +36,11 @@ Subetapas:
 6. modelo M4: versão fabricável com paredes, chanfros, pinos e FR4;
 7. análise de convergência;
 8. comparação com banda, ganho, ripple e larguras de feixe publicadas.
+
+**Estado em 2026-08-03:** o texto foi auditado e o runtime passou em um M0
+sintético. A Figura 2/CAD ainda não foi obtida com fidelidade suficiente;
+portanto M0–M4 de reprodução permanecem documentalmente bloqueados. O smoke
+test não conta como reprodução do artigo.
 
 Critério de saída:
 

@@ -1,0 +1,20 @@
+HFSS Mesh Statistics
+  Project:           G0_figura2_reconstrucao_v7_M4
+  Design:            HFSS_ENZ_G0_figura2_reconstrucao_v7_M4
+  Solution setup:    Setup_Driven_25p87_HIPOTESE
+  Design variation:  altura_interna_wr28='7.1100000000000003mm' cavidade_area_plana='108mm2' cavidade_comprimento_interno_exploratorio='18mm' cavidade_largura_interna_exploratoria='6mm' chanfro='3mm' comprimento_total_eixo_y='27mm' corpo_altura_externa='11.109999999999999mm' corpo_comprimento_externo='36mm' corpo_largura_externa_exploratoria='9mm' degrau_altura='1mm' degrau_largura='9mm' espessura_fundo_exploratoria='3mm' espessura_parede_lateral='1mm' espessura_tampa='1mm' flange_comprimento_exploratorio='4mm' flange_largura='22.5mm' fr4_dimensao_x='3mm' fr4_dimensao_y='1.6499999999999999mm' fr4_epsilon_r_exploratorio='4.4000000000000004' fr4_tan_delta_exploratorio='0.02' frequencia_adaptativa='25.870000000000001GHz' frequencia_sweep_fim='27GHz' frequencia_sweep_inicio='25GHz' largura_interna_wr28='3.5600000000000001mm' parafuso_diametro_exploratorio='2mm' pino_diametro='1mm' pino_offset_x_exploratorio='2mm' pino_offset_y_exploratorio='1.325mm' plano_porta_y='-18mm' ranhura_comprimento='5.6600000000000001mm' ranhura_largura='0.80000000000000004mm' ranhura_passo_exploratorio='4mm'
+
+Total number of mesh elements: 33723
+               |     Num Tets  | Min edge length  | Max edge length  | RMS edge length  |     Min tet vol  |     Max tet vol  |    Mean tet vol  |  Std Devn (vol)  |
+Housing_Cavity |         3591  |        0.721342  |          7.7088  |         3.65899  |       0.0024275  |         14.2006  |          1.1173  |         2.05442  |
+    Cavity_Air |        11175  |        0.310996  |         3.97474  |         1.40321  |     0.000564908  |         1.47105  |        0.110216  |       0.0953544  |
+      FR4_Slab |          295  |        0.866844  |         2.22956  |          1.4375  |       0.0361742  |        0.390284  |        0.119303  |       0.0552615  |
+    Rod_PEC_NW |          367  |        0.382683  |         2.25896  |         1.15033  |     0.000144864  |       0.0919754  |       0.0148277  |       0.0177036  |
+    Rod_PEC_NE |          330  |        0.382683  |          2.8317  |         1.25761  |     0.000396423  |        0.272146  |       0.0164902  |        0.019843  |
+    Rod_PEC_SW |          315  |        0.382683  |         2.58957  |         1.25846  |     0.000437861  |        0.076849  |       0.0172754  |       0.0170992  |
+    Rod_PEC_SE |          348  |        0.382683  |         3.97474  |         1.28501  |     0.000279681  |        0.101026  |       0.0156372  |       0.0160972  |
+   MountHole_L |          410  |        0.519567  |         6.31619  |         2.01362  |     0.000971001  |         1.03243  |       0.0844517  |         0.11988  |
+   MountHole_R |          335  |        0.581281  |         5.25155  |          2.2972  |     0.000971001  |        0.932092  |        0.103359  |         0.12767  |
+   Open_Region |        16557  |        0.539407  |         7.16768  |         5.30947  |     0.000911799  |         26.9555  |         8.17815  |          4.3563  |
+
+ |

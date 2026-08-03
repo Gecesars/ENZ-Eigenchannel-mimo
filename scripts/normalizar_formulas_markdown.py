@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Normaliza matemática Markdown para a sintaxe nativa do GitHub.
+r"""Normaliza matemática Markdown para a sintaxe nativa do GitHub.
 
 Política do repositório:
 - matemática inline permanece entre ``$...$``;
@@ -55,15 +55,13 @@ def normalizar_texto(texto: str, caminho: Path) -> tuple[str, tuple[str, ...]]:
     for numero, linha_com_fim in enumerate(linhas, start=1):
         fim = "\n" if linha_com_fim.endswith("\n") else ""
         linha = linha_com_fim[:-1] if fim else linha_com_fim
-        sem_cr = linha[:-1] if linha.endswith("\r") else linha
+        sem_cr = linha.removesuffix("\r")
         indentada = sem_cr.lstrip()
 
         if bloco_matematico is not None:
             fecha = (
                 bloco_matematico == "$$" and re.fullmatch(r"\s*\$\$\s*", sem_cr)
-            ) or (
-                bloco_matematico == "\\[" and re.fullmatch(r"\s*\\\]\s*", sem_cr)
-            )
+            ) or (bloco_matematico == "\\[" and re.fullmatch(r"\s*\\\]\s*", sem_cr))
             if fecha:
                 saida.append("```" + fim)
                 bloco_matematico = None
@@ -154,7 +152,9 @@ def main() -> int:
     )
     argumentos = parser.parse_args()
 
-    resultados = [processar(caminho, argumentos.apply) for caminho in arquivos_markdown()]
+    resultados = [
+        processar(caminho, argumentos.apply) for caminho in arquivos_markdown()
+    ]
     erros = [erro for resultado in resultados for erro in resultado.erros]
     alterados = [resultado.caminho for resultado in resultados if resultado.alterado]
 
@@ -163,7 +163,9 @@ def main() -> int:
 
     if argumentos.check and alterados:
         for caminho in alterados:
-            print(f"NORMALIZAÇÃO PENDENTE: {caminho.relative_to(ROOT)}", file=sys.stderr)
+            print(
+                f"NORMALIZAÇÃO PENDENTE: {caminho.relative_to(ROOT)}", file=sys.stderr
+            )
 
     if argumentos.apply:
         print(f"Arquivos Markdown normalizados: {len(alterados)}")

@@ -1,0 +1,46 @@
+! Touchstone file exported from HFSS 2024.2.0
+!        File:           D:/dev/ENZ_ANT/ENZ-Eigenchannel-mimo/artefatos/runs/ENZ-20260803-192218-ed5384a5/aedt/G0_figura2_reconstrucao_v7_M4.aedt
+!        Generated:      04:24:09 PM Aug  3, 2026
+!        Design:         HFSS_ENZ_G0_figura2_reconstrucao_v7_M4
+!        Project:        G0_figura2_reconstrucao_v7_M4
+!        Setup:          Setup_Driven_25p87_HIPOTESE
+!        Solution:       LastAdaptive
+!
+! Variables:
+!        altura_interna_wr28 = 7.11mm
+!        cavidade_area_plana = 108mm2
+!        cavidade_comprimento_interno_exploratorio = 18mm
+!        cavidade_largura_interna_exploratoria = 6mm
+!        chanfro = 3mm
+!        comprimento_total_eixo_y = 27mm
+!        corpo_altura_externa = 11.11mm
+!        corpo_comprimento_externo = 36mm
+!        corpo_largura_externa_exploratoria = 9mm
+!        degrau_altura = 1mm
+!        degrau_largura = 9mm
+!        espessura_fundo_exploratoria = 3mm
+!        espessura_parede_lateral = 1mm
+!        espessura_tampa = 1mm
+!        flange_comprimento_exploratorio = 4mm
+!        flange_largura = 22.5mm
+!        fr4_dimensao_x = 3mm
+!        fr4_dimensao_y = 1.65mm
+!        fr4_epsilon_r_exploratorio = 4.4
+!        fr4_tan_delta_exploratorio = 0.02
+!        frequencia_adaptativa = 25.87GHz
+!        frequencia_sweep_fim = 27GHz
+!        frequencia_sweep_inicio = 25GHz
+!        largura_interna_wr28 = 3.56mm
+!        parafuso_diametro_exploratorio = 2mm
+!        pino_diametro = 1mm
+!        pino_offset_x_exploratorio = 2mm
+!        pino_offset_y_exploratorio = 1.325mm
+!        plano_porta_y = -18mm
+!        ranhura_comprimento = 5.66mm
+!        ranhura_largura = 0.8mm
+!        ranhura_passo_exploratorio = 4mm
+!
+# GHz S MA R 50.000000
+! Terminal data exported
+! Port[1] = P1_WR28_TE10
+25.87                          0.891531187684404 -23.605997346752 
