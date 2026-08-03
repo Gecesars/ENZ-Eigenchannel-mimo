@@ -56,11 +56,11 @@ A parede larga é aumentada, a outra dimensão é ajustada para preservar $108\t
 
 O modelo final utiliza:
 
-$$
+```math
 w_{sp}=9\text{ mm},
 \qquad
 h_{sp}=1\text{ mm}.
-$$
+```
 
 Dois chanfros de 3 mm foram introduzidos para reduzir excitação de ondas de superfície e recuperar ripple.
 
@@ -80,7 +80,7 @@ Dois chanfros de 3 mm foram introduzidos para reduzir excitação de ondas de su
 
 A cadeia causal pode ser resumida como:
 
-$$
+```math
 f\gtrsim f_c
 \Rightarrow
 \beta_z\ \text{pequeno}
@@ -90,7 +90,7 @@ f\gtrsim f_c
 \text{ranhuras coerentes}
 \Rightarrow
 \text{geometria controla a distribuição espacial}.
-$$
+```
 
 O FR4 atua na impedância efetiva; os pinos controlam modos parasitas; o degrau altera a impedância espacial local e a amplitude de acoplamento das ranhuras.
 
@@ -141,3 +141,18 @@ Um modelo que reproduza o gráfico após ajustar dimensões desconhecidas será 
 ## 8. Atribuição
 
 O PDF integral não é reproduzido textualmente neste arquivo. O DOI oficial e as fontes de acesso estão em `referencias/artigo_base/README.md`. Qualquer figura adaptada deverá indicar “adaptado de Vilas Boas et al., 2026, CC BY 4.0”.
+
+## 9. FR4: reprodução versus evolução de engenharia
+
+O artigo declara que o FR4 foi escolhido por disponibilidade para prototipagem. Essa justificativa é importante: o resultado medido comprova que a inclusão funcionou dentro da estrutura completa, mas não transforma FR4 genérico em material preferencial para todas as implementações em 25,87 GHz.
+
+Para preservar integridade científica:
+
+- o primeiro modelo deve manter FR4;
+- o fabricante, a composição e as propriedades complexas não podem ser inventados;
+- a biblioteca genérica do HFSS não deve ser tratada como dado publicado;
+- a influência de $\varepsilon_r$, $\tan\delta$, anisotropia e dispersão deve ser quantificada;
+- materiais de baixa perda somente serão comparados após reotimização da inclusão;
+- a versão alternativa não será chamada de reprodução do artigo.
+
+A campanha completa está definida em [`01a_validacao_fr4_e_materiais_26ghz.md`](01a_validacao_fr4_e_materiais_26ghz.md).
