@@ -15,11 +15,11 @@ A política deste repositório é:
 
 Exemplo normativo:
 
-```text
+````text
 ```math
 \beta_z=\sqrt{k_0^2\varepsilon_r\mu_r-k_c^2}
 ```
-```
+````
 
 A renderização esperada é:
 
@@ -58,6 +58,7 @@ O normalizador:
 - converte `\[` e `\]` em cercas `math`;
 - converte expressões `$$...$$` de uma linha em blocos;
 - ignora exemplos que já estão dentro de blocos de código;
+- respeita cercas externas mais longas em exemplos aninhados;
 - falha diante de delimitadores não fechados;
 - não altera matemática inline.
 
