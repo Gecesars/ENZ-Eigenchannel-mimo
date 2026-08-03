@@ -4,6 +4,7 @@
 
 - [Carta científica](00_carta_cientifica.md)
 - [Leitura do artigo-base do Inatel](01_artigo_base_inatel.md)
+- [Validação do FR4 e seleção de materiais em 25,87 GHz](01a_validacao_fr4_e_materiais_26ghz.md)
 - [Fundamentos maxwellianos](02_fundamentos_maxwellianos.md)
 - [Guia retangular e ENZ estrutural](03_guia_retangular_e_enz_estrutural.md)
 - [Invariância geométrica](04_invariancia_geometrica.md)
@@ -41,3 +42,7 @@
 - [Notação e glossário](27_notacao_e_glossario.md)
 - [Perguntas abertas](28_perguntas_abertas.md)
 - [Plano de publicações](29_plano_de_publicacoes.md)
+
+## Publicação e qualidade documental
+
+- [Guia de renderização matemática](GUIA_RENDERIZACAO_MATEMATICA.md)
