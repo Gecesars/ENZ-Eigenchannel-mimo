@@ -3,7 +3,7 @@
 
 Política do repositório:
 - matemática inline permanece entre ``$...$``;
-- matemática de bloco usa cercas `````math``;
+- matemática de bloco usa cercas de código com linguagem ``math``;
 - delimitadores isolados ``$$`` e ``\[``/``\]`` são convertidos;
 - blocos de código comuns não são alterados;
 - delimitadores desbalanceados interrompem a validação.
@@ -23,7 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 IGNORED_PARTS = {".git", ".venv", "venv", "build", "dist", "site"}
-FENCE_RE = re.compile(r"^\s*(`{3,}|~{3,})([^`]*)$")
+FENCE_RE = re.compile(r"^\s*(?P<marker>`{3,}|~{3,})(?P<info>.*)$")
 ONE_LINE_DOLLAR_RE = re.compile(r"^(?P<indent>\s*)\$\$(?P<body>.+?)\$\$\s*$")
 
 
@@ -74,10 +74,15 @@ def normalizar_texto(texto: str, caminho: Path) -> tuple[str, tuple[str, ...]]:
 
         cerca = FENCE_RE.match(sem_cr)
         if cerca:
-            marcador = cerca.group(1)
+            marcador = cerca.group("marker")
+            info = cerca.group("info").strip()
             if cerca_codigo is None:
-                cerca_codigo = marcador[0]
-            elif marcador.startswith(cerca_codigo):
+                cerca_codigo = marcador
+            elif (
+                marcador[0] == cerca_codigo[0]
+                and len(marcador) >= len(cerca_codigo)
+                and not info
+            ):
                 cerca_codigo = None
             saida.append(sem_cr + fim)
             continue
@@ -105,7 +110,10 @@ def normalizar_texto(texto: str, caminho: Path) -> tuple[str, tuple[str, ...]]:
             continue
 
         # Evita LaTeX de bloco que o GitHub não reconhece fora de delimitadores.
-        if indentada.startswith("\\begin{") and "equation" in indentada:
+        if indentada.startswith("\\begin{") and any(
+            ambiente in indentada
+            for ambiente in ("equation", "align", "gather", "multline")
+        ):
             erros.append(
                 f"{caminho.relative_to(ROOT)}:{numero}: ambiente LaTeX de bloco sem cerca math"
             )
@@ -134,8 +142,16 @@ def processar(caminho: Path, aplicar: bool) -> ResultadoArquivo:
 def main() -> int:
     parser = argparse.ArgumentParser()
     grupo = parser.add_mutually_exclusive_group(required=True)
-    grupo.add_argument("--check", action="store_true", help="não modifica; falha se houver normalização pendente")
-    grupo.add_argument("--apply", action="store_true", help="aplica a normalização segura")
+    grupo.add_argument(
+        "--check",
+        action="store_true",
+        help="não modifica; falha se houver normalização pendente",
+    )
+    grupo.add_argument(
+        "--apply",
+        action="store_true",
+        help="aplica a normalização segura",
+    )
     argumentos = parser.parse_args()
 
     resultados = [processar(caminho, argumentos.apply) for caminho in arquivos_markdown()]
