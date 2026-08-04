@@ -3,9 +3,15 @@ from __future__ import annotations
 import math
 from itertools import pairwise
 
+import numpy as np
 import pytest
 
-from enz_eigenchannel_mimo.mimo2x2 import Mimo2x2C0Spec, ler_touchstone_s2p
+from enz_eigenchannel_mimo.mimo2x2 import (
+    Mimo2x2C0Spec,
+    ecc_campos_complexos,
+    ler_ffd_complexo,
+    ler_touchstone_s2p,
+)
 
 
 def test_q4_c0_wr28_e_monomodo() -> None:
@@ -72,3 +78,28 @@ def test_ler_touchstone_s2p_preserva_ordem_complexa(tmp_path) -> None:
     assert matrices[0, 1, 0] == 0.3 + 0.4j
     assert matrices[0, 0, 1] == 0.5 + 0.6j
     assert matrices[0, 1, 1] == 0.7 + 0.8j
+
+
+def test_ler_ffd_complexo_e_ecc(tmp_path) -> None:
+    path = tmp_path / "element.ffd"
+    path.write_text(
+        "0 180 3\n"
+        "0 360 3\n"
+        "Frequencies 1\n"
+        "Frequency 2.587e10\n"
+        + "\n".join(f"{value} 0 0 0" for value in range(1, 10))
+        + "\n",
+        encoding="utf-8",
+    )
+    theta, phi, field = ler_ffd_complexo(path)
+    assert theta.tolist() == [0.0, 90.0, 180.0]
+    assert phi.tolist() == [0.0, 180.0, 360.0]
+    assert field.shape == (3, 3, 2)
+    assert field[0, 1, 0] == 2.0 + 0.0j
+    assert field[1, 0, 0] == 4.0 + 0.0j
+    assert ecc_campos_complexos(theta, phi, field, field) == pytest.approx(1.0)
+
+    orthogonal = np.empty_like(field)
+    orthogonal[..., 0] = 0.0
+    orthogonal[..., 1] = 1.0
+    assert ecc_campos_complexos(theta, phi, field, orthogonal) == pytest.approx(0.0)

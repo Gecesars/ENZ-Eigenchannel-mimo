@@ -25,13 +25,14 @@ isso, este pacote não deve ser apresentado como reprodução validada do artigo
 
 ## Relatório técnico
 
-**DERIVADO:** `relatorios/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v2.pdf`
-é a cópia corrente do dossiê consolidado; a v1 permanece preservada. O
+**DERIVADO:** `relatorios/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v3.pdf`
+é a cópia corrente do dossiê consolidado; v1 e v2 permanecem preservadas. O
 manifesto adjacente valida
 estrutura, conteúdo extraível, densidade editorial, DOI, fontes e SHA-256.
 
-**DESCONHECIDO:** o gate Q0 MIMO 2×2 está bloqueado em 0/4 radiadores
-validados. A inspeção da v7 não a promove a componente validado.
+**HIPÓTESE:** o gate Q0 MIMO 2×2 permanece em 0/4 radiadores validados. A v8
+Q4-C0 foi solucionada como extensão exploratória e não promove a v7 a
+componente validado.
 
 **DERIVADO:** `manifest.json` inventaria todos os arquivos publicáveis de
 `poros_aedt`. Locks e semáforos de sessão AEDT são explicitamente excluídos.

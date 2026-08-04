@@ -9,7 +9,7 @@ MANIFEST = (
     ROOT
     / "doc"
     / "pdfs"
-    / "Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v2.manifest.json"
+    / "Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v3.manifest.json"
 )
 
 
@@ -60,7 +60,13 @@ def test_gates_cientificos_nao_sao_promovidos_silenciosamente() -> None:
     assert gates["global_reproduction_classification"] == "HIPÓTESE"
     assert gates["q0_validated_radiators"] == "BLOCKED_MISSING_VALIDATED_ARTIFACTS"
     assert gates["q0_validated_instances"] == "0/4"
-    assert gates["mimo2x2_system_classification"] == "DESCONHECIDO"
+    assert gates["q4_adaptive_convergence"] == "PASS"
+    assert gates["q4_strict_passivity"] == "PASS"
+    assert gates["q4_s11_matching"] == "FAIL"
+    assert gates["q4_s22_matching"] == "FAIL"
+    assert gates["q4_complex_embedded_patterns"] == "PASS"
+    assert gates["q4_mimo_claim"] == "BLOCKED_SOURCE_MODEL_HIPOTESE"
+    assert gates["mimo2x2_system_classification"] == "HIPÓTESE"
 
 
 def test_manifesto_global_poros_aedt() -> None:
@@ -71,13 +77,21 @@ def test_manifesto_global_poros_aedt() -> None:
     assert data["scientific_gates"]["g0_strict_passivity"] == "FAIL"
     assert data["scientific_gates"]["g0_published_s11_correspondence"] == "FAIL"
     assert data["scientific_gates"]["q0_validated_instances"] == "0/4"
-    assert data["scientific_gates"]["mimo_2x2_system"] == "DESCONHECIDO"
+    assert data["scientific_gates"]["q4_adaptive_convergence"] == "PASS"
+    assert data["scientific_gates"]["q4_s11_matching"] == "FAIL"
+    assert data["scientific_gates"]["q4_s22_matching"] == "FAIL"
+    assert data["scientific_gates"]["mimo_2x2_system"] == "HIPÓTESE"
 
     paths = [item["path"] for item in data["arquivos"]]
     assert len(paths) == len(set(paths))
     assert not any(path.endswith((".aedt.lock", ".semaphore")) for path in paths)
     assert not set(data["ephemeral_files_excluded"]) & set(paths)
     assert not set(data["active_session_generated_files_excluded"]) & set(paths)
+    cache_paths = {
+        item["path"] for item in data["nonportable_solver_cache_excluded"]
+    }
+    assert cache_paths
+    assert not cache_paths & set(paths)
     for item in data["arquivos"]:
         path = ROOT / "poros_aedt" / item["path"]
         assert path.is_file(), item["path"]

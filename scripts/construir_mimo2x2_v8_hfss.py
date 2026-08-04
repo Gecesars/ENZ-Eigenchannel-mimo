@@ -1,10 +1,13 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
 import json
 import math
+import re
 import traceback
+import xml.etree.ElementTree as ET
 from collections.abc import Callable, Mapping
 from datetime import UTC, datetime
 from pathlib import Path
@@ -18,7 +21,12 @@ from enz_eigenchannel_mimo.aedt.runtime import (
     preflight_aedt,
 )
 from enz_eigenchannel_mimo.metrics import potencia_aceita, tarc
-from enz_eigenchannel_mimo.mimo2x2 import Mimo2x2C0Spec, ler_touchstone_s2p
+from enz_eigenchannel_mimo.mimo2x2 import (
+    Mimo2x2C0Spec,
+    ecc_campos_complexos,
+    ler_ffd_complexo,
+    ler_touchstone_s2p,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_DEFAULT = (
@@ -75,6 +83,12 @@ def jsonable(value: Any) -> Any:
         return [jsonable(item) for item in value]
     if isinstance(value, np.ndarray):
         return value.tolist()
+    if isinstance(value, np.bool_):
+        return bool(value)
+    if isinstance(value, np.integer):
+        return int(value)
+    if isinstance(value, np.floating):
+        return float(value)
     if isinstance(value, complex):
         return {"real": value.real, "imag": value.imag}
     return str(value)
@@ -1097,6 +1111,151 @@ def sparameter_validation(touchstone: Path, frequency_ghz: float) -> dict[str, A
     }
 
 
+def convergence_declared(text: str) -> bool:
+    """Reconhece a declaração de convergência exportada pelo AEDT."""
+
+    return bool(
+        re.search(r"^\s*Converged\s*:\s*Yes\s*$", text, re.IGNORECASE | re.MULTILINE)
+    )
+
+
+def power_metadata(xml_path: Path) -> dict[str, Any]:
+    """Extrai potências por fonte do XML de metadados de antena."""
+
+    root = ET.parse(xml_path).getroot()
+    sources: dict[str, Any] = {}
+    for source in root.findall("./ElementPatterns/Source"):
+        name = source.attrib["name"]
+        power = source.find("./PowerInfo/Power")
+        if power is None:
+            continue
+        values = {
+            "frequency_hz": float(power.attrib["Freq"]),
+            "incident_w": float(power.findtext("IncidentPower", "nan")),
+            "accepted_w": float(power.findtext("AcceptedPower", "nan")),
+            "radiated_w": float(power.findtext("RadiatedPower", "nan")),
+        }
+        values["power_balance_relative_error"] = (
+            abs(values["radiated_w"] - values["accepted_w"])
+            / values["accepted_w"]
+        )
+        values["power_balance_within_1pct"] = (
+            values["power_balance_relative_error"] <= 0.01
+        )
+        sources[name] = values
+    return sources
+
+
+def realized_gain_peak(csv_path: Path) -> dict[str, float]:
+    """Calcula o pico do ganho realizado total a partir das componentes."""
+
+    best: dict[str, float] | None = None
+    with csv_path.open(encoding="utf-8-sig", newline="") as stream:
+        for row in csv.DictReader(stream):
+            gain_theta = float(row["dB(RealizedGainTheta)"])
+            gain_phi = float(row["dB(RealizedGainPhi)"])
+            total = 10.0 * math.log10(
+                10.0 ** (gain_theta / 10.0) + 10.0 ** (gain_phi / 10.0)
+            )
+            if best is None or total > best["realized_gain_total_db"]:
+                best = {
+                    "realized_gain_total_db": total,
+                    "phi_deg": float(row["Phi[deg]"]),
+                    "theta_deg": float(row["Theta[deg]"]),
+                    "realized_gain_theta_db": gain_theta,
+                    "realized_gain_phi_db": gain_phi,
+                }
+    if best is None:
+        raise ValueError(f"CSV de ganho vazio: {csv_path}")
+    return best
+
+
+def revalidate_artifacts(artifact_dir: Path) -> dict[str, Any]:
+    """Recalcula gates e métricas somente a partir dos artefatos exportados."""
+
+    validation_path = artifact_dir / "validation.json"
+    result = json.loads(validation_path.read_text(encoding="utf-8"))
+    convergence = artifact_dir / "metrics" / "convergence.csv"
+    converged = convergence_declared(
+        convergence.read_text(encoding="utf-8", errors="replace")
+    )
+    result["gates"]["adaptive_convergence"] = "PASS" if converged else "FAIL"
+
+    sweep_path = artifact_dir / "network" / "system.s2p"
+    exact_paths = sorted((artifact_dir / "farfield").rglob("LastAdaptive*.s2p"))
+    if len(exact_paths) != 1:
+        raise RuntimeError(
+            f"esperado um Touchstone LastAdaptive; encontrados {len(exact_paths)}"
+        )
+    sweep = sparameter_validation(sweep_path, 25.87)
+    exact = sparameter_validation(exact_paths[0], 25.87)
+    result["sparameters"] = {
+        "at_exact_f0": exact,
+        "sweep_25_27_ghz": sweep,
+        "note": (
+            "Métricas em f0 usam LastAdaptive em 25,87 GHz; "
+            "passividade de banda usa a varredura de 81 pontos."
+        ),
+    }
+    result["gates"]["strict_passivity"] = (
+        "PASS" if sweep["gates"]["strict_passivity_1pct"] else "FAIL"
+    )
+    result["gates"]["s11"] = (
+        "PASS" if exact["gates"]["s11_below_minus10_db"] else "FAIL"
+    )
+    result["gates"]["s22"] = (
+        "PASS" if exact["gates"]["s22_below_minus10_db"] else "FAIL"
+    )
+    result["gates"]["isolation"] = (
+        "PASS" if exact["gates"]["isolation_below_minus15_db"] else "FAIL"
+    )
+    result["gates"]["reciprocity"] = (
+        "PASS" if exact["gates"]["reciprocity_1e_minus3"] else "FAIL"
+    )
+
+    xml_paths = sorted((artifact_dir / "farfield").glob("*.xml"))
+    if len(xml_paths) != 1:
+        raise RuntimeError(f"esperado um XML de antena; encontrados {len(xml_paths)}")
+    result["power"] = power_metadata(xml_paths[0])
+    result["gates"]["power_balance"] = (
+        "PASS"
+        if result["power"]
+        and all(item["power_balance_within_1pct"] for item in result["power"].values())
+        else "FAIL"
+    )
+
+    ffd_paths = sorted((artifact_dir / "farfield").rglob("exportfield_*.ffd"))
+    if len(ffd_paths) != 2:
+        raise RuntimeError(f"esperados dois FFD; encontrados {len(ffd_paths)}")
+    theta_1, phi_1, field_1 = ler_ffd_complexo(ffd_paths[0])
+    theta_2, phi_2, field_2 = ler_ffd_complexo(ffd_paths[1])
+    if not np.array_equal(theta_1, theta_2) or not np.array_equal(phi_1, phi_2):
+        raise RuntimeError("grades angulares dos padrões embarcados são distintas")
+    result["mimo_diagnostics"] = {
+        "field_ecc_complex": ecc_campos_complexos(
+            theta_1, phi_1, field_1, field_2
+        ),
+        "theta_samples": int(theta_1.size),
+        "phi_samples_including_duplicate_360deg": int(phi_1.size),
+        "formula": (
+            "rho_e=|integral(E1 dot conj(E2))dOmega|^2/"
+            "(integral(|E1|^2)dOmega integral(|E2|^2)dOmega)"
+        ),
+        "classification": "SIMULADO",
+        "claim_limit": (
+            "ECC isolada não valida diversidade, rank, capacidade ou throughput; "
+            "o radiador fonte permanece HIPÓTESE e está severamente descasado."
+        ),
+    }
+    result["farfield_metrics"] = realized_gain_peak(
+        artifact_dir / "plots" / "Q4_Gain3D_25p87.csv"
+    )
+    result["revalidated_at_utc"] = datetime.now(UTC).isoformat()
+    result["revalidation_method"] = "artifact-only; no AEDT re-solve"
+    write_json(validation_path, result)
+    return result
+
+
 def solve(
     target: Path,
     artifact_dir: Path,
@@ -1200,7 +1359,7 @@ def solve(
         convergence_text = convergence.read_text(
             encoding="utf-8", errors="replace"
         )
-        converged = "Converged: Yes" in convergence_text
+        converged = convergence_declared(convergence_text)
         result["gates"]["adaptive_convergence"] = "PASS" if converged else "FAIL"
 
         touchstone = network_dir / "system.s2p"
@@ -1324,25 +1483,31 @@ def solve(
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=("build", "repair-build", "solve"))
+    parser.add_argument(
+        "command", choices=("build", "repair-build", "solve", "revalidate")
+    )
     parser.add_argument("--source", type=Path, default=SOURCE_DEFAULT)
     parser.add_argument("--target", type=Path, default=TARGET_DEFAULT)
     parser.add_argument("--artifacts", type=Path, default=ARTIFACT_DEFAULT)
-    parser.add_argument("--grpc-port", type=int, required=True)
+    parser.add_argument("--grpc-port", type=int)
     parser.add_argument("--pid", type=int)
     args = parser.parse_args()
 
     source = args.source.resolve()
     target = args.target.resolve()
     artifacts = args.artifacts.resolve()
+    if args.command != "revalidate" and args.grpc_port is None:
+        parser.error("--grpc-port é obrigatório para build, repair-build e solve")
     if args.command == "build":
         result = build(source, target, artifacts, args.grpc_port, args.pid)
     elif args.command == "repair-build":
         result = repair_build(
             source, target, artifacts, args.grpc_port, args.pid
         )
-    else:
+    elif args.command == "solve":
         result = solve(target, artifacts, args.grpc_port, args.pid)
+    else:
+        result = revalidate_artifacts(artifacts)
     print(
         json.dumps(
             {

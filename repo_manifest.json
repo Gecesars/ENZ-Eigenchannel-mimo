@@ -6,11 +6,11 @@
     "transport": "PyAEDT over native AEDT gRPC",
     "validated_solver_resources": {"cores": 14, "tasks": 1, "gpus": 0}
   },
-  "status": "corpus-audited-g0-v7-exploratory-q0-mimo-blocked-and-documented",
+  "status": "q4-c0-v8-solved-with-scientific-block-and-documented",
   "base_paper_doi": "10.1109/OJAP.2026.3703713",
   "technical_report": {
-    "path": "doc/pdfs/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v2.pdf",
-    "manifest": "doc/pdfs/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v2.manifest.json",
+    "path": "doc/pdfs/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v3.pdf",
+    "manifest": "doc/pdfs/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v3.manifest.json",
     "classification": "HIPÓTESE"
   },
   "g0_v7_gates": {
@@ -25,5 +25,15 @@
     "required_radiators": 4,
     "mimo_classification": "DESCONHECIDO"
   },
-  "next_gate": "Q0-provide-four-validated-radiator-packages-and-complex-patterns"
+  "mimo2x2_q4_c0_v8": {
+    "classification": "HIPÓTESE",
+    "status": "COMPLETED_WITH_SCIENTIFIC_BLOCK",
+    "adaptive_convergence": "PASS",
+    "strict_passivity": "PASS",
+    "s11_matching": "FAIL",
+    "s22_matching": "FAIL",
+    "complex_embedded_patterns": "PASS",
+    "mimo_claim": "BLOCKED_SOURCE_MODEL_HIPOTESE"
+  },
+  "next_gate": "validate-source-radiator-and-match-both-q4-ports"
 }

@@ -76,6 +76,18 @@ Q0_INSPECTION = (
 Q0_PREVIEW = (
     ROOT / "artefatos" / "q0" / "hfss_inspection" / "hfss_design_preview.jpg"
 )
+Q4_DIR = ROOT / "artefatos" / "q4_mimo2x2_c0_v8"
+Q4_VALIDATION = Q4_DIR / "validation.json"
+Q4_IMAGES = [
+    Q4_DIR / "plots" / "design_solved.jpg",
+    Q4_DIR / "fields" / "EMag_XZ_ArrayCenter_25p87.jpg",
+    Q4_DIR / "fields" / "EMag_XY_MidHeight_25p87.jpg",
+    Q4_DIR / "fields" / "EMag_XZ_Feed_25p87.jpg",
+    Q4_DIR / "plots" / "S_Q4_2Port_25_27GHz.jpg",
+    Q4_DIR / "plots" / "Q4_EPlane_RealizedGain_25p87.jpg",
+    Q4_DIR / "plots" / "Q4_HPlane_RealizedGain_25p87.jpg",
+    Q4_DIR / "plots" / "Q4_Gain3D_25p87.jpg",
+]
 CLEAN_METRICS = [
     ROOT
     / "poros_aedt"
@@ -86,7 +98,7 @@ CLEAN_METRICS = [
     / name
     for name in ("convergence.csv", "mesh_stats.csv", "solver_profile.csv")
 ]
-REPORT_VERSION = 2
+REPORT_VERSION = 3
 OUTPUT_NAME = f"Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v{REPORT_VERSION}.pdf"
 MANIFEST_NAME = (
     f"Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v{REPORT_VERSION}.manifest.json"
@@ -1124,6 +1136,48 @@ def build_story(
     )
     visual_count += 1
 
+    story.append(
+        Paragraph("Sistema exploratório Q4-C0 v8", styles["Heading2"])
+    )
+    q4_entries = [
+        (
+            Q4_IMAGES[0],
+            "**HIPÓTESE/SIMULADO.** Vista solucionada das quatro cópias da v7 e das duas redes H-plane. Os espaçamentos não são cotas publicadas.",
+        ),
+        (
+            Q4_IMAGES[1],
+            "**SIMULADO.** Magnitude de campo no corte XZ central em 25,87 GHz; a fase complexa é preservada nos FFD exportados.",
+        ),
+        (
+            Q4_IMAGES[2],
+            "**SIMULADO.** Magnitude de campo no plano XY de meia-altura do sistema de quatro módulos.",
+        ),
+        (
+            Q4_IMAGES[3],
+            "**SIMULADO.** Magnitude de campo no corte XZ das redes de alimentação externas.",
+        ),
+        (
+            Q4_IMAGES[4],
+            "**SIMULADO.** Rede de duas portas entre 25 e 27 GHz: isolamento alto coexistindo com reflexão próxima de 0 dB.",
+        ),
+        (
+            Q4_IMAGES[5],
+            "**SIMULADO.** Corte E do ganho realizado em 25,87 GHz para o estado EVEN/EVEN.",
+        ),
+        (
+            Q4_IMAGES[6],
+            "**SIMULADO.** Corte H do ganho realizado em 25,87 GHz para o estado EVEN/EVEN.",
+        ),
+        (
+            Q4_IMAGES[7],
+            "**SIMULADO.** Ganho realizado 3D em 25,87 GHz; pico total de −0,03864 dB. O matching reprovado limita a interpretação.",
+        ),
+    ]
+    story.append(
+        image_grid(q4_entries, styles, page_width, columns=2, max_height=67 * mm)
+    )
+    visual_count += len(q4_entries)
+
     story.append(Paragraph("Waveport e planos de corte", styles["Heading2"]))
     derived_entries = [
         (
@@ -1277,6 +1331,8 @@ def generate() -> dict[str, Any]:
         Q0_INVENTORY,
         Q0_INSPECTION,
         Q0_PREVIEW,
+        Q4_VALIDATION,
+        *Q4_IMAGES,
         *CLEAN_METRICS,
         *CORE_DOCS,
         *GEOMETRY_IMAGES,
@@ -1311,6 +1367,8 @@ def generate() -> dict[str, Any]:
             Q0_INVENTORY,
             Q0_INSPECTION,
             Q0_PREVIEW,
+            Q4_VALIDATION,
+            *Q4_IMAGES,
             *CLEAN_METRICS,
             *CORE_DOCS,
             *GEOMETRY_IMAGES,
@@ -1330,7 +1388,7 @@ def generate() -> dict[str, Any]:
         "schema": "enz-eigenchannel-mimo/technical-report-manifest/v1",
         "generated_at_utc": datetime.now(UTC).isoformat(),
         "classification": "HIPÓTESE",
-        "title": "Dossiê técnico da cavidade ENZ, ambiente HFSS e gate Q0 MIMO 2×2",
+        "title": "Dossiê técnico da cavidade ENZ, ambiente HFSS e extensão Q4-C0 MIMO 2×2",
         "primary_source": {
             "authors": [
                 "Evandro C. Vilas Boas",
@@ -1356,7 +1414,13 @@ def generate() -> dict[str, Any]:
             "global_reproduction_classification": "HIPÓTESE",
             "q0_validated_radiators": "BLOCKED_MISSING_VALIDATED_ARTIFACTS",
             "q0_validated_instances": "0/4",
-            "mimo2x2_system_classification": "DESCONHECIDO",
+            "q4_adaptive_convergence": "PASS",
+            "q4_strict_passivity": "PASS",
+            "q4_s11_matching": "FAIL",
+            "q4_s22_matching": "FAIL",
+            "q4_complex_embedded_patterns": "PASS",
+            "q4_mimo_claim": "BLOCKED_SOURCE_MODEL_HIPOTESE",
+            "mimo2x2_system_classification": "HIPÓTESE",
         },
         "sources": sources,
     }

@@ -305,3 +305,56 @@ necessários para liberar Q0 estão em
 sem valor para o sistema solicitado, pois não existem S2P externo nem padrões
 `Etheta/Ephi` complexos por porta. Essa ausência é um resultado de gate, não
 uma lacuna preenchível por hipótese geométrica.
+
+## 15. Extensão exploratória Q4-C0 v8 após autorização
+
+**HIPÓTESE:** após o gate Q0, foi autorizada explicitamente a utilização da v7
+aberta como fonte exploratória. Quatro cópias determinísticas foram integradas
+a duas redes H-plane simétricas, formando duas portas externas e o estado
+EVEN/EVEN. A construção não altera retroativamente o resultado Q0: nenhuma
+instância fonte foi promovida a radiador validado.
+
+**SIMULADO:** o projeto Q4-C0 v8 contém 43 objetos, duas waveports com linha de
+integração em (Z), 15 sistemas de coordenadas/cortes, nove plots de campo,
+três relatórios de campo distante e um relatório de rede. O AEDT 2024 R2
+solucionou o setup com 14 cores em três passes. O erro adaptativo final foi
+
+```math
+\Delta S_{\max}=2{,}8215\times10^{-4},
+```
+
+com 651.746 elementos resolvidos no último passe.
+
+**SIMULADO:** em (25{,}87\,\mathrm{GHz}), o LastAdaptive forneceu
+(S_{11}=-0{,}129025\,\mathrm{dB}),
+(S_{22}=-0{,}129095\,\mathrm{dB}) e
+(S_{12}=S_{21}=-83{,}867707\,\mathrm{dB}). A maior singularidade na
+varredura de 25–27 GHz foi (0{,}9995667), portanto o gate estrito de
+passividade passou. O TARC EVEN/EVEN foi
+(-0{,}129291\,\mathrm{dB}), revelando o mesmo descasamento severo das portas.
+
+**SIMULADO:** os padrões embarcados foram exportados como campos vetoriais
+complexos. A ECC calculada pelo produto interno de
+(\mathbf E_1=(E_{\theta,1},E_{\phi,1})) e
+(\mathbf E_2=(E_{\theta,2},E_{\phi,2})) foi
+
+```math
+\rho_e=\frac{
+\left|\int_\Omega \mathbf E_1\cdot\mathbf E_2^*d\Omega\right|^2}
+{\int_\Omega |\mathbf E_1|^2d\Omega
+ \int_\Omega |\mathbf E_2|^2d\Omega}
+=2{,}03548\times10^{-5}.
+```
+
+**DERIVADO:** baixa ECC e isolamento alto não bastam para declarar diversidade
+ou throughput. Os gates (S_{11}<-10\,\mathrm{dB}) e
+(S_{22}<-10\,\mathrm{dB}) falharam, e a geometria fonte continua
+`HIPÓTESE`. O estado científico é
+`COMPLETED_WITH_SCIENTIFIC_BLOCK`; o claim MIMO permanece
+`BLOCKED_SOURCE_MODEL_HIPOTESE`.
+
+Os dados reprodutíveis estão em `artefatos/q4_mimo2x2_c0_v8/`, com S2P,
+convergência, malha, perfil do solver, XML de potência, dois FFD complexos,
+nove cortes de campo, três diagramas e o manifesto `validation.json`. O projeto
+solucionado tem SHA-256
+`1b93d9d855969733cfe736c1d5396f0cc932cff6f99cfecc9da736993a514a3d`.

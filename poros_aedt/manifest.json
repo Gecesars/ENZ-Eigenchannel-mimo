@@ -1,6 +1,6 @@
 {
   "schema_version": "poros-aedt-package-v2",
-  "generated_at_utc": "2026-08-04T10:46:56.037542+00:00",
+  "generated_at_utc": "2026-08-04T12:56:37.733548+00:00",
   "classificacao_resultado": "SIMULADO",
   "classificacao_geometria": "HIPÓTESE",
   "primary_source": {
@@ -16,8 +16,9 @@
   "packages": {
     "m0_infrastructure_run": "ENZ-20260803-173105-52288067",
     "g0_exploratory_reconstruction": "ENZ-20260803-192218-ed5384a5",
-    "technical_report": "913bb5894514f5b398bf0656a387ac365774bf8f6e248c298eb74a8fedd12634",
-    "q0_validated_radiators": "BLOCKED_MISSING_VALIDATED_ARTIFACTS"
+    "technical_report": "319ffa78b5c293c51370e9b4cbefee7c1e8bead3c5524dd561789e4e3089c5c3",
+    "q0_validated_radiators": "BLOCKED_MISSING_VALIDATED_ARTIFACTS",
+    "q4_exploratory_model": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedt"
   },
   "scientific_gates": {
     "m0_infrastructure": "PASS",
@@ -26,67 +27,431 @@
     "g0_strict_passivity": "FAIL",
     "g0_published_s11_correspondence": "FAIL",
     "q0_validated_instances": "0/4",
-    "mimo_2x2_system": "DESCONHECIDO",
+    "q4_adaptive_convergence": "PASS",
+    "q4_strict_passivity": "PASS",
+    "q4_s11_matching": "FAIL",
+    "q4_s22_matching": "FAIL",
+    "q4_complex_embedded_patterns": "PASS",
+    "q4_mimo_claim": "BLOCKED_SOURCE_MODEL_HIPOTESE",
+    "mimo_2x2_system": "HIPÓTESE",
     "global_reproduction_classification": "HIPÓTESE"
   },
   "active_session_locks_excluded": [
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedt.lock"
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedt.lock"
   ],
   "active_session_generated_files_excluded": [
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/HFSS_ENZ_G0_figura2_reconstrucao_v7_M4.asol_priv",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/ManagedFiles_Design0.asol_priv",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/36042220417858394752.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/360B2220417858394773.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/360E2220417858394784.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/360E2220417858394785.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/361B2220417858394826.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/361B2220417858394827.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/361F2220417858394838.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/361F2220417858394839.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362222204178583948410.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362222204178583948411.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362522204178583948512.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362522204178583948513.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362822204178583948614.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362822204178583948615.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362C22204178583948716.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362C22204178583948717.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362C22204178583948718.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362F22204178583948819.tmp"
+    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/RAD7AEA31352178578467010.tmp",
+    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/ValidationCache/HDR7AEE31352178578467112.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.asol_priv",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot10.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot11.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot12.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot13.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot14.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot15.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot16.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot8.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot9.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/GeometryCache/CacheDataVersion.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/radfld/1456222041785846869190.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/radfld/RAD7AEA31352178578467010.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/radfld/RAD7E97117840178578495810.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/svcache/HDR68B622204178584344962.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/svcache/HDR7E97117840178578495811.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/svcache/min1477222041785846879192.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/svcache/min1477222041785846879193.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/ValidationCache/HDR7AEE31352178578467112.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/ValidationCache/VI692F222041785843486100.tmp"
   ],
-  "active_session_tracked_files_temporarily_absent": [
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/GeometryCache/BodyCache/0000006.fct",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/GeometryCache/BodyCache/0000006.x_b",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/GeometryCache/BodyCache/0000140.fct",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/GeometryCache/BodyCache/0000140.x_b",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/GeometryCache/CacheDataVersion.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/GeometryCache/InterrogationCache.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/GeometryCache/OperationDataCache.tmp"
+  "active_session_tracked_files_temporarily_absent": [],
+  "nonportable_solver_cache_excluded": [
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.asol",
+      "bytes": 10774,
+      "sha256": "6ef53d9b3615ef82a4116c6ba708868d82a730f515d247171a67245ea96bab8e",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_MI0_V451.sd/initial.stats",
+      "bytes": 6501,
+      "sha256": "2b66af7083357edcea5550939363f2b62e86e320b6c1951fced4411a531859a5",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S454_ADP3_V0.sd/native.adp",
+      "bytes": 71692119,
+      "sha256": "ab7d9373963958ac68eca7bf65bd39733381cb4b6ea4826a09936236de69e55b",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S454_MI0_V0.sd/current.stats",
+      "bytes": 6656,
+      "sha256": "4971a4d82816c2df48b14c268822c20c4ec72a95fb1745e45abcd410d85fd330",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S454_SD1_V0.su",
+      "bytes": 849,
+      "sha256": "b083678b3c6019b7fb1338d36c43357448b5b99b3e89da64baaf516f210026f6",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S454_SD2_V0.su",
+      "bytes": 849,
+      "sha256": "a978ac2fea456291441b0bd40c5f8502ce23543a2f11b11fd99a69af94c2c83e",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S454_SD3_V0.su",
+      "bytes": 849,
+      "sha256": "4afd4048480c50c6dd00ef574783c2e2bf5de0549cb549f236399a34fa7bac13",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S454_V0.cmesh/bodyFaceInfo.info",
+      "bytes": 122241,
+      "sha256": "0281330d3222aeffeb2435edc552eba62be17bbe1ae1e3965883078768c7df06",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S454_V0.cmesh/current.ngmesh",
+      "bytes": 37130220,
+      "sha256": "c18ac54721d8f7965f8d9320d9beeba6b9752ab19c1198df0da3c7c4f08ca747",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S454_V0.cmesh/current.stats",
+      "bytes": 6656,
+      "sha256": "4971a4d82816c2df48b14c268822c20c4ec72a95fb1745e45abcd410d85fd330",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S454_V0.EMConvData",
+      "bytes": 1445,
+      "sha256": "b287362b929efb7391f53f06073b9dc2dc384d20fc407ae35d871774a9fa7c07",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S454_V0.profile",
+      "bytes": 28820,
+      "sha256": "0456c46b7d2dff6e9a01b21724ae5fe2d15ae48606fcd66ecff39ab0fa7dd03b",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/2.nvc",
+      "bytes": 322,
+      "sha256": "2996b9ed7e811e62b4c9b4a939107c9086a2339df7a189fdcbfe052bc106bf6b",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/2_1.tvc",
+      "bytes": 15352,
+      "sha256": "41df5ba87674676fa2b279ebd8f93e10ec3e68f6f137fba28e40a3d7dcd92c04",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/2_1.tvm",
+      "bytes": 12461,
+      "sha256": "165ddc14e010f96cabb157c9ece6b94dc0d08717213dfff7525c46b84ba630e4",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/2_1.tvz",
+      "bytes": 15137,
+      "sha256": "19e846fdc110d8ffa47bc61640c11fa36e0091a31350884cb798ed546c4279ba",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/3.nvc",
+      "bytes": 322,
+      "sha256": "4521acc6dd82d3ce6f6db69c46fd70d02a73caa112417988fb92699c51fee52c",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/3_1.tvc",
+      "bytes": 15799,
+      "sha256": "0130275ab3854f81d04fb5eeebfba1026ff4b608016b5382f58ff10ceb17775f",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/3_1.tvm",
+      "bytes": 11786,
+      "sha256": "f8192f1b66652bc24481f1b63f9d2baa5cf62112508fd26f0650e612fa872535",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/3_1.tvz",
+      "bytes": 15137,
+      "sha256": "06f82dca07a9abac83b2c381f5afd7732cb6d5c60c916a55bcfd9eef3e794341",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/current.sf_msh",
+      "bytes": 265692,
+      "sha256": "bd874ac10c4712bb142b07ed672877d05e9807fb51b15935caf4e9a693bea9e4",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/current.sf_mshhdr",
+      "bytes": 186,
+      "sha256": "7e324907e2c92b84c421c75a9a78924dede2e89f4e07f4b54e19d59717d3a118",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/fields.evtrs",
+      "bytes": 238,
+      "sha256": "6161d5ed4bcb41c733c8637e78238f7f12f1dca20464428dc9899016bc425a6e",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/fields.evtrs_0",
+      "bytes": 161633016,
+      "sha256": "239cca68bcada0e1eeac633f31184ed9818e4fbcb27dab36c629d168e2d4e014",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/fields.evtrs_1",
+      "bytes": 161633016,
+      "sha256": "4c578ac41b69e13d32e8045c419a6f6e4b592550b35aa23c11cf1337c61bf0e4",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/fields.evtrs_hyd",
+      "bytes": 13203117,
+      "sha256": "83ba93f0a003d5084656fcd9d9c3606141157e07212a5cd28b9d3f7072887ad6",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/fields.imp",
+      "bytes": 7,
+      "sha256": "1d11e19211ff0faf45dfefafdf3aa9475e635a64381a95c05bae2b8341f14737",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/fields.sf_fld_0",
+      "bytes": 1861256,
+      "sha256": "32e12ed32298ca1eb0848bd34dbec71eb9e4d7f70b5d4f9f06c0d42d62793062",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/fields.sf_fld_1",
+      "bytes": 1861256,
+      "sha256": "a78caf99f92380ac980484bac55b8c42212bcbea45f3778d6d1c950338e07699",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/hf3d_solver_freq.input",
+      "bytes": 802830,
+      "sha256": "72402a21120282ff28c96bfac1ab4954dfd6dce95b84fe8fba6bb207ca5f3d26",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/matrixReordering_1x1_CotreeOff_Full.dat",
+      "bytes": 15963088,
+      "sha256": "13deaa1474f6cf1ee5064d264deb2323132794e3d266e913a567af4de78322c7",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/matrixReordering_1x1_CotreeOff_SMatrixOnly_Sparse.dat",
+      "bytes": 15963088,
+      "sha256": "13deaa1474f6cf1ee5064d264deb2323132794e3d266e913a567af4de78322c7",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/matrixReordering_2x2_CotreeOff_Full.dat",
+      "bytes": 15963080,
+      "sha256": "5be2df0ba3cd558cd7dc2664d42430acbfaf6e92739ce2a2fdbc1c1f63c26b45",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/mf_apip_25870000000_000000_23532.mfsapip",
+      "bytes": 1478,
+      "sha256": "ae057d15edafe38b2a2f4b4ace48ac8338028b9542f4df04a7f67646ad36f258",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/mf_apip_25870000000_000000_28392.mfsapip",
+      "bytes": 1477,
+      "sha256": "e8f9440c5553beba8d02d05e30849a5dcffb729cd33320c84fb1298e72cc27e0",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S456_V460_F591/mf_apip_25870000000_000000_9132.mfsapip",
+      "bytes": 1477,
+      "sha256": "e69a6011454a89b54e074e59db1467156fb66afa72c4d2c6f7e16fbd4c6af347",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S462_V0_F602_SU.txt",
+      "bytes": 849,
+      "sha256": "2a340cbed2edcfa5f91471631af90ad4fe65a3524ad5918db1f81e5563657c2d",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S462_V0_F603_SU.txt",
+      "bytes": 849,
+      "sha256": "71f95828f3afba49eef903aa390fd658f4a765c00245a22d7979ba07969d7373",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S462_V0_F605_SU.txt",
+      "bytes": 849,
+      "sha256": "f7197fb34fb6d2618f53bc7004891c9f78b85bbca6706b41844c207329f3f735",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S462_V0_F606_SU.txt",
+      "bytes": 849,
+      "sha256": "a6deaac6af7ca904751a18404095b385dcc5f26b1e7c767f31bddac3db05ba00",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S462_V0_F607_SU.txt",
+      "bytes": 849,
+      "sha256": "b6d65d676c89427163857e4fa71d00d7e30888ea804ac1d5e8cb0c0f482ac338",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S462_V0_F608_SU.txt",
+      "bytes": 849,
+      "sha256": "26c04788b3b0c011cee861d2397d095579bd6c5e8e245046614f37eb8d141c64",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S462_V0_F609_SU.txt",
+      "bytes": 849,
+      "sha256": "008d44a644db939b8e7b7f3d8fe1e1d62fb1370075f35d8f8c005f789f19c853",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S462_V0_F610_SU.txt",
+      "bytes": 849,
+      "sha256": "ea86f5404c712bf22c648d41e384ebf00cd27f6f105c9976965cd1289f8e092a",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S462_V0_F611_SU.txt",
+      "bytes": 849,
+      "sha256": "1c1632fc94f527e403546c9a6cae21ab1e155e9e941ae0542f980a56dfcb1cf1",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S462_V0_F612_SU.txt",
+      "bytes": 849,
+      "sha256": "45617d979650003a88ca787117fb3b2a59c097cebe691d42b34d4d64545cabf2",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S462_V0_F613_SU.txt",
+      "bytes": 849,
+      "sha256": "91a59fa1a177f99f8fff14f590ee49954167e5ff70f5fb609598f7be5c739ef7",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_S462_V0_F614_SU.txt",
+      "bytes": 849,
+      "sha256": "a093f0f55aa2de080bf5830d0add749aa27e6c12a1c9da4df1857ee60b4b5662",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_SOL455_M1_V0.sd",
+      "bytes": 3529,
+      "sha256": "59487fd387bf6f0c451aa5e72108d1a92f9dd996b60d7d4a5b717ec89243e962",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_SOL455_M2_V0.sd",
+      "bytes": 3386,
+      "sha256": "09c1757aeaa0fca6c27993226c41490a147688751f3da26b66e755b39deaf855",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_SOL455_M3_V0.sd",
+      "bytes": 3390,
+      "sha256": "7b4d1bfd70aee0eabc2ea4abd2a84d8bf21f795ada1edce12333bf674ff50bad",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_SOL456_M0_V460.sd",
+      "bytes": 3391,
+      "sha256": "1ec5d3f7c17fe5e31a4100b16b4964112451674124e2d97478aaa7cc55534de0",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_SOL462_M0_V0.sd",
+      "bytes": 27747,
+      "sha256": "3000f5b851b38ba33c62cce395fff1be438bdb2cf7d55dd1fc71713787d19623",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_V451.imesh/bodyFaceInfo.info",
+      "bytes": 122241,
+      "sha256": "0281330d3222aeffeb2435edc552eba62be17bbe1ae1e3965883078768c7df06",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_V451.imesh/initial.ngmesh",
+      "bytes": 1270732,
+      "sha256": "f59d21e1c7cea412588588cc178e30cd2b24c31b46fe827400b28318568138c7",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/DV457_V451.imesh/initial.stats",
+      "bytes": 6501,
+      "sha256": "2b66af7083357edcea5550939363f2b62e86e320b6c1951fced4411a531859a5",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/NDV247_V95.dmesh/defn_native_vmesh.ngmesh",
+      "bytes": 1270732,
+      "sha256": "f59d21e1c7cea412588588cc178e30cd2b24c31b46fe827400b28318568138c7",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/NDV247_V95.dmesh/defn_native_vmesh.stats",
+      "bytes": 6501,
+      "sha256": "2b66af7083357edcea5550939363f2b62e86e320b6c1951fced4411a531859a5",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.results/nominalmesh.g3derr",
+      "bytes": 866756,
+      "sha256": "76f52babe4db6f855a0a376511c79e7e5930e0c50830e538448584ffccdfbf80",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/ManagedFiles_Design0.asol",
+      "bytes": 329,
+      "sha256": "69ef0548d585b28362f1fff1e9fce80e6d1db8d765861537801646a52bc5d1e1",
+      "reason": "cache privado reproduzível pelo AEDT; arquivos individuais excedem o limite de 100 MB do GitHub"
+    }
   ],
   "ephemeral_files_excluded": [
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedt.lock",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/.HFSS_ENZ_G0_figura2_reconstrucao_v7_M4.asol.semaphore",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/.HFSS_ENZ_G0_figura2_reconstrucao_v7_M4.asol_priv.semaphore",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/HFSS_ENZ_G0_figura2_reconstrucao_v7_M4.asol_priv",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/ManagedFiles_Design0.asol_priv",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/36042220417858394752.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/360B2220417858394773.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/360E2220417858394784.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/360E2220417858394785.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/361B2220417858394826.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/361B2220417858394827.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/361F2220417858394838.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/361F2220417858394839.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362222204178583948410.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362222204178583948411.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362522204178583948512.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362522204178583948513.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362822204178583948614.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362822204178583948615.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362C22204178583948716.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362C22204178583948717.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362C22204178583948718.tmp",
-    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/362F22204178583948819.tmp",
+    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/RAD7AEA31352178578467010.tmp",
+    "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/ValidationCache/HDR7AEE31352178578467112.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedt.lock",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/.HFSS_ENZ_Q4_mimo2x2_c0_v8.asol.semaphore",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/.HFSS_ENZ_Q4_mimo2x2_c0_v8.asol_priv.semaphore",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/HFSS_ENZ_Q4_mimo2x2_c0_v8.asol_priv",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot10.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot11.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot12.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot13.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot14.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot15.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot16.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot8.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/fldplt/Plot9.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/GeometryCache/CacheDataVersion.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/radfld/1456222041785846869190.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/radfld/RAD7AEA31352178578467010.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/radfld/RAD7E97117840178578495810.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/svcache/HDR68B622204178584344962.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/svcache/HDR7E97117840178578495811.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/svcache/min1477222041785846879192.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/svcache/min1477222041785846879193.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/ValidationCache/HDR7AEE31352178578467112.tmp",
+    "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults/mf_0/ValidationCache/VI692F222041785843486100.tmp",
     "runs/ENZ-20260803-173105-52288067/aedt/M0_cavidade_retangular_smoke_M0.aedtresults/.HFSS_ENZ_M0_cavidade_retangular_smoke_M0.asol_priv.semaphore"
   ],
   "arquivos": [
@@ -117,8 +482,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 1934,
-      "sha256": "6af96725494b07109c2e844d2661315ff232a1bdeab69a77f16eda033f5a4ad7"
+      "bytes": 1972,
+      "sha256": "65efabafe4de261e709dc25d4d16ba35630e7c47cf3016713b31cdd377332958"
     },
     {
       "path": "reconstrucoes_exploratorias/G0_figura2_v5/build_manifest.json",
@@ -2316,6 +2681,41 @@
       "sha256": "f7a34b75199fc7423b2f9fe80bb973ed2ff136c827628f4311492088716513ad"
     },
     {
+      "path": "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/GeometryCache/BodyCache/0000006.fct",
+      "bytes": 27156,
+      "sha256": "8e43b9ec5356dab57433ced2292c78c89b9c712f74e8e1bc9e907ed08d7a5dfb"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/GeometryCache/BodyCache/0000006.x_b",
+      "bytes": 50537,
+      "sha256": "8ca3a00c4445731ed734819ce71778bf06f54d2a57bdb36a76ca4710793fbe5e"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/GeometryCache/BodyCache/0000140.fct",
+      "bytes": 27964,
+      "sha256": "ddcd5d5baf152bbae50ccd0fe0702744e64295195610cba4d2f3307e59a04b57"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/GeometryCache/BodyCache/0000140.x_b",
+      "bytes": 39248,
+      "sha256": "6a9b6d807fa6fdd3f08fc37cffa34c3f23a0b97e122c97cbfcfc6ca469c3809f"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/GeometryCache/CacheDataVersion.tmp",
+      "bytes": 1107,
+      "sha256": "5a8e7ea1ddcd528fb356cb98b1dfd3e35fb67c624e806d91c16472253c059e3f"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/GeometryCache/InterrogationCache.tmp",
+      "bytes": 2618,
+      "sha256": "5190ebbacc5e0f5f2d869de2dec3d7acfdad40edd36a942efe684db5b2e44673"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/GeometryCache/OperationDataCache.tmp",
+      "bytes": 12,
+      "sha256": "09f4493a7016a764f6190b5e84a16d72f8d5f85c3119f6b4d79f2785b628881c"
+    },
+    {
       "path": "reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedtresults/mf_0/radfld/RAD7E97117840178578495810.tmp",
       "bytes": 258,
       "sha256": "d164bf282c2a65677ee7b2a4278d232b835fb193f8709db89d66d3d5cce3e99d"
@@ -2381,9 +2781,19 @@
       "sha256": "03f0f1f39d9160c443f09a835ef91b1eb391e544dd5d4ed98d2263ae618fde88"
     },
     {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedt",
+      "bytes": 830582,
+      "sha256": "1b93d9d855969733cfe736c1d5396f0cc932cff6f99cfecc9da736993a514a3d"
+    },
+    {
+      "path": "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.pyaedt/HFSS_ENZ_Q4_mimo2x2_c0_v8/pyaedt_config.acf",
+      "bytes": 996,
+      "sha256": "ffb22724a4e56902c1a49ee37bdd457ece35a05075a5571a1c53c673cf84a9a2"
+    },
+    {
       "path": "relatorios/README.md",
-      "bytes": 1017,
-      "sha256": "61c270897b717e61c5e6469090234dd47dcf06a0c551cef2576652c91a1038f3"
+      "bytes": 1160,
+      "sha256": "592fe8fe92417f63f01709d9cca4f6c20af531c3fece545505ec1e75224cfa30"
     },
     {
       "path": "relatorios/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v1.manifest.json",
@@ -2404,6 +2814,16 @@
       "path": "relatorios/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v2.pdf",
       "bytes": 3974727,
       "sha256": "913bb5894514f5b398bf0656a387ac365774bf8f6e248c298eb74a8fedd12634"
+    },
+    {
+      "path": "relatorios/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v3.manifest.json",
+      "bytes": 17573,
+      "sha256": "e81172e5808c8ef3099bd7d6de08ec6032a441e6541b97b22082dd20bb247a9d"
+    },
+    {
+      "path": "relatorios/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v3.pdf",
+      "bytes": 6398577,
+      "sha256": "319ffa78b5c293c51370e9b4cbefee7c1e8bead3c5524dd561789e4e3089c5c3"
     },
     {
       "path": "runs/ENZ-20260803-173105-52288067/aedt/M0_cavidade_retangular_smoke_M0.aedt",

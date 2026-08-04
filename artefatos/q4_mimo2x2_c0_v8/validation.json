@@ -18,13 +18,15 @@
   "gates": {
     "source_radiator_validation": "FAIL",
     "validate_design": "PASS",
-    "adaptive_convergence": "FAIL",
+    "adaptive_convergence": "PASS",
     "strict_passivity": "PASS",
     "s11": "FAIL",
     "s22": "FAIL",
     "isolation": "PASS",
     "complex_embedded_patterns": "PASS",
-    "mimo_claim": "BLOCKED_SOURCE_MODEL_HIPOTESE"
+    "mimo_claim": "BLOCKED_SOURCE_MODEL_HIPOTESE",
+    "reciprocity": "PASS",
+    "power_balance": "PASS"
   },
   "errors": [],
   "runtime": {
@@ -39,60 +41,119 @@
     "gpus": 0
   },
   "sparameters": {
-    "frequency_hz": 25875000000.0,
-    "samples": 81,
-    "s_matrix": [
-      [
+    "at_exact_f0": {
+      "frequency_hz": 25870000000.0,
+      "samples": 1,
+      "s_matrix": [
+        [
+          {
+            "real": 0.9845097390039035,
+            "imag": 0.038319661608717984
+          },
+          {
+            "real": -2.3966006993907027e-05,
+            "imag": -5.9412441355032836e-05
+          }
+        ],
+        [
+          {
+            "real": -2.396600699390997e-05,
+            "imag": -5.941244135502215e-05
+          },
+          {
+            "real": 0.9845061781908713,
+            "imag": 0.038208147203390996
+          }
+        ]
+      ],
+      "s11_db": -0.12902522601839345,
+      "s22_db": -0.1290947745619519,
+      "s12_db": -83.86770671395146,
+      "s21_db": -83.86770671395266,
+      "active_reflection": [
         {
-          "real": 0.9852241054407532,
-          "imag": 0.03558998130241426
+          "real": 0.9844857729969096,
+          "imag": 0.038260249167362946
         },
         {
-          "real": -2.4293476604911684e-05,
-          "imag": -5.675976600818489e-05
+          "real": 0.9844822121838773,
+          "imag": 0.03814873476203597
         }
       ],
-      [
+      "active_reflection_db": [
+        -0.1292567065233455,
+        -0.12932619872391934
+      ],
+      "tarc_linear": 0.9852250088101897,
+      "tarc_db": -0.12929145248463672,
+      "accepted_power_normalized_w": 0.029331682014961724,
+      "maximum_singular_value_over_sweep": 0.9852778140692585,
+      "reciprocity_error_at_f0": 1.1083458966835027e-17,
+      "gates": {
+        "s11_below_minus10_db": false,
+        "s22_below_minus10_db": false,
+        "isolation_below_minus15_db": true,
+        "strict_passivity_1pct": true,
+        "reciprocity_1e_minus3": true
+      }
+    },
+    "sweep_25_27_ghz": {
+      "frequency_hz": 25875000000.0,
+      "samples": 81,
+      "s_matrix": [
+        [
+          {
+            "real": 0.9852241054407532,
+            "imag": 0.03558998130241426
+          },
+          {
+            "real": -2.4293476604911684e-05,
+            "imag": -5.675976600818489e-05
+          }
+        ],
+        [
+          {
+            "real": -2.429347660491525e-05,
+            "imag": -5.675976600817403e-05
+          },
+          {
+            "real": 0.9852185637181907,
+            "imag": 0.035484966660037504
+          }
+        ]
+      ],
+      "s11_db": -0.12363589506702957,
+      "s22_db": -0.12371804014577678,
+      "s12_db": -84.18864876321237,
+      "s21_db": -84.18864876321358,
+      "active_reflection": [
         {
-          "real": -2.429347660491525e-05,
-          "imag": -5.675976600817403e-05
+          "real": 0.9851998119641483,
+          "imag": 0.035533221536406076
         },
         {
-          "real": 0.9852185637181907,
-          "imag": 0.035484966660037504
+          "real": 0.9851942702415857,
+          "imag": 0.03542820689402933
         }
-      ]
-    ],
-    "s11_db": -0.12363589506702957,
-    "s22_db": -0.12371804014577678,
-    "s12_db": -84.18864876321237,
-    "s21_db": -84.18864876321358,
-    "active_reflection": [
-      {
-        "real": 0.9851998119641483,
-        "imag": 0.035533221536406076
-      },
-      {
-        "real": 0.9851942702415857,
-        "imag": 0.03542820689402933
+      ],
+      "active_reflection_db": [
+        -0.12386783306461183,
+        -0.12394992805522613
+      ],
+      "tarc_linear": 0.9858357336005643,
+      "tarc_db": -0.12390888036593682,
+      "accepted_power_normalized_w": 0.028127906356237298,
+      "maximum_singular_value_over_sweep": 0.999566685475406,
+      "reciprocity_error_at_f0": 1.1432191285620794e-17,
+      "gates": {
+        "s11_below_minus10_db": false,
+        "s22_below_minus10_db": false,
+        "isolation_below_minus15_db": true,
+        "strict_passivity_1pct": true,
+        "reciprocity_1e_minus3": true
       }
-    ],
-    "active_reflection_db": [
-      -0.12386783306461183,
-      -0.12394992805522613
-    ],
-    "tarc_linear": 0.9858357336005643,
-    "tarc_db": -0.12390888036593682,
-    "accepted_power_normalized_w": 0.028127906356237298,
-    "maximum_singular_value_over_sweep": 0.999566685475406,
-    "reciprocity_error_at_f0": 1.1432191285620794e-17,
-    "gates": {
-      "s11_below_minus10_db": false,
-      "s22_below_minus10_db": false,
-      "isolation_below_minus15_db": true,
-      "strict_passivity_1pct": true,
-      "reciprocity_1e_minus3": "True"
-    }
+    },
+    "note": "Métricas em f0 usam LastAdaptive em 25,87 GHz; passividade de banda usa a varredura de 81 pontos."
   },
   "postprocessing": {
     "field_plots_created": [
@@ -806,5 +867,40 @@
       "Cut_Q4_XZ_ArrayCenter",
       "Cut_Q4_XZ_Feed"
     ]
-  }
+  },
+  "power": {
+    "P1_WG_A:1": {
+      "frequency_hz": 25870000000.0,
+      "incident_w": 1.0,
+      "accepted_w": 0.029272,
+      "radiated_w": 0.029176,
+      "power_balance_relative_error": 0.003279584585952407,
+      "power_balance_within_1pct": true
+    },
+    "P2_WG_B:1": {
+      "frequency_hz": 25870000000.0,
+      "incident_w": 1.0,
+      "accepted_w": 0.029288,
+      "radiated_w": 0.029338,
+      "power_balance_relative_error": 0.0017071838295546968,
+      "power_balance_within_1pct": true
+    }
+  },
+  "mimo_diagnostics": {
+    "field_ecc_complex": 2.0354776223864653e-05,
+    "theta_samples": 91,
+    "phi_samples_including_duplicate_360deg": 181,
+    "formula": "rho_e=|integral(E1 dot conj(E2))dOmega|^2/(integral(|E1|^2)dOmega integral(|E2|^2)dOmega)",
+    "classification": "SIMULADO",
+    "claim_limit": "ECC isolada não valida diversidade, rank, capacidade ou throughput; o radiador fonte permanece HIPÓTESE e está severamente descasado."
+  },
+  "farfield_metrics": {
+    "realized_gain_total_db": -0.03864172076702302,
+    "phi_deg": 270.0,
+    "theta_deg": 2.0,
+    "realized_gain_theta_db": -58.578,
+    "realized_gain_phi_db": -0.0386478
+  },
+  "revalidated_at_utc": "2026-08-04T12:50:58.776885+00:00",
+  "revalidation_method": "artifact-only; no AEDT re-solve"
 }

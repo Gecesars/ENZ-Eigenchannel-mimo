@@ -1,0 +1,465 @@
+{
+  "schema": "enz-eigenchannel-mimo/technical-report-manifest/v1",
+  "generated_at_utc": "2026-08-04T12:54:51.014032+00:00",
+  "classification": "HIPÓTESE",
+  "title": "Dossiê técnico da cavidade ENZ, ambiente HFSS e extensão Q4-C0 MIMO 2×2",
+  "primary_source": {
+    "authors": [
+      "Evandro C. Vilas Boas",
+      "Sofia B. de Vasconcellos",
+      "Arismar Cerqueira Sodré Jr.",
+      "Felipe A. P. de Figueiredo"
+    ],
+    "doi": "10.1109/OJAP.2026.3703713",
+    "license": "CC BY 4.0",
+    "metrics": {
+      "pages": 10,
+      "words": 8329,
+      "figures": 4,
+      "tables": 4,
+      "elements": 8
+    }
+  },
+  "report": {
+    "path": "doc/pdfs/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v3.pdf",
+    "bytes": 6398577,
+    "sha256": "319ffa78b5c293c51370e9b4cbefee7c1e8bead3c5524dd561789e4e3089c5c3",
+    "pages": 109,
+    "extracted_words": 29569,
+    "visual_figures": 27,
+    "markdown_tables": 26,
+    "technical_elements": 53,
+    "gates": {
+      "pdf_header": true,
+      "pdf_eof": true,
+      "pypdf_strict_parse": true,
+      "word_count_at_least_2x_article": true,
+      "technical_elements_at_least_2x_article": true,
+      "primary_doi_present": true,
+      "mandatory_claim_labels_present": true
+    }
+  },
+  "scientific_gates": {
+    "waveport_integration_axis_z": "PASS",
+    "adaptive_convergence": "PASS",
+    "strict_passivity": "FAIL",
+    "published_s11_correspondence": "FAIL",
+    "global_reproduction_classification": "HIPÓTESE",
+    "q0_validated_radiators": "BLOCKED_MISSING_VALIDATED_ARTIFACTS",
+    "q0_validated_instances": "0/4",
+    "q4_adaptive_convergence": "PASS",
+    "q4_strict_passivity": "PASS",
+    "q4_s11_matching": "FAIL",
+    "q4_s22_matching": "FAIL",
+    "q4_complex_embedded_patterns": "PASS",
+    "q4_mimo_claim": "BLOCKED_SOURCE_MODEL_HIPOTESE",
+    "mimo2x2_system_classification": "HIPÓTESE"
+  },
+  "sources": [
+    {
+      "path": "artefatos/q0/artifact_inventory.json",
+      "bytes": 67753,
+      "sha256": "c98b01b6e7f118d95f20a2f7f0fb0364d81fc2e6f6edce0875f1c7daeee558be"
+    },
+    {
+      "path": "artefatos/q0/hfss_inspection/hfss_design_preview.jpg",
+      "bytes": 18156,
+      "sha256": "2e21f89c780bd8a8ecaa9cb62b60b4e0a06ddd422ddfc25605ed8b01bf72d8b0"
+    },
+    {
+      "path": "artefatos/q0/hfss_inspection/hfss_inspection.json",
+      "bytes": 24766,
+      "sha256": "f9c9de4c366d97c3c6e7e03f2ad6b3606b87480050a4395c74b47491b40cc496"
+    },
+    {
+      "path": "artefatos/q0/missing_validated_models.json",
+      "bytes": 19410,
+      "sha256": "a1c3a780fa0eb47fd03ccddd5605f4efed18f51724122902c05faf60de8d93f4"
+    },
+    {
+      "path": "artefatos/q4_mimo2x2_c0_v8/fields/EMag_XY_MidHeight_25p87.jpg",
+      "bytes": 412546,
+      "sha256": "87ea06d7c7151754a839e97c33b39ba92cfd3b0635f550c93b7243ad7461e931"
+    },
+    {
+      "path": "artefatos/q4_mimo2x2_c0_v8/fields/EMag_XZ_ArrayCenter_25p87.jpg",
+      "bytes": 435547,
+      "sha256": "aa0d384fc2dd1d0b383e884d1ecb9ed52a864ef1c156dc82f053224d66c2ac45"
+    },
+    {
+      "path": "artefatos/q4_mimo2x2_c0_v8/fields/EMag_XZ_Feed_25p87.jpg",
+      "bytes": 424851,
+      "sha256": "869d4b9c9cf6d73be5548c0fd55dcc10cbd2b9daf1444aeab8f431194602f6f9"
+    },
+    {
+      "path": "artefatos/q4_mimo2x2_c0_v8/plots/design_solved.jpg",
+      "bytes": 16594,
+      "sha256": "2eec1ed1f64aee3ea02aa79dda60ac437155220488bc42afd74d821fac1cd7e5"
+    },
+    {
+      "path": "artefatos/q4_mimo2x2_c0_v8/plots/Q4_EPlane_RealizedGain_25p87.jpg",
+      "bytes": 163593,
+      "sha256": "5f8683afb91c13d996e1419003429072a4ed0c679be7c215e0be8c553fb6337b"
+    },
+    {
+      "path": "artefatos/q4_mimo2x2_c0_v8/plots/Q4_Gain3D_25p87.jpg",
+      "bytes": 89846,
+      "sha256": "7b32826fea8dafc8c19cb1ffc26a973a9914d1a71b85e12351f437ecf088fc34"
+    },
+    {
+      "path": "artefatos/q4_mimo2x2_c0_v8/plots/Q4_HPlane_RealizedGain_25p87.jpg",
+      "bytes": 140155,
+      "sha256": "64b12fde39f3c4c5856a586acee0ec231bf3f6ea2425f57f4cf113187409d6f2"
+    },
+    {
+      "path": "artefatos/q4_mimo2x2_c0_v8/plots/S_Q4_2Port_25_27GHz.jpg",
+      "bytes": 240349,
+      "sha256": "66642d7edef6a936fc0b705e44ebc9b352defe3c4d6eb1ce8eb048dc04e70fc8"
+    },
+    {
+      "path": "artefatos/q4_mimo2x2_c0_v8/validation.json",
+      "bytes": 23511,
+      "sha256": "750aaa27d0dc4f27fc4ebba70675fdfce29b802b9eb450996d37a630db3c3f94"
+    },
+    {
+      "path": "CREDITOS.md",
+      "bytes": 3412,
+      "sha256": "6fda2d53b375eac538b6981ca6dd7c5b8ba13b59b90365c72676189064975acc"
+    },
+    {
+      "path": "doc/pdfs/VilasBoas_2026_OJAP_FlatTop.pdf",
+      "bytes": 7869402,
+      "sha256": "57f4627b41767a8edc07eca437fb62c192fe277d3d891df39ce4bf53d101a40a"
+    },
+    {
+      "path": "doc/relatorio_tecnico/assets/atlas_cortes_declarativos.png",
+      "bytes": 83470,
+      "sha256": "e20aff1c9c648e3a81f156d4b672589d3a0dc492bb39194014dfa563122de80e"
+    },
+    {
+      "path": "doc/relatorio_tecnico/assets/convergencia_malha_v7.png",
+      "bytes": 76077,
+      "sha256": "518614e5539daabada3c1712f99d2c535ec2886ad6bbf0ce92845cf2b294e555"
+    },
+    {
+      "path": "doc/relatorio_tecnico/assets/EMag_XY_MidHeight_25p87.jpg",
+      "bytes": 263960,
+      "sha256": "adb17142c994f46efd569c5bbe5ca185780398072da0c447f405b548c496bc86"
+    },
+    {
+      "path": "doc/relatorio_tecnico/assets/EMag_YZ_Slot1_25p87.jpg",
+      "bytes": 262200,
+      "sha256": "9b17bb5f512262cdadf265b967976158a20962ff674bcfc3e517ea07394d2a84"
+    },
+    {
+      "path": "doc/relatorio_tecnico/assets/EMag_ZX_ArrayCenter_25p87.jpg",
+      "bytes": 263856,
+      "sha256": "020117ada546ba6981f4d28bf21a45b3684fd8fb647e41031c722a5c40c8eec4"
+    },
+    {
+      "path": "doc/relatorio_tecnico/assets/geometry_front.png",
+      "bytes": 23560,
+      "sha256": "35f4d71c9b1d1b0b59e350aef08a38f9cecd5069c989a8b16c1f53d0ae9b8402"
+    },
+    {
+      "path": "doc/relatorio_tecnico/assets/geometry_isometric.png",
+      "bytes": 93987,
+      "sha256": "fb9f4e4a0690731859ebc376a586d16eaf401a339da8cc10b7800389d7d7151a"
+    },
+    {
+      "path": "doc/relatorio_tecnico/assets/geometry_top.png",
+      "bytes": 27397,
+      "sha256": "77b8e94ed7a2ec0a8f4dc5282a5d2d6aa6b49522a400fb46a707c410c5ce4d7f"
+    },
+    {
+      "path": "doc/relatorio_tecnico/assets/vilasboas_figura2_dimensoes.png",
+      "bytes": 224838,
+      "sha256": "d32b2405f513aca656f317cdf19af7040b326206b63af5d239593761af5d2cad"
+    },
+    {
+      "path": "doc/relatorio_tecnico/assets/waveport_integracao_z.png",
+      "bytes": 47855,
+      "sha256": "181bfcc87e4103a531f183dbd2f6926b88f211ea11307ee7d18a39fa05c6455e"
+    },
+    {
+      "path": "docs/00_carta_cientifica.md",
+      "bytes": 5264,
+      "sha256": "daf86462e92a23615fed291f13306948a3e9dbfe268b55aea49ff7d6235e44eb"
+    },
+    {
+      "path": "docs/01_artigo_base_inatel.md",
+      "bytes": 6749,
+      "sha256": "1ea54d23a188fc2fd520b11d87a8fc4979a2cad0bfa1fa1495bfa11e3417c316"
+    },
+    {
+      "path": "docs/01a_validacao_fr4_e_materiais_26ghz.md",
+      "bytes": 10640,
+      "sha256": "358e4a5dcc5132e9bdad6b6a0a20bb646f45703ceab75030370ed7516516d20b"
+    },
+    {
+      "path": "docs/02_fundamentos_maxwellianos.md",
+      "bytes": 5131,
+      "sha256": "8b67bb65f4d97e10adfb08746f2eb246f362804c23e103324bf0f5a91620355b"
+    },
+    {
+      "path": "docs/03_guia_retangular_e_enz_estrutural.md",
+      "bytes": 4791,
+      "sha256": "30f994273c211270382c5f2f0925e83b97ea4b8cd1dd2f393f3fc2972ba27ac5"
+    },
+    {
+      "path": "docs/04_invariancia_geometrica.md",
+      "bytes": 4595,
+      "sha256": "aa55dbe392c2254328a9d06f986c40fb0c1fd4d4e0d46392d17d0390e1f1ba1d"
+    },
+    {
+      "path": "docs/05_dopagem_fotonica.md",
+      "bytes": 3803,
+      "sha256": "2f784d67038824792b55632147d882d93db280f5d548765706d27018f3f42bf6"
+    },
+    {
+      "path": "docs/06_ranhuras_e_sintese_de_abertura.md",
+      "bytes": 3374,
+      "sha256": "9bcc089661ef38c8ca5926cdc189578d76f8d9abe06cb9609ae09344ec96bdaf"
+    },
+    {
+      "path": "docs/07_teoria_modal_de_cavidades_abertas.md",
+      "bytes": 3436,
+      "sha256": "36309dcb4baeeba4eb09e99e9f71814132ae15885ee2062f2cc23fabe0ac4d99"
+    },
+    {
+      "path": "docs/08_modelagem_multiporta.md",
+      "bytes": 2815,
+      "sha256": "2a5da84a55838db92140bff3975edccc97a831fafbff7b9403a805dfa9c14061"
+    },
+    {
+      "path": "docs/09_padroes_embarcados_complexos.md",
+      "bytes": 2908,
+      "sha256": "af4d1de930fe60902fcb38eedea9312e6d0266a7ec627762bf3af4e8f6cfaaaa"
+    },
+    {
+      "path": "docs/10_teoria_da_informacao_eletromagnetica.md",
+      "bytes": 3276,
+      "sha256": "b2a73a62765cb7c8078b386f2181aa296d3e10057327b16cb4826cd78cba18f3"
+    },
+    {
+      "path": "docs/11_operadores_e_autocanais.md",
+      "bytes": 3100,
+      "sha256": "bb93a89f7e593008231d5c6e3664f719730d829a7a98a492426df77ebcc357f7"
+    },
+    {
+      "path": "docs/12_acoplamento_mutuo_e_rede_ativa.md",
+      "bytes": 2604,
+      "sha256": "8679a930cdbd8f32db03247a344821a6d19e87cf0cddde193dc48e0942c3c421"
+    },
+    {
+      "path": "docs/13_diversidade_e_rank.md",
+      "bytes": 2931,
+      "sha256": "68b5afc32d0e717ccbcad22160e706625530b5fb3770ae6fbf7d6db2685dbec6"
+    },
+    {
+      "path": "docs/14_limites_fundamentais.md",
+      "bytes": 2315,
+      "sha256": "cbe81eee2158b8fb516c6d11e7414d11f530490dae133b722c28e7575454c570"
+    },
+    {
+      "path": "docs/15_modelos_de_canal_mmwave.md",
+      "bytes": 2048,
+      "sha256": "ea9f4e4016e5d627e15476d893a171bb881364e5fa4aeaa961961d64068e8d24"
+    },
+    {
+      "path": "docs/16_objetivos_orientados_a_capacidade.md",
+      "bytes": 1644,
+      "sha256": "1774891aff63186053ac1fb7a84305c5fad44fda649104934c727d1d6ec3c545"
+    },
+    {
+      "path": "docs/17_projeto_inverso_e_otimizacao.md",
+      "bytes": 2033,
+      "sha256": "4495fb31a4518ebfddeebb77e31656adea5e7b77f01747a085a74848a5623ce6"
+    },
+    {
+      "path": "docs/18_hipoteses_originais.md",
+      "bytes": 2531,
+      "sha256": "3524bcde1036845c7d09387310867307f548d1b0a94ee27c10d7193405a6e0ad"
+    },
+    {
+      "path": "docs/19_arquiteturas_candidatas.md",
+      "bytes": 2138,
+      "sha256": "d0a5c770ea5521dd76149822ca971a2b60a7fc95f109eb71c09ea30842b068f0"
+    },
+    {
+      "path": "docs/20_arquitetura_hfss_grpc.md",
+      "bytes": 4192,
+      "sha256": "b3f2aee93ccd6a29fe8e39226f6cbd6dc35b10bfa84254dac66d50894e18c544"
+    },
+    {
+      "path": "docs/21_validacao_eletromagnetica.md",
+      "bytes": 2265,
+      "sha256": "ae7efa8fe14b5692bcbf4afb41364c88f80dbddc022770461c8862e19a6feb1e"
+    },
+    {
+      "path": "docs/22_validacao_experimental.md",
+      "bytes": 2013,
+      "sha256": "32a4ffa594b9b51201c6c782e63b0897369aa82876838441b954d97f2551f60e"
+    },
+    {
+      "path": "docs/23_dados_e_reprodutibilidade.md",
+      "bytes": 1671,
+      "sha256": "260460d0279e77d25367099d45a4bd74b4af583dff6caa727498e123f98cb6c9"
+    },
+    {
+      "path": "docs/24_revisao_bibliografica_e_patentes.md",
+      "bytes": 2023,
+      "sha256": "dd8026029b648700dbd3fb8c83858f066617ac4b1dbb3b688e0e4d0e7d7ada6d"
+    },
+    {
+      "path": "docs/25_matriz_de_evidencias.md",
+      "bytes": 2146,
+      "sha256": "556cb68d667e2a85934065efd83796f94ea097c55fdad3033a38a357fc205c2e"
+    },
+    {
+      "path": "docs/26_benchmarks.md",
+      "bytes": 1597,
+      "sha256": "863b8164ad8ee77a29b57ecb032d03e366fa58fd90511f1aed7d4b629c67e35d"
+    },
+    {
+      "path": "docs/27_notacao_e_glossario.md",
+      "bytes": 1436,
+      "sha256": "e3b3661de48994a56ab1ead629e06ad4644f781aa83e5969c47dd1ea8172bbe9"
+    },
+    {
+      "path": "docs/28_perguntas_abertas.md",
+      "bytes": 1290,
+      "sha256": "93709c20c35e76c0adb616ff3d4d5978b62b9668bd6ea6b05e8f230d7f1f586c"
+    },
+    {
+      "path": "docs/29_plano_de_publicacoes.md",
+      "bytes": 1364,
+      "sha256": "2e064c0b2048246bb7fcf44fc2eda9d50e0f4433cc6ddb448776a306a08bdecd"
+    },
+    {
+      "path": "docs/30_auditoria_independente_de_formulas.md",
+      "bytes": 2301,
+      "sha256": "f3ad12ff0f8d0c2f3a6769096e78314b2d8c86c814c6af7363c02dd246c7cbd8"
+    },
+    {
+      "path": "docs/31_auditoria_dimensional_artigo_base.md",
+      "bytes": 3594,
+      "sha256": "674941ad944a34bc102704dcf2609920c629897ec4a2e684e0c6e44410e9d9f6"
+    },
+    {
+      "path": "docs/32_execucao_prioridades_1_a_5.md",
+      "bytes": 4914,
+      "sha256": "87cfb79db852904291db8de5aa79c5be70275d527cbd08bd587df86ef5804745"
+    },
+    {
+      "path": "docs/32_relatorio_implementacao_mimo_2x2.md",
+      "bytes": 19967,
+      "sha256": "2a1417621c108d99c1af781834c5d0651dbe8168d83199d4a1599c0174509c2e"
+    },
+    {
+      "path": "docs/33_validacao_artigo_e_execucao_14_cores.md",
+      "bytes": 5259,
+      "sha256": "ed4d359134c29e38ad6e869f2b1dbdf084626192121512049c474a942363099d"
+    },
+    {
+      "path": "docs/34_reconstrucao_exploratoria_figura2_hfss.md",
+      "bytes": 6673,
+      "sha256": "f76b034c392de45c08287f678fe554cc293abcbaf711ce3cc6aadb10b376b285"
+    },
+    {
+      "path": "docs/35_waveport_z_e_ambiente_de_plots.md",
+      "bytes": 5442,
+      "sha256": "b7ff8cc55276e03d2dbc5d54709622a938746b6e42831627f4e5b0f56a77cd6c"
+    },
+    {
+      "path": "docs/36_relatorio_tecnico_completo.md",
+      "bytes": 17553,
+      "sha256": "3c572c55d27e904f6ceda73080a559a8074cac4cf1c1a51f163d909bfb9b7582"
+    },
+    {
+      "path": "docs/GUIA_RENDERIZACAO_MATEMATICA.md",
+      "bytes": 3490,
+      "sha256": "ae329ea23e2b34d7089df7cfda6b16a9ce8902b7ce7dddc35d5b494409804551"
+    },
+    {
+      "path": "inst.md",
+      "bytes": 35640,
+      "sha256": "9033b80fb10a45e1d7b2a0fcc3113b0773a2f6369eec415ec369379d9520fe2b"
+    },
+    {
+      "path": "modelos/especificacoes/g0_figura2_reconstrucao_exploratoria.hipotese.v7.yaml",
+      "bytes": 22808,
+      "sha256": "ed5384a5dcbf709a0019269af4332b5ef65c2f6353bf725fd3a2a06fe0b2025e"
+    },
+    {
+      "path": "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/posprocessamento/postprocessing_environment.json",
+      "bytes": 4805,
+      "sha256": "b50aec46f5004a48d4e2ea2c83677952e38d4cd54097f5ed0400f572ed600c01"
+    },
+    {
+      "path": "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/posprocessamento/relatorios_artigo/Fig1b_d_EPlane_25p87.jpg",
+      "bytes": 140910,
+      "sha256": "a24f2aec87f6638a3d79b313b9ba23913627dde1c5fb1589d70b12a088f75c9f"
+    },
+    {
+      "path": "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/posprocessamento/relatorios_artigo/Fig2b_RadiationEfficiency.jpg",
+      "bytes": 203065,
+      "sha256": "4e3216572cce317c82fd460f884b9be48567c47325ff937361b0c29602aea80d"
+    },
+    {
+      "path": "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/posprocessamento/relatorios_artigo/Fig2b_S11_25_27GHz.jpg",
+      "bytes": 222003,
+      "sha256": "1ee888eb5dbd199871f6b08a895942768566378967c9b2cd2653bdef53df3c1f"
+    },
+    {
+      "path": "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/posprocessamento/relatorios_artigo/Fig3c_PeakRealizedGain.jpg",
+      "bytes": 184608,
+      "sha256": "52bd863fcaf809967569f7edfe234a3ba4016dc6f9c90a204db55beb3cc131ae"
+    },
+    {
+      "path": "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/posprocessamento/relatorios_artigo/Fig3d_EPlane_25p87.jpg",
+      "bytes": 140721,
+      "sha256": "69d53af30aa3ddd8b4696f423e7e0a760186b0f96da710a58a82a15bcea8ef3d"
+    },
+    {
+      "path": "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/posprocessamento/relatorios_artigo/Fig4_EPlane_CoCross_MultiFreq.jpg",
+      "bytes": 194267,
+      "sha256": "7a0a4dfa35cb0d4c1203c7d04c6ed9522f34e6dd9f548173a8ccdbeb20100e8a"
+    },
+    {
+      "path": "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/posprocessamento/relatorios_artigo/Fig4_HPlane_CoCross_MultiFreq.jpg",
+      "bytes": 183378,
+      "sha256": "c6f7b240c9df54809301231e3fc106d6848c1acbe476c85e44664bc5282ddb71"
+    },
+    {
+      "path": "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/posprocessamento/relatorios_artigo/Gain3D_25p87.jpg",
+      "bytes": 65239,
+      "sha256": "4ca1a0e8ca4a3b0181e6232618995de837906411baf5cf17dde736e370c1c8af"
+    },
+    {
+      "path": "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/posprocessamento/validacao_cientifica_exploratoria.json",
+      "bytes": 2622,
+      "sha256": "e9566b6e4e70db533bcbd97c4adda5ac11a018803975a029ea286b4842269dd0"
+    },
+    {
+      "path": "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/run_limpo/metrics/convergence.csv",
+      "bytes": 1648,
+      "sha256": "9700a1dd530c380852a00fff7591bf18f94c1b0ca24847154592c99f21b7c508"
+    },
+    {
+      "path": "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/run_limpo/metrics/mesh_stats.csv",
+      "bytes": 3164,
+      "sha256": "6ff6dc00caee0e9288e65ab2dc1ddb1c30ed1842552387ff368ed9156042d976"
+    },
+    {
+      "path": "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/run_limpo/metrics/solver_profile.csv",
+      "bytes": 22775,
+      "sha256": "d5185d6e47beb32fbc25c0999bdd77f5094779bd8d09ade9976e10122bc69c0c"
+    },
+    {
+      "path": "scripts/gerar_relatorio_tecnico_pdf.py",
+      "bytes": 47827,
+      "sha256": "f8dc66676cca42011c082fe5323704d2d27159c7040dea8820ec1566cf73295a"
+    }
+  ]
+}

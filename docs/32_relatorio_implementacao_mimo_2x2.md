@@ -1,4 +1,10 @@
-# 32 — Relatório de implementação MIMO 2×2: pré-flight e gate Q0
+# 32 — Relatório de implementação MIMO 2×2: gate Q0 e extensão Q4-C0 v8
+
+> **Nota de versão:** as seções 1–16 preservam o resultado do gate Q0 antes da
+> autorização explícita para usar a reconstrução v7 como fonte exploratória. A
+> seção 17 registra a construção, solução e validação da v8. A autorização
+> permitiu executar uma `HIPÓTESE`; não promoveu a v7 nem a v8 a modelo
+> validado.
 
 ## 1. Escopo e resultado executivo
 
@@ -289,3 +295,144 @@ LIMITAÇÕES: ausência dos componentes, S3P/S4P/S2P e padrões complexos indivi
 RISCOS: promover cópias exploratórias e produzir claims MIMO sem evidência
 PRÓXIMO GATE: Q0 continua; fornecer os quatro pacotes validados
 ```
+
+## 17. Extensão Q4-C0 v8 construída e solucionada
+
+### 17.1 Escopo e classificação
+
+**HIPÓTESE:** por autorização expressa, a reconstrução v7 aberta foi usada
+como geometria fonte para quatro cópias determinísticas. O projeto novo foi
+salvo como
+`poros_aedt/reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedt`.
+O arquivo fonte permaneceu inalterado, com SHA-256
+`c65aac7fa669d6b98264081712e29c335eb1f1ae1f72d40d0eac61921573ad4d`.
+
+**DERIVADO:** a arquitetura Q4-C0 contém dois pares simétricos, cada qual
+alimentado por uma junção H-plane. As duas waveports externas excitam o estado
+EVEN/EVEN. O espaçamento interno de (42\,\mathrm{mm}) e o espaçamento entre
+centros de pares de (96\,\mathrm{mm}) não são cotas do artigo e permanecem
+`HIPÓTESE`.
+
+### 17.2 Guia, comprimentos e coordenadas
+
+**PUBLICADO:** a seção nominal WR-28 empregada é
+(a=7{,}11\,\mathrm{mm}) ao longo de (Z) e
+(b=3{,}56\,\mathrm{mm}) ao longo de (X). Para o modo dominante,
+
+```math
+f_{c,10}=\frac{c}{2a}=21{,}082451\ \mathrm{GHz},
+\qquad
+\lambda_g=\frac{\lambda_0}
+{\sqrt{1-\left(f_{c,10}/f_0\right)^2}}
+=19{,}995624\ \mathrm{mm}.
+```
+
+**DERIVADO:** os ramos e os trechos de entrada foram inicializados com
+(L_b=L_{in}=\lambda_g), e a região de junção com
+(L_j=\lambda_g/4=4{,}998906\,\mathrm{mm}). Esses comprimentos são um
+baseline analítico, não um matching otimizado. Os centros dos quatro módulos
+são (x=(-69,-27,+27,+69)\,\mathrm{mm}).
+
+**SIMULADO:** o inventário final contém 43 objetos — 41 sólidos e duas folhas
+de porta —, três fronteiras, duas excitações, um setup, duas operações locais
+de malha e 15 sistemas de coordenadas/cortes. As linhas de integração das duas
+waveports são paralelas a (Z), corrigindo a orientação solicitada.
+
+### 17.3 Setup e recursos
+
+**SIMULADO:** o setup `Setup_Q4_MIMO2X2` foi executado no AEDT 2024 R2,
+PyAEDT 1.3.0 e gRPC nativo, com 14 cores, uma tarefa e zero GPU. A frequência
+adaptativa foi (25{,}87\,\mathrm{GHz}); a varredura contém 81 pontos de
+(25\) a (27\,\mathrm{GHz}), em passos de
+(25\,\mathrm{MHz}). O projeto foi salvo antes e depois da solução.
+
+**SIMULADO:** o solve terminou em 51 min 13 s. A adaptação convergiu em três
+passes, com 505.065, 600.055 e 651.746 elementos resolvidos. O último erro foi
+
+```math
+\Delta S_{\max}=2{,}8215\times10^{-4}<2\times10^{-2},
+```
+
+e dois passes consecutivos cumpriram o critério. O projeto solucionado possui
+830.582 bytes e SHA-256
+`1b93d9d855969733cfe736c1d5396f0cc932cff6f99cfecc9da736993a514a3d`.
+
+### 17.4 Rede de duas portas em (25{,}87\,\mathrm{GHz})
+
+**SIMULADO:** as métricas pontuais usam o Touchstone `LastAdaptive`, que contém
+exatamente (25{,}87\,\mathrm{GHz}). A passividade em banda usa o S2P de 81
+pontos. Os resultados são:
+
+| Métrica | Valor | Gate |
+|---|---:|---|
+| (S_{11}) | (-0{,}129025\,\mathrm{dB}) | FAIL |
+| (S_{22}) | (-0{,}129095\,\mathrm{dB}) | FAIL |
+| (S_{12}=S_{21}) | (-83{,}867707\,\mathrm{dB}) | PASS isolamento |
+| TARC EVEN/EVEN | (-0{,}129291\,\mathrm{dB}) | diagnóstico |
+| potência aceita normalizada | (0{,}0293317\,\mathrm{W}) | diagnóstico |
+| maior valor singular na banda | (0{,}9995667) | PASS passividade |
+| erro de reciprocidade | (1{,}1083\times10^{-17}) | PASS |
+
+O TARC foi calculado preservando a matriz complexa:
+
+```math
+\Gamma_{\mathrm{TARC}}(\mathbf a)=
+\sqrt{\frac{\lVert\mathbf S\mathbf a\rVert_2^2}
+{\lVert\mathbf a\rVert_2^2}},
+\qquad
+\mathbf a=\frac{1}{\sqrt{2}}[1\ \ 1]^T.
+```
+
+**DERIVADO:** o excelente isolamento não valida o sistema como MIMO. Quase
+toda a potência incidente é refletida, de modo que (S_{11}) e (S_{22})
+reprovam por ampla margem o gate de (-10\,\mathrm{dB}).
+
+### 17.5 Potência, campos complexos e ECC
+
+**SIMULADO:** o XML do AEDT registra, para P1, 1 W incidente, 0,029272 W
+aceito e 0,029176 W radiado; para P2, 1 W incidente, 0,029288 W aceito e
+0,029338 W radiado. Os erros relativos 
+(0{,}32796\%\) e (0{,}17072\%\) ficam abaixo da tolerância numérica declarada
+de (1\%\).
+
+**SIMULADO:** dois padrões embarcados FFD preservam
+(\Re\{E_\theta\}), (\Im\{E_\theta\}),
+(\Re\{E_\phi\}) e (\Im\{E_\phi\}) em uma grade de
+(91\times181) amostras. A última amostra (phi=360^\circ), duplicada de
+(phi=0^\circ), foi removida da quadratura. A ECC de campo foi calculada por
+
+```math
+\rho_e=\frac{
+\left|\int_\Omega \mathbf E_1\cdot\mathbf E_2^*\,d\Omega\right|^2}
+{\left(\int_\Omega |\mathbf E_1|^2d\Omega\right)
+ \left(\int_\Omega |\mathbf E_2|^2d\Omega\right)}
+=2{,}03548\times10^{-5}.
+```
+
+**SIMULADO:** o pico de ganho realizado total exportado é
+(-0{,}03864\,\mathrm{dB}), em
+((\theta,\phi)=(2^\circ,270^\circ)). Nove plots de magnitude de campo, cortes
+E/H, um diagrama 3D e os campos vetoriais complexos foram exportados.
+
+**DERIVADO:** a ECC baixa é somente diagnóstico do par de padrões deste modelo.
+Ela não demonstra diversidade, rank, capacidade nem throughput. Esses claims
+permanecem bloqueados porque o radiador fonte é `HIPÓTESE` e o matching falhou.
+
+### 17.6 Resultado dos gates v8
+
+| Gate | Resultado | Evidência |
+|---|---|---|
+| `ValidateDesign` | PASS | log pré-solve sem erro |
+| convergência adaptativa | PASS | três passes; (Delta S_{\max}=2{,}8215\times10^{-4}) |
+| passividade estrita em banda | PASS | (max\sigma(\mathbf S)=0{,}9995667) |
+| reciprocidade | PASS | erro (1{,}1083\times10^{-17}) |
+| balanço de potência | PASS | erro menor que (1\%\) nas duas fontes |
+| padrões complexos embarcados | PASS | dois FFD com fase complexa |
+| (S_{11}) e (S_{22}<-10\,\mathrm{dB}) | FAIL | aproximadamente (-0{,}129\,\mathrm{dB}) |
+| radiador fonte validado | FAIL | v7 permanece `HIPÓTESE` |
+| claim MIMO completo | BLOQUEADO | `BLOCKED_SOURCE_MODEL_HIPOTESE` |
+
+O registro canônico é
+`artefatos/q4_mimo2x2_c0_v8/validation.json`. A rotina `revalidate` recalcula
+os gates somente dos artefatos exportados, sem abrir nova sessão nem repetir o
+solve.

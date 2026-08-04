@@ -13,6 +13,13 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 POROS = ROOT / "poros_aedt"
 MANIFEST = POROS / "manifest.json"
+Q4_SOLVER_CACHE = (
+    POROS
+    / "reconstrucoes_exploratorias"
+    / "Q4_mimo2x2_c0_v8"
+    / "projeto_configurado"
+    / "Q4_mimo2x2_c0_v8_HIPOTESE.aedtresults"
+)
 
 
 def sha256(path: Path) -> str:
@@ -81,7 +88,7 @@ def update(*, allow_active_locks: bool = False) -> dict[str, Any]:
     report_manifest_path = (
         POROS
         / "relatorios"
-        / "Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v2.manifest.json"
+        / "Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v3.manifest.json"
     )
     reconstruction_manifest_path = (
         POROS
@@ -91,9 +98,14 @@ def update(*, allow_active_locks: bool = False) -> dict[str, Any]:
     )
     report = load_json(report_manifest_path)
     reconstruction = load_json(reconstruction_manifest_path)
+    solver_cache = [
+        path
+        for path in Q4_SOLVER_CACHE.rglob("*")
+        if path.is_file() and path not in ephemeral
+    ]
     files = []
     for path in sorted(item for item in POROS.rglob("*") if item.is_file()):
-        if path == MANIFEST or path in ephemeral:
+        if path == MANIFEST or path in ephemeral or path in solver_cache:
             continue
         files.append(
             {
@@ -117,6 +129,10 @@ def update(*, allow_active_locks: bool = False) -> dict[str, Any]:
             "g0_exploratory_reconstruction": reconstruction["run_limpo"],
             "technical_report": report["report"]["sha256"],
             "q0_validated_radiators": "BLOCKED_MISSING_VALIDATED_ARTIFACTS",
+            "q4_exploratory_model": (
+                "reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/"
+                "projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedt"
+            ),
         },
         "scientific_gates": {
             "m0_infrastructure": "PASS",
@@ -125,7 +141,13 @@ def update(*, allow_active_locks: bool = False) -> dict[str, Any]:
             "g0_strict_passivity": "FAIL",
             "g0_published_s11_correspondence": "FAIL",
             "q0_validated_instances": "0/4",
-            "mimo_2x2_system": "DESCONHECIDO",
+            "q4_adaptive_convergence": "PASS",
+            "q4_strict_passivity": "PASS",
+            "q4_s11_matching": "FAIL",
+            "q4_s22_matching": "FAIL",
+            "q4_complex_embedded_patterns": "PASS",
+            "q4_mimo_claim": "BLOCKED_SOURCE_MODEL_HIPOTESE",
+            "mimo_2x2_system": "HIPÓTESE",
             "global_reproduction_classification": "HIPÓTESE",
         },
         "active_session_locks_excluded": [
@@ -139,6 +161,18 @@ def update(*, allow_active_locks: bool = False) -> dict[str, Any]:
             if not path.name.endswith(".aedt.lock")
         ],
         "active_session_tracked_files_temporarily_absent": temporarily_absent,
+        "nonportable_solver_cache_excluded": [
+            {
+                "path": path.relative_to(POROS).as_posix(),
+                "bytes": path.stat().st_size,
+                "sha256": sha256(path),
+                "reason": (
+                    "cache privado reproduzível pelo AEDT; arquivos individuais "
+                    "excedem o limite de 100 MB do GitHub"
+                ),
+            }
+            for path in sorted(solver_cache)
+        ],
         "ephemeral_files_excluded": [
             path.relative_to(POROS).as_posix() for path in ephemeral
         ],

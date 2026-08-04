@@ -244,3 +244,97 @@ def ler_touchstone_s2p(
         s22 = complex_value(record[7], record[8])
         matrices[row] = [[s11, s12], [s21, s22]]
     return frequencies, matrices
+
+
+def ler_ffd_complexo(
+    caminho: str | Path,
+) -> tuple[NDArray[np.float64], NDArray[np.float64], NDArray[np.complex128]]:
+    r"""Lê um padrão HFSS FFD preservando fase e componentes vetoriais.
+
+    Retorna os eixos ``theta`` e ``phi`` em graus e um arranjo complexo com
+    formato ``(n_theta, n_phi, 2)``. No FFD do HFSS, :math:`\phi` varia mais
+    rapidamente que :math:`\theta`. A última dimensão contém
+    :math:`(E_\theta, E_\phi)`.
+    """
+
+    lines = Path(caminho).read_text(
+        encoding="utf-8", errors="strict"
+    ).splitlines()
+    if len(lines) < 5:
+        raise ValueError("FFD incompleto")
+
+    def axis(line: str, name: str) -> NDArray[np.float64]:
+        tokens = line.split()
+        if len(tokens) != 3:
+            raise ValueError(f"eixo {name} inválido no FFD")
+        start, stop = (float(tokens[0]), float(tokens[1]))
+        count = int(tokens[2])
+        if count < 2 or not math.isfinite(start) or not math.isfinite(stop):
+            raise ValueError(f"eixo {name} inválido no FFD")
+        return np.linspace(start, stop, count, dtype=np.float64)
+
+    theta = axis(lines[0], "theta")
+    phi = axis(lines[1], "phi")
+    if lines[2].strip().lower() != "frequencies 1":
+        raise ValueError("somente FFD com uma frequência é suportado")
+    frequency_tokens = lines[3].split()
+    if len(frequency_tokens) != 2 or frequency_tokens[0].lower() != "frequency":
+        raise ValueError("frequência ausente no FFD")
+
+    numeric = np.loadtxt(lines[4:], dtype=np.float64)
+    expected = theta.size * phi.size
+    if numeric.shape != (expected, 4):
+        raise ValueError(
+            f"FFD deveria conter {expected} amostras vetoriais; "
+            f"encontrado {numeric.shape}"
+        )
+    fields = np.empty((theta.size, phi.size, 2), dtype=np.complex128)
+    fields[..., 0] = (
+        numeric[:, 0] + 1j * numeric[:, 1]
+    ).reshape(theta.size, phi.size)
+    fields[..., 1] = (
+        numeric[:, 2] + 1j * numeric[:, 3]
+    ).reshape(theta.size, phi.size)
+    return theta, phi, fields
+
+
+def ecc_campos_complexos(
+    theta_deg: NDArray[np.float64],
+    phi_deg: NDArray[np.float64],
+    campo_1: NDArray[np.complex128],
+    campo_2: NDArray[np.complex128],
+) -> float:
+    r"""Calcula ECC pelo produto interno vetorial dos campos complexos.
+
+    A discretização implementa
+
+    .. math::
+
+       \rho_e = \frac{\left|\int_\Omega \mathbf{E}_1\cdot
+       \mathbf{E}_2^*\,d\Omega\right|^2}
+       {\int_\Omega |\mathbf{E}_1|^2d\Omega\;
+       \int_\Omega |\mathbf{E}_2|^2d\Omega}.
+
+    Se :math:`\phi=360^\circ` duplicar :math:`\phi=0^\circ`, a amostra final
+    é removida antes da quadratura.
+    """
+
+    theta = np.asarray(theta_deg, dtype=np.float64)
+    phi = np.asarray(phi_deg, dtype=np.float64)
+    first = np.asarray(campo_1, dtype=np.complex128)
+    second = np.asarray(campo_2, dtype=np.complex128)
+    expected = (theta.size, phi.size, 2)
+    if first.shape != expected or second.shape != expected:
+        raise ValueError(f"campos devem ter formato {expected}")
+    if np.isclose(phi[-1] - phi[0], 360.0):
+        phi = phi[:-1]
+        first = first[:, :-1]
+        second = second[:, :-1]
+
+    weights = np.sin(np.deg2rad(theta))[:, None, None]
+    cross = np.sum(first * np.conjugate(second) * weights)
+    power_1 = float(np.sum(np.abs(first) ** 2 * weights))
+    power_2 = float(np.sum(np.abs(second) ** 2 * weights))
+    if power_1 <= 0.0 or power_2 <= 0.0:
+        raise ValueError("campo com potência angular nula")
+    return float(abs(cross) ** 2 / (power_1 * power_2))
