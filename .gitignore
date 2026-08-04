@@ -31,3 +31,5 @@ dist/
 # A exceção do pacote curado não reabilita estado efêmero de sessão.
 poros_aedt/**/*.aedt.lock
 poros_aedt/**/*.semaphore
+poros_aedt/**/*.asol_priv
+poros_aedt/**/*.tmp

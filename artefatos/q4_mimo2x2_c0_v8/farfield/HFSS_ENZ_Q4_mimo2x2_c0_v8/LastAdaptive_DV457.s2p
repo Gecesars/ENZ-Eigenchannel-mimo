@@ -1,0 +1,57 @@
+! Touchstone file exported from HFSS 2024.2.0
+!        File:           D:/dev/ENZ_ANT/ENZ-Eigenchannel-mimo/poros_aedt/reconstrucoes_exploratorias/Q4_mimo2x2_c0_v8/projeto_configurado/Q4_mimo2x2_c0_v8_HIPOTESE.aedt
+!        Generated:      09:31:53 AM Aug  4, 2026
+!        Design:         HFSS_ENZ_Q4_mimo2x2_c0_v8
+!        Project:        Q4_mimo2x2_c0_v8_HIPOTESE
+!        Setup:          Setup_Q4_MIMO2X2
+!        Solution:       LastAdaptive
+!
+! Variables:
+!        altura_interna_wr28 = 7.11mm
+!        cavidade_area_plana = 108mm2
+!        cavidade_comprimento_interno_exploratorio = 18mm
+!        cavidade_largura_interna_exploratoria = 6mm
+!        chanfro = 3mm
+!        comprimento_total_eixo_y = 27mm
+!        corpo_altura_externa = 11.11mm
+!        corpo_comprimento_externo = 36mm
+!        corpo_largura_externa_exploratoria = 9mm
+!        degrau_altura = 1mm
+!        degrau_largura = 9mm
+!        espessura_fundo_exploratoria = 3mm
+!        espessura_parede_lateral = 1mm
+!        espessura_tampa = 1mm
+!        flange_comprimento_exploratorio = 4mm
+!        flange_largura = 22.5mm
+!        fr4_dimensao_x = 3mm
+!        fr4_dimensao_y = 1.65mm
+!        fr4_epsilon_r_exploratorio = 4.4
+!        fr4_tan_delta_exploratorio = 0.02
+!        frequencia_adaptativa = 25.87GHz
+!        frequencia_sweep_fim = 27GHz
+!        frequencia_sweep_inicio = 25GHz
+!        largura_interna_wr28 = 3.56mm
+!        parafuso_diametro_exploratorio = 2mm
+!        pino_diametro = 1mm
+!        pino_offset_x_exploratorio = 2mm
+!        pino_offset_y_exploratorio = 1.325mm
+!        plano_porta_y = -18mm
+!        q4_branch_length = 19.9956242277669mm
+!        q4_external_port_y = -62.9901545124755mm
+!        q4_frequency = 25.87GHz
+!        q4_input_length = 19.9956242277669mm
+!        q4_interpair_spacing = 96mm
+!        q4_junction_length = 4.99890605694172mm
+!        q4_lambda_g = 19.9956242277669mm
+!        q4_pair_spacing = 42mm
+!        q4_wg_a_z = 7.11mm
+!        q4_wg_b_x = 3.56mm
+!        ranhura_comprimento = 5.66mm
+!        ranhura_largura = 0.8mm
+!        ranhura_passo_exploratorio = 4mm
+!
+# GHz S MA R 50.000000
+! Terminal data exported
+! Port[1] = P1_WG_A
+! Port[2] = P2_WG_B
+25.87                          0.985255206867409 2.2289745555112  6.40640904016914E-05 -111.968342193671 6.40640904017002E-05 -111.968342193665 0.985247317889631 2.22250254039786 

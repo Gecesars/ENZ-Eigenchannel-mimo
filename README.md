@@ -14,12 +14,13 @@ exportação e encerramento sem processo órfão. Ele valida a infraestrutura, n
 reproduz o artigo. O relatório está em
 [`docs/32_execucao_prioridades_1_a_5.md`](docs/32_execucao_prioridades_1_a_5.md).
 
-**DERIVADO:** o dossiê consolidado de 99 páginas, com teoria, dimensões,
+**DERIVADO:** o dossiê consolidado v2, com 106 páginas, teoria, dimensões,
 waveport em Z, cortes, campos, relatórios, diagramas de radiação e gates de
-validação está em
-[`doc/pdfs/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v1.pdf`](doc/pdfs/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v1.pdf).
-Seu manifesto registra 25.530 palavras extraíveis, 18 figuras, 19 tabelas e os
-hashes de todas as fontes.
+validação — incluindo a auditoria Q0 da arquitetura MIMO 2×2 — está em
+[`doc/pdfs/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v2.pdf`](doc/pdfs/Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v2.pdf).
+Seu manifesto registra 27.781 palavras extraíveis, 19 figuras, 24 tabelas e os
+hashes de todas as fontes. **DESCONHECIDO:** Q0 permanece bloqueado porque
+nenhum dos quatro radiadores requeridos possui pacote de validação completo.
 
 ---
 

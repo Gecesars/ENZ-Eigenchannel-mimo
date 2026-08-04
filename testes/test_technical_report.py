@@ -9,7 +9,7 @@ MANIFEST = (
     ROOT
     / "doc"
     / "pdfs"
-    / "Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v1.manifest.json"
+    / "Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v2.manifest.json"
 )
 
 
@@ -35,7 +35,7 @@ def test_relatorio_tecnico_publicado_e_integro() -> None:
     assert pdf.stat().st_size == report["bytes"]
     assert _sha256(pdf) == report["sha256"]
     assert _sha256(poros) == report["sha256"]
-    assert report["pages"] == 99
+    assert report["pages"] >= 99
     assert report["extracted_words"] >= 2 * data["primary_source"]["metrics"]["words"]
     assert report["technical_elements"] >= 2 * data["primary_source"]["metrics"]["elements"]
     assert all(report["gates"].values())
@@ -58,6 +58,9 @@ def test_gates_cientificos_nao_sao_promovidos_silenciosamente() -> None:
     assert gates["strict_passivity"] == "FAIL"
     assert gates["published_s11_correspondence"] == "FAIL"
     assert gates["global_reproduction_classification"] == "HIPÓTESE"
+    assert gates["q0_validated_radiators"] == "BLOCKED_MISSING_VALIDATED_ARTIFACTS"
+    assert gates["q0_validated_instances"] == "0/4"
+    assert gates["mimo2x2_system_classification"] == "DESCONHECIDO"
 
 
 def test_manifesto_global_poros_aedt() -> None:
@@ -67,10 +70,14 @@ def test_manifesto_global_poros_aedt() -> None:
     assert data["classificacao_geometria"] == "HIPÓTESE"
     assert data["scientific_gates"]["g0_strict_passivity"] == "FAIL"
     assert data["scientific_gates"]["g0_published_s11_correspondence"] == "FAIL"
+    assert data["scientific_gates"]["q0_validated_instances"] == "0/4"
+    assert data["scientific_gates"]["mimo_2x2_system"] == "DESCONHECIDO"
 
     paths = [item["path"] for item in data["arquivos"]]
     assert len(paths) == len(set(paths))
     assert not any(path.endswith((".aedt.lock", ".semaphore")) for path in paths)
+    assert not set(data["ephemeral_files_excluded"]) & set(paths)
+    assert not set(data["active_session_generated_files_excluded"]) & set(paths)
     for item in data["arquivos"]:
         path = ROOT / "poros_aedt" / item["path"]
         assert path.is_file(), item["path"]

@@ -1,0 +1,91 @@
+schema: enz-eigenchannel-mimo/q4-c0-spec/v1
+modelo: Q4_mimo2x2_c0_v8
+arquitetura: C0_EVEN_EVEN
+classificacao_global: HIPÓTESE
+fonte_geometrica:
+  modelo: G0_figura2_reconstrucao_v7_M4
+  arquivo: poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedt
+  uso_autorizado_pelo_usuario: true
+  promover_como_validado: false
+  motivo: a reconstrução v7 reprova passividade e correspondência de S11
+sistema_coordenadas:
+  unidade: mm
+  X: eixo transversal do arranjo e separação entre radiadores
+  Y: propagação das redes WR-28 até as cavidades
+  Z: eixo vertical e dimensão larga de 7.11 mm do WR-28
+parametros:
+  frequency_ghz: {valor: 25.87, classe: PUBLICADO}
+  sweep_start_ghz: {valor: 25.0, classe: PUBLICADO}
+  sweep_stop_ghz: {valor: 27.0, classe: PUBLICADO}
+  wg_a_z_mm: {valor: 7.11, classe: PUBLICADO}
+  wg_b_x_mm: {valor: 3.56, classe: PUBLICADO}
+  source_port_y_mm: {valor: -18.0, classe: DERIVADO}
+  source_housing_span_x_mm: {valor: 36.0, classe: PUBLICADO}
+  pair_spacing_mm: {valor: 42.0, classe: HIPÓTESE}
+  interpair_spacing_mm: {valor: 96.0, classe: HIPÓTESE}
+  wall_mm: {valor: 1.0, classe: HIPÓTESE}
+derivacoes:
+  fc10:
+    formula: c/(2*a)
+    valor_ghz: 21.0824513361
+    classe: DERIVADO
+  fc20:
+    formula: c/a
+    valor_ghz: 42.1649026723
+    classe: DERIVADO
+  fc01:
+    formula: c/(2*b)
+    valor_ghz: 42.1056823034
+    classe: DERIVADO
+  lambda_g:
+    formula: lambda_0/sqrt(1-(fc10/f0)^2)
+    valor_mm: 19.9956242278
+    classe: DERIVADO
+  branch_length_mm: {valor: 19.9956242278, classe: DERIVADO}
+  junction_length_mm: {valor: 4.99890605694, classe: DERIVADO}
+  input_length_mm: {valor: 19.9956242278, classe: DERIVADO}
+transformacoes:
+  RAD_A1: {translation_mm: [-69.0, 0.0, 0.0], rotation_deg: [0, 0, 0], mirror: false}
+  RAD_A2: {translation_mm: [-27.0, 0.0, 0.0], rotation_deg: [0, 0, 0], mirror: false}
+  RAD_B1: {translation_mm: [27.0, 0.0, 0.0], rotation_deg: [0, 0, 0], mirror: false}
+  RAD_B2: {translation_mm: [69.0, 0.0, 0.0], rotation_deg: [0, 0, 0], mirror: false}
+redes:
+  WG_A:
+    tipo: H_PLANE_SYMMETRIC_T
+    estado: EVEN
+    porta_externa: P1_WG_A
+    radiadores: [RAD_A1, RAD_A2]
+  WG_B:
+    tipo: H_PLANE_SYMMETRIC_T
+    estado: EVEN
+    porta_externa: P2_WG_B
+    radiadores: [RAD_B1, RAD_B2]
+setup:
+  nome: Setup_Q4_MIMO2x2
+  solution_type: HFSS Driven Modal
+  frequency_ghz: 25.87
+  max_delta_s: 0.02
+  maximum_passes: 12
+  minimum_passes: 2
+  minimum_converged_passes: 2
+  percent_refinement: 20
+  cores: 14
+  tasks: 1
+  gpus: 0
+sweep:
+  nome: Sweep_Q4_25_27GHz
+  tipo: Interpolating
+  inicio_ghz: 25.0
+  fim_ghz: 27.0
+  pontos: 81
+gates:
+  source_radiator_validation: FAIL
+  build_geometry: PENDING
+  validate_design: PENDING
+  adaptive_convergence: PENDING
+  strict_passivity: PENDING
+  s11: PENDING
+  s22: PENDING
+  isolation: PENDING
+  complex_embedded_patterns: PENDING
+  mimo_claim: BLOCKED_SOURCE_MODEL_HIPOTESE

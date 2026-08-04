@@ -1,0 +1,428 @@
+{
+  "schema": "enz-eigenchannel-mimo/q0-missing-validated-models/v1",
+  "gate": "Q0",
+  "status": "BLOCKED_MISSING_VALIDATED_ARTIFACTS",
+  "classification": "DESCONHECIDO",
+  "generated_at_utc": "2026-08-04T10:27:38.208333+00:00",
+  "git": {
+    "branch": "research/mimo-2x2-four-radiators-waveguide",
+    "commit": "5c802e19a1fabfb71d98d7a32365f334fa26c28b",
+    "dirty": true
+  },
+  "required_instances": [
+    "RAD_A1",
+    "RAD_A2",
+    "RAD_B1",
+    "RAD_B2"
+  ],
+  "validated_instances_found": 0,
+  "component_status": [
+    {
+      "id": "RAD_A1",
+      "validated": false,
+      "reasons": [
+        "manifesto ausente: modelos/componentes_validados/RAD_A1/manifest.json"
+      ],
+      "manifest": null
+    },
+    {
+      "id": "RAD_A2",
+      "validated": false,
+      "reasons": [
+        "manifesto ausente: modelos/componentes_validados/RAD_A2/manifest.json"
+      ],
+      "manifest": null
+    },
+    {
+      "id": "RAD_B1",
+      "validated": false,
+      "reasons": [
+        "manifesto ausente: modelos/componentes_validados/RAD_B1/manifest.json"
+      ],
+      "manifest": null
+    },
+    {
+      "id": "RAD_B2",
+      "validated": false,
+      "reasons": [
+        "manifesto ausente: modelos/componentes_validados/RAD_B2/manifest.json"
+      ],
+      "manifest": null
+    }
+  ],
+  "aedt_candidates": [
+    {
+      "path": "artefatos/runs/ENZ-20260803-164217-52288067/aedt/M0_cavidade_retangular_smoke_M0.aedt",
+      "suffix": ".aedt",
+      "bytes": 4271,
+      "sha256": "204c9b0271292412849d1e8e85690c05ded68142b390d0d29a14d53c402f26a6",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "cavidade sintética Eigenmode destinada apenas ao smoke test; não é radiador Driven Modal validado",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "poros_aedt/runs/ENZ-20260803-173105-52288067/metrics/validacao_gates.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-164344-52288067/aedt/M0_cavidade_retangular_smoke_M0.aedt",
+      "suffix": ".aedt",
+      "bytes": 25857,
+      "sha256": "8a518ef5cd7e222da066ebef70b8e2453ebc19941940c9ffc31f7c3fd5c4674e",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "cavidade sintética Eigenmode destinada apenas ao smoke test; não é radiador Driven Modal validado",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "poros_aedt/runs/ENZ-20260803-173105-52288067/metrics/validacao_gates.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-164540-52288067/aedt/M0_cavidade_retangular_smoke_M0.aedt",
+      "suffix": ".aedt",
+      "bytes": 26304,
+      "sha256": "24788774128e529596ea0fcde387315e42e0a43a0d339d23447dad589255ec2e",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "cavidade sintética Eigenmode destinada apenas ao smoke test; não é radiador Driven Modal validado",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "poros_aedt/runs/ENZ-20260803-173105-52288067/metrics/validacao_gates.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-165053-52288067/aedt/M0_cavidade_retangular_smoke_M0.aedt",
+      "suffix": ".aedt",
+      "bytes": 90626,
+      "sha256": "849bac2b25495d748ee4466fe1dcdebe10d77eeabcd0a36a2929fc8ea020e02e",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "cavidade sintética Eigenmode destinada apenas ao smoke test; não é radiador Driven Modal validado",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "poros_aedt/runs/ENZ-20260803-173105-52288067/metrics/validacao_gates.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-165509-52288067/aedt/M0_cavidade_retangular_smoke_M0.aedt",
+      "suffix": ".aedt",
+      "bytes": 25857,
+      "sha256": "1bd4f4e535cb4dfdad31b6e44175e54566ebeb3a79595d44abe9eb7a7cff1655",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "cavidade sintética Eigenmode destinada apenas ao smoke test; não é radiador Driven Modal validado",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "poros_aedt/runs/ENZ-20260803-173105-52288067/metrics/validacao_gates.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-165824-52288067/aedt/M0_cavidade_retangular_smoke_M0.aedt",
+      "suffix": ".aedt",
+      "bytes": 26734,
+      "sha256": "9f4df13512005200f28c63547dad224d678725f48024faec7b89a3aab00e856f",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "cavidade sintética Eigenmode destinada apenas ao smoke test; não é radiador Driven Modal validado",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "poros_aedt/runs/ENZ-20260803-173105-52288067/metrics/validacao_gates.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-173034-52288067/aedt/M0_cavidade_retangular_smoke_M0.aedt",
+      "suffix": ".aedt",
+      "bytes": 25856,
+      "sha256": "a762a5f3098b9a10f581f86b4fd9485ec41dcd0b34942a622739f3deb9ee02bb",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "a especificação do run é explicitamente HIPÓTESE",
+        "manifesto do run registra status=EXPORTING e solve_requested=True",
+        "cavidade sintética Eigenmode destinada apenas ao smoke test; não é radiador Driven Modal validado",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "artefatos/runs/ENZ-20260803-173034-52288067/manifest.json",
+        "poros_aedt/runs/ENZ-20260803-173105-52288067/metrics/validacao_gates.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-173105-52288067/aedt/M0_cavidade_retangular_smoke_M0.aedt",
+      "suffix": ".aedt",
+      "bytes": 26736,
+      "sha256": "f50e59297c746604f0f5da2cb161c6f094eb4ebd2fe97cad67a4512383f14e8b",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "a especificação do run é explicitamente HIPÓTESE",
+        "manifesto do run registra status=COMPLETED e solve_requested=True",
+        "cavidade sintética Eigenmode destinada apenas ao smoke test; não é radiador Driven Modal validado",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "artefatos/runs/ENZ-20260803-173105-52288067/manifest.json",
+        "poros_aedt/runs/ENZ-20260803-173105-52288067/metrics/validacao_gates.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-180323-ae961d5a/aedt/G0_figura2_reconstrucao_exploratoria_M4.aedt",
+      "suffix": ".aedt",
+      "bytes": 277317,
+      "sha256": "86620401d4d9ae20829b31207582ff16fbb153af23af373598812e018b2748a8",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "a especificação do run é explicitamente HIPÓTESE",
+        "manifesto do run registra status=BUILT e solve_requested=False",
+        "reconstrução exploratória sem promoção a reprodução validada",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "artefatos/runs/ENZ-20260803-180323-ae961d5a/manifest.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-180417-ae961d5a/aedt/G0_figura2_reconstrucao_exploratoria_M4.aedt",
+      "suffix": ".aedt",
+      "bytes": 248090,
+      "sha256": "d72e816c60c3121b1e66e9ebdb7a9a6c2cf113c8ae7edde07b9bfc3d8b66b4dd",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "a especificação do run é explicitamente HIPÓTESE",
+        "manifesto do run registra status=FAILED e solve_requested=True",
+        "reconstrução exploratória sem promoção a reprodução validada",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "artefatos/runs/ENZ-20260803-180417-ae961d5a/manifest.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-180655-ae961d5a/aedt/G0_figura2_reconstrucao_exploratoria_M4.aedt",
+      "suffix": ".aedt",
+      "bytes": 253380,
+      "sha256": "85d5cb2d361effc62a758d6e237988d14c197a06c8eb2152ea5495d9ccf16e2e",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "a especificação do run é explicitamente HIPÓTESE",
+        "manifesto do run registra status=EXPORTING e solve_requested=True",
+        "reconstrução exploratória sem promoção a reprodução validada",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "artefatos/runs/ENZ-20260803-180655-ae961d5a/manifest.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-185618-b77e191c/aedt/G0_figura2_reconstrucao_v6_M4.aedt",
+      "suffix": ".aedt",
+      "bytes": 4271,
+      "sha256": "3df612bd0da3d1427afa1214aa436541bc44e930f245b3b131b4944382a62c1d",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "a especificação do run é explicitamente HIPÓTESE",
+        "manifesto do run registra status=FAILED e solve_requested=False",
+        "reconstrução exploratória sem promoção a reprodução validada",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "artefatos/runs/ENZ-20260803-185618-b77e191c/manifest.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-185807-821f2cf6/aedt/G0_figura2_reconstrucao_v6_M4.aedt",
+      "suffix": ".aedt",
+      "bytes": 250648,
+      "sha256": "bcf9b29a208e37f7478ff1ade0964bd4d148c716a5eae4e41d07b489413231bb",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "a especificação do run é explicitamente HIPÓTESE",
+        "manifesto do run registra status=BUILT e solve_requested=False",
+        "reconstrução exploratória sem promoção a reprodução validada",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "artefatos/runs/ENZ-20260803-185807-821f2cf6/manifest.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-185959-821f2cf6/aedt/G0_figura2_reconstrucao_v6_M4.aedt",
+      "suffix": ".aedt",
+      "bytes": 248908,
+      "sha256": "861d09a81ba5797c3f7954989a812e53875ee4b4930271cfd514cf4f675ce135",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "a especificação do run é explicitamente HIPÓTESE",
+        "manifesto do run registra status=BUILT e solve_requested=False",
+        "reconstrução exploratória sem promoção a reprodução validada",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "artefatos/runs/ENZ-20260803-185959-821f2cf6/manifest.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-190101-821f2cf6/aedt/G0_figura2_reconstrucao_v6_M4.aedt",
+      "suffix": ".aedt",
+      "bytes": 718068,
+      "sha256": "fc21d77141866ddb2e552b176a5150c6e9aa2c7114ccc358b7d01100a18bee4a",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "a especificação do run é explicitamente HIPÓTESE",
+        "manifesto do run registra status=COMPLETED e solve_requested=True",
+        "reconstrução exploratória sem promoção a reprodução validada",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "artefatos/runs/ENZ-20260803-190101-821f2cf6/manifest.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-191237-821f2cf6/aedt/G0_figura2_reconstrucao_v6_M4.aedt",
+      "suffix": ".aedt",
+      "bytes": 249021,
+      "sha256": "54d1399b5923e9cb94d033a3c3a75a8d3415e80b95f75d15649fb2c91d444a95",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "a especificação do run é explicitamente HIPÓTESE",
+        "manifesto do run registra status=COMPLETED e solve_requested=True",
+        "reconstrução exploratória sem promoção a reprodução validada",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "artefatos/runs/ENZ-20260803-191237-821f2cf6/manifest.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-191559-ed5384a5/aedt/G0_figura2_reconstrucao_v7_M4.aedt",
+      "suffix": ".aedt",
+      "bytes": 249861,
+      "sha256": "f1934984ea31b660d18f812ca0a04c0d382fcc92f6e4c25c1c382eb4b1fa43cb",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "a especificação do run é explicitamente HIPÓTESE",
+        "manifesto do run registra status=BUILT e solve_requested=False",
+        "reconstrução exploratória sem promoção a reprodução validada",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "artefatos/runs/ENZ-20260803-191559-ed5384a5/manifest.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-191731-ed5384a5/aedt/G0_figura2_reconstrucao_v7_M4.aedt",
+      "suffix": ".aedt",
+      "bytes": 730742,
+      "sha256": "c65aac7fa669d6b98264081712e29c335eb1f1ae1f72d40d0eac61921573ad4d",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "a especificação do run é explicitamente HIPÓTESE",
+        "manifesto do run registra status=COMPLETED e solve_requested=True",
+        "reconstrução exploratória sem promoção a reprodução validada",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "artefatos/runs/ENZ-20260803-191731-ed5384a5/manifest.json"
+      ]
+    },
+    {
+      "path": "artefatos/runs/ENZ-20260803-192218-ed5384a5/aedt/G0_figura2_reconstrucao_v7_M4.aedt",
+      "suffix": ".aedt",
+      "bytes": 249970,
+      "sha256": "24315eb2b3a2a5bec23b224c42872fd619d4eb5263b9a616ce7ba82c89631aab",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "a especificação do run é explicitamente HIPÓTESE",
+        "manifesto do run registra status=COMPLETED e solve_requested=True",
+        "reconstrução exploratória sem promoção a reprodução validada",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "artefatos/runs/ENZ-20260803-192218-ed5384a5/manifest.json"
+      ]
+    },
+    {
+      "path": "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v5/G0_figura2_reconstrucao_exploratoria_M4.aedt",
+      "suffix": ".aedt",
+      "bytes": 277317,
+      "sha256": "86620401d4d9ae20829b31207582ff16fbb153af23af373598812e018b2748a8",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "manifesto registra status=BUILT e solve_requested=False",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v5/build_manifest.json"
+      ]
+    },
+    {
+      "path": "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/projeto_configurado/G0_figura2_reconstrucao_v7_M4.aedt",
+      "suffix": ".aedt",
+      "bytes": 730742,
+      "sha256": "c65aac7fa669d6b98264081712e29c335eb1f1ae1f72d40d0eac61921573ad4d",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "classificação global HIPÓTESE",
+        "gate estrito de passividade FAIL",
+        "gate de correspondência de S11 FAIL",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "poros_aedt/reconstrucoes_exploratorias/G0_figura2_v7/posprocessamento/validacao_cientifica_exploratoria.json"
+      ]
+    },
+    {
+      "path": "poros_aedt/runs/ENZ-20260803-173105-52288067/aedt/M0_cavidade_retangular_smoke_M0.aedt",
+      "suffix": ".aedt",
+      "bytes": 26736,
+      "sha256": "f50e59297c746604f0f5da2cb161c6f094eb4ebd2fe97cad67a4512383f14e8b",
+      "classification": "HIPÓTESE",
+      "eligible_as_validated_radiator": false,
+      "reasons": [
+        "cavidade sintética Eigenmode destinada apenas ao smoke test; não é radiador Driven Modal validado",
+        "não existe manifesto modelos/componentes_validados/RAD_*/manifest.json que vincule este arquivo a uma instância Q0"
+      ],
+      "evidence": [
+        "poros_aedt/runs/ENZ-20260803-173105-52288067/metrics/validacao_gates.json"
+      ]
+    }
+  ],
+  "missing_referenced_documents": [
+    "docs/30_implementacao_aedt_2024r2.md",
+    "docs/31_planejamento_mimo_2x2_quatro_radiadores_guia.md"
+  ],
+  "prohibited_progression": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4",
+    "Q5"
+  ],
+  "required_action": "Fornecer quatro manifestos de componentes validados, seus projetos AEDT, Touchstone, convergência, padrões complexos e relatórios de regressão.",
+  "risk": "Duplicar a reconstrução v7 promoveria uma hipótese reprovada a componente validado e contaminaria todas as métricas MIMO posteriores."
+}

@@ -1,0 +1,870 @@
+{
+  "schema": "enz-eigenchannel-mimo/q0-hfss-inspection/v1",
+  "classification": "SIMULADO",
+  "purpose": "inspeção Q0 somente leitura; não promove o modelo a validado",
+  "captured_at_utc": "2026-08-04T10:33:38.622135+00:00",
+  "project": {
+    "path": "D:\\dev\\ENZ_ANT\\ENZ-Eigenchannel-mimo\\poros_aedt\\reconstrucoes_exploratorias\\G0_figura2_v7\\projeto_configurado\\G0_figura2_reconstrucao_v7_M4.aedt",
+    "bytes": 730742,
+    "sha256_before_open": "c65aac7fa669d6b98264081712e29c335eb1f1ae1f72d40d0eac61921573ad4d",
+    "project_name": "G0_figura2_reconstrucao_v7_M4",
+    "design_name": "HFSS_ENZ_G0_figura2_reconstrucao_v7_M4",
+    "solution_type": "Modal",
+    "model_units": "mm",
+    "sha256_after_inspection": "c65aac7fa669d6b98264081712e29c335eb1f1ae1f72d40d0eac61921573ad4d",
+    "unchanged_by_inspection": true
+  },
+  "counts": {
+    "objects": 11,
+    "solids": 10,
+    "sheets": 1,
+    "lines": 0,
+    "points": 0,
+    "boundaries": 2,
+    "excitations": 1,
+    "setups": 1,
+    "reports": 8,
+    "field_plots": 8,
+    "coordinate_systems": 8,
+    "mesh_operations": 0,
+    "parametric_setups": 3
+  },
+  "objects": [
+    {
+      "name": "Cavity_Air",
+      "id": 140,
+      "object_type": "Solid",
+      "material": "vacuum",
+      "group": "Model",
+      "is_model": true,
+      "solve_inside": true,
+      "bounding_box_model_units": [
+        -9.0,
+        -18.0,
+        3.0,
+        9.0,
+        7.5,
+        11.31
+      ]
+    },
+    {
+      "name": "FR4_Slab",
+      "id": 348,
+      "object_type": "Solid",
+      "material": "fr4_epoxy",
+      "group": "Model",
+      "is_model": true,
+      "solve_inside": true,
+      "bounding_box_model_units": [
+        -1.5,
+        3.675,
+        3.0,
+        1.5,
+        5.325,
+        10.11
+      ]
+    },
+    {
+      "name": "Housing_Cavity",
+      "id": 6,
+      "object_type": "Solid",
+      "material": "pec",
+      "group": "Model",
+      "is_model": true,
+      "solve_inside": false,
+      "bounding_box_model_units": [
+        -18.0,
+        -18.0,
+        0.0,
+        18.0,
+        10.0,
+        11.11
+      ]
+    },
+    {
+      "name": "MountHole_L",
+      "id": 412,
+      "object_type": "Solid",
+      "material": "vacuum",
+      "group": "Model",
+      "is_model": true,
+      "solve_inside": true,
+      "bounding_box_model_units": [
+        -9.0,
+        -17.0,
+        -0.1,
+        -7.0,
+        -15.0,
+        11.21
+      ]
+    },
+    {
+      "name": "MountHole_R",
+      "id": 421,
+      "object_type": "Solid",
+      "material": "vacuum",
+      "group": "Model",
+      "is_model": true,
+      "solve_inside": true,
+      "bounding_box_model_units": [
+        7.0,
+        -17.0,
+        -0.1,
+        9.0,
+        -15.0,
+        11.21
+      ]
+    },
+    {
+      "name": "Open_Region",
+      "id": 430,
+      "object_type": "Solid",
+      "material": "air",
+      "group": "Model",
+      "is_model": true,
+      "solve_inside": true,
+      "bounding_box_model_units": [
+        -36.0,
+        -18.0,
+        -13.792,
+        36.0,
+        32.4,
+        25.002
+      ]
+    },
+    {
+      "name": "Port_WR28_Sheet",
+      "id": 196,
+      "object_type": "Sheet",
+      "material": "",
+      "group": "Model",
+      "is_model": true,
+      "solve_inside": null,
+      "bounding_box_model_units": [
+        -1.78,
+        -18.0,
+        3.0,
+        1.78,
+        -18.0,
+        10.11
+      ]
+    },
+    {
+      "name": "Rod_PEC_NE",
+      "id": 385,
+      "object_type": "Solid",
+      "material": "pec",
+      "group": "Model",
+      "is_model": true,
+      "solve_inside": false,
+      "bounding_box_model_units": [
+        1.5,
+        2.675,
+        3.0,
+        2.5,
+        3.675,
+        10.11
+      ]
+    },
+    {
+      "name": "Rod_PEC_NW",
+      "id": 376,
+      "object_type": "Solid",
+      "material": "pec",
+      "group": "Model",
+      "is_model": true,
+      "solve_inside": false,
+      "bounding_box_model_units": [
+        -2.5,
+        2.675,
+        3.0,
+        -1.5,
+        3.675,
+        10.11
+      ]
+    },
+    {
+      "name": "Rod_PEC_SE",
+      "id": 403,
+      "object_type": "Solid",
+      "material": "pec",
+      "group": "Model",
+      "is_model": true,
+      "solve_inside": false,
+      "bounding_box_model_units": [
+        1.5,
+        5.325,
+        3.0,
+        2.5,
+        6.325,
+        10.11
+      ]
+    },
+    {
+      "name": "Rod_PEC_SW",
+      "id": 394,
+      "object_type": "Solid",
+      "material": "pec",
+      "group": "Model",
+      "is_model": true,
+      "solve_inside": false,
+      "bounding_box_model_units": [
+        -2.5,
+        5.325,
+        3.0,
+        -1.5,
+        6.325,
+        10.11
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "name": "Radiation_Open_5Faces",
+      "python_type": "BoundaryObject",
+      "type": "Radiation",
+      "properties": {
+        "ID": 0,
+        "BoundType": "Radiation",
+        "IsComponent": false,
+        "Faces": [
+          431,
+          434,
+          435,
+          432,
+          436
+        ],
+        "ParentBndID": -1,
+        "UseAdaptiveIE": false,
+        "IsFssReference": false,
+        "IsForPML": false
+      }
+    },
+    {
+      "name": "P1_WR28_TE10",
+      "python_type": "BoundaryObject",
+      "type": "Wave Port",
+      "properties": {
+        "ID": 1,
+        "BoundType": "Wave Port",
+        "IsComponent": false,
+        "Objects": [
+          196
+        ],
+        "WavePortType": "Modal",
+        "NumModes": 1,
+        "PECCapPartID": -1,
+        "UseLineModeAlignment": false,
+        "DoDeembed": false,
+        "DeembedDist": "0mm",
+        "ParentBndID": -1,
+        "Modes": {
+          "Mode1": {
+            "ModeNum": 1,
+            "UseIntLine": true,
+            "IntLine": {
+              "GeometryPosition": [
+                {
+                  "IsAttachedToEntity": true,
+                  "EntityID": 200,
+                  "FacetedBodyTriangleIndex": -1,
+                  "TriangleVertexIndex": -1,
+                  "hasXYZ": true,
+                  "PositionType": "EdgeCenter",
+                  "UParam": 0,
+                  "VParam": 0,
+                  "XPosition": "0",
+                  "YPosition": "-18",
+                  "ZPosition": "3"
+                },
+                {
+                  "IsAttachedToEntity": true,
+                  "EntityID": 198,
+                  "FacetedBodyTriangleIndex": -1,
+                  "TriangleVertexIndex": -1,
+                  "hasXYZ": true,
+                  "PositionType": "EdgeCenter",
+                  "UParam": 0,
+                  "VParam": 0,
+                  "XPosition": "1.38777878078145e-15",
+                  "YPosition": "-18",
+                  "ZPosition": "10.11"
+                }
+              ]
+            },
+            "AlignmentGroup": 0,
+            "CharImp": "Zpi",
+            "RenormImp": "50ohm"
+          }
+        },
+        "UseAnalyticAlignment": false,
+        "ShowReporterFilter": false,
+        "ReporterFilter": [
+          true
+        ]
+      }
+    }
+  ],
+  "excitations": [
+    "P1_WR28_TE10:1"
+  ],
+  "setups": [
+    {
+      "name": "Setup_Driven_25p87_HIPOTESE",
+      "properties": {
+        "ID": 1,
+        "SetupType": "HfssDriven",
+        "SolveType": "Single",
+        "Frequency": "25.87GHz",
+        "MaxDeltaS": 0.02,
+        "UseMatrixConv": false,
+        "MaximumPasses": 15,
+        "MinimumPasses": 2,
+        "MinimumConvergedPasses": 2,
+        "PercentRefinement": 20,
+        "IsEnabled": true,
+        "MeshLink": {
+          "ImportMesh": false
+        },
+        "BasisOrder": 1,
+        "DoLambdaRefine": true,
+        "DoMaterialLambda": true,
+        "SetLambdaTarget": false,
+        "Target": 0.3333,
+        "UseMaxTetIncrease": false,
+        "PortAccuracy": 2,
+        "UseABCOnPort": false,
+        "SetPortMinMaxTri": false,
+        "PortMinTri": 100,
+        "PortMaxTri": 500,
+        "DrivenSolverType": "Direct Solver",
+        "EnhancedLowFreqAccuracy": false,
+        "SaveRadFieldsOnly": false,
+        "SaveAnyFields": true,
+        "IESolverType": "Auto",
+        "LambdaTargetForIESolver": 0.15,
+        "UseDefaultLambdaTgtForIESolver": true,
+        "IE Solver Accuracy": "Balanced",
+        "InfiniteSphereSetup": -1,
+        "MaxPass": 10,
+        "MinPass": 1,
+        "MinConvPass": 1,
+        "PerError": 1,
+        "PerRefine": 30
+      },
+      "sweeps": [
+        {
+          "name": "Sweep_25_27GHz",
+          "python_type": "SweepHFSS",
+          "type": "SweepHFSS",
+          "properties": {
+            "Type": "Interpolating",
+            "IsEnabled": true,
+            "RangeType": "LinearCount",
+            "RangeStart": "25GHz",
+            "RangeEnd": "27GHz",
+            "SaveSingleField": false,
+            "RangeCount": 201,
+            "RangeStep": "1MHz",
+            "RangeSamples": 11,
+            "SaveFields": true,
+            "SaveRadFields": true,
+            "GenerateFieldsForAllFreqs": false,
+            "InterpTolerance": 0.5,
+            "InterpMaxSolns": 80,
+            "InterpMinSolns": 0,
+            "InterpMinSubranges": 1,
+            "InterpUseS": true,
+            "InterpUsePortImped": false,
+            "InterpUsePropConst": true,
+            "UseDerivativeConvergence": false,
+            "InterpDerivTolerance": 0.2,
+            "EnforcePassivity": true,
+            "UseFullBasis": true,
+            "PassivityErrorTolerance": 0.0001,
+            "EnforceCausality": false,
+            "UseQ3DForDCSolve": false,
+            "SMatrixOnlySolveMode": "Auto",
+            "SMatrixOnlySolveAbove": "1MHz"
+          }
+        },
+        {
+          "name": "Sweep_Fields_Article",
+          "python_type": "SweepHFSS",
+          "type": "SweepHFSS",
+          "properties": {
+            "Type": "Interpolating",
+            "IsEnabled": true,
+            "RangeType": "SinglePoints",
+            "RangeStart": "25.65GHz",
+            "RangeEnd": "25.65GHz",
+            "SaveSingleField": true,
+            "RangeCount": 401,
+            "RangeStep": "1MHz",
+            "RangeSamples": 11,
+            "SaveFields": true,
+            "SaveRadFields": true,
+            "GenerateFieldsForAllFreqs": false,
+            "InterpTolerance": 0.5,
+            "InterpMaxSolns": 250,
+            "InterpMinSolns": 0,
+            "InterpMinSubranges": 1,
+            "InterpUseS": true,
+            "InterpUsePortImped": false,
+            "InterpUsePropConst": true,
+            "UseDerivativeConvergence": false,
+            "InterpDerivTolerance": 0.2,
+            "EnforcePassivity": true,
+            "UseFullBasis": true,
+            "PassivityErrorTolerance": 0.0001,
+            "EnforceCausality": false,
+            "UseQ3DForDCSolve": false,
+            "SMatrixOnlySolveMode": "Auto",
+            "SMatrixOnlySolveAbove": "1MHz"
+          }
+        }
+      ]
+    }
+  ],
+  "existing_analysis_sweeps": [
+    "Setup_Driven_25p87_HIPOTESE : LastAdaptive",
+    "Setup_Driven_25p87_HIPOTESE : Sweep_25_27GHz",
+    "Setup_Driven_25p87_HIPOTESE : Sweep_Fields_Article",
+    "Setup_Driven_25p87_HIPOTESE - altura_interna_wr28='7.1100000000000003mm' cavidade_area_plana='108mm2' cavidade_comprimento_interno_exploratorio='18mm' cavidade_largura_interna_exploratoria='6mm' chanfro='3mm' comprimento_total_eixo_y='27mm' corpo_altura_externa='11.109999999999999mm' corpo_comprimento_externo='36mm' corpo_largura_externa_exploratoria='9mm' degrau_altura='1mm' degrau_largura='9mm' espessura_fundo_exploratoria='3mm' espessura_parede_lateral='1mm' espessura_tampa='1mm' flange_comprimento_exploratorio='4mm' flange_largura='22.5mm' fr4_dimensao_x='3mm' fr4_dimensao_y='1.6499999999999999mm' fr4_epsilon_r_exploratorio='4.4000000000000004' fr4_tan_delta_exploratorio='0.02' frequencia_adaptativa='25.870000000000001GHz' frequencia_sweep_fim='27GHz' frequencia_sweep_inicio='25GHz' largura_interna_wr28='3.5600000000000001mm' parafuso_diametro_exploratorio='2mm' pino_diametro='1mm' pino_offset_x_exploratorio='2mm' pino_offset_y_exploratorio='1.325mm' plano_porta_y='-18mm' ranhura_comprimento='5.6600000000000001mm' ranhura_largura='0.80000000000000004mm' ranhura_passo_exploratorio='4mm' : Table"
+  ],
+  "reports": [
+    "Fig2b_S11_25_27GHz",
+    "Fig1b_d_EPlane_25p87",
+    "Fig3d_EPlane_25p87",
+    "Fig4_EPlane_CoCross_MultiFreq",
+    "Fig4_HPlane_CoCross_MultiFreq",
+    "Gain3D_25p87",
+    "Fig2b_RadiationEfficiency",
+    "Fig3c_PeakRealizedGain"
+  ],
+  "field_plots": [
+    {
+      "name": "EMag_ZX_ArrayCenter_25p87",
+      "python_type": "FieldPlot",
+      "plot_folder": "EMag_ZX_ArrayCenter_25p87",
+      "quantity": "Mag_E",
+      "solution": "Setup_Driven_25p87_HIPOTESE : LastAdaptive",
+      "intrinsics": {
+        "Freq": "25.870000000000001GHz",
+        "Phase": "0deg"
+      },
+      "surfaces": [],
+      "volumes": [],
+      "cutplanes": [
+        "Cut_ZX_ArrayCenter:XZ"
+      ],
+      "lines": [],
+      "seeding_faces": []
+    },
+    {
+      "name": "EMag_XY_MidHeight_25p87",
+      "python_type": "FieldPlot",
+      "plot_folder": "EMag_XY_MidHeight_25p87",
+      "quantity": "Mag_E",
+      "solution": "Setup_Driven_25p87_HIPOTESE : LastAdaptive",
+      "intrinsics": {
+        "Freq": "25.870000000000001GHz",
+        "Phase": "0deg"
+      },
+      "surfaces": [],
+      "volumes": [],
+      "cutplanes": [
+        "Cut_XY_MidHeight:XY"
+      ],
+      "lines": [],
+      "seeding_faces": []
+    },
+    {
+      "name": "EMag_YZ_Slot1_25p87",
+      "python_type": "FieldPlot",
+      "plot_folder": "EMag_YZ_Slot1_25p87",
+      "quantity": "Mag_E",
+      "solution": "Setup_Driven_25p87_HIPOTESE : LastAdaptive",
+      "intrinsics": {
+        "Freq": "25.870000000000001GHz",
+        "Phase": "0deg"
+      },
+      "surfaces": [],
+      "volumes": [],
+      "cutplanes": [
+        "Cut_YZ_Slot1:YZ"
+      ],
+      "lines": [],
+      "seeding_faces": []
+    },
+    {
+      "name": "EMag_YZ_Slot2_25p87",
+      "python_type": "FieldPlot",
+      "plot_folder": "EMag_YZ_Slot2_25p87",
+      "quantity": "Mag_E",
+      "solution": "Setup_Driven_25p87_HIPOTESE : LastAdaptive",
+      "intrinsics": {
+        "Freq": "25.870000000000001GHz",
+        "Phase": "0deg"
+      },
+      "surfaces": [],
+      "volumes": [],
+      "cutplanes": [
+        "Cut_YZ_Slot2:YZ"
+      ],
+      "lines": [],
+      "seeding_faces": []
+    },
+    {
+      "name": "EMag_YZ_Slot3_25p87",
+      "python_type": "FieldPlot",
+      "plot_folder": "EMag_YZ_Slot3_25p87",
+      "quantity": "Mag_E",
+      "solution": "Setup_Driven_25p87_HIPOTESE : LastAdaptive",
+      "intrinsics": {
+        "Freq": "25.870000000000001GHz",
+        "Phase": "0deg"
+      },
+      "surfaces": [],
+      "volumes": [],
+      "cutplanes": [
+        "Cut_YZ_Slot3:YZ"
+      ],
+      "lines": [],
+      "seeding_faces": []
+    },
+    {
+      "name": "EMag_YZ_Slot4_25p87",
+      "python_type": "FieldPlot",
+      "plot_folder": "EMag_YZ_Slot4_25p87",
+      "quantity": "Mag_E",
+      "solution": "Setup_Driven_25p87_HIPOTESE : LastAdaptive",
+      "intrinsics": {
+        "Freq": "25.870000000000001GHz",
+        "Phase": "0deg"
+      },
+      "surfaces": [],
+      "volumes": [],
+      "cutplanes": [
+        "Cut_YZ_Slot4:YZ"
+      ],
+      "lines": [],
+      "seeding_faces": []
+    },
+    {
+      "name": "EMag_YZ_Slot5_25p87",
+      "python_type": "FieldPlot",
+      "plot_folder": "EMag_YZ_Slot5_25p87",
+      "quantity": "Mag_E",
+      "solution": "Setup_Driven_25p87_HIPOTESE : LastAdaptive",
+      "intrinsics": {
+        "Freq": "25.870000000000001GHz",
+        "Phase": "0deg"
+      },
+      "surfaces": [],
+      "volumes": [],
+      "cutplanes": [
+        "Cut_YZ_Slot5:YZ"
+      ],
+      "lines": [],
+      "seeding_faces": []
+    },
+    {
+      "name": "EMag_ZX_Port_25p87",
+      "python_type": "FieldPlot",
+      "plot_folder": "EMag_ZX_Port_25p87",
+      "quantity": "Mag_E",
+      "solution": "Setup_Driven_25p87_HIPOTESE : LastAdaptive",
+      "intrinsics": {
+        "Freq": "25.870000000000001GHz",
+        "Phase": "0deg"
+      },
+      "surfaces": [],
+      "volumes": [],
+      "cutplanes": [
+        "Cut_ZX_Port:XZ"
+      ],
+      "lines": [],
+      "seeding_faces": []
+    }
+  ],
+  "coordinate_systems": [
+    {
+      "name": "Cut_ZX_ArrayCenter",
+      "python_type": "CoordinateSystem",
+      "type": "CoordinateSystem",
+      "properties": {
+        "KernelVersion": 24,
+        "Mode": "Axis/Position",
+        "OriginX": "0mm",
+        "OriginY": "4.5mm",
+        "OriginZ": "0mm",
+        "XAxisXvec": "1mm",
+        "XAxisYvec": "0mm",
+        "XAxisZvec": "0mm",
+        "YAxisXvec": "0mm",
+        "YAxisYvec": "1mm",
+        "YAxisZvec": "0mm"
+      }
+    },
+    {
+      "name": "Cut_XY_MidHeight",
+      "python_type": "CoordinateSystem",
+      "type": "CoordinateSystem",
+      "properties": {
+        "KernelVersion": 24,
+        "Mode": "Axis/Position",
+        "OriginX": "0mm",
+        "OriginY": "0mm",
+        "OriginZ": "espessura_fundo_exploratoria+altura_interna_wr28/2",
+        "XAxisXvec": "1mm",
+        "XAxisYvec": "0mm",
+        "XAxisZvec": "0mm",
+        "YAxisXvec": "0mm",
+        "YAxisYvec": "1mm",
+        "YAxisZvec": "0mm"
+      }
+    },
+    {
+      "name": "Cut_YZ_Slot1",
+      "python_type": "CoordinateSystem",
+      "type": "CoordinateSystem",
+      "properties": {
+        "KernelVersion": 24,
+        "Mode": "Axis/Position",
+        "OriginX": "-2*ranhura_passo_exploratorio",
+        "OriginY": "0mm",
+        "OriginZ": "0mm",
+        "XAxisXvec": "1mm",
+        "XAxisYvec": "0mm",
+        "XAxisZvec": "0mm",
+        "YAxisXvec": "0mm",
+        "YAxisYvec": "1mm",
+        "YAxisZvec": "0mm"
+      }
+    },
+    {
+      "name": "Cut_YZ_Slot2",
+      "python_type": "CoordinateSystem",
+      "type": "CoordinateSystem",
+      "properties": {
+        "KernelVersion": 24,
+        "Mode": "Axis/Position",
+        "OriginX": "-ranhura_passo_exploratorio",
+        "OriginY": "0mm",
+        "OriginZ": "0mm",
+        "XAxisXvec": "1mm",
+        "XAxisYvec": "0mm",
+        "XAxisZvec": "0mm",
+        "YAxisXvec": "0mm",
+        "YAxisYvec": "1mm",
+        "YAxisZvec": "0mm"
+      }
+    },
+    {
+      "name": "Cut_YZ_Slot3",
+      "python_type": "CoordinateSystem",
+      "type": "CoordinateSystem",
+      "properties": {
+        "KernelVersion": 24,
+        "Mode": "Axis/Position",
+        "OriginX": "0mm",
+        "OriginY": "0mm",
+        "OriginZ": "0mm",
+        "XAxisXvec": "1mm",
+        "XAxisYvec": "0mm",
+        "XAxisZvec": "0mm",
+        "YAxisXvec": "0mm",
+        "YAxisYvec": "1mm",
+        "YAxisZvec": "0mm"
+      }
+    },
+    {
+      "name": "Cut_YZ_Slot4",
+      "python_type": "CoordinateSystem",
+      "type": "CoordinateSystem",
+      "properties": {
+        "KernelVersion": 24,
+        "Mode": "Axis/Position",
+        "OriginX": "ranhura_passo_exploratorio",
+        "OriginY": "0mm",
+        "OriginZ": "0mm",
+        "XAxisXvec": "1mm",
+        "XAxisYvec": "0mm",
+        "XAxisZvec": "0mm",
+        "YAxisXvec": "0mm",
+        "YAxisYvec": "1mm",
+        "YAxisZvec": "0mm"
+      }
+    },
+    {
+      "name": "Cut_YZ_Slot5",
+      "python_type": "CoordinateSystem",
+      "type": "CoordinateSystem",
+      "properties": {
+        "KernelVersion": 24,
+        "Mode": "Axis/Position",
+        "OriginX": "2*ranhura_passo_exploratorio",
+        "OriginY": "0mm",
+        "OriginZ": "0mm",
+        "XAxisXvec": "1mm",
+        "XAxisYvec": "0mm",
+        "XAxisZvec": "0mm",
+        "YAxisXvec": "0mm",
+        "YAxisYvec": "1mm",
+        "YAxisZvec": "0mm"
+      }
+    },
+    {
+      "name": "Cut_ZX_Port",
+      "python_type": "CoordinateSystem",
+      "type": "CoordinateSystem",
+      "properties": {
+        "KernelVersion": 24,
+        "Mode": "Axis/Position",
+        "OriginX": "0mm",
+        "OriginY": "plano_porta_y",
+        "OriginZ": "0mm",
+        "XAxisXvec": "1mm",
+        "XAxisYvec": "0mm",
+        "XAxisZvec": "0mm",
+        "YAxisXvec": "0mm",
+        "YAxisYvec": "1mm",
+        "YAxisZvec": "0mm"
+      }
+    }
+  ],
+  "mesh_operations": [],
+  "parametric_setups": [
+    {
+      "name": "Param_Chamfer_c_0_4mm",
+      "python_type": "SetupParam",
+      "type": "SetupParam",
+      "properties": {
+        "IsEnabled": true,
+        "ProdOptiSetupDataV2": {
+          "SaveFields": false,
+          "CopyMesh": false,
+          "SolveWithCopiedMeshOnly": true
+        },
+        "StartingPoint": {},
+        "Sim. Setups": [
+          "Setup_Driven_25p87_HIPOTESE"
+        ],
+        "Sweeps": {
+          "SweepDefinition": {
+            "Variable": "chanfro",
+            "Data": "LIN 0.0mm 4.0mm 1.0mm",
+            "OffsetF1": false,
+            "Synchronize": 0
+          }
+        },
+        "Sweep Operations": {},
+        "Goals": {}
+      }
+    },
+    {
+      "name": "Param_StepWidth_8_10mm",
+      "python_type": "SetupParam",
+      "type": "SetupParam",
+      "properties": {
+        "IsEnabled": true,
+        "ProdOptiSetupDataV2": {
+          "SaveFields": false,
+          "CopyMesh": false,
+          "SolveWithCopiedMeshOnly": true
+        },
+        "StartingPoint": {},
+        "Sim. Setups": [
+          "Setup_Driven_25p87_HIPOTESE"
+        ],
+        "Sweeps": {
+          "SweepDefinition": {
+            "Variable": "degrau_largura",
+            "Data": "LIN 8.0mm 10.0mm 1.0mm",
+            "OffsetF1": false,
+            "Synchronize": 0
+          }
+        },
+        "Sweep Operations": {},
+        "Goals": {}
+      }
+    },
+    {
+      "name": "Param_StepHeight_0p5_1p5mm",
+      "python_type": "SetupParam",
+      "type": "SetupParam",
+      "properties": {
+        "IsEnabled": true,
+        "ProdOptiSetupDataV2": {
+          "SaveFields": false,
+          "CopyMesh": false,
+          "SolveWithCopiedMeshOnly": true
+        },
+        "StartingPoint": {},
+        "Sim. Setups": [
+          "Setup_Driven_25p87_HIPOTESE"
+        ],
+        "Sweeps": {
+          "SweepDefinition": {
+            "Variable": "degrau_altura",
+            "Data": "LIN 0.5mm 1.5mm 0.5mm",
+            "OffsetF1": false,
+            "Synchronize": 0
+          }
+        },
+        "Sweep Operations": {},
+        "Goals": {}
+      }
+    }
+  ],
+  "design_variables": {
+    "frequencia_adaptativa": "25.87GHz",
+    "frequencia_sweep_inicio": "25GHz",
+    "frequencia_sweep_fim": "27GHz",
+    "cavidade_area_plana": "108mm2",
+    "cavidade_comprimento_interno_exploratorio": "18mm",
+    "cavidade_largura_interna_exploratoria": "6mm",
+    "corpo_comprimento_externo": "36mm",
+    "corpo_largura_externa_exploratoria": "9mm",
+    "corpo_altura_externa": "11.11mm",
+    "altura_interna_wr28": "7.11mm",
+    "largura_interna_wr28": "3.56mm",
+    "espessura_parede_lateral": "1mm",
+    "espessura_tampa": "1mm",
+    "espessura_fundo_exploratoria": "3mm",
+    "flange_largura": "22.5mm",
+    "flange_comprimento_exploratorio": "4mm",
+    "comprimento_total_eixo_y": "27mm",
+    "plano_porta_y": "-18mm",
+    "chanfro": "3mm",
+    "degrau_largura": "9mm",
+    "degrau_altura": "1mm",
+    "ranhura_comprimento": "5.66mm",
+    "ranhura_largura": "0.8mm",
+    "ranhura_passo_exploratorio": "4mm",
+    "fr4_dimensao_x": "3mm",
+    "fr4_dimensao_y": "1.65mm",
+    "fr4_epsilon_r_exploratorio": "4.4",
+    "fr4_tan_delta_exploratorio": "0.02",
+    "pino_diametro": "1mm",
+    "pino_offset_x_exploratorio": "2mm",
+    "pino_offset_y_exploratorio": "1.325mm",
+    "parafuso_diametro_exploratorio": "2mm"
+  },
+  "project_variables": {},
+  "visual_artifacts": {
+    "preview": "D:\\dev\\ENZ_ANT\\ENZ-Eigenchannel-mimo\\artefatos\\q0\\hfss_inspection\\hfss_design_preview.jpg",
+    "messages": "D:\\dev\\ENZ_ANT\\ENZ-Eigenchannel-mimo\\artefatos\\q0\\hfss_inspection\\aedt_messages.log"
+  },
+  "extraction_errors": [],
+  "runtime": {
+    "build": "2024.2.0",
+    "pid": 22204,
+    "grpc_port": 49782,
+    "pyaedt": "1.3.0",
+    "license": "DISPONIVEL: available_license_feature=99",
+    "transport": "native AEDT gRPC via PyAEDT",
+    "session_left_open": true
+  }
+}

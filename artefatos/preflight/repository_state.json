@@ -1,0 +1,18 @@
+{
+  "schema": "enz-eigenchannel-mimo/preflight-repository/v1",
+  "classification": "DERIVADO",
+  "captured_at_utc": "2026-08-04T10:23:40.568397+00:00",
+  "captured_at_local": "2026-08-04T07:23:40.568397-03:00",
+  "working_directory": "D:\\dev\\ENZ_ANT\\ENZ-Eigenchannel-mimo",
+  "branch": "research/mimo-2x2-four-radiators-waveguide",
+  "initial_commit": "5c802e19a1fabfb71d98d7a32365f334fa26c28b",
+  "initial_log": "5c802e1 feat: publica reconstrução HFSS v7 e dossiê técnico auditável",
+  "changes_at_capture": [
+    "?? artefatos/preflight/",
+    "?? inst.md",
+    "?? scripts/registrar_preflight_mimo.py"
+  ],
+  "preexisting_changes": [
+    "?? inst.md"
+  ]
+}

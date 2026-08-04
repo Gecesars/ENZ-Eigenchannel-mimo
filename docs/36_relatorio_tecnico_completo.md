@@ -57,10 +57,10 @@ declaradas no artigo são `a = 7,11 mm` e `b = 3,56 mm`.
 **DERIVADO:** no mapeamento geométrico adotado, a maior dimensão da folha está
 em Z. A linha de integração modal é
 
-$$
+```math
 \mathbf{l}_{\mathrm{int}}:\;(0,-18,3)\ \mathrm{mm}
 \longrightarrow(0,-18,10{,}11)\ \mathrm{mm},
-$$
+```
 
 portanto `Δx = 0`, `Δy = 0` e `Δz = 7,11 mm`. A orientação é estritamente Z.
 O bounding box salvo no projeto é
@@ -89,20 +89,20 @@ a sweep discreta dos campos do artigo. Nenhuma versão anterior foi sobrescrita.
 **DERIVADO:** para o modo dominante de um guia retangular ideal, a constante de
 propagação pode ser escrita como
 
-$$
+```math
 \beta_{10}=k_0\sqrt{1-\left(\frac{f_c}{f}\right)^2},
 \qquad
 f_c=\frac{c}{2a}.
-$$
+```
 
 Próximo ao corte, `β10 → 0` e o comprimento de onda guiado cresce. Uma forma
 equivalente de representar esse comportamento é definir uma permissividade
 modal efetiva
 
-$$
+```math
 \varepsilon_{\mathrm{eff},10}
 =\varepsilon_0\left[1-\left(\frac{f_c}{f}\right)^2\right].
-$$
+```
 
 **PUBLICADO:** Vilas Boas et al. exploram o regime ENZ inspirado pelo modo
 dominante para obter baixa variação longitudinal de fase e excitação coerente
@@ -182,13 +182,13 @@ licença, PyAEDT, hashes e verificação de processo órfão.
 `Pacc = 0,38535475` e `Prad = 0,39368747`. As identidades relatadas pelo HFSS
 fecham numericamente:
 
-$$
+```math
 \eta_{\mathrm{rad}}=\frac{P_{\mathrm{rad}}}{P_{\mathrm{acc}}}
 =1{,}02162350,
 \qquad
 \eta_{\mathrm{tot}}=\frac{P_{\mathrm{rad}}}{P_{\mathrm{inc}}}
 =0{,}39368747.
-$$
+```
 
 **DERIVADO:** o fechamento algébrico não é aprovação física. Para um sistema
 passivo, `Prad ≤ Pacc` dentro da tolerância numérica. O excesso de 2,16235%
@@ -261,3 +261,47 @@ original deste repositório.
 **DERIVADO:** o PDF deve sempre circular junto de seu manifesto. O manifesto
 registra fontes, contagens, hashes, gates e limitações, impedindo que imagens
 de simulação sejam confundidas com resultados medidos ou publicados.
+
+## 14. Extensão Q0 — sistema MIMO 2×2 com quatro radiadores
+
+**DESCONHECIDO:** a campanha especificada em `inst.md` exige quatro radiadores
+previamente validados. A auditoria recursiva encontrou 22 projetos AEDT, com
+19 hashes distintos, mas nenhum manifesto válido para `RAD_A1`, `RAD_A2`,
+`RAD_B1` ou `RAD_B2`. O estado formal é
+`BLOCKED_MISSING_VALIDATED_ARTIFACTS`.
+
+**DERIVADO:** cópias de runs não equivalem a quatro radiadores independentes.
+Os projetos encontrados pertencem ao smoke M0 ou às reconstruções
+exploratórias v5–v7. O smoke não é radiador; v5 não foi solucionada; v7 é
+HIPÓTESE e reprova passividade e correspondência de S11. Portanto as redes em
+guia, estados EVEN/ODD/QUADRATURE e gates Q1–Q5 não foram fabricados
+numericamente nem apresentados como resultados.
+
+**SIMULADO:** o candidato v7 foi reaberto no HFSS 2024.2 para inspeção somente
+leitura. Foram confirmados 11 objetos, uma excitação, duas fronteiras, um
+setup, duas sweeps, oito plots de campo, oito relatórios, oito sistemas locais
+de corte e três estudos paramétricos. Não houve exceção de extração e o hash
+do projeto permaneceu
+`c65aac7fa669d6b98264081712e29c335eb1f1ae1f72d40d0eac61921573ad4d`.
+
+**SIMULADO:** a interface permanece aberta no PID 22204 e na porta gRPC
+49782. O estado transitório criado pelo AEDT foi separado do pacote científico:
+24 arquivos efêmeros foram excluídos do inventário e sete caches versionados
+estão registrados como temporariamente ausentes enquanto a sessão os
+administra. A relação nominal está em `poros_aedt/manifest.json`; nenhum
+lock, semáforo, `.asol_priv` ou temporário novo foi tratado como resultado
+científico.
+
+O relatório detalhado, a matriz de evidências e a lista exata de dados
+necessários para liberar Q0 estão em
+`docs/32_relatorio_implementacao_mimo_2x2.md`. Os artefatos canônicos são:
+
+- `artefatos/q0/missing_validated_models.json`;
+- `artefatos/q0/artifact_inventory.json`;
+- `artefatos/q0/hfss_inspection/hfss_inspection.json`;
+- `artefatos/q0/hfss_inspection/hfss_design_preview.jpg`.
+
+**DESCONHECIDO:** ECC, TARC, CCL, MEG, rank efetivo e capacidade permanecem
+sem valor para o sistema solicitado, pois não existem S2P externo nem padrões
+`Etheta/Ephi` complexos por porta. Essa ausência é um resultado de gate, não
+uma lacuna preenchível por hipótese geométrica.

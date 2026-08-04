@@ -1,0 +1,982 @@
+{
+  "schema": "enz-eigenchannel-mimo/q4-c0-build/v1",
+  "classification": "HIPÓTESE",
+  "status": "BUILT",
+  "started_at_utc": "2026-08-04T11:37:28.042836+00:00",
+  "source": {
+    "path": "poros_aedt\\reconstrucoes_exploratorias\\G0_figura2_v7\\projeto_configurado\\G0_figura2_reconstrucao_v7_M4.aedt",
+    "sha256_before": "c65aac7fa669d6b98264081712e29c335eb1f1ae1f72d40d0eac61921573ad4d",
+    "promoted_as_validated": false,
+    "project_name": "G0_figura2_reconstrucao_v7_M4",
+    "design_name": "HFSS_ENZ_G0_figura2_reconstrucao_v7_M4",
+    "sha256_after": "c65aac7fa669d6b98264081712e29c335eb1f1ae1f72d40d0eac61921573ad4d",
+    "unchanged": true
+  },
+  "specification": {
+    "schema": "enz-eigenchannel-mimo/q4-c0-spec/v1",
+    "classification": "HIPÓTESE",
+    "parameters": {
+      "frequency_ghz": 25.87,
+      "sweep_start_ghz": 25.0,
+      "sweep_stop_ghz": 27.0,
+      "wg_a_z_mm": 7.11,
+      "wg_b_x_mm": 3.56,
+      "source_port_y_mm": -18.0,
+      "source_housing_span_x_mm": 36.0,
+      "source_housing_z_min_mm": 0.0,
+      "source_housing_z_max_mm": 11.11,
+      "source_air_z_min_mm": 3.0,
+      "pair_spacing_mm": 42.0,
+      "interpair_spacing_mm": 96.0,
+      "wall_mm": 1.0,
+      "region_x_padding_mm": 18.0,
+      "region_y_max_mm": 32.4,
+      "region_z_min_mm": -13.792,
+      "region_z_max_mm": 25.002
+    },
+    "derived": {
+      "fc10_ghz": 21.08245133614627,
+      "fc20_ghz": 42.16490267229254,
+      "fc01_ghz": 42.105682303370784,
+      "lambda0_mm": 11.588421260146887,
+      "lambda_g_mm": 19.995624227766882,
+      "branch_length_mm": 19.995624227766882,
+      "junction_length_mm": 4.9989060569417205,
+      "input_length_mm": 19.995624227766882,
+      "pair_centers_x_mm": {
+        "A": -48.0,
+        "B": 48.0
+      },
+      "radiator_centers_x_mm": {
+        "RAD_A1": -69.0,
+        "RAD_A2": -27.0,
+        "RAD_B1": 27.0,
+        "RAD_B2": 69.0
+      },
+      "external_port_y_mm": -62.990154512475485,
+      "manifold_air_width_mm": 45.56,
+      "feed_housing_width_mm": 47.56,
+      "region_bounds_mm": [
+        -105.0,
+        -62.990154512475485,
+        -13.792,
+        105.0,
+        32.4,
+        25.002
+      ]
+    },
+    "classifications": {
+      "frequency_ghz": "PUBLICADO",
+      "sweep_start_ghz": "PUBLICADO",
+      "sweep_stop_ghz": "PUBLICADO",
+      "wg_a_z_mm": "PUBLICADO",
+      "wg_b_x_mm": "PUBLICADO",
+      "source_port_y_mm": "DERIVADO",
+      "source_housing_span_x_mm": "PUBLICADO",
+      "source_housing_z_min_mm": "DERIVADO",
+      "source_housing_z_max_mm": "PUBLICADO",
+      "source_air_z_min_mm": "DERIVADO",
+      "pair_spacing_mm": "HIPÓTESE",
+      "interpair_spacing_mm": "HIPÓTESE",
+      "wall_mm": "HIPÓTESE",
+      "branch_length_mm": "DERIVADO",
+      "junction_length_mm": "DERIVADO",
+      "input_length_mm": "DERIVADO",
+      "manifold_air_width_mm": "DERIVADO",
+      "feed_housing_width_mm": "DERIVADO",
+      "region_bounds_mm": "DERIVADO"
+    }
+  },
+  "gates": {
+    "source_radiator_validation": "FAIL",
+    "build_geometry": "PASS",
+    "validate_design": "PASS",
+    "adaptive_convergence": "PENDING",
+    "strict_passivity": "PENDING",
+    "mimo_claim": "BLOCKED_SOURCE_MODEL_HIPOTESE"
+  },
+  "errors": [],
+  "runtime": {
+    "build": "2024.2.0",
+    "pid": 22204,
+    "grpc_port": 49782,
+    "pyaedt": "1.3.0",
+    "license": "DISPONIVEL: available_license_feature=99",
+    "transport": "native AEDT gRPC via PyAEDT",
+    "cores": 14,
+    "tasks": 1,
+    "gpus": 0
+  },
+  "completed_at_utc": "2026-08-04T11:40:07.109717+00:00",
+  "target": {
+    "path": "poros_aedt\\reconstrucoes_exploratorias\\Q4_mimo2x2_c0_v8\\projeto_configurado\\Q4_mimo2x2_c0_v8_HIPOTESE.aedt",
+    "bytes": 673776,
+    "sha256": "83c8edc49547a4fff5d2f66d6b65d5489ef533375ccf86b2dcda8e3aefe30026",
+    "project_name": "Q4_mimo2x2_c0_v8_HIPOTESE",
+    "design_name": "HFSS_ENZ_Q4_mimo2x2_c0_v8",
+    "solution_type": "Modal"
+  },
+  "geometry": {
+    "modules": {
+      "RAD_A1": [
+        "Cavity_Air_RAD_A1",
+        "FR4_Slab_RAD_A1",
+        "Housing_Cavity_RAD_A1",
+        "MountHole_L_RAD_A1",
+        "MountHole_R_RAD_A1",
+        "Rod_PEC_NE_RAD_A1",
+        "Rod_PEC_NW_RAD_A1",
+        "Rod_PEC_SE_RAD_A1",
+        "Rod_PEC_SW_RAD_A1"
+      ],
+      "RAD_A2": [
+        "Cavity_Air_RAD_A2",
+        "FR4_Slab_RAD_A2",
+        "Housing_Cavity_RAD_A2",
+        "MountHole_L_RAD_A2",
+        "MountHole_R_RAD_A2",
+        "Rod_PEC_NE_RAD_A2",
+        "Rod_PEC_NW_RAD_A2",
+        "Rod_PEC_SE_RAD_A2",
+        "Rod_PEC_SW_RAD_A2"
+      ],
+      "RAD_B1": [
+        "Cavity_Air_RAD_B1",
+        "FR4_Slab_RAD_B1",
+        "Housing_Cavity_RAD_B1",
+        "MountHole_L_RAD_B1",
+        "MountHole_R_RAD_B1",
+        "Rod_PEC_NE_RAD_B1",
+        "Rod_PEC_NW_RAD_B1",
+        "Rod_PEC_SE_RAD_B1",
+        "Rod_PEC_SW_RAD_B1"
+      ],
+      "RAD_B2": [
+        "Cavity_Air_RAD_B2",
+        "FR4_Slab_RAD_B2",
+        "Housing_Cavity_RAD_B2",
+        "MountHole_L_RAD_B2",
+        "MountHole_R_RAD_B2",
+        "Rod_PEC_NE_RAD_B2",
+        "Rod_PEC_NW_RAD_B2",
+        "Rod_PEC_SE_RAD_B2",
+        "Rod_PEC_SW_RAD_B2"
+      ]
+    },
+    "feeds": {
+      "WG_A": {
+        "housing": "WG_A_Housing_PEC",
+        "air": "WG_A_Air",
+        "sheet": "P1_WG_A_Sheet",
+        "boundary": "P1_WG_A",
+        "integration_line_mm": [
+          [
+            -48.0,
+            -62.990154512475485,
+            3.0
+          ],
+          [
+            -48.0,
+            -62.990154512475485,
+            10.11
+          ]
+        ],
+        "pair_center_x_mm": -48.0
+      },
+      "WG_B": {
+        "housing": "WG_B_Housing_PEC",
+        "air": "WG_B_Air",
+        "sheet": "P2_WG_B_Sheet",
+        "boundary": "P2_WG_B",
+        "integration_line_mm": [
+          [
+            48.0,
+            -62.990154512475485,
+            3.0
+          ],
+          [
+            48.0,
+            -62.990154512475485,
+            10.11
+          ]
+        ],
+        "pair_center_x_mm": 48.0
+      }
+    },
+    "region": {
+      "object": "Open_Region_Q4",
+      "bounds_mm": [
+        -105.0,
+        -62.990154512475485,
+        -13.792,
+        105.0,
+        32.4,
+        25.002
+      ],
+      "boundary": "Radiation_Q4_5Faces"
+    },
+    "cutplanes": {
+      "EMag_YZ_RAD_A1_25p87": "Cut_Q4_YZ_RAD_A1:YZ",
+      "EMag_YZ_RAD_A2_25p87": "Cut_Q4_YZ_RAD_A2:YZ",
+      "EMag_YZ_RAD_B1_25p87": "Cut_Q4_YZ_RAD_B1:YZ",
+      "EMag_YZ_RAD_B2_25p87": "Cut_Q4_YZ_RAD_B2:YZ",
+      "EMag_YZ_WG_A_25p87": "Cut_Q4_YZ_WG_A:YZ",
+      "EMag_YZ_WG_B_25p87": "Cut_Q4_YZ_WG_B:YZ",
+      "EMag_XY_MidHeight_25p87": "Cut_Q4_XY_MidHeight:XY",
+      "EMag_XZ_ArrayCenter_25p87": "Cut_Q4_XZ_ArrayCenter:XZ",
+      "EMag_XZ_Feed_25p87": "Cut_Q4_XZ_Feed:XZ"
+    },
+    "mesh_operations": [
+      "Mesh_Q4_WG_Cavity_Air_1p2mm",
+      "Mesh_Q4_FR4_0p35mm"
+    ]
+  },
+  "setup": {
+    "setup": "Setup_Q4_MIMO2X2",
+    "properties": {
+      "ID": 2,
+      "SetupType": "HfssDriven",
+      "SolveType": "Single",
+      "Frequency": "25.87GHz",
+      "MaxDeltaS": 0.02,
+      "UseMatrixConv": false,
+      "MaximumPasses": 12,
+      "MinimumPasses": 2,
+      "MinimumConvergedPasses": 2,
+      "PercentRefinement": 20,
+      "IsEnabled": true,
+      "MeshLink": {
+        "ImportMesh": false
+      },
+      "BasisOrder": 1,
+      "DoLambdaRefine": true,
+      "DoMaterialLambda": true,
+      "SetLambdaTarget": false,
+      "Target": 0.3333,
+      "UseMaxTetIncrease": false,
+      "PortAccuracy": 2,
+      "UseABCOnPort": false,
+      "SetPortMinMaxTri": false,
+      "PortMinTri": 100,
+      "PortMaxTri": 500,
+      "DrivenSolverType": "Direct Solver",
+      "EnhancedLowFreqAccuracy": false,
+      "SaveRadFieldsOnly": false,
+      "SaveAnyFields": true,
+      "IESolverType": "Auto",
+      "LambdaTargetForIESolver": 0.15,
+      "UseDefaultLambdaTgtForIESolver": true,
+      "IE Solver Accuracy": "Balanced",
+      "InfiniteSphereSetup": -1,
+      "MaxPass": 10,
+      "MinPass": 1,
+      "MinConvPass": 1,
+      "PerError": 1,
+      "PerRefine": 30,
+      "Sweeps": {
+        "NextUniqueID": 1,
+        "MoveBackwards": false,
+        "Sweep_Q4_25_27GHz": {
+          "ID": 0,
+          "IsEnabled": true,
+          "RangeType": "LinearCount",
+          "RangeStart": "25GHz",
+          "RangeEnd": "27GHz",
+          "RangeCount": 81,
+          "Type": "Interpolating",
+          "SaveFields": false,
+          "SaveRadFields": false,
+          "InterpTolerance": 0.5,
+          "InterpMaxSolns": 250,
+          "InterpMinSolns": 0,
+          "InterpMinSubranges": 1,
+          "InterpUseS": true,
+          "InterpUsePortImped": false,
+          "InterpUsePropConst": true,
+          "UseDerivativeConvergence": false,
+          "InterpDerivTolerance": 0.2,
+          "UseFullBasis": true,
+          "EnforcePassivity": true,
+          "PassivityErrorTolerance": 0.0001,
+          "SMatrixOnlySolveMode": "Auto"
+        }
+      }
+    },
+    "sweep": "Sweep_Q4_25_27GHz",
+    "sphere": "FF_Q4_3D"
+  },
+  "reports": [
+    "S_Q4_2Port_25_27GHz"
+  ],
+  "inventory": {
+    "objects": [
+      {
+        "name": "Cavity_Air_RAD_A1",
+        "id": 140,
+        "type": "Solid",
+        "material": "vacuum",
+        "bounding_box_mm": [
+          -78.0,
+          -18.0,
+          3.0,
+          -60.0,
+          7.5,
+          11.31
+        ]
+      },
+      {
+        "name": "Cavity_Air_RAD_A2",
+        "id": 1042,
+        "type": "Solid",
+        "material": "vacuum",
+        "bounding_box_mm": [
+          -36.0,
+          -18.0,
+          3.0,
+          -18.0,
+          7.5,
+          11.31
+        ]
+      },
+      {
+        "name": "Cavity_Air_RAD_B1",
+        "id": 1646,
+        "type": "Solid",
+        "material": "vacuum",
+        "bounding_box_mm": [
+          18.0,
+          -18.0,
+          3.0,
+          36.0,
+          7.5,
+          11.31
+        ]
+      },
+      {
+        "name": "Cavity_Air_RAD_B2",
+        "id": 2250,
+        "type": "Solid",
+        "material": "vacuum",
+        "bounding_box_mm": [
+          60.0,
+          -18.0,
+          3.0,
+          78.0,
+          7.5,
+          11.31
+        ]
+      },
+      {
+        "name": "FR4_Slab_RAD_A1",
+        "id": 348,
+        "type": "Solid",
+        "material": "fr4_epoxy",
+        "bounding_box_mm": [
+          -70.5,
+          3.675,
+          3.0,
+          -67.5,
+          5.325,
+          10.11
+        ]
+      },
+      {
+        "name": "FR4_Slab_RAD_A2",
+        "id": 1269,
+        "type": "Solid",
+        "material": "fr4_epoxy",
+        "bounding_box_mm": [
+          -28.5,
+          3.675,
+          3.0,
+          -25.5,
+          5.325,
+          10.11
+        ]
+      },
+      {
+        "name": "FR4_Slab_RAD_B1",
+        "id": 1873,
+        "type": "Solid",
+        "material": "fr4_epoxy",
+        "bounding_box_mm": [
+          25.5,
+          3.675,
+          3.0,
+          28.5,
+          5.325,
+          10.11
+        ]
+      },
+      {
+        "name": "FR4_Slab_RAD_B2",
+        "id": 2477,
+        "type": "Solid",
+        "material": "fr4_epoxy",
+        "bounding_box_mm": [
+          67.5,
+          3.675,
+          3.0,
+          70.5,
+          5.325,
+          10.11
+        ]
+      },
+      {
+        "name": "Housing_Cavity_RAD_A1",
+        "id": 6,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          -87.0,
+          -18.0,
+          0.0,
+          -51.0,
+          10.0,
+          11.11
+        ]
+      },
+      {
+        "name": "Housing_Cavity_RAD_A2",
+        "id": 1298,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          -45.0,
+          -18.0,
+          0.0,
+          -9.0,
+          10.0,
+          11.11
+        ]
+      },
+      {
+        "name": "Housing_Cavity_RAD_B1",
+        "id": 1902,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          8.99999999999999,
+          -18.0,
+          0.0,
+          45.0,
+          10.0,
+          11.11
+        ]
+      },
+      {
+        "name": "Housing_Cavity_RAD_B2",
+        "id": 2506,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          51.0,
+          -18.0,
+          0.0,
+          87.0,
+          10.0,
+          11.11
+        ]
+      },
+      {
+        "name": "MountHole_L_RAD_A1",
+        "id": 412,
+        "type": "Solid",
+        "material": "vacuum",
+        "bounding_box_mm": [
+          -78.0,
+          -17.0,
+          -0.1,
+          -76.0,
+          -15.0,
+          11.21
+        ]
+      },
+      {
+        "name": "MountHole_L_RAD_A2",
+        "id": 1598,
+        "type": "Solid",
+        "material": "vacuum",
+        "bounding_box_mm": [
+          -36.0,
+          -17.0,
+          -0.1,
+          -34.0,
+          -15.0,
+          11.21
+        ]
+      },
+      {
+        "name": "MountHole_L_RAD_B1",
+        "id": 2202,
+        "type": "Solid",
+        "material": "vacuum",
+        "bounding_box_mm": [
+          18.0,
+          -17.0,
+          -0.1,
+          20.0,
+          -15.0,
+          11.21
+        ]
+      },
+      {
+        "name": "MountHole_L_RAD_B2",
+        "id": 2806,
+        "type": "Solid",
+        "material": "vacuum",
+        "bounding_box_mm": [
+          60.0,
+          -17.0,
+          -0.1,
+          62.0,
+          -15.0,
+          11.21
+        ]
+      },
+      {
+        "name": "MountHole_R_RAD_A1",
+        "id": 421,
+        "type": "Solid",
+        "material": "vacuum",
+        "bounding_box_mm": [
+          -62.0,
+          -17.0,
+          -0.1,
+          -60.0,
+          -15.0,
+          11.21
+        ]
+      },
+      {
+        "name": "MountHole_R_RAD_A2",
+        "id": 1606,
+        "type": "Solid",
+        "material": "vacuum",
+        "bounding_box_mm": [
+          -20.0,
+          -17.0,
+          -0.1,
+          -18.0,
+          -15.0,
+          11.21
+        ]
+      },
+      {
+        "name": "MountHole_R_RAD_B1",
+        "id": 2210,
+        "type": "Solid",
+        "material": "vacuum",
+        "bounding_box_mm": [
+          34.0,
+          -17.0,
+          -0.1,
+          36.0,
+          -15.0,
+          11.21
+        ]
+      },
+      {
+        "name": "MountHole_R_RAD_B2",
+        "id": 2814,
+        "type": "Solid",
+        "material": "vacuum",
+        "bounding_box_mm": [
+          76.0,
+          -17.0,
+          -0.1,
+          78.0,
+          -15.0,
+          11.21
+        ]
+      },
+      {
+        "name": "Open_Region_Q4",
+        "id": 3471,
+        "type": "Solid",
+        "material": "air",
+        "bounding_box_mm": [
+          -105.0,
+          -62.9901545124755,
+          -13.792,
+          105.0,
+          32.4,
+          25.002
+        ]
+      },
+      {
+        "name": "P1_WG_A_Sheet",
+        "id": 3150,
+        "type": "Sheet",
+        "material": "",
+        "bounding_box_mm": [
+          -49.78,
+          -62.9901545124755,
+          3.0,
+          -46.22,
+          -62.9901545124755,
+          10.11
+        ]
+      },
+      {
+        "name": "P2_WG_B_Sheet",
+        "id": 3459,
+        "type": "Sheet",
+        "material": "",
+        "bounding_box_mm": [
+          46.22,
+          -62.9901545124755,
+          3.0,
+          49.78,
+          -62.9901545124755,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_NE_RAD_A1",
+        "id": 385,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          -67.5,
+          2.675,
+          3.0,
+          -66.5,
+          3.675,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_NE_RAD_A2",
+        "id": 1614,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          -25.5,
+          2.675,
+          3.0,
+          -24.5,
+          3.675,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_NE_RAD_B1",
+        "id": 2218,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          28.5,
+          2.675,
+          3.0,
+          29.5,
+          3.675,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_NE_RAD_B2",
+        "id": 2822,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          70.5,
+          2.675,
+          3.0,
+          71.5,
+          3.675,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_NW_RAD_A1",
+        "id": 376,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          -71.5,
+          2.675,
+          3.0,
+          -70.5,
+          3.675,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_NW_RAD_A2",
+        "id": 1622,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          -29.5,
+          2.675,
+          3.0,
+          -28.5,
+          3.675,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_NW_RAD_B1",
+        "id": 2226,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          24.5,
+          2.675,
+          3.0,
+          25.5,
+          3.675,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_NW_RAD_B2",
+        "id": 2830,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          66.5,
+          2.675,
+          3.0,
+          67.5,
+          3.675,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_SE_RAD_A1",
+        "id": 403,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          -67.5,
+          5.325,
+          3.0,
+          -66.5,
+          6.325,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_SE_RAD_A2",
+        "id": 1630,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          -25.5,
+          5.325,
+          3.0,
+          -24.5,
+          6.325,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_SE_RAD_B1",
+        "id": 2234,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          28.5,
+          5.325,
+          3.0,
+          29.5,
+          6.325,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_SE_RAD_B2",
+        "id": 2838,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          70.5,
+          5.325,
+          3.0,
+          71.5,
+          6.325,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_SW_RAD_A1",
+        "id": 394,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          -71.5,
+          5.325,
+          3.0,
+          -70.5,
+          6.325,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_SW_RAD_A2",
+        "id": 1638,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          -29.5,
+          5.325,
+          3.0,
+          -28.5,
+          6.325,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_SW_RAD_B1",
+        "id": 2242,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          24.5,
+          5.325,
+          3.0,
+          25.5,
+          6.325,
+          10.11
+        ]
+      },
+      {
+        "name": "Rod_PEC_SW_RAD_B2",
+        "id": 2846,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          66.5,
+          5.325,
+          3.0,
+          67.5,
+          6.325,
+          10.11
+        ]
+      },
+      {
+        "name": "WG_A_Air",
+        "id": 2881,
+        "type": "Solid",
+        "material": "vacuum",
+        "bounding_box_mm": [
+          -70.78,
+          -62.9901545124755,
+          3.0,
+          -25.22,
+          -18.0,
+          10.11
+        ]
+      },
+      {
+        "name": "WG_A_Housing_PEC",
+        "id": 2853,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          -71.78,
+          -62.9901545124755,
+          0.0,
+          -24.22,
+          -18.0,
+          11.11
+        ]
+      },
+      {
+        "name": "WG_B_Air",
+        "id": 3190,
+        "type": "Solid",
+        "material": "vacuum",
+        "bounding_box_mm": [
+          25.22,
+          -62.9901545124755,
+          3.0,
+          70.78,
+          -18.0,
+          10.11
+        ]
+      },
+      {
+        "name": "WG_B_Housing_PEC",
+        "id": 3162,
+        "type": "Solid",
+        "material": "pec",
+        "bounding_box_mm": [
+          24.22,
+          -62.9901545124755,
+          0.0,
+          71.78,
+          -18.0,
+          11.11
+        ]
+      }
+    ],
+    "object_count": 43,
+    "solid_count": 41,
+    "sheet_count": 2,
+    "boundaries": [
+      {
+        "name": "Radiation_Q4_5Faces",
+        "type": "Radiation"
+      },
+      {
+        "name": "P1_WG_A",
+        "type": "Wave Port"
+      },
+      {
+        "name": "P2_WG_B",
+        "type": "Wave Port"
+      }
+    ],
+    "excitations": [
+      "P2_WG_B:1",
+      "P1_WG_A:1"
+    ],
+    "setups": [
+      "Setup_Q4_MIMO2X2"
+    ],
+    "sweeps": [
+      "Setup_Q4_MIMO2X2 : LastAdaptive",
+      "Setup_Q4_MIMO2X2 : Sweep_Q4_25_27GHz",
+      "Setup_Q4_MIMO2X2 - altura_interna_wr28='7.1100000000000003mm' cavidade_area_plana='108mm2' cavidade_comprimento_interno_exploratorio='18mm' cavidade_largura_interna_exploratoria='6mm' chanfro='3mm' comprimento_total_eixo_y='27mm' corpo_altura_externa='11.109999999999999mm' corpo_comprimento_externo='36mm' corpo_largura_externa_exploratoria='9mm' degrau_altura='1mm' degrau_largura='9mm' espessura_fundo_exploratoria='3mm' espessura_parede_lateral='1mm' espessura_tampa='1mm' flange_comprimento_exploratorio='4mm' flange_largura='22.5mm' fr4_dimensao_x='3mm' fr4_dimensao_y='1.6499999999999999mm' fr4_epsilon_r_exploratorio='4.4000000000000004' fr4_tan_delta_exploratorio='0.02' frequencia_adaptativa='25.870000000000001GHz' frequencia_sweep_fim='27GHz' frequencia_sweep_inicio='25GHz' largura_interna_wr28='3.5600000000000001mm' parafuso_diametro_exploratorio='2mm' pino_diametro='1mm' pino_offset_x_exploratorio='2mm' pino_offset_y_exploratorio='1.325mm' plano_porta_y='-18mm' q4_branch_length='19.995624227766882mm' q4_external_port_y='-62.990154512475485mm' q4_frequency='25.870000000000001GHz' q4_input_length='19.995624227766882mm' q4_interpair_spacing='96mm' q4_junction_length='4.9989060569417205mm' q4_lambda_g='19.995624227766882mm' q4_pair_spacing='42mm' q4_wg_a_z='7.1100000000000003mm' q4_wg_b_x='3.5600000000000001mm' ranhura_comprimento='5.6600000000000001mm' ranhura_largura='0.80000000000000004mm' ranhura_passo_exploratorio='4mm' : Table"
+    ],
+    "mesh_operations": [
+      "Mesh_Q4_WG_Cavity_Air_1p2mm",
+      "Mesh_Q4_FR4_0p35mm"
+    ],
+    "coordinate_systems": [
+      "CS_RAD_A1",
+      "Cut_Q4_YZ_RAD_A1",
+      "CS_RAD_A2",
+      "Cut_Q4_YZ_RAD_A2",
+      "CS_RAD_B1",
+      "Cut_Q4_YZ_RAD_B1",
+      "CS_RAD_B2",
+      "Cut_Q4_YZ_RAD_B2",
+      "CS_WG_A",
+      "Cut_Q4_YZ_WG_A",
+      "CS_WG_B",
+      "Cut_Q4_YZ_WG_B",
+      "Cut_Q4_XY_MidHeight",
+      "Cut_Q4_XZ_ArrayCenter",
+      "Cut_Q4_XZ_Feed"
+    ]
+  },
+  "artifacts": {
+    "validation_log": "artefatos\\q4_mimo2x2_c0_v8\\logs\\validation_build_repair.log",
+    "preview": "artefatos\\q4_mimo2x2_c0_v8\\plots\\design_build.jpg"
+  },
+  "repair": {
+    "cause": "optimetrics órfãos da v7 após remoção do setup fonte",
+    "deleted_parametrics": [
+      "Param_Chamfer_c_0_4mm",
+      "Param_StepWidth_8_10mm",
+      "Param_StepHeight_0p5_1p5mm"
+    ]
+  },
+  "historical_errors": [
+    "Traceback (most recent call last):\n  File \"D:\\dev\\ENZ_ANT\\ENZ-Eigenchannel-mimo\\scripts\\construir_mimo2x2_v8_hfss.py\", line 679, in build\n    raise RuntimeError(f\"ValidateDesign falhou; consulte {validation_log}\")\nRuntimeError: ValidateDesign falhou; consulte D:\\dev\\ENZ_ANT\\ENZ-Eigenchannel-mimo\\artefatos\\q4_mimo2x2_c0_v8\\logs\\validation_build.log\n"
+  ]
+}

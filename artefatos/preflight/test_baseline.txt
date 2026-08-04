@@ -1,0 +1,58 @@
+PRE-FLIGHT MIMO 2x2 / Q0
+UTC: 2026-08-04T10:23:40.568397+00:00
+LOCAL: 2026-08-04T07:23:40.568397-03:00
+WORKDIR: D:\dev\ENZ_ANT\ENZ-Eigenchannel-mimo
+CLASSIFICACAO: DERIVADO
+
+$ git status --short
+RETURN_CODE=0
+?? artefatos/preflight/
+?? inst.md
+?? scripts/registrar_preflight_mimo.py
+
+
+$ git branch --show-current
+RETURN_CODE=0
+research/mimo-2x2-four-radiators-waveguide
+
+
+$ git log -1 --oneline
+RETURN_CODE=0
+5c802e1 feat: publica reconstrução HFSS v7 e dossiê técnico auditável
+
+
+$ python --version
+RETURN_CODE=0
+Python 3.12.10
+
+
+$ python -m pip --version
+RETURN_CODE=0
+pip 25.0.1 from C:\Users\geral\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip (python 3.12)
+
+
+$ python -m pip check
+RETURN_CODE=0
+No broken requirements found.
+
+
+$ python -m pytest -q
+RETURN_CODE=0
+................................                                         [100%]
+32 passed in 1.16s
+
+
+$ python -m compileall -q src scripts testes
+RETURN_CODE=0
+
+
+
+$ python -m ruff check src scripts testes
+RETURN_CODE=0
+All checks passed!
+
+
+$ python scripts/normalizar_formulas_markdown.py --check
+RETURN_CODE=1
+Arquivos Markdown verificados: 57
+NORMALIZAÇÃO PENDENTE: docs\36_relatorio_tecnico_completo.md

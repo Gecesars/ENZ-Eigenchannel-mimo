@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import subprocess
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -29,17 +30,49 @@ def load_json(path: Path) -> dict[str, Any]:
     return data
 
 
-def update() -> dict[str, Any]:
+def git_paths(*arguments: str) -> set[str]:
+    result = subprocess.run(
+        ["git", *arguments],
+        cwd=ROOT,
+        capture_output=True,
+        check=True,
+    )
+    return {
+        item.decode("utf-8", errors="surrogateescape").replace("\\", "/")
+        for item in result.stdout.split(b"\0")
+        if item
+    }
+
+
+def update(*, allow_active_locks: bool = False) -> dict[str, Any]:
     if not POROS.is_dir():
         raise FileNotFoundError(POROS)
+    tracked_paths = git_paths("ls-files", "-z", "--", "poros_aedt")
+    temporarily_absent = sorted(
+        path.removeprefix("poros_aedt/")
+        for path in git_paths(
+            "diff",
+            "--name-only",
+            "--diff-filter=D",
+            "-z",
+            "--",
+            "poros_aedt",
+        )
+    )
     ephemeral = [
         path
         for path in POROS.rglob("*")
         if path.is_file()
-        and (path.name.endswith(".aedt.lock") or path.name.endswith(".semaphore"))
+        and (
+            path.name.endswith((".aedt.lock", ".semaphore"))
+            or (
+                path.name.endswith((".tmp", ".asol_priv"))
+                and path.relative_to(ROOT).as_posix() not in tracked_paths
+            )
+        )
     ]
     versionable_ephemeral = [path for path in ephemeral if path.stat().st_size > 0]
-    if versionable_ephemeral:
+    if versionable_ephemeral and not allow_active_locks:
         raise ValueError(
             "locks não vazios não podem ser publicados: "
             + ", ".join(str(path) for path in versionable_ephemeral)
@@ -48,7 +81,7 @@ def update() -> dict[str, Any]:
     report_manifest_path = (
         POROS
         / "relatorios"
-        / "Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v1.manifest.json"
+        / "Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v2.manifest.json"
     )
     reconstruction_manifest_path = (
         POROS
@@ -83,6 +116,7 @@ def update() -> dict[str, Any]:
             "m0_infrastructure_run": "ENZ-20260803-173105-52288067",
             "g0_exploratory_reconstruction": reconstruction["run_limpo"],
             "technical_report": report["report"]["sha256"],
+            "q0_validated_radiators": "BLOCKED_MISSING_VALIDATED_ARTIFACTS",
         },
         "scientific_gates": {
             "m0_infrastructure": "PASS",
@@ -90,8 +124,21 @@ def update() -> dict[str, Any]:
             "g0_adaptive_convergence": "PASS",
             "g0_strict_passivity": "FAIL",
             "g0_published_s11_correspondence": "FAIL",
+            "q0_validated_instances": "0/4",
+            "mimo_2x2_system": "DESCONHECIDO",
             "global_reproduction_classification": "HIPÓTESE",
         },
+        "active_session_locks_excluded": [
+            path.relative_to(POROS).as_posix()
+            for path in versionable_ephemeral
+            if path.name.endswith(".aedt.lock")
+        ],
+        "active_session_generated_files_excluded": [
+            path.relative_to(POROS).as_posix()
+            for path in versionable_ephemeral
+            if not path.name.endswith(".aedt.lock")
+        ],
+        "active_session_tracked_files_temporarily_absent": temporarily_absent,
         "ephemeral_files_excluded": [
             path.relative_to(POROS).as_posix() for path in ephemeral
         ],
@@ -105,14 +152,31 @@ def update() -> dict[str, Any]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.parse_args()
-    manifest = update()
+    parser.add_argument(
+        "--allow-active-locks",
+        action="store_true",
+        help=(
+            "Exclui locks ativos do inventário. Use somente quando a sessão AEDT "
+            "precisa permanecer aberta e está registrada em artefato de inspeção."
+        ),
+    )
+    args = parser.parse_args()
+    manifest = update(allow_active_locks=args.allow_active_locks)
     print(
         json.dumps(
             {
                 "schema_version": manifest["schema_version"],
                 "arquivos": len(manifest["arquivos"]),
                 "ephemeral_files_excluded": manifest["ephemeral_files_excluded"],
+                "active_session_locks_excluded": manifest[
+                    "active_session_locks_excluded"
+                ],
+                "active_session_generated_files_excluded": manifest[
+                    "active_session_generated_files_excluded"
+                ],
+                "active_session_tracked_files_temporarily_absent": manifest[
+                    "active_session_tracked_files_temporarily_absent"
+                ],
             },
             ensure_ascii=False,
             indent=2,

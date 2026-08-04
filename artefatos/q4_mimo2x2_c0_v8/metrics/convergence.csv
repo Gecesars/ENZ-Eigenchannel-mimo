@@ -1,0 +1,21 @@
+DesignVariation : altura_interna_wr28='7.1100000000000003mm' cavidade_area_plana='108mm2' cavidade_comprimento_interno_exploratorio='18mm' cavidade_largura_interna_exploratoria='6mm' chanfro='3mm' comprimento_total_eixo_y='27mm' corpo_altura_externa='11.109999999999999mm' corpo_comprimento_externo='36mm' corpo_largura_externa_exploratoria='9mm' degrau_altura='1mm' degrau_largura='9mm' espessura_fundo_exploratoria='3mm' espessura_parede_lateral='1mm' espessura_tampa='1mm' flange_comprimento_exploratorio='4mm' flange_largura='22.5mm' fr4_dimensao_x='3mm' fr4_dimensao_y='1.6499999999999999mm' fr4_epsilon_r_exploratorio='4.4000000000000004' fr4_tan_delta_exploratorio='0.02' frequencia_adaptativa='25.870000000000001GHz' frequencia_sweep_fim='27GHz' frequencia_sweep_inicio='25GHz' largura_interna_wr28='3.5600000000000001mm' parafuso_diametro_exploratorio='2mm' pino_diametro='1mm' pino_offset_x_exploratorio='2mm' pino_offset_y_exploratorio='1.325mm' plano_porta_y='-18mm' q4_branch_length='19.9956242277669mm' q4_external_port_y='-62.990154512475499mm' q4_frequency='25.870000000000001GHz' q4_input_length='19.9956242277669mm' q4_interpair_spacing='96mm' q4_junction_length='4.9989060569417196mm' q4_lambda_g='19.9956242277669mm' q4_pair_spacing='42mm' q4_wg_a_z='7.1100000000000003mm' q4_wg_b_x='3.5600000000000001mm' ranhura_comprimento='5.6600000000000001mm' ranhura_largura='0.80000000000000004mm' ranhura_passo_exploratorio='4mm'
+Setup : Setup_Q4_MIMO2X2
+
+==================
+Number of Passes
+Completed : 3
+Maximum   : 12
+Minimum   : 2
+==================
+Criterion : Max Mag. Delta S
+Target    : 0.02
+Current   : 0.00028215
+Target Consecutive Passes  : 2
+Current Consecutive Passes : 2
+Converged : Yes
+==================
+Pass Number|Solved Elements|Max Mag. Delta S|
+          1|         505065|             N/A|
+          2|         600055|      0.00075361|
+          3|         651746|      0.00028215|
+

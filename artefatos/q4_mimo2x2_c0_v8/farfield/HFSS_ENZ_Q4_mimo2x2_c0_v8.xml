@@ -1,0 +1,31 @@
+<Metadata>
+  <ElementPatterns>
+    <Source name='P1_WG_A:1'>
+      <Filename>exportfield_0.ffd      </Filename>
+      <PortLocation>-0.048000,-0.062990,0.006555      </PortLocation>
+      <ReferenceLocation>0.000000,0.000000,0.000000      </ReferenceLocation>
+        <PowerInfo>
+            <Power Freq='2.587e+10'>
+              <IncidentPower>1.000000              </IncidentPower>
+              <AcceptedPower>0.029272              </AcceptedPower>
+              <RadiatedPower>0.029176              </RadiatedPower>
+            </Power>
+        </PowerInfo>
+    </Source>
+    <Source name='P2_WG_B:1'>
+      <Filename>exportfield_1.ffd      </Filename>
+      <PortLocation>0.048000,-0.062990,0.006555      </PortLocation>
+      <ReferenceLocation>0.000000,0.000000,0.000000      </ReferenceLocation>
+        <PowerInfo>
+            <Power Freq='2.587e+10'>
+              <IncidentPower>1.000000              </IncidentPower>
+              <AcceptedPower>0.029288              </AcceptedPower>
+              <RadiatedPower>0.029338              </RadiatedPower>
+            </Power>
+        </PowerInfo>
+    </Source>
+  </ElementPatterns>
+  <TouchstoneInfo>
+    <Filename>LastAdaptive_DV457.s2p    </Filename>
+  </TouchstoneInfo>
+</Metadata>

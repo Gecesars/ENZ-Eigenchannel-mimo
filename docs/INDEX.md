@@ -49,6 +49,7 @@
 - [Auditoria independente de fórmulas centrais](30_auditoria_independente_de_formulas.md)
 - [Auditoria dimensional do artigo-base](31_auditoria_dimensional_artigo_base.md)
 - [Execução das prioridades 1 a 5](32_execucao_prioridades_1_a_5.md)
+- [Pré-flight e gate Q0 do sistema MIMO 2×2](32_relatorio_implementacao_mimo_2x2.md)
 - [Validação do artigo e execução AEDT com 14 cores](33_validacao_artigo_e_execucao_14_cores.md)
 - [Reconstrução exploratória da Figura 2 no HFSS](34_reconstrucao_exploratoria_figura2_hfss.md)
 - [Waveport em Z e ambiente de plots do artigo](35_waveport_z_e_ambiente_de_plots.md)

@@ -14,15 +14,17 @@ CC BY 4.0.
 
 ## Dossiê técnico consolidado
 
-**DERIVADO:** `Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v1.pdf` reúne em 99
+**DERIVADO:** `Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v2.pdf` reúne em 106
 páginas a teoria do corpus, a auditoria dimensional, a geometria exploratória,
 a waveport em Z, os cortes de campo, os relatórios HFSS e os gates de
-validação. O PDF contém 25.530 palavras extraíveis, 18 figuras e 19 tabelas.
+validação. A versão v2 acrescenta o pré-flight e o gate Q0 MIMO 2×2, totalizando
+27.781 palavras extraíveis, 19 figuras e 24 tabelas. A versão v1 permanece
+preservada como edição anterior.
 
 **HIPÓTESE:** o dossiê não promove a reconstrução a reprodução do artigo. O
 gate de passividade e a correspondência de S11 permanecem reprovados. Métricas,
 fontes e SHA-256 estão em
-`Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v1.manifest.json`.
+`Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v2.manifest.json`.
 
 Para regenerar:
 

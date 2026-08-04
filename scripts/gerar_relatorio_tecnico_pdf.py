@@ -67,6 +67,15 @@ POSTPROCESSING = (
     / "posprocessamento"
     / "postprocessing_environment.json"
 )
+INSTRUCTION = ROOT / "inst.md"
+Q0_MISSING = ROOT / "artefatos" / "q0" / "missing_validated_models.json"
+Q0_INVENTORY = ROOT / "artefatos" / "q0" / "artifact_inventory.json"
+Q0_INSPECTION = (
+    ROOT / "artefatos" / "q0" / "hfss_inspection" / "hfss_inspection.json"
+)
+Q0_PREVIEW = (
+    ROOT / "artefatos" / "q0" / "hfss_inspection" / "hfss_design_preview.jpg"
+)
 CLEAN_METRICS = [
     ROOT
     / "poros_aedt"
@@ -77,8 +86,11 @@ CLEAN_METRICS = [
     / name
     for name in ("convergence.csv", "mesh_stats.csv", "solver_profile.csv")
 ]
-OUTPUT_NAME = "Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v1.pdf"
-MANIFEST_NAME = "Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v1.manifest.json"
+REPORT_VERSION = 2
+OUTPUT_NAME = f"Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v{REPORT_VERSION}.pdf"
+MANIFEST_NAME = (
+    f"Relatorio_Tecnico_ENZ_Cavidade_VilasBoas_v{REPORT_VERSION}.manifest.json"
+)
 OUTPUT = ROOT / "doc" / "pdfs" / OUTPUT_NAME
 MANIFEST = ROOT / "doc" / "pdfs" / MANIFEST_NAME
 POROS_DIR = ROOT / "poros_aedt" / "relatorios"
@@ -1016,7 +1028,7 @@ def build_story(
             ),
             Spacer(1, 6 * mm),
             Paragraph(
-                f"Versão 1 — gerada em {datetime.now(UTC).strftime('%Y-%m-%d %H:%M UTC')}",
+                f"Versão {REPORT_VERSION} — gerada em {datetime.now(UTC).strftime('%Y-%m-%d %H:%M UTC')}",
                 styles["Small"],
             ),
             PageBreak(),
@@ -1099,6 +1111,18 @@ def build_story(
         image_grid(geometry_entries, styles, page_width, columns=2, max_height=72 * mm)
     )
     visual_count += len(geometry_entries)
+
+    story.append(Paragraph("Inspeção Q0 no HFSS 2024 R2", styles["Heading2"]))
+    story.extend(
+        image_block(
+            Q0_PREVIEW,
+            "**SIMULADO.** Prévia exportada durante inspeção somente leitura da reconstrução v7. O hash do projeto permaneceu inalterado; a imagem não representa o sistema MIMO 2×2, cujo Q0 está bloqueado.",
+            styles,
+            page_width,
+            95 * mm,
+        )
+    )
+    visual_count += 1
 
     story.append(Paragraph("Waveport e planos de corte", styles["Heading2"]))
     derived_entries = [
@@ -1248,6 +1272,11 @@ def generate() -> dict[str, Any]:
         SPECIFICATION,
         VALIDATION,
         POSTPROCESSING,
+        INSTRUCTION,
+        Q0_MISSING,
+        Q0_INVENTORY,
+        Q0_INSPECTION,
+        Q0_PREVIEW,
         *CLEAN_METRICS,
         *CORE_DOCS,
         *GEOMETRY_IMAGES,
@@ -1277,6 +1306,11 @@ def generate() -> dict[str, Any]:
             SPECIFICATION,
             VALIDATION,
             POSTPROCESSING,
+            INSTRUCTION,
+            Q0_MISSING,
+            Q0_INVENTORY,
+            Q0_INSPECTION,
+            Q0_PREVIEW,
             *CLEAN_METRICS,
             *CORE_DOCS,
             *GEOMETRY_IMAGES,
@@ -1296,7 +1330,7 @@ def generate() -> dict[str, Any]:
         "schema": "enz-eigenchannel-mimo/technical-report-manifest/v1",
         "generated_at_utc": datetime.now(UTC).isoformat(),
         "classification": "HIPÓTESE",
-        "title": "Dossiê técnico da cavidade ENZ e do ambiente HFSS",
+        "title": "Dossiê técnico da cavidade ENZ, ambiente HFSS e gate Q0 MIMO 2×2",
         "primary_source": {
             "authors": [
                 "Evandro C. Vilas Boas",
@@ -1320,6 +1354,9 @@ def generate() -> dict[str, Any]:
             "strict_passivity": "FAIL",
             "published_s11_correspondence": "FAIL",
             "global_reproduction_classification": "HIPÓTESE",
+            "q0_validated_radiators": "BLOCKED_MISSING_VALIDATED_ARTIFACTS",
+            "q0_validated_instances": "0/4",
+            "mimo2x2_system_classification": "DESCONHECIDO",
         },
         "sources": sources,
     }
