@@ -57,10 +57,10 @@ declaradas no artigo são `a = 7,11 mm` e `b = 3,56 mm`.
 **DERIVADO:** no mapeamento geométrico adotado, a maior dimensão da folha está
 em Z. A linha de integração modal é
 
-$$
+```math
 \mathbf{l}_{\mathrm{int}}:\;(0,-18,3)\ \mathrm{mm}
 \longrightarrow(0,-18,10{,}11)\ \mathrm{mm},
-$$
+```
 
 portanto `Δx = 0`, `Δy = 0` e `Δz = 7,11 mm`. A orientação é estritamente Z.
 O bounding box salvo no projeto é
@@ -89,20 +89,20 @@ a sweep discreta dos campos do artigo. Nenhuma versão anterior foi sobrescrita.
 **DERIVADO:** para o modo dominante de um guia retangular ideal, a constante de
 propagação pode ser escrita como
 
-$$
+```math
 \beta_{10}=k_0\sqrt{1-\left(\frac{f_c}{f}\right)^2},
 \qquad
 f_c=\frac{c}{2a}.
-$$
+```
 
 Próximo ao corte, `β10 → 0` e o comprimento de onda guiado cresce. Uma forma
 equivalente de representar esse comportamento é definir uma permissividade
 modal efetiva
 
-$$
+```math
 \varepsilon_{\mathrm{eff},10}
 =\varepsilon_0\left[1-\left(\frac{f_c}{f}\right)^2\right].
-$$
+```
 
 **PUBLICADO:** Vilas Boas et al. exploram o regime ENZ inspirado pelo modo
 dominante para obter baixa variação longitudinal de fase e excitação coerente
@@ -182,13 +182,13 @@ licença, PyAEDT, hashes e verificação de processo órfão.
 `Pacc = 0,38535475` e `Prad = 0,39368747`. As identidades relatadas pelo HFSS
 fecham numericamente:
 
-$$
+```math
 \eta_{\mathrm{rad}}=\frac{P_{\mathrm{rad}}}{P_{\mathrm{acc}}}
 =1{,}02162350,
 \qquad
 \eta_{\mathrm{tot}}=\frac{P_{\mathrm{rad}}}{P_{\mathrm{inc}}}
 =0{,}39368747.
-$$
+```
 
 **DERIVADO:** o fechamento algébrico não é aprovação física. Para um sistema
 passivo, `Prad ≤ Pacc` dentro da tolerância numérica. O excesso de 2,16235%
